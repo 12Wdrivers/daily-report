@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>十二W车行 · 群日报导航</title>
+<style>
+  :root {
+    --bg: #f5f5f7;
+    --card: #ffffff;
+    --ink: #1a1a1a;
+    --ink2: #333333;
+    --muted: #86868b;
+    --muted2: #aeaeb2;
+    --rule: #e5e5ea;
+    --accent: #e85d3a;
+    --accent-light: #fff4f0;
+    --accent-tag: #fde8e0;
+    --tag-bg: #f0f0f2;
+    --tag-text: #636366;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, 'PingFang SC', 'Helvetica Neue', 'Microsoft YaHei', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 16px 80px;
+  }
+
+  /* Header */
+  .header-card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 32px 24px 28px;
+    margin: 20px 0 16px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .header-card h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    margin-bottom: 6px;
+  }
+  .header-card .subtitle {
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .header-card .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+
+  /* Date List */
+  .date-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .date-card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .date-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  .date-card:active {
+    transform: translateY(0);
+  }
+
+  .date-card .left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .date-badge {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: var(--accent-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .date-badge .day {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .date-badge .month {
+    font-size: 11px;
+    color: var(--accent);
+    opacity: 0.7;
+    margin-top: 2px;
+  }
+
+  .date-info .title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+  .date-info .weekday {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .date-card .arrow {
+    font-size: 18px;
+    color: var(--muted2);
+    flex-shrink: 0;
+  }
+
+  /* Latest badge */
+  .latest-tag {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  /* Footer */
+  .footer-note {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted2);
+    padding: 32px 16px 0;
+    line-height: 1.7;
+  }
+
+  @media (min-width: 520px) {
+    .container { padding: 0 24px 80px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header-card">
+    <h1>十二W车行 · 群日报</h1>
+    <div class="subtitle"><span class="dot"></span>每日精选 · 按日期查阅</div>
+  </div>
+
+  <!-- Date List -->
+  <div class="date-list">
+
+    <a class="date-card" href="daily-report-2026-07-15.html">
+      <div class="left">
+        <div class="date-badge">
+          <div class="day">15</div>
+          <div class="month">07月</div>
+        </div>
+        <div class="date-info">
+          <div class="title">2026-07-15 日报<span class="latest-tag">最新</span></div>
+          <div class="weekday">星期三</div>
+        </div>
+      </div>
+      <div class="arrow">›</div>
+    </a>
+
+    <a class="date-card" href="daily-report-2026-07-14.html">
+      <div class="left">
+        <div class="date-badge">
+          <div class="day">14</div>
+          <div class="month">07月</div>
+        </div>
+        <div class="date-info">
+          <div class="title">2026-07-14 日报</div>
+          <div class="weekday">星期二</div>
+        </div>
+      </div>
+      <div class="arrow">›</div>
+    </a>
+
+    <a class="date-card" href="daily-report-2026-07-13.html">
+      <div class="left">
+        <div class="date-badge">
+          <div class="day">13</div>
+          <div class="month">07月</div>
+        </div>
+        <div class="date-info">
+          <div class="title">2026-07-13 日报</div>
+          <div class="weekday">星期一</div>
+        </div>
+      </div>
+      <div class="arrow">›</div>
+    </a>
+
+    <a class="date-card" href="daily-report-2026-07-12.html">
+      <div class="left">
+        <div class="date-badge">
+          <div class="day">12</div>
+          <div class="month">07月</div>
+        </div>
+        <div class="date-info">
+          <div class="title">2026-07-12 日报</div>
+          <div class="weekday">星期日</div>
+        </div>
+      </div>
+      <div class="arrow">›</div>
+    </a>
+
+    <a class="date-card" href="daily-report-2026-07-11.html">
+      <div class="left">
+        <div class="date-badge">
+          <div class="day">11</div>
+          <div class="month">07月</div>
+        </div>
+        <div class="date-info">
+          <div class="title">2026-07-11 日报</div>
+          <div class="weekday">星期六</div>
+        </div>
+      </div>
+      <div class="arrow">›</div>
+    </a>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer-note">
+    本报告基于群聊数据自动生成，仅供参考。<br>
+    内容可能包含个人观点，不代表群组官方立场。
+  </div>
+
+</div>
+
+</body>
+</html>
