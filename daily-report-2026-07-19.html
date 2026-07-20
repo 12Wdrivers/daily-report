@@ -91,9 +91,17 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   }
   .nav-bar .nav-label {
-    font-size: 14px;
-    color: var(--muted);
-    font-weight: 500;
+    font-size: 13px;
+    color: #fff;
+    background: var(--accent);
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+  .nav-bar .nav-label:hover {
+    background: #d14e2e;
   }
   .nav-btn {
     background: none;
@@ -433,7 +441,7 @@
   <!-- Nav Bar -->
   <div class="nav-bar">
     <a class="nav-btn" href="daily-report-2026-07-18.html">上一天</a>
-    <a class="nav-label" href="index.html" style="text-decoration:none;color:inherit;">日报导航</a>
+    <a class="nav-label" href="index.html">日报导航</a>
     <button class="nav-btn" disabled>下一天</button>
   </div>
 
