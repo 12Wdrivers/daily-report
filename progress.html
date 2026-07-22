@@ -1,0 +1,529 @@
+<!-- 十二W车行 · 进度墙 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>十二W车行 · 进度墙</title>
+<style>
+  :root {
+    --bg: #f5f5f7;
+    --card: #ffffff;
+    --ink: #1a1a1a;
+    --ink2: #333333;
+    --muted: #86868b;
+    --muted2: #aeaeb2;
+    --rule: #e5e5ea;
+    --accent: #e85d3a;
+    --accent-light: #fff4f0;
+    --accent-tag: #fde8e0;
+    --tag-bg: #f0f0f2;
+    --tag-text: #636366;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, 'PingFang SC', 'Helvetica Neue', 'Microsoft YaHei', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 16px 80px;
+  }
+
+  /* ===== Header Card ===== */
+  .header-card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 32px 24px 28px;
+    margin: 20px 0 0;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    position: relative;
+    overflow: hidden;
+  }
+  .header-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), #f09b4a, var(--accent));
+    border-radius: 16px 16px 0 0;
+  }
+  .header-card h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    margin-bottom: 6px;
+  }
+  .header-card .subtitle {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .header-card .cheer {
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 18px;
+    line-height: 1.6;
+  }
+  .cheer-dot {
+    display: inline-block;
+    width: 5px; height: 5px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin: 0 4px;
+    vertical-align: middle;
+    opacity: 0.5;
+  }
+  .cheer-dot:nth-child(odd) { opacity: 0.35; }
+  .cheer-icon {
+    display: inline-block;
+    margin: 0 3px;
+    vertical-align: middle;
+    font-size: 12px;
+  }
+
+  /* Stats Row */
+  .stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+  }
+  .stats-row .stat-block { text-align: center; }
+  .stats-row .stat-num {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1.2;
+  }
+  .stats-row .stat-label {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* ===== Member Grid (Directory) ===== */
+  .member-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .member-tile {
+    background: var(--card);
+    border-radius: 14px;
+    min-height: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: 10px 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    text-decoration: none;
+    color: inherit;
+  }
+  .member-tile:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  .member-tile:active { transform: translateY(0); }
+
+  .member-tile .name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* ===== 老司机 Badge ===== */
+  .driver-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    margin-bottom: 2px;
+  }
+  .driver-badge svg {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+  }
+  .driver-badge .driver-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #b8912e;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* ===== Detail Page ===== */
+  .detail-page {
+    display: none;
+  }
+  .detail-page.active { display: block; }
+  .directory-page.hidden { display: none; }
+
+  /* Back button */
+  .back-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 500;
+    background: none;
+    border: none;
+    font-family: inherit;
+    padding: 4px 0;
+  }
+  .back-bar svg { flex-shrink: 0; }
+
+  /* Profile Card */
+  .profile-card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 28px 24px;
+    margin-bottom: 12px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .profile-card .profile-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .profile-card .profile-role {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .profile-card .profile-count {
+    display: inline-block;
+    background: var(--accent-tag);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* Nav Bar */
+  .nav-bar {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 12px 20px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .nav-bar a, .nav-bar button {
+    font-size: 13px;
+    color: #fff;
+    background: var(--accent);
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.15s ease;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .nav-bar a:hover, .nav-bar button:hover { background: #d14e2e; }
+  .nav-bar .nav-back {
+    background: none;
+    border: 1px solid var(--rule);
+    color: var(--ink2);
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  /* Timeline */
+  .timeline-card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .timeline-card .timeline-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 20px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--rule);
+    border-radius: 1px;
+  }
+
+  .milestone {
+    position: relative;
+    padding-bottom: 20px;
+  }
+  .milestone:last-child { padding-bottom: 0; }
+
+  .milestone-dot {
+    position: absolute;
+    left: -20px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2.5px solid var(--card);
+    box-shadow: 0 0 0 2px var(--accent);
+    z-index: 1;
+  }
+
+  .milestone-date {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+
+  .milestone-text {
+    font-size: 14px;
+    color: var(--ink2);
+    line-height: 1.7;
+    margin-bottom: 6px;
+  }
+
+  .milestone-source {
+    font-size: 12px;
+    color: var(--muted2);
+    line-height: 1.6;
+    padding: 8px 10px;
+    background: var(--bg);
+    border-radius: 8px;
+    font-style: italic;
+  }
+
+  /* Updated timestamp */
+  .updated-row {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted2);
+    margin-top: 24px;
+    padding-bottom: 20px;
+  }
+
+  /* Verified badge */
+  .verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  /* Empty state */
+  .empty-state {
+    text-align: center;
+    padding: 32px 20px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  /* Section label */
+  .section-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Nav -->
+  <div class="nav-bar">
+    <a href="index.html" class="nav-back" style="margin: 0 auto;">返回首页</a>
+  </div>
+
+  <!-- ===== DIRECTORY VIEW ===== -->
+  <div id="directoryView">
+    <!-- Header -->
+    <div class="header-card">
+      <h1>进度墙</h1>
+      <div class="subtitle">记录每一小步，看见彼此的成长</div>
+      <div class="cheer">
+        <span class="cheer-dot"></span> 每一步都算数 <span class="cheer-dot"></span>
+      </div>
+      <div class="stats-row">
+        <div class="stat-block">
+          <div class="stat-num" id="totalMembers">0</div>
+          <div class="stat-label">位队友</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num" id="totalMilestones">0</div>
+          <div class="stat-label">条里程碑</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Member Grid -->
+    <div class="section-label">点击查看成长线</div>
+    <div id="memberGrid" class="member-grid"></div>
+
+    <div class="updated-row" id="updatedRow"></div>
+  </div>
+
+  <!-- ===== DETAIL VIEW ===== -->
+  <div id="detailView" class="detail-page">
+    <button class="back-bar" id="backBtn" onclick="showDirectory()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      返回全部成员
+    </button>
+
+    <!-- Profile -->
+    <div class="profile-card">
+      <div class="profile-name" id="detailName"></div>
+      <div class="profile-role" id="detailRole"></div>
+      <div class="profile-count" id="detailCount"></div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="timeline-card">
+      <div class="timeline-title">里程碑</div>
+      <div class="timeline" id="detailTimeline"></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+let membersData = [];
+
+fetch('progress-data.json')
+  .then(r => r.json())
+  .then(data => {
+    membersData = data.members || [];
+    renderDirectory(data);
+  })
+  .catch(err => {
+    document.getElementById('memberGrid').innerHTML =
+      '<div class="empty-state">暂无数据</div>';
+  });
+
+function formatDate(dateStr) {
+  const d = new Date(dateStr);
+  return (d.getMonth() + 1) + '月' + d.getDate() + '日';
+}
+
+function renderDirectory(data) {
+  const members = data.members || [];
+  const totalMilestones = members.reduce((sum, m) => sum + m.milestones.length, 0);
+  document.getElementById('totalMembers').textContent = members.length;
+  document.getElementById('totalMilestones').textContent = totalMilestones;
+
+  // Sort by first letter (Chinese locale)
+  members.sort((a, b) => a.name.localeCompare(b.name, 'zh-CN'));
+
+  const grid = document.getElementById('memberGrid');
+  grid.innerHTML = members.map((member, idx) => {
+    const isDriver = member.role && member.role.includes('老司机');
+    return `
+      <div class="member-tile${isDriver ? ' tile-driver' : ''}" onclick="showDetail(${idx})">
+        ${isDriver ? `
+        <div class="driver-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#b8912e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="2" x2="12" y2="12"/>
+            <line x1="12" y1="12" x2="18" y2="8"/>
+            <line x1="12" y1="12" x2="9" y2="7"/>
+          </svg>
+          <span class="driver-label">老司机</span>
+        </div>` : ''}
+        <div class="name">${member.name}</div>
+      </div>
+    `;
+  }).join('');
+
+  if (data.updated_at) {
+    document.getElementById('updatedRow').textContent = '数据更新于 ' + data.updated_at;
+  }
+}
+
+function showDetail(idx) {
+  const member = membersData[idx];
+  if (!member) return;
+
+  // Update profile
+  document.getElementById('detailName').textContent = member.name;
+  document.getElementById('detailRole').textContent = member.role || '';
+  document.getElementById('detailCount').textContent = member.milestones.length + ' 条里程碑';
+
+  // Sort milestones by date desc
+  const milestones = [...member.milestones].sort((a, b) => b.date.localeCompare(a.date));
+
+  // Render timeline
+  const timeline = document.getElementById('detailTimeline');
+  timeline.innerHTML = milestones.map(ms => `
+    <div class="milestone">
+      <div class="milestone-dot"></div>
+      <div class="milestone-date">${formatDate(ms.date)}</div>
+      <div class="milestone-text">${ms.text}</div>
+      ${ms.source ? `<div class="milestone-source">原文：${ms.source}</div>` : ''}
+    </div>
+  `).join('');
+
+  // Switch views
+  document.getElementById('directoryView').style.display = 'none';
+  document.getElementById('detailView').classList.add('active');
+  window.scrollTo(0, 0);
+}
+
+function showDirectory() {
+  document.getElementById('detailView').classList.remove('active');
+  document.getElementById('directoryView').style.display = 'block';
+  window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>
