@@ -91,17 +91,9 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   }
   .nav-bar .nav-label {
-    font-size: 13px;
-    color: #fff;
-    background: var(--accent);
-    font-weight: 600;
-    padding: 6px 14px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.15s ease;
-  }
-  .nav-bar .nav-label:hover {
-    background: #d14e2e;
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 500;
   }
   .nav-btn {
     background: none;
@@ -472,6 +464,44 @@
   @media (min-width: 520px) {
     .container { padding: 0 24px 80px; }
   }
+
+  /* ===== v5.4 新增样式 ===== */
+  .header-card { background: linear-gradient(135deg, var(--accent) 0%, #f07a5a 100%); border-radius: 20px; padding: 32px 24px 28px; margin: 16px 0 14px; text-align: center; box-shadow: 0 4px 16px rgba(232, 93, 58, 0.2); }
+  .header-card h1 { font-size: 22px; font-weight: 800; color: #ffffff; letter-spacing: 0.5px; margin-bottom: 10px; text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+  .header-card .date-row { font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 4px; }
+  .header-card .time-row { font-size: 12px; color: rgba(255,255,255,0.7); }
+  .section-title { font-size: 16px; font-weight: 700; color: var(--ink); margin: 24px 0 10px 4px; padding-left: 10px; border-left: 3px solid var(--accent); }
+  .hero-card { background: var(--card); border-radius: 16px; padding: 22px 18px; margin-bottom: 14px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+  .hero-card h4 { font-size: 16px; font-weight: 700; color: var(--ink); line-height: 1.5; margin-bottom: 4px; }
+  .hero-card .topic-time { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+  .hero-card .detail-content .sub-heading { font-size: 14px; font-weight: 700; color: var(--ink); margin: 18px 0 10px; padding: 8px 0 8px 12px; border-left: 3px solid var(--accent); background: linear-gradient(90deg, var(--kw-bg) 0%, transparent 70%); border-radius: 0 6px 6px 0; }
+  .hero-card .detail-content .sub-heading:first-child { margin-top: 0; }
+  .hero-card .detail-content p { margin-bottom: 14px; line-height: 1.85; color: var(--ink2); font-size: 14px; }
+  .hero-card .detail-content p:last-child { margin-bottom: 0; }
+  .conclusion-gm { margin-top: 18px; padding: 16px 14px 14px; background: var(--accent-light); border-radius: 12px; border: 1px solid var(--accent-tag); }
+  .conclusion-gm .conclusion-box { background: var(--card); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+  .conclusion-gm .gm-label { font-size: 13px; font-weight: 700; color: var(--accent); margin-bottom: 10px; padding-left: 8px; border-left: 2px solid var(--accent); }
+  .conclusion-gm .gm-item { background: var(--card); border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .conclusion-gm .gm-item:last-child { margin-bottom: 0; }
+  .conclusion-gm .gm-quote { font-size: 14px; line-height: 1.7; color: var(--ink); font-weight: 500; }
+  .conclusion-gm .gm-author { font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .topic-card { background: var(--card); border-radius: 14px; padding: 18px 16px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .topic-card h4 { font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+  .topic-card .topic-time { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+  .topic-card .detail-content p { margin-bottom: 12px; line-height: 1.8; color: var(--ink2); font-size: 14px; }
+  .topic-card .detail-content .sub-heading { font-size: 14px; font-weight: 700; color: var(--ink); margin: 14px 0 8px; }
+  .detail-content p strong, .qa-content p strong { background: var(--accent-light); padding: 1px 4px; border-radius: 3px; font-weight: 600; color: var(--accent); }
+  .quote-section { background: var(--card); border-radius: 14px; padding: 18px 16px; margin-bottom: 12px; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .quote-label { font-size: 12px; font-weight: 700; color: var(--accent); margin-bottom: 8px; letter-spacing: 1px; }
+  .quote-text { font-size: 16px; font-weight: 600; color: var(--ink); line-height: 1.6; margin-bottom: 8px; }
+  .quote-author { font-size: 13px; color: var(--muted); }
+  .stats-card { background: var(--card); border-radius: 14px; padding: 18px 16px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .stat-big { font-size: 28px; font-weight: 800; color: var(--accent); }
+  .stat-label { font-size: 12px; color: var(--muted); }
+  .nav-bar { display: flex; gap: 6px; margin-bottom: 14px; overflow-x: auto; padding-bottom: 4px; }
+  .nav-btn { background: var(--card); border: 1px solid var(--rule); border-radius: 20px; padding: 6px 14px; font-size: 13px; color: var(--ink2); white-space: nowrap; }
+  .nav-label { background: var(--card); border: 1px solid var(--rule); border-radius: 20px; padding: 6px 14px; color: var(--muted); font-size: 13px; font-weight: 600; white-space: nowrap; }
+  .footer-note { font-size: 12px; color: var(--muted2); text-align: center; margin-top: 24px; padding: 0 16px; }
 </style>
 </head>
 <body>
@@ -481,346 +511,188 @@
   <!-- Header Card -->
   <div class="header-card">
     <h1>十二W车行群日报</h1>
-    <div class="date-row">2026 年 07 月 13 日（星期一）</div>
-    <div class="time-row">00:00 - 22:16</div>
+    <div class="date-row">2026 年 07 月 13 日（星期日）</div>
+    <div class="time-row">10:01 - 18:50</div>
   </div>
 
   <!-- Nav Bar -->
   <div class="nav-bar">
-    <a class="nav-btn" href="daily-report-2026-07-12.html">上一天</a>
-    <a class="nav-label" href="index.html">日报导航</a>
-    <a class="nav-btn" href="daily-report-2026-07-14.html">下一天</a>
+    <button class="nav-btn" onclick="location.href='daily-report-v5.4-2026-07-12.html'">上一天</button>
+    <span class="nav-label">日报导航</span>
+    <button class="nav-btn" disabled>下一天</button>
   </div>
 
   <!-- 每日金句 -->
   <div class="quote-section">
     <div class="quote-label">每日金句</div>
-    <div class="quote-text">基因彩票，中了就要兑现，否则人族如何解放？</div>
-    <div class="quote-author"><strong>昍（日日）</strong> · 2026-07-13 · 小会精粹</div>
+    <div class="quote-text">大的顾虑是目前没有对家人出柜，在自媒体上搞迟早在小镇圈子里曝光，让爸妈难堪。好在爸妈快退休了，希望我赚钱的速度能让他们心里平衡一点。</div>
+    <div class="quote-author"><strong>子蟹</strong> · 2026-07-13 · 小会中的坦诚自白</div>
   </div>
 
-  <!-- 一、总消息概览 -->
-  <div class="section-title">一、总消息概览</div>
+  <!-- 总消息概览 -->
+  <div class="section-title">总消息概览</div>
   <div class="stats-card">
-    <div>
-      <div class="stat-big">493</div>
-      <div class="stat-label">总消息数量</div>
+    <div class="stat-item-sm">
+      <div class="num">390</div>
+      <div class="label">总消息</div>
     </div>
-    <div class="stat-group">
-      <div class="stat-item-sm">
-        <div class="num">11</div>
-        <div class="label">活跃成员</div>
-      </div>
-      <div class="stat-item-sm">
-        <div class="num">00:00</div>
-        <div class="label">最活跃时段</div>
-      </div>
+    <div class="stat-item-sm">
+      <div class="num">9,791</div>
+      <div class="label">全文字数</div>
+    </div>
+    <div class="stat-item-sm">
+      <div class="num">25</div>
+      <div class="label">阅读时长(分)</div>
     </div>
   </div>
 
-  <!-- 二、火花碰撞时刻・热点话题 -->
-  <div class="section-title">二、火花碰撞时刻・热点话题</div>
+  <!-- 今日主角 -->
+  <div class="section-title">今日主角</div>
 
-  <!-- 话题一 -->
-  <div class="topic-card">
-    <h4>特殊孩子家长的"鬼打墙"困境与自媒体破局之路</h4>
-    <div class="topic-time">00:06 - 01:05</div>
+  <!-- 主角一：子蟹（小会发起人） -->
+  <div class="hero-card">
+    <h4>子蟹 —— 9个月自媒体复盘：从5200到月入一万的路有多远</h4>
+    <div class="topic-time">10:01 - 18:50 &nbsp;|&nbsp; 第一周小会发起人</div>
 
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">转念之间：</span>"我想写的跟职场差不多，自闭症孩子有哪些刻板行为，产生哪些问题，家长怎么解决，解决方案跟正常孩子不一样，甚至背道而驰。"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">自闭症家庭</span>
-      <span class="tag">家长心理</span>
-      <span class="tag">内容定位</span>
-      <span class="tag">筛选机制</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
     <div class="detail-content">
-      <div class="sub-heading">一、话题背景与起因</div>
-      <p>深夜，<strong>转念之间</strong>分享了作为自闭症孩子家长的心路历程，她想把专业知识写成自媒体内容，但面对"跟家长说话心累""容易代入"的双重阻力，迟迟没有迈出第一步。群友们围绕这个困境展开了长讨论。</p>
-      <div class="sub-heading">二、主要观点与讨论详情</div>
-      <p><strong>橙子🍊</strong>从内容创作角度分析，将同类作品分为A类（强调父母伟大但让人绝望）、B类（励志但牵强）、C类（只展示成就不强调付出），建议转念之间找到属于自己的"D类"。<strong>二壮</strong>敏锐地指出"到这一步，受众就从特殊孩子的家长变成了全部孩子的家长"，一下子打开了内容受众的天花板。</p>
-      <p>在变现层面，<strong>糕糕</strong>直指核心："所以要设定很高的价格"。<strong>宝鹅</strong>补充"赛道小+高认知，而且姐真的经历过"。群友一致认为，高单价本身就是最好的筛选机制——"不能频繁接单，要提高自己的单价"。</p>
-      <div class="sub-heading">三、结论与启发</div>
-      <p><strong>昍（日日）</strong>给出了关键方法论：吐槽也是内容，"能看懂的过了门槛的就是优质用户"；"你就写这个，这也是一种筛选"；"不是在PUA别人，而是每个人能教的范围是有限的，你要找到那个你能教的范围"。最终为转念之间拟定了文章标题：《七个月，我从鬼打墙，变成佛跳墙》。</p>
+      <div class="sub-heading">小会发起：一份近乎残酷的诚实复盘</div>
+      <p>早上十点刚过，<strong>子蟹</strong>在群里发起了她的小会——一份从25年10月到26年7月、跨度9个月的自媒体全数据复盘。核心数字：粉丝1014、点赞1.2万、总发帖117篇（"太少，不到3天一篇"）、爆贴3篇（"太少"）、变现共计5200元。她的自我评价极其诚实：每个数据后面都跟着"太少"，没有美化，没有借口。客户画像同样清晰——10个付费客户中，3个来自星火群、3个来自新茧群、2个来自小红书、2个来自朋友圈，男女比例3:7，年龄22-34。最关键的发现是："小红书反而没啥获客，大部分都是熟人看到了小红书来了"——这意味着小红书对子蟹来说是名片而非获客渠道，信任来自其他社群的背书。</p>
+
+      <div class="sub-heading">双面人设：公开的"英年早退产品经理" vs 隐藏的"拉拉"</div>
+      <p><strong>子蟹</strong>在小会中完成了一次罕见的自我暴露。她的公开人设是"英年早退、带教、虚线管理、游戏策划、产品经理、多次转岗"——这是一条清晰的职场咨询路径。但她坦陈了一个隐藏人设："拉拉，公司疑似涉灰色地带，洗钱，非典型游戏公司"。这个隐藏面让她面临三重困境：想做拉拉话题但不知道如何切入、没有对家人出柜但做自媒体迟早瞒不住、害怕让爸妈难堪。她的解决方案朴素而有力："好在爸妈快退休了，希望我赚钱的速度能让他们心里平衡一点"——这是所有自媒体人在"自我暴露"和"社会压力"之间的典型挣扎。</p>
+
+      <div class="sub-heading">内容路径选择：口播 vs 段子 vs 露脸，三路并行的困惑</div>
+      <p>子蟹的内容策略面临一个典型的新手分岔路口。路径一：拍口播视频讲职场话题，露脸建立咨询信任，增加B端商单。路径二：拍段子视频多涨粉。路径三：切入拉拉话题讲拉拉故事。她的核心疑虑是"段子和咨询人设会不会冲突？而且拍段子需要时间精力更多，是否应该现在就尝试，还是先把口播弄好再尝试段子？"对此，群友给出了多角度的回应。<strong>溏心蛋</strong>举了暴叔的例子——"暴叔很抽象啊，但是他讲的升学规划就是有很多家长和学生愿意听"——说明段子和专业性可以并存。<strong>AA昍</strong>在下午给出了一个犀利的标题建议："就写这个，换梯术，选择比努力更重要"——直接把子蟹多次转岗的经历抽象为一个可传播的概念。</p>
+
+      <div class="sub-heading">从"写不出来"到"发出口播"：行动是最好的解药</div>
+      <p>子蟹在小会中暴露出一个很多自媒体人都有的自我怀疑："职场话题写起来总不趁手，写帖子很费劲，不知道转口播会不会好一点。我总觉得自己没什么东西。"但她反思后提炼了自己的三个趁手本事：写日报多复盘、多站在大局角度思考、比同事聪明一点选的都是能靠智商换钱的工作。更重要的是，她在小会当天下午就发布了口播视频"逃离游戏，正如逃离金融"，用行动回应了自己的焦虑。<strong>黄云</strong>对口播给出了精确的镜头建议："太凝重了，要么镜头稍微侧一下让凝重的攻击性看起来是显酷，要么语气慢一点点咬字轻一些把音量放大，给人一种事实如此的感觉。"</p>
     </div>
 
     <div class="conclusion-gm">
       <div class="conclusion-box">
         <div class="c-label">关键结论</div>
-        <div class="c-text">面对高情绪消耗的咨询赛道，高价是最好的筛选机制；同时，"写自己的困境"本身就是最好的内容——吐槽也是筛选，能看懂的就是优质用户。</div>
+        <div class="c-text">子蟹的9个月复盘暴露了自媒体新手的典型卡点：数据有积累但离变现目标还有距离（5200 vs 月入1万），内容方向多但缺乏聚焦（职场/拉拉/段子三路并行），自我怀疑严重但核心能力真实存在（复盘力、大局观、选赛道眼力）。她的转折点在于"边写边拍"——下午就发出口播，用行动打破焦虑。</div>
       </div>
       <div class="gm-label">金句时刻</div>
       <div class="gm-item">
-        <div class="gm-quote">你就写这个。吐槽也是可以的，这也是一种筛选。能看懂的，过了门槛的，就是优质用户。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
+        <div class="gm-quote">小红书变成了我的名片，其他的交集提供信任基石，这是我的理解。</div>
+        <div class="gm-author">—— <strong>子蟹</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">到这一步，受众就从特殊孩子的家长变成了全部孩子的家长。</div>
-        <div class="gm-author">—— <strong>二壮</strong></div>
+        <div class="gm-quote">我总觉得自己没什么东西，趁手的本事就是：写日报多复盘，多站在大局角度思考，比我同事聪明一点，选的都是能靠智商换钱的工作，避开了最激烈的卷。</div>
+        <div class="gm-author">—— <strong>子蟹</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">不能频繁接单，要提高自己的单价。</div>
-        <div class="gm-author">—— <strong>宝鹅</strong></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 话题二 -->
-  <div class="topic-card">
-    <h4>子蟹自媒体复盘：从文字到口播的转型破局</h4>
-    <div class="topic-time">10:01 - 10:59 / 18:49 - 22:16</div>
-
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">子蟹：</span>"职场话题写起来总不趁手，写帖子很费劲……我总觉得自己没什么东西，趁手的本事就是：1.写日报多复盘，2.多站在大局角度思考，3.比我同事聪明一点，选的都是能靠智商换钱的工作。"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">口播转型</span>
-      <span class="tag">内容结构</span>
-      <span class="tag">钩子设计</span>
-      <span class="tag">问答形式</span>
-      <span class="tag">镜头呈现</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
-    <div class="detail-content">
-      <div class="sub-heading">一、话题背景与起因</div>
-      <p><strong>子蟹</strong>在群里做了详细的自媒体复盘：9个月发了117篇帖子（不到3天一篇），粉丝1014，变现5200元。核心困境是"写帖子很费劲""没有趁手的本事可以教人"，以及拉拉人设和职场话题"太散没有重点"的困惑。</p>
-      <div class="sub-heading">二、主要观点与讨论详情</div>
-      <p>晚间子蟹发了第一条口播视频，群友们给出了密集反馈。<strong>糕糕</strong>诊断核心问题："太散了，没有钩子，没有重点"，建议用"大标题+3个小标题"的结构，每期围绕一个主标题扩散。<strong>黄云</strong>给出了具体的镜头指导："要么镜头稍微侧一下""要么表现得轻描淡写一点"，并提供了完整的口播改稿示范——结论先行、要点清晰列在段落开头、用"时空门"做类比、最终给出行动方案。<strong>昍（日日）</strong>则从标题策略入手："大部分人没有类比思维，标题里类比的如果不离奇，就不如不类比"，建议把"逃离金融"类比放在内容里而非标题上。</p>
-      <p><strong>黄云</strong>还提出了"快问快答"的形式建议：一问一答，先给结论再解释，5个问题起步，一气呵成会显得"比较懂"。最终子蟹的视频发布后播放量良好，<strong>糕糕</strong>感叹："可见！真诚必杀技啊！"</p>
-      <div class="sub-heading">三、结论与启发</div>
-      <p>口播不是念稿，是议论文和说明文的口语化。好钩子就是好问题，问答形式天然自带结构感。真诚是不可多得的武器——子蟹首条口播的播放量已经证明了这一点。</p>
-    </div>
-
-    <div class="conclusion-gm">
-      <div class="conclusion-box">
-        <div class="c-label">关键结论</div>
-        <div class="c-text">口播内容的核心是"问答+钩子"结构，信息量要大但口吻要真诚；先剪了发再迭代，在实践中找到自己的节奏，不要等到"完美"再行动。</div>
-      </div>
-      <div class="gm-label">金句时刻</div>
-      <div class="gm-item">
-        <div class="gm-quote">好的钩子是代替观众问出了他们心中的疑问。</div>
-        <div class="gm-author">—— <strong>黄云</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">很真诚是不可多得的武器，所以一定会好。</div>
-        <div class="gm-author">—— <strong>糕糕</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">笑死我了，我的真诚要义就是，开源会带来更多收益，因为说了他们也听不懂。</div>
+        <div class="gm-quote">对，其实我不是很在乎爸妈怎么想，他们受不了他们可以跑。问题在我爸妈太要脸。好在他们快退休了，希望我赚钱的速度能让他们心里平衡一点。</div>
         <div class="gm-author">—— <strong>子蟹</strong></div>
       </div>
     </div>
   </div>
 
-  <!-- 话题三 -->
+  <!-- 老司机补给站 -->
+  <div class="section-title">老司机补给站</div>
   <div class="topic-card">
-    <h4>糕糕的医美消费指导：从机构困局到独立C端咨询</h4>
-    <div class="topic-time">18:13 - 21:57</div>
+    <h4>AA昍的战略级建议：换梯术 + 不要掺和对象 + 社群飞轮</h4>
+    <div class="topic-time">14:15 - 14:18</div>
 
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">糕糕：</span>"C端我是想重新把这个业务开起来的……比如，确实有诉求，去了以后销售吹得天花乱坠，来找糕某咨询，花两千直接避免自己在机构充值十万。"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">医美咨询</span>
-      <span class="tag">消费指导</span>
-      <span class="tag">信息差</span>
-      <span class="tag">高客单价</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
     <div class="detail-content">
-      <div class="sub-heading">一、话题背景与起因</div>
-      <p><strong>糕糕</strong>在协和整外专家助理和内容运营岗位上积累了三年医美咨询经验，曾面临机构KPI压力导致的"精神分裂"——明知客户需要就医而非医美，但劝退客户意味着机构没有收入。如今脱离机构，她想重新启动C端医美消费指导业务，在群里征求大家意见。</p>
-      <div class="sub-heading">二、主要观点与讨论详情</div>
-      <p><strong>糕糕</strong>分享了完整的咨询模式：将客户分为"不正常诉求"（想回18岁）和"正常诉求"（怕被坑的理性消费者）两类，前者劝退，后者提供信息差价值。她透露了一个关键数据："大群就有过群友去某机构一口气做了十万块钱的，其中九万都是毫无必要的。"<strong>昍（日日）</strong>用"精神病"做类比点醒了核心逻辑："如果直接说受不了精神病人所以不做，这就属于自欺欺人。"程度不严重的用认知层面的信息帮他提升效果，"赚点钱，对他也有真实帮助"。</p>
-      <p><strong>黄云</strong>提出了信任背书的担忧，<strong>糕糕</strong>用事实回击——"很多人不知道的信息差，国外的医美水平非常烂"，国内正规机构的水平比发达国家更好。她甚至能做到自己去做医美免费——"打了个100单位的肉毒素，都是免费做的，顺便给销售和运营上一节课"。</p>
-      <div class="sub-heading">三、结论与启发</div>
-      <p>最终糕糕总结了动力的来源："这个钱我不挣，全是傻逼在挣。" willingness-to-pay极高的高端客户+信息差壁垒+独立于机构的客观立场，医美消费指导是一个被严重低估的小众高利润赛道。</p>
+      <p><strong>AA昍</strong>在下午对子蟹的小会内容给出了三条高密度建议。第一条是内容定位——"就写这个，换梯术，选择比努力更重要"——将子蟹多次转岗、靠选赛道避卷的经历提炼为一个有传播力的概念，这种"给别人的经历命名"的能力是老司机最核心的价值之一。第二条是实操红线——"不要对象，绝对不要，结了婚都能离"、"要和对象一起做，群费就不能是1k，得是2w"、"对象也不要当助理，到时谁指挥谁？"——这些斩钉截铁的判断来自大量真实案例。第三条是战略思维——"想想怎么把你的社群，和你加入的这边的社群，做成飞轮"——暗示子蟹的付费群和十二W车行之间应该形成某种互相赋能的循环。</p>
     </div>
 
     <div class="conclusion-gm">
-      <div class="conclusion-box">
-        <div class="c-label">关键结论</div>
-        <div class="c-text">医美消费指导的核心价值不是"推荐机构"，而是"帮你花两千避免充值十万"；脱离机构后独立做咨询，反而能提供真正客观的判断。</div>
-      </div>
       <div class="gm-label">金句时刻</div>
       <div class="gm-item">
-        <div class="gm-quote">大群就有过群友去某机构一口气做了十万块钱的，其中九万都是毫无必要的。</div>
-        <div class="gm-author">—— <strong>糕糕</strong></div>
+        <div class="gm-quote">不要对象，绝对不要，结了婚都能离。要和对象一起做，群费就不能是1k，得是2w。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">这个钱我不挣，全是傻逼在挣。</div>
-        <div class="gm-author">—— <strong>糕糕</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">消费者是试不出来经验的，只有真的开过机构的人，才知道这里是咋回事。</div>
-        <div class="gm-author">—— <strong>糕糕</strong></div>
+        <div class="gm-quote">就写这个，换梯术，选择比努力更重要。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
       </div>
     </div>
   </div>
 
-  <!-- 三、秉烛共谈录・小会精粹 -->
-  <div class="section-title">三、秉烛共谈录・小会精粹</div>
-
   <div class="topic-card">
-    <h4>昍（日日）深夜长谈转念之间：聪明人"合理化"的疙瘩与燃烧的义务</h4>
-    <div class="topic-time">01:02 - 01:33</div>
+    <h4>黄云的口播镜头指导：凝重感的两种解法</h4>
+    <div class="topic-time">18:58 - 19:05</div>
 
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">昍（日日）：</span>"你给我的感觉刚好相反——你肯定有很多真本事，但似乎说不出来。如果你是个坏人，我还安心一些。"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">主体性</span>
-      <span class="tag">合理化</span>
-      <span class="tag">听劝</span>
-      <span class="tag">基因彩票</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
     <div class="detail-content">
-      <div class="sub-heading">一、问题提出与背景补充</div>
-      <p>凌晨一点，<strong>转念之间</strong>说自己"挺听劝的"，<strong>昍（日日）</strong>直接否定了这个说法："听劝，本身就是个很差的词。人有主体性，为什么还要别人劝，而且还炫耀自己听劝？"这句话成为整场对话的导火索。昍随后展开了一段极其坦诚的"示弱式"表达："我明明应该是可以帮到你，让你跳起来帮别人的。我为什么没做到呢。"</p>
-      <div class="sub-heading">二、核心焦点与深层议题挖掘</div>
-      <p>昍指出<strong>转念之间</strong>的核心问题不是能力不足，而是"合理化"能力太强——"我真正的第二个问题是脑子太快了，太擅长实时编借口了"。他用了一个精妙的比喻："糕的鼻子上有个疙瘩，她用了很久才慢慢放下。但有的人心里明明有个疙瘩，却一直不去处理，别人也不好说什么。看久了，想帮忙的人也会怀疑——会不会看错了？"</p>
-      <p>他进一步分析了转念之间的"狡猾"："我是嘴硬，硬解释。你很软，不对抗，很柔和，习惯性地就躲开了。你这样的人难对付得多，99%的咨询师斗不过你，而且你还不缺钱，一小时3k也付得起，等于买通了咨询师，更完了，无解。"</p>
-      <div class="sub-heading">三、多方观点流派与方案探讨</div>
-      <p><strong>二壮</strong>被这番对话触动，回忆起自己的转折点："当时我天灵盖都要震开了，那个小会可以说是我自己的遵义会议……一切起点来自于某天晚上小会——共产主义者有义务发财。"<strong>昍</strong>在听完转念之间愿意做得更好后，引用了党史中的"政委"概念来阐释调动人的积极性的力量，并分享了马斯克火箭回收和光刻机突破的思考。</p>
-      <div class="sub-heading">四、老司机引导与方案点评</div>
-      <p>昍用"榜样的榜样"来推动——先以转念之间在开小会时分享职场故事的高光时刻为例（"当狗、当牛马、当白手套"——"这一看就是真懂行的，信手拈来"），指出"这样的高光时刻很少，这很不正常"。他要求转念之间"实事求是"，"你拿100w年薪offer，指望别人夸你吗？"</p>
-      <div class="sub-heading">五、讨论共识与分歧总结</div>
-      <p>这场对话最终形成了一个深层共识：聪明人的"合理化"能力既是天赋也是枷锁。<strong>二壮</strong>用自己的蜕变经历做了佐证，<strong>转念之间</strong>回应"我想做得更好，也想帮助更多"。昍以宏大的叙事收尾："假如历史上所有聪明人都这样想的话，我们早就在银河系之外了。功成不必在我，功成必定有我。"</p>
+      <p><strong>黄云</strong>在看了子蟹发布的口播视频后，给出了极其具体的镜头建议。他先肯定了子蟹在视频中"回答问题'转行呗'那几个字时的交流感"，然后精准诊断了问题——"太凝重了，因为在针对一个点聚焦深入时说出来的话看上去就会有攻击性"。他给出了两个解决方案：方案一是技术层面的——镜头稍微侧一下，"让凝重的攻击性看起来不会拽，是显酷，这样可以抬高内容的深度"；方案二是表演层面的——"语气慢一点点，咬字轻一些把音量放大，表情就可以缓一点，给人一种事实如此的感觉"。他还建议子蟹尝试问答形式的口播内容，"每个问题之间有递进，把钩子用问题的方式第三视角说出来"——这个建议直接给出了口播的内容结构。</p>
     </div>
 
     <div class="conclusion-gm">
-      <div class="conclusion-box">
-        <div class="c-label">关键结论</div>
-        <div class="c-text">聪明人最大的敌人不是外界，而是自己的"合理化"能力——太擅长给自己编借口，以至于连自己都骗过了。真正的突破从"不再听劝"开始，建立主体性。</div>
-      </div>
-      <div class="conclusion-box">
-        <div class="c-label">关键结论</div>
-        <div class="c-text">"听劝"是个很差的词。人有主体性，为什么还要别人劝？拿到100w年薪offer，指望别人夸你吗？要实事求是。</div>
-      </div>
       <div class="gm-label">金句时刻</div>
       <div class="gm-item">
-        <div class="gm-quote">你肯定有很多真本事，但似乎说不出来，不知道为什么。如果你是个坏人，我还安心一些。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
+        <div class="gm-quote">镜头稍微侧一下，让那个凝重的攻击性看起来不会拽，是显酷，这样可以抬高内容的深度。</div>
+        <div class="gm-author">—— <strong>黄云</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <h4>糕糕的三线并行：资源对接 + 医美C端开放讨论 + 子蟹方向校准</h4>
+    <div class="topic-time">17:42 - 18:50</div>
+
+    <div class="detail-content">
+      <p><strong>糕糕</strong>今天几乎是同时推进三条线。第一条是资源对接——推荐<strong>绵羊</strong>去她经常合作的美妆PR公司"水羊传媒"，返点20-25%，"矩阵式合作"，还贴心地嘱咐"不必急着给我红包，真的成了合作结束拿到费用再说"。第二条是医美C端开放式讨论——她分享了自己想重新开起来的医美咨询业务，背景是曾做协和整外专家助理+内容运营，核心产品是"花两千直接避免自己在机构充值十万"的咨询，关键顾虑是"信任度"和"精神病太多"。<strong>AA昍</strong>用精神科的类比来回应："有一部分医美也是精神病。程度不严重的，用认知层面的消息帮他提升一下，赚点钱，对他也有真实帮助。"<strong>溏心蛋</strong>、<strong>橙子🍊</strong>、<strong>黄云</strong>都参与了这个讨论，形成了一个高质量的交叉视角碰撞。</p>
+      <p>第三条是对子蟹的方向校准——"我看起来都是很散的东西，人设倒是好办，但是内容规划需要更垂直。整体大方向呢？你要教大家干啥？"这是一个老司机对新手的核心追问，直指子蟹最大的问题：方向太多，缺乏一个清晰的产品定义。</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">花两千直接避免自己在机构充值十万。</div>
+        <div class="gm-author">—— <strong>糕糕</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">我是嘴硬，硬解释。你很软，不对抗，很柔和，习惯性地就躲开了。你这样的人99%的咨询师斗不过你。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
+        <div class="gm-quote">如果直接就说——虽然我懂这个，但是受不了这类人，不愿意接触，所以这东西我做不了——这就属于自欺欺人。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
       </div>
+    </div>
+  </div>
+
+  <!-- 同伴行动 -->
+  <div class="section-title">同伴行动</div>
+
+  <div class="topic-card">
+    <h4>二壮 —— 社群运营进展汇报：79人免费群 + 周六取经计划</h4>
+    <div class="topic-time">11:41 - 12:07</div>
+
+    <div class="detail-content">
+      <p><strong>二壮</strong>在群里同步了自己社群的最新进展：微信群79人，今早群里很活跃，目前免费运营准备半个月左右开始付费，每天给自己设两小时运营上限。他透露了明确的策略："得益于新茧群和星火群，我能直接照搬的东西不少，但是要把它变成成熟的产品。"当<strong>宝鹅</strong>问他每天运营+自媒体共花多少时间时，他回答"最近少，最多也就四个小时，主业太忙了"。他还计划周六晚上重点请教社群运营问题，同时也不放过当天的学习机会："我特别期待今天晚上帝王蟹的小会能够多带来一些工作思路和方法，准备抄了。"</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
       <div class="gm-item">
-        <div class="gm-quote">基因彩票，中了就要兑现，否则人族如何解放？</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">当时我天灵盖都要震开了，那个小会可以说是我自己的遵义会议。</div>
+        <div class="gm-quote">得益于新茧群和星火群，我能直接照搬的东西不少，但是要把它变成成熟的产品。</div>
         <div class="gm-author">—— <strong>二壮</strong></div>
       </div>
-      <div class="gm-item">
-        <div class="gm-quote">和职场合作其实是一样的：a没有义务做b的，但双方各自多做一些且觉得天然应该的，这样的合作就会非常顺畅。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">有些人都是看似爱分享，实则一点干货没有，假大空，借分享的名头吹嘘自己的能力。</div>
-        <div class="gm-author">—— <strong>糕糕</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">别人做事是尽量投入，你尽量不要太投入，你太喜欢用微观投入来逃避了，每次都会憋个大的。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">聪明人都很擅长「合理化」，哪怕拉裤子里了也能想到这样做的7个好处。自欺欺人的时候是没救的。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
-      </div>
     </div>
   </div>
 
-  <!-- 四、解惑一点通・有问必答 -->
-  <div class="section-title">四、解惑一点通・有问必答</div>
+  <div class="topic-card">
+    <h4>溏心蛋 —— 从子蟹身上学到的三点</h4>
+    <div class="topic-time">11:48 - 11:48</div>
 
-  <div class="qa-card">
-    <h4>自媒体要不要掺和对象？子蟹的人设与伴侣边界</h4>
-    <div class="qa-climb">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">查理：</span>"你对象愿意配合出镜吗？如果一起出现，都不用说啥评论区就磕起来了。"</div>
-    </div>
-    <div class="qa-answer-label">解答</div>
-    <div class="qa-content">
-      <div class="sub-heading">一、问题背景</div>
-      <p><strong>子蟹</strong>在小会中提到了拉拉人设的切入困境：最大顾虑是对家人未出柜，在自媒体上暴露可能让小镇爸妈难堪。</p>
-      <div class="sub-heading">二、核心原因分析</div>
-      <p><strong>查理</strong>建议让对象配合出镜制造暧昧感，<strong>宝鹅</strong>一句话终结了这个想法："我建议不要了，万一分手了呢。"——这揭示了一个更深层的逻辑：自媒体是长期资产，而感情关系有不确定性，两者绑定风险极高。</p>
-      <div class="sub-heading">三、解决方案与建议</div>
-      <p><strong>糕糕</strong>给出了终极结论："任何自媒体都不要掺和对象、同事或搭档，先把自己干好。"<strong>昍（日日）</strong>更直接："不要对象，绝对不要，结了婚都能离。"并补充了商业逻辑——"要和对象一起做，群费就不能是1k，得是2w"，用价格来量化风险。</p>
-    </div>
-    <div class="qa-tags">
-      <span class="tag">自媒体边界</span>
-      <span class="tag">人设风险</span>
-      <span class="tag">独立经营</span>
+    <div class="detail-content">
+      <p>在看完子蟹的小会后，<strong>溏心蛋</strong>快速做出了三点自我对照："1. 我几乎等于没有写过复盘日报；2. 我要多想一下怎么让宏观的考虑落地；3. 凭力气平推惯了的我，要开始增加一些脑力训练。"这是群内"互相学习"的一个缩影——不是等着老司机投喂，而是从同侪的分享中主动提取可学之处。</p>
     </div>
   </div>
 
-  <!-- 五、智慧火花匣・每日精选 -->
-  <div class="section-title">五、智慧火花匣・每日精选</div>
+  <div class="topic-card">
+    <h4>查理与宝鹅 —— 拉拉话题的边界讨论</h4>
+    <div class="topic-time">10:40 - 10:43</div>
 
-  <div class="pick-card">
-    <h4>昍（日日）的"痛经女翻盘"职场SOP：把自己当领导</h4>
-    <div class="pick-climb">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">昍（日日）：</span>"从一个事儿逼，变成一个分队，进而变成SOP，特殊性就全部抹掉了。常设的特殊名额还是特殊名额吗？他就不特殊了。"</div>
-    </div>
-    <div class="pick-body">
-      <div class="sub-heading">一、推荐内容</div>
-      <p>昍在另一个群中帮一位因痛经无法参加集体活动的老师出谋划策。他设计了一套堪称教科书级的"向上管理"方案：建议当事人在酒店做后勤——帮校长联系餐馆、准备水果、协调导游信息，把"请假的弱势"转化为"服务团队的主动贡献"，既保全了面子又不躺平。更精彩的是"三校联合小分队"方案：让ABC三校各出一人，把"特殊请假"抹成"常规SOP"。</p>
-      <div class="sub-heading">二、核心价值</div>
-      <p>这不是拍马屁，是"玩弄领导"——借势。核心心法是"把自己当领导，换位思考"，把"旅游"重新定义为"上班"，心态一转，海阔天空。这套方法论从职场SOP设计到增量博弈思维，值得反复研读。</p>
-    </div>
-    <div class="pick-tags">
-      <span class="tag">向上管理</span>
-      <span class="tag">SOP思维</span>
-      <span class="tag">增量博弈</span>
-    </div>
-  </div>
-
-  <div class="pick-card">
-    <h4>糕糕的"鲶鱼人格"：线下社恐救星的真实面目</h4>
-    <div class="pick-climb">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">糕糕：</span>"我线下会呈现不同的分裂人格，是在我做医疗咨询的时候搞出来的。如果聚餐的人都是社恐，我的咨询热情人格会大爆发。但那个不是我。"</div>
-    </div>
-    <div class="pick-body">
-      <div class="sub-heading">一、推荐内容</div>
-      <p>在讨论"线上压迫感vs线下害羞"的反差时，<strong>糕糕</strong>坦诚分享了自己的"分裂人格"：在线下聚餐时如果大家都是社恐，她的咨询热情人格会大爆发变成"鲶鱼"，会临场发挥冷笑话、帮大家拍照活跃气氛——"但那个不是我"。这与<strong>爱吃豹🐆</strong>的"身为i人会疯狂讲话"形成了有趣的呼应。</p>
-      <div class="sub-heading">二、核心价值</div>
-      <p>揭示了一个普遍现象：很多人在职业中训练出的"社交人格"和真实自我之间存在张力。用日日的比喻说，"我就是鲶鱼"不是自夸，而是对一种功能性人格的清醒认知。</p>
-    </div>
-    <div class="pick-tags">
-      <span class="tag">社交人格</span>
-      <span class="tag">职业面具</span>
-      <span class="tag">自我认知</span>
+    <div class="detail-content">
+      <p>针对子蟹是否要公开拉拉人设的问题，群友给出了两种视角。<strong>查理</strong>建议用"懂的都懂"的方式——如果对象愿意配合出镜，评论区自然就磕起来了；如果不愿意，可以讲"我的朋友"的暧昧故事。同时他认为小镇曝光"暂时不用考虑"，因为"真的很难刷到，做到累子那种程度可能才会影响到身边人"。<strong>宝鹅</strong>则泼了冷水："我建议不要了，万一分手了呢"——这个提醒让查理瞬间意识到问题的严重性。</p>
     </div>
   </div>
 
   <!-- Footer -->
   <div class="footer-note">
-    本报告基于群聊数据自动生成，仅供参考。内容可能包含个人观点，不代表群组官方立场。
+    本报告基于群聊数据自动生成，仅供参考。
+    生成版本：v5.4 &middot; 2026-07-13
   </div>
 
 </div>

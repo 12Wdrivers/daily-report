@@ -91,17 +91,9 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   }
   .nav-bar .nav-label {
-    font-size: 13px;
-    color: #fff;
-    background: var(--accent);
-    font-weight: 600;
-    padding: 6px 14px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.15s ease;
-  }
-  .nav-bar .nav-label:hover {
-    background: #d14e2e;
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 500;
   }
   .nav-btn {
     background: none;
@@ -472,6 +464,44 @@
   @media (min-width: 520px) {
     .container { padding: 0 24px 80px; }
   }
+
+  /* ===== v5.4 新增样式 ===== */
+  .header-card { background: linear-gradient(135deg, var(--accent) 0%, #f07a5a 100%); border-radius: 20px; padding: 32px 24px 28px; margin: 16px 0 14px; text-align: center; box-shadow: 0 4px 16px rgba(232, 93, 58, 0.2); }
+  .header-card h1 { font-size: 22px; font-weight: 800; color: #ffffff; letter-spacing: 0.5px; margin-bottom: 10px; text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+  .header-card .date-row { font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 4px; }
+  .header-card .time-row { font-size: 12px; color: rgba(255,255,255,0.7); }
+  .section-title { font-size: 16px; font-weight: 700; color: var(--ink); margin: 24px 0 10px 4px; padding-left: 10px; border-left: 3px solid var(--accent); }
+  .hero-card { background: var(--card); border-radius: 16px; padding: 22px 18px; margin-bottom: 14px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+  .hero-card h4 { font-size: 16px; font-weight: 700; color: var(--ink); line-height: 1.5; margin-bottom: 4px; }
+  .hero-card .topic-time { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+  .hero-card .detail-content .sub-heading { font-size: 14px; font-weight: 700; color: var(--ink); margin: 18px 0 10px; padding: 8px 0 8px 12px; border-left: 3px solid var(--accent); background: linear-gradient(90deg, var(--kw-bg) 0%, transparent 70%); border-radius: 0 6px 6px 0; }
+  .hero-card .detail-content .sub-heading:first-child { margin-top: 0; }
+  .hero-card .detail-content p { margin-bottom: 14px; line-height: 1.85; color: var(--ink2); font-size: 14px; }
+  .hero-card .detail-content p:last-child { margin-bottom: 0; }
+  .conclusion-gm { margin-top: 18px; padding: 16px 14px 14px; background: var(--accent-light); border-radius: 12px; border: 1px solid var(--accent-tag); }
+  .conclusion-gm .conclusion-box { background: var(--card); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+  .conclusion-gm .gm-label { font-size: 13px; font-weight: 700; color: var(--accent); margin-bottom: 10px; padding-left: 8px; border-left: 2px solid var(--accent); }
+  .conclusion-gm .gm-item { background: var(--card); border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .conclusion-gm .gm-item:last-child { margin-bottom: 0; }
+  .conclusion-gm .gm-quote { font-size: 14px; line-height: 1.7; color: var(--ink); font-weight: 500; }
+  .conclusion-gm .gm-author { font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .topic-card { background: var(--card); border-radius: 14px; padding: 18px 16px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .topic-card h4 { font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+  .topic-card .topic-time { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+  .topic-card .detail-content p { margin-bottom: 12px; line-height: 1.8; color: var(--ink2); font-size: 14px; }
+  .topic-card .detail-content .sub-heading { font-size: 14px; font-weight: 700; color: var(--ink); margin: 14px 0 8px; }
+  .detail-content p strong, .qa-content p strong { background: var(--accent-light); padding: 1px 4px; border-radius: 3px; font-weight: 600; color: var(--accent); }
+  .quote-section { background: var(--card); border-radius: 14px; padding: 18px 16px; margin-bottom: 12px; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .quote-label { font-size: 12px; font-weight: 700; color: var(--accent); margin-bottom: 8px; letter-spacing: 1px; }
+  .quote-text { font-size: 16px; font-weight: 600; color: var(--ink); line-height: 1.6; margin-bottom: 8px; }
+  .quote-author { font-size: 13px; color: var(--muted); }
+  .stats-card { background: var(--card); border-radius: 14px; padding: 18px 16px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .stat-big { font-size: 28px; font-weight: 800; color: var(--accent); }
+  .stat-label { font-size: 12px; color: var(--muted); }
+  .nav-bar { display: flex; gap: 6px; margin-bottom: 14px; overflow-x: auto; padding-bottom: 4px; }
+  .nav-btn { background: var(--card); border: 1px solid var(--rule); border-radius: 20px; padding: 6px 14px; font-size: 13px; color: var(--ink2); white-space: nowrap; }
+  .nav-label { background: var(--card); border: 1px solid var(--rule); border-radius: 20px; padding: 6px 14px; color: var(--muted); font-size: 13px; font-weight: 600; white-space: nowrap; }
+  .footer-note { font-size: 12px; color: var(--muted2); text-align: center; margin-top: 24px; padding: 0 16px; }
 </style>
 </head>
 <body>
@@ -482,355 +512,249 @@
   <div class="header-card">
     <h1>十二W车行群日报</h1>
     <div class="date-row">2026 年 07 月 14 日（星期二）</div>
-    <div class="time-row">00:00 - 23:59</div>
+    <div class="time-row">08:47 - 22:00</div>
   </div>
 
   <!-- Nav Bar -->
   <div class="nav-bar">
-    <a class="nav-btn" href="daily-report-2026-07-13.html">上一天</a>
-    <a class="nav-label" href="index.html">日报导航</a>
-    <a class="nav-btn" href="daily-report-2026-07-15.html">下一天</a>
+    <button class="nav-btn" disabled>上一天</button>
+    <span class="nav-label">日报导航</span>
+    <button class="nav-btn" onclick="location.href='daily-report-v5.4-2026-07-15.html'">下一天</button>
   </div>
 
   <!-- 每日金句 -->
   <div class="quote-section">
     <div class="quote-label">每日金句</div>
-    <div class="quote-text">临考前一个月他去学，他能学啥？家长买的不就是一个机会吗？他自己花钱买赎罪券，也只赎自己的罪。</div>
-    <div class="quote-author"><strong>溏心蛋</strong> · 2026-07-14 · 小会精粹</div>
+    <div class="quote-text">先穷尽方向，只列方向，不考虑可行性。再考虑可行性、投入产出比、时间成本。一步一步来。</div>
+    <div class="quote-author"><strong>AA昍</strong> · 2026-07-14 · 产品经理思维做自媒体</div>
   </div>
 
-  <!-- 一、总消息概览 -->
-  <div class="section-title">一、总消息概览</div>
+  <!-- 总消息概览 -->
+  <div class="section-title">总消息概览</div>
   <div class="stats-card">
-    <div>
-      <div class="stat-big">782</div>
-      <div class="stat-label">总消息数量</div>
+    <div class="stat-item-sm">
+      <div class="num">807</div>
+      <div class="label">总消息</div>
     </div>
-    <div class="stat-group">
-      <div class="stat-item-sm">
-        <div class="num">14</div>
-        <div class="label">活跃成员</div>
-      </div>
-      <div class="stat-item-sm">
-        <div class="num">20:00</div>
-        <div class="label">最活跃时段</div>
-      </div>
+    <div class="stat-item-sm">
+      <div class="num">28,490</div>
+      <div class="label">全文字数</div>
+    </div>
+    <div class="stat-item-sm">
+      <div class="num">14</div>
+      <div class="label">阅读时长</div>
     </div>
   </div>
 
-  <!-- 二、火花碰撞时刻・热点话题 -->
-  <div class="section-title">二、火花碰撞时刻・热点话题</div>
+  <!-- 今日主角 -->
+  <div class="section-title">今日主角</div>
 
-  <!-- 话题一 -->
-  <div class="topic-card">
-    <h4>个人服务定价的底层逻辑：你不是工厂，没有优惠的能力</h4>
-    <div class="topic-time">18:02 - 18:39</div>
+  <!-- 主角一：查理（小会发起人） -->
+  <div class="hero-card">
+    <h4>查理 —— 美术生的第三条路：从"劝退"到"艺考张雪峰"</h4>
+    <div class="topic-time">09:48 - 20:07 &nbsp;|&nbsp; 小会发起人</div>
 
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">昍（日日）：</span>"半小时500，一小时1000，没有任何优惠，因为边际成本并没有下降，你又不是开工厂，搞个毛线"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">定价策略</span>
-      <span class="tag">边际成本</span>
-      <span class="tag">价格跳变</span>
-      <span class="tag">预期管理</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
     <div class="detail-content">
-      <div class="sub-heading">一、话题背景与起因</div>
-      <p><strong>宝鹅</strong>在讨论咨询服务定价时，<strong>昍（日日）</strong>突然抛出一套个人服务定价的底层框架，直接刷新了群友对"优惠""阶梯价"的认知。</p>
-      <div class="sub-heading">二、主要观点与讨论详情</div>
-      <p><strong>昍（日日）</strong>提出个人咨询定价的三条铁律：第一，按时间线性计价，半小时500、一小时1000、两小时3000——"因为老子累了"，人不是机器，越往后越疲惫，价格必须递增；第二，绝对不要搞优惠活动，"你不是工厂，你没有这个优惠的能力"，不要给客户制造"时不时会打折"的错误预期；第三，价格要跳变而非微调，"不要给人一种他时不时会优惠活动的感觉"。<strong>子蟹</strong>随后用血泪教训印证："价格是要跳变的，我已经被2000的单子坑了，还得狠狠涨价。"<strong>二壮</strong>也当场表示"又学到了，那我这单500之后不这么弄了"，并感慨"意识到这个，真的很爽"。</p>
-      <div class="sub-heading">三、结论与启发</div>
-      <p>个人服务的定价核心是尊重自身的时间和精力成本。优惠和折扣看似促成交易，实则在透支品牌价值和客户预期。正确的做法是：价格透明、梯度递增、绝不打折。</p>
+      <div class="sub-heading">小会发起：双号困境下的职业迷茫</div>
+      <p>上午九点四十八分，<strong>查理</strong>发起本周车行小会，提交了一份详尽的PDF文档。她坦诚梳理了当前两个账号的困境：家居号900+粉仅有置换变现，画画号2700+粉尚未变现。她画得慢，一张画要一个多星期，自我评价"性价比很低的出卖时间"。但在群友追问下，她坦白自己最爱的还是画画——"我太爱画画了"。</p>
+
+      <div class="sub-heading">群友围剿：艺考培训——一条查理从未想过的路</div>
+      <p>讨论中，<strong>二壮</strong>率先提出"艺术界张雪峰"的定位。此后<strong>溏心蛋</strong>用一手数据揭示了艺考市场的惊人规模：全芜湖市13000名考生中，4000-8000名家庭愿意花二三十万送孩子学美术，"家长买的是赎罪券，只赎自己的罪"。<strong>黄云</strong>分享了自己大学期间做艺考培训的经历——以一个工科生的身份上影视鉴赏课，一个学期赚了近3万块，点出"这个赛道很多都是大学生在上课，难度低"。黄云更一针见血："成交理由一旦好，是一力降十会的。产品会自动说话吸引人。"</p>
+
+      <div class="sub-heading">从拒绝到接纳：观念的根本转变</div>
+      <p><strong>查理</strong>起初抗拒艺考培训方向，直言"我觉得学美术纯粹害人"。但在溏心蛋、黄云、二壮等多位群友的接力说服下，她经历了关键的观念转变。溏心蛋用自己劝学生学德语的例子打破她的心理障碍："你管他翻不翻呢？咱目的不就是为了挣钱嘛"。黄云从价值观层面升华："这群学美术的人怎么都会把钱交出去，你不赚也会给别人。你把赚来的资源复用在真正有潜力的美术生身上，还有培养人才的一功。"查理最终松口："大家说得对。如果是别人来赚，不如我来赚。甚至我还是美院毕业，我自己有考学的经验，并且是成功的。"</p>
+
+      <div class="sub-heading">AA昍的系统性批改：先穷尽再可行性</div>
+      <p>下午两点，<strong>AA昍</strong>对查理的PDF进行了系统性批改。他指出三个核心问题：第一，两个赛道的变现方式没有穷尽分析；第二，"性价比很低"的判断需要深入展开；第三，C端高价约稿（如画头像3万）完全没有体现在规划中。他给出了产品经理方法论："先穷尽方向，只列方向，不考虑可行性——产品经理环节。再考虑可行性、投入产出比、时间成本——程序员环节。一步一步来。"并犀利点出查理的核心矛盾："自媒体从来都是只能做高客单价的生意，不然干嘛不进大厂？怎么到现在了还在讨论这个？"</p>
     </div>
 
     <div class="conclusion-gm">
       <div class="conclusion-box">
         <div class="c-label">关键结论</div>
-        <div class="c-text">个人服务不是工厂流水线，不存在规模效应带来的成本递减。定价必须反映时间的真实稀缺性，优惠只会制造错误的客户预期。</div>
+        <div class="c-text">查理的美术自媒体有两条明确的变现路径：一是艺考培训咨询（面向家长，客单价高），二是C端高价约稿（面向二次元粉丝，出圈可期）。家居号作为辅助保持更新即可。核心思路是：用美院+成功考学的履历建立信任，用"劝退美术"的差异化定位吸引眼球，用"对手不强、你有戏"的叙事给家长希望。关键一步是先把方向的穷尽做好，不能跳过分析直接做执行。</div>
       </div>
       <div class="gm-label">金句时刻</div>
       <div class="gm-item">
-        <div class="gm-quote">半小时500，一小时1000，没有任何优惠，因为边际成本并没有下降，你又不是开工厂，搞个毛线。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
+        <div class="gm-quote">这群学美术的人怎么都会把钱交出去，你不赚也会给别人。你把赚来的资源复用在真正有潜力的美术生身上，还有培养人才的一功。</div>
+        <div class="gm-author">—— <strong>黄云</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">2小时3000，因为老子累了。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
+        <div class="gm-quote">成交理由一旦好，是一力降十会的。产品会自动说话吸引人。这时候做起内容来就很轻松了，因为营销上不需要怎么费劲。</div>
+        <div class="gm-author">—— <strong>黄云</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">价格是要跳变的，我已经被2000的单子坑了，还得狠狠涨价。</div>
-        <div class="gm-author">—— <strong>子蟹</strong></div>
+        <div class="gm-quote">自媒体从来都是只能做高客单价的生意，不然干嘛不进大厂？怎么到现在了，还在讨论这个？</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
       </div>
     </div>
   </div>
 
-  <!-- 话题二 -->
-  <div class="topic-card">
-    <h4>IP稀缺性的本质：审美和"不能被复制的一切"最值钱</h4>
-    <div class="topic-time">00:05 - 00:10</div>
+  <!-- 主角二：二壮 -->
+  <div class="hero-card">
+    <h4>二壮 —— 私域爆破：一天两个群满员，"反复就是反复"的顿悟</h4>
+    <div class="topic-time">11:21 - 18:30 &nbsp;|&nbsp; 群运营取得突破性进展</div>
 
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">转念之间：</span>"美和财富，是唯二不需要解释就可以让人理解的东西。"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">IP价值</span>
-      <span class="tag">审美壁垒</span>
-      <span class="tag">稀缺性</span>
-      <span class="tag">内容变现</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
     <div class="detail-content">
-      <div class="sub-heading">一、话题背景与起因</div>
-      <p>深夜闲聊中，<strong>转念之间</strong>抛出一个关于"美"的价值论断，引发<strong>糕糕</strong>的进一步延伸。</p>
-      <div class="sub-heading">二、主要观点与讨论详情</div>
-      <p><strong>转念之间</strong>认为"美和财富是唯二不需要解释就可以让人理解的东西"，并指出"跟美有关的IP都很值钱，触达的范围太广了"。<strong>糕糕</strong>随之补刀："不能被复制的一切都很值钱，审美风格就是其中一个。"这两句话构成了当天最早也最精炼的IP价值论。后续讨论中，<strong>糕糕</strong>还提到自己脑子里"冒出来了一些古灵精怪的想法"，想学<strong>绵羊</strong>如何呈现自己的特色，甚至考虑"写小说，主角就是'我'"。</p>
-      <div class="sub-heading">三、结论与启发</div>
-      <p>IP的核心壁垒不是知识或信息，而是"不能被复制"的东西——审美风格、个人经历、表达方式。越难被复制，越值钱。</p>
+      <div class="sub-heading">引流爆了：小红书群一天破百</div>
+      <p>下午一点零九分，<strong>二壮</strong>接连报喜："又爆了一篇，引流效果非常好，微信群马上破百""小红书一群已经满了，二群刚开就50人了"。到下午四点，二群已达325人，下午五点更突破到"一群满+二群255人"。他意识到之前的内容分层策略"非常的保守，或者说是愚蠢"："你只需要把优质的内容扔出去就好了，自然会吸引来更多的咨询。"</p>
+
+      <div class="sub-heading">"反复就是反复"：一年多前真理的顿悟</div>
+      <p>下午五点，<strong>二壮</strong>在群中发出了一段深刻的复盘："再优质的内容，你说一遍两遍是根本没用的，得八遍十遍二十遍地说都不见得有用，但是每次听起来都会觉得有用。就是这种强化的过程正是付费的原因。"他进一步感慨："这个道理甚至是去年新茧群这个时候就有的，才领会到。"他引用《毛选》中的"反复抓，抓反复"，溏心蛋也共鸣道："我们搞安全教育有一句口号：反复抓，抓反复。"二壮激动地表示："哎呀，真是给我爽到了，不是说私域人多了爽，就是领会到这句话了，爽到了爽到了。"</p>
+
+      <div class="sub-heading">咨询定价的实战学习</div>
+      <p><strong>二壮</strong>当天还开出了第一单咨询——500元半小时，并宣布后续将咨询划分为500元半小时、900元一小时两档。<strong>AA昍</strong>立刻纠正："半小时500，一小时1000，没有任何优惠，因为边际成本并没有下降，你又不是开工厂，搞个毛线。2小时3000，因为老子累了。"并强调"不要给人一种你时不时会优惠活动的感觉，你不是工厂，你没有这个优惠的能力"。二壮顿悟："就，我确实能赚到很多钱的感觉——之前是被告诉，我就信了。但心里终归是虚的，现在有感觉了。"</p>
     </div>
 
     <div class="conclusion-gm">
       <div class="conclusion-box">
         <div class="c-label">关键结论</div>
-        <div class="c-text">IP的护城河是"不可复制性"。审美风格作为高度个人化的能力，天然具备稀缺性，是构建高价值IP的底层资产。</div>
+        <div class="c-text">二壮今天完成了两个关键跃迁：一是从"内容分层"到"优质内容直接输出"的策略升级，用爆款内容自然筛选付费用户；二是从"被告知能赚钱"到"自己感觉到能赚钱"的心态转变。咨询定价不应有优惠，因为边际成本不下降——这是小生意的客观规律。</div>
       </div>
       <div class="gm-label">金句时刻</div>
       <div class="gm-item">
-        <div class="gm-quote">美和财富，是唯二不需要解释就可以让人理解的东西。</div>
-        <div class="gm-author">—— <strong>转念之间</strong></div>
+        <div class="gm-quote">再优质的内容，你说一遍两遍是根本没用的，得八遍十遍二十遍地说都不见得有用。就是这种强化的过程正是付费的原因，等到付费用户遇到自己问题的时候，他才有可能动起来。</div>
+        <div class="gm-author">—— <strong>二壮</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">不能被复制的一切都很值钱，审美风格就是其中一个。</div>
+        <div class="gm-quote">半小时500，一小时1000，没有任何优惠，因为边际成本并没有下降，你又不是开工厂。2小时3000，因为老子累了。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">就，我确实能赚到很多钱的感觉——之前是被告诉，我就信了。但心里终归是虚的，现在有感觉了。</div>
+        <div class="gm-author">—— <strong>二壮</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 老司机补给站 -->
+  <div class="section-title">老司机补给站</div>
+
+  <div class="topic-card">
+    <h4>AA昍的系统性批改：产品经理+程序员双环节法</h4>
+    <div class="topic-time">14:00 - 18:08</div>
+
+    <div class="detail-content">
+      <p><strong>AA昍</strong>今天贡献了一套完整的方法论框架。对查理，他提出了"产品经理环节+程序员环节"的双步法——先穷尽所有方向不做可行性判断，再逐个评估投入产出比。对查理画得慢的抱怨，他犀利反问："画画产出再慢，还能有这个慢吗？你有几套房可以装啊？"点出家居号本质上更慢。对查理的"画得慢性价比低"论调，他指出C端高价约稿存在"太太大手子帮别人画个头像3万"的案例，查理自己的圈子就有但规划里完全没有——这是"没有思考"的表现。</p>
+      <p>对二壮的咨询定价，<strong>AA昍</strong>给出了简洁而精辟的定价原则：不加量反而加价（因为人会累），不给优惠（因为你不是工厂）。他还给宝鹅的分享做了点评："群里其他人还没有意识到，还早。还在鬼打墙。"这句话背后是对整个群成长阶段的清醒判断。此外，他对绵羊的茶账号策略也做了追问，要求补充"如果第一周就成/不成怎么办"的预期管理。</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">先穷尽方向，只列方向，不考虑可行性（产品经理环节）。再考虑可行性、投入产出比、时间成本（程序员环节）。一步一步来。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">画画产出再慢，还能有这个慢吗？你有几套房可以装啊？非常诡异。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">不要给人一种「他时不时会优惠活动」的感觉，你不是工厂，你没有这个优惠的能力，这是客观规律。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <h4>黄云的实战复盘：艺考培训亲历 + 成交理由方法论</h4>
+    <div class="topic-time">10:05 - 18:00</div>
+
+    <div class="detail-content">
+      <p><strong>黄云</strong>今天用自己的亲身经历为查理的艺考培训方向提供了坚实背书。他分享了自己大学时作为工科生接艺考培训课的经历——认识隔壁城市院校的播音系官媒负责人，替他在本地城市上影视鉴赏课。前两次还临时抱佛脚，第三次开始就直接讲自己喜欢的电影，"最后那个学期，我是赚了2万多接近3万块"。他用这个例子证明：艺考培训赛道门槛低，很多都是大学生在上课，查理作为美院毕业、艺考成功、就业良好的人，优势巨大。</p>
+      <p><strong>黄云</strong>还提炼了"成交理由"的方法论：成交理由好是一力降十会的，产品会自动说话吸引人。他同时给出查理家居号的反馈："看着你做那几期视频数据不错，怎么没继续挖深了？那几期就像开篇，然后就没了，变成发资讯一样的感觉。"他还关注了念姐的教育小号，请她分享"咨询数量和质量超同类号"的方法论。</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">成交理由一旦好，是一力降十会的。产品会自动说话吸引人。这时候做起内容来就很轻松了，因为营销上不需要怎么费劲。</div>
+        <div class="gm-author">—— <strong>黄云</strong></div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">艺考培训这赛道很多都是大学生在上课，难度低。艺术大学生能有什么水平？更别说，你这种艺考好，又是美院，还是成功的，毕业之后还有比较好的生活。</div>
+        <div class="gm-author">—— <strong>黄云</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <h4>糕糕的赛道补位：二次元C端 + 艺术端占坑 + 家居打辅助</h4>
+    <div class="topic-time">13:10 - 20:01</div>
+
+    <div class="detail-content">
+      <p><strong>糕糕</strong>在晚上的小会讨论中给出了三个方向的结构性建议。对画画号，她指出二次元C端虽小但潜力大——"这个领域的精神病很多，要么是精神病，要么是资本做局。所以先占个坑位，潜力大"。对家居号，她建议作为辅助保持更新——"再怎么全力做一个号，短时间内也不会有水花。像家居号这种随手拍，形成积累的习惯，有一天就变现了"。她还透露自己在尝试艺术端账号，未来可以和查理、绵羊姐配合做艺术品鉴赏自媒体矩阵。这个视角给查理的两个账号关系提供了一个清晰的优先级排序。</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">为什么做自媒体一般建议开2个号以上呢，是因为就算全力做1个号，短时间内也不会马上有水花。所以像家居号这种随手拍，形成积累的习惯，有一天就变现了。</div>
+        <div class="gm-author">—— <strong>糕糕</strong></div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">艺术端坐C端的意义，除了自己喜欢，帮自己做IP以外，还有一个是这个领域的精神病很多，要么是精神病，要么是资本做局。所以先占个坑位。</div>
         <div class="gm-author">—— <strong>糕糕</strong></div>
       </div>
     </div>
   </div>
 
-  <!-- 话题三 -->
+  <!-- 同伴行动 -->
+  <div class="section-title">同伴行动</div>
+
+  <!-- 同伴：溏心蛋 -->
   <div class="topic-card">
-    <h4>故事驱动IP：为什么"写故事"是自媒体的万能解法</h4>
-    <div class="topic-time">21:10 - 21:12</div>
+    <h4>溏心蛋的艺考市场深度拆解：家长买赎罪券</h4>
+    <div class="topic-time">09:58 - 21:49</div>
 
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">二壮：</span>"为什么要写故事呢？故事里就带有情绪、信息和价值，的受众无限广。"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">故事驱动</span>
-      <span class="tag">内容漏斗</span>
-      <span class="tag">受众拓展</span>
-      <span class="tag">IP打造</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
     <div class="detail-content">
-      <div class="sub-heading">一、话题背景与起因</div>
-      <p>在讨论<strong>查理</strong>的画画号内容方向时，<strong>二壮</strong>突然输出了一套关于"故事驱动内容"的方法论，用自己的亲身实践做了论证。</p>
-      <div class="sub-heading">二、主要观点与讨论详情</div>
-      <p><strong>二壮</strong>的核心论点是：故事同时承载情绪、信息和价值，受众面无限广。他以自己的帖子为例："我同一篇帖子同时吸引来了点赞、收藏、咨询、加群、关注，就证明每个人的需求是不一样的。"他提出要做大漏斗口——"把漏斗的口做得越大越好，至于漏多少下去，这不是你说了算吗？"、"最差最差吸引了流量，对吧？剩下的都是赚的。"这种"先有流量再筛选"的思路，与很多人的"先精准再扩张"正好相反。</p>
-      <div class="sub-heading">三、结论与启发</div>
-      <p>故事是最低门槛、最高上限的内容形态。不要过早限定受众，先用故事把漏斗口撑大，让数据告诉你谁会被吸引来。</p>
+      <p><strong>溏心蛋</strong>今天贡献了最有穿透力的市场洞察。她以芜湖市13000名考生为样本，详细拆解了艺考培训的需求结构：前三分之一走正常高考，中间4000-8000名"但凡有一些些家底，都愿意把小孩送去学美术"。她指出关键心理机制——"家长买的不是技能，是赎罪券，只赎自己的罪"。家长不关心"双达线"到底达的是什么线，"关心的就是百分百，我家孩子不能落"。她还用自己劝学生学德语的案例拆解了销售心理：对高分学生讲出国留学含金量更高，对低分学生讲学德语和学拼音一样简单。她总结自己"讲起别人来都叭叭的，干到自己的田就慢慢的"——这种坦诚引发了群友共鸣。</p>
     </div>
 
     <div class="conclusion-gm">
-      <div class="conclusion-box">
-        <div class="c-label">关键结论</div>
-        <div class="c-text">故事同时承载情绪、信息和价值，是扩大受众漏斗的最优解。不要预设受众，先用内容跑数据，让市场替你做筛选。</div>
-      </div>
       <div class="gm-label">金句时刻</div>
       <div class="gm-item">
-        <div class="gm-quote">把漏斗的口做得越大越好，至于漏多少下去，这不是你说了算吗？</div>
-        <div class="gm-author">—— <strong>二壮</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">最差最差吸引了流量，对吧？剩下的都是赚的。</div>
-        <div class="gm-author">—— <strong>二壮</strong></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 三、秉烛共谈录・小会精粹 -->
-  <div class="section-title">三、秉烛共谈录・小会精粹</div>
-
-  <div class="topic-card">
-    <h4>查理的绘画赛道破局：从"画画号"到"绘画+变现"的全链路推演</h4>
-    <div class="topic-time">09:48 - 21:55（小会主讨论 19:54 - 21:12）</div>
-
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">查理：</span>"这是我的小会问题，大家如果有时间可以提前看看，晚上20:00讨论。"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">绘画IP</span>
-      <span class="tag">变现路径</span>
-      <span class="tag">艺考培训</span>
-      <span class="tag">成人画画班</span>
-      <span class="tag">内容策略</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
-    <div class="detail-content">
-      <div class="sub-heading">一、问题提出与背景补充</div>
-      <p><strong>查理</strong>是群里的画师，有两个小红书号：家居号900+粉（仅有置换变现）、画画号2700+粉（尚未变现）。她上午发了一份PDF小会提纲，坦诚描述了自己的困境：画画效率低（一张画要一星期+修改）、约稿"性价比很低的出卖时间"不想做、家居号"没有个人特色"、画画号"没有人设"。当被问"在哪条赛道更有可能坚持下来"时，她的回答很干脆："画画，我太爱画画了。"</p>
-
-      <div class="sub-heading">二、核心焦点与深层议题挖掘</div>
-      <p>讨论迅速暴露出几个深层矛盾。第一，<strong>查理</strong>嘴上说"约稿性价比低不想做"，但<strong>昍（日日）</strong>一针见血地追问："真的吗？展开说说你的考量，感觉这里有坑。"并进一步指出她回避了最显而易见的变现路径——"这个赛道是一眼就能看见的，为什么完全没有提及？有什么小心思？"第二，<strong>查理</strong>自称"搞艺术没出路"，但<strong>黄云</strong>直言"艺考太赚钱了"，<strong>溏心蛋</strong>则揭示了美术培训产业链的暴利真相。第三，<strong>查理</strong>说家居号和画画号"方向不清晰"，但<strong>昍（日日）</strong>犀利指出："房子不错，看完就ok了，没有你的个人特色。干嘛要关注你？或者说有特色，但没有那么有特色。"核心问题被逐步剥开：不是赛道的问题，是<strong>查理</strong>在回避做选择、回避展示自我。</p>
-
-      <div class="sub-heading">三、多方观点流派与方案探讨</div>
-      <p>群友们从不同角度给出了变现方案。<strong>溏心蛋</strong>系统性地拆解了艺考培训的商业模式：初三集训大几万、高考前冲刺15万一个人净产值30个、"学校年年宣传百分百双达线"，并建议查理做"艺考信息差"内容。 <strong>黄云</strong>提出"神笔查理"概念——画家具变实体、画万物、跟所有行业结合，还建议做"什么样的画能得高分"的评判内容。<strong>二壮</strong>拆解了艺考全链条（考前/培训时/考后/毕业后），建议查理找到自己在链条中的位置。<strong>橙子🍊</strong>从行业内部视角提供了大量案例和对标（呼葱觅蒜、鸡腿子等），并建议做成人画画班、宠物画/肖像画。<strong>转念之间</strong>提出成人画画班的核心卖点是"装X"——"学几节课就能画出看上去蛮厉害的作品"，并建议"招一期录课然后卖回放"。<strong>糕糕</strong>则从战略层面给出三步走：主攻艺术端C端做IP占坑位、家居号打辅助不放弃、后续打磨艺术品鉴赏方向。</p>
-
-      <div class="sub-heading">四、老司机引导与方案点评</div>
-      <p><strong>昍（日日）</strong>扮演了最尖锐也最有价值的老司机角色。他没有直接给方案，而是用连续追问逼<strong>查理</strong>面对真实问题："这话说的，那你别干了"、"就是说你能力差，不如别人，所以你准备换一个不那么卷的变现方式？是这意思吗？"、"认真说说这个，我感觉问题非常大"、"画画产出再慢，还能有这个慢吗？你有几套房可以装啊？非常诡异。"这些"冒犯性"的追问，本质上是在帮查理打破自我设限。在内容方向上，<strong>昍（日日）</strong>建议抓主要矛盾优先深挖绘画领域，并推荐《八仙》等即将爆火的历史题材让查理蹭热点。<strong>黄云</strong>的点评则精准定位了家居号的问题："每个话题都是浅浅搁在那，做出了资讯号的味道，没链接到人。"<strong>糕糕</strong>在最后阶段给出了冷静的判断："我个人认为这个特别复杂……其他人至少先满足万粉这个门槛，再讨论这个吧？"</p>
-
-      <div class="sub-heading">五、讨论共识与分歧总结</div>
-      <p>共识方面：第一，<strong>查理</strong>应该优先深挖绘画领域而非家居号；第二，艺考赛道/成人画画班是明确可变现的方向；第三，内容需要建立人设、讲好故事。分歧在于：<strong>查理</strong>对约稿和教画画的抵触情绪始终没有完全化解，她内心对"学美术纯粹害人"的道德包袱影响了她的选择判断。<strong>溏心蛋</strong>用一句话击碎了这个包袱："家长买的不就是一个机会吗？他自己花钱买赎罪券，也只赎自己的罪。"最终，<strong>查理</strong>明确了终极目标——"我想要很高的知名度，想成为大red，电影会找我画海报的那种"，群友们也围绕这个目标达成了以故事驱动的连环画+精致成品穿插的内容策略。</p>
-    </div>
-
-    <div class="conclusion-gm">
-      <div class="conclusion-box">
-        <div class="c-label">关键结论一</div>
-        <div class="c-text">查理的核心问题不是"赛道选错了"，而是在回避选择和展示自我。绘画领域的变现路径清晰且丰富（约稿/艺考/成人班/教学/品牌合作），关键是要先跑起来。</div>
-      </div>
-      <div class="conclusion-box">
-        <div class="c-label">关键结论二</div>
-        <div class="c-text">以"成为大red、电影找我画海报"为终极目标倒推，所有路径都要服务于这个方向。优先做连环画+精致成品穿插的内容策略，用故事驱动扩大漏斗。</div>
-      </div>
-      <div class="gm-label">金句时刻</div>
-      <div class="gm-item">
-        <div class="gm-quote">临考前一个月他能学啥？家长买的不就是一个机会吗？他自己花钱买赎罪券，也只赎自己的罪。</div>
+        <div class="gm-quote">家长是不识字的，家长是只看结果的，家长是只看得懂本科的。百分百双达线，达的是什么线呢？家长关心吗？他不关心。他关心的就是百分百。我家孩子不能落。</div>
         <div class="gm-author">—— <strong>溏心蛋</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">就是说你能力差，不如别人，所以你准备换一个不那么卷的变现方式？——是这意思吗？</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">每个话题都是浅浅搁在那，做出了资讯号的味道，没链接到人。</div>
-        <div class="gm-author">—— <strong>黄云</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">成人画画班，一个很重要的用途是装X。学几节课就能画出看上去蛮厉害的作品。</div>
-        <div class="gm-author">—— <strong>转念之间</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">我想要很高的知名度，想成为大red，电影会找我画海报的那种。</div>
-        <div class="gm-author">—— <strong>查理</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">画画产出再慢，还能有这个慢吗？你有几套房可以装啊？非常诡异。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">稀释西方话语权，讲好中国故事不一定要讲中国故事。</div>
-        <div class="gm-author">—— <strong>查理</strong></div>
+        <div class="gm-quote">讲起别人来都叭叭的，干到自己的田就慢慢的。</div>
+        <div class="gm-author">—— <strong>溏心蛋</strong></div>
       </div>
     </div>
   </div>
 
-  <!-- 四、解惑一点通・有问必答 -->
-  <div class="section-title">四、解惑一点通・有问必答</div>
+  <!-- 同伴：绵羊 -->
+  <div class="topic-card">
+    <h4>绵羊的茶账号策略：从纠结到落地</h4>
+    <div class="topic-time">13:43 - 20:07</div>
 
-  <div class="qa-card">
-    <h4>约稿被AI冲击，定制插画还能做吗？</h4>
-    <div class="qa-climb">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">子蟹：</span>"定制插画在AI冲击下有点儿像厨子那种了，只能做高客单才好活？"</div>
+    <div class="detail-content">
+      <p><strong>绵羊</strong>提交了一份茶账号运营策略文档，并在下午两点的小会讨论中获得了AA昍的系统性反馈。<strong>AA昍</strong>要求她在策略中补充"第一周结束时几种可能及应对方案"的风险预判，强调"如果是上班，必须得有这些，否则你怎么预判未来一个月项目的风险"。绵羊表示会总结好后发到群里。晚上她还给查理的家居号提出了具体建议：不做硬核装修干货（拼不过专业博主），而主打软装审美种草，"杯子、餐具、大件家具、家电、床上家纺全都能拍"。她还分享了自己报成人零基础画画班的经历，为查理提供了"零基础小画教程+画材测评"的新思路。</p>
     </div>
-    <div class="qa-answer-label">解答</div>
-    <div class="qa-content">
-      <div class="sub-heading">一、问题背景</div>
-      <p><strong>查理</strong>在犹豫是否继续做约稿变现，<strong>子蟹</strong>提出AI冲击下定制插画的前途疑问。</p>
-      <div class="sub-heading">二、核心分析</div>
-      <p><strong>查理</strong>确认"私人订单如果不是顶尖画技/名气很大确实难做"，但她同时也提到自己朋友的案例——不敢用AI怕被发现，但靠手快"一个月保底1w多"。 <strong>橙子🍊</strong>提供了更直接的行业数据：她认识的大red画师，粉丝三四万时一条商稿就2w+，现在4w+了，一个月画两三张。</p>
-      <div class="sub-heading">三、解决方案</div>
-      <p>共识是：<strong>子蟹</strong>判断正确——只能走高客单路线。但"高客单"不等于拼命画，而是要提升单笔价值。具体路径包括：宠物/肖像定制（不受二次元规矩束缚）、影视/游戏同人商单、与品牌跨界合作（如在奢侈品包上画游戏人物）。同时要规避AI能替代的"量产型"需求，专注于AI无法提供的"个人风格+情感连接"。</p>
-    </div>
-    <div class="qa-tags">
-      <span class="tag">AI冲击</span>
-      <span class="tag">高客单价</span>
-      <span class="tag">插画变现</span>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">查理的优势还是审美，不如主打家居审美，做软装种草。能拍的东西其实特别多，杯子、餐具、大件家具、家电、床上家纺全都能拍。</div>
+        <div class="gm-author">—— <strong>绵羊</strong></div>
+      </div>
     </div>
   </div>
 
-  <div class="qa-card">
-    <h4>画师做教学视频，效率低怎么办？</h4>
-    <div class="qa-climb">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">二壮：</span>"可是如果这个是一天的半成品的话，那是不是意味着接下来一周你发的都是这一幅画的进度呢？"</div>
-    </div>
-    <div class="qa-answer-label">解答</div>
-    <div class="qa-content">
-      <div class="sub-heading">一、问题背景</div>
-      <p><strong>查理</strong>想通过教学/过程类视频增加更新频率，但她画一张画要一周，如果每天发半成品，主页会"很难看"。</p>
-      <div class="sub-heading">二、核心分析</div>
-      <p><strong>查理</strong>自己的亲身体会是"完成度低的作品涨粉和观看都不太好"。<strong>黄云</strong>建议"再填上点线条发吧"，但本质问题没有解决。</p>
-      <div class="sub-heading">三、解决方案</div>
-      <p><strong>橙子🍊</strong>给出了实操方案："一条正经的内容 + 评论区做小条漫"，既保证主页质感又能高频更新。<strong>二壮</strong>进一步提出"连环画"路线：出图快、不需要精湛技术、可以用现成故事（"不要自己想故事呀！"）。最终形成的方案是：以连环画（出图快、可量产）为主力内容，穿插精致成品保持调性。</p>
-    </div>
-    <div class="qa-tags">
-      <span class="tag">内容策略</span>
-      <span class="tag">更新频率</span>
-      <span class="tag">连环画</span>
-    </div>
-  </div>
+  <!-- 同伴：宝鹅 -->
+  <div class="topic-card">
+    <h4>宝鹅的内容反思 + 念姐的教育小号起号</h4>
+    <div class="topic-time">15:46 - 18:40</div>
 
-  <!-- 五、智慧火花匣・每日精选 -->
-  <div class="section-title">五、智慧火花匣・每日精选</div>
-
-  <div class="pick-card">
-    <h4>黄云的"艺考培训"亲身经历：工科生零基础上影视鉴赏课赚了近3万</h4>
-    <div class="pick-climb">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">黄云：</span>"大学因为公众号互相去交流学习，认识了一个隔壁城市院校的官媒负责人……我没艺考过，甚至还是个工科生，一点不推辞，上啊。"</div>
-    </div>
-    <div class="pick-body">
-      <div class="sub-heading">一、推荐内容</div>
-      <p><strong>黄云</strong>分享了大学期间一段"离谱"的赚钱经历：通过公众号交流认识了一个搞艺考培训的播音系同行，对方在他所在城市有学生但不方便每次跑，就请黄云代上影视鉴赏课。黄云是工科生，从未艺考过，前两次课临时抱佛脚背鉴赏要点，第三次烦了就直接聊自己喜欢的电影。结果那个学期赚了接近3万。</p>
-      <div class="sub-heading">二、核心价值</div>
-      <p>这个故事完美诠释了"信息差"和"胆量"的变现能力——你不需要是顶尖专家，你只需要比客户多知道一点、敢站上去讲，就已经足够了。它打破了"必须专业对口才能教"的思维定式。</p>
-    </div>
-    <div class="pick-tags">
-      <span class="tag">信息差</span>
-      <span class="tag">艺考培训</span>
-      <span class="tag">胆量变现</span>
-    </div>
-  </div>
-
-  <div class="pick-card">
-    <h4>宝鹅的"接广不内耗"心法</h4>
-    <div class="pick-climb">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">宝鹅：</span>"我接了一个很恶心的广子，然后告诉自己：你可以不接。瞬间不内耗了。"</div>
-    </div>
-    <div class="pick-body">
-      <div class="sub-heading">一、推荐内容</div>
-      <p>临近午夜，<strong>宝鹅</strong>分享了自己处理"工伤广子"的心态转变。</p>
-      <div class="sub-heading">二、核心价值</div>
-      <p>五个字"你可以不接"，直接终结了自媒体人最常见的内耗循环。很多时候内耗的根源不是"接了烂活"，而是"觉得自己不得不接"。</p>
-    </div>
-    <div class="pick-tags">
-      <span class="tag">心态管理</span>
-      <span class="tag">自媒体</span>
-      <span class="tag">拒绝内耗</span>
+    <div class="detail-content">
+      <p><strong>宝鹅</strong>分享了自己小红书内容的数据反思：一篇数据惨淡的文章自己回头再看"感觉很寡淡，爹味十足"，而另一些讲故事的帖子虽然数据滞后但涨了约400粉。她总结"大家还是喜欢听故事"。<strong>转念之间</strong>则分享了教育小号的起号观察：首页全是自闭症内容，低龄家长抱有希望、高龄家长探讨"妈妈走了孩子还能活多久"，"不少妈妈在考虑全职带孩子"。她表示"想写点难听的实话"——这个真实而残酷的洞察引发了群友对高净值内容方向的深入讨论。</p>
     </div>
   </div>
 
   <!-- Footer -->
   <div class="footer-note">
-    本报告基于群聊数据自动生成，仅供参考。内容可能包含个人观点，不代表群组官方立场。
+    本报告基于群聊数据自动生成，仅供参考。
+    生成版本：v5.4 &middot; 2026-07-14
   </div>
 
 </div>

@@ -91,17 +91,9 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   }
   .nav-bar .nav-label {
-    font-size: 13px;
-    color: #fff;
-    background: var(--accent);
-    font-weight: 600;
-    padding: 6px 14px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.15s ease;
-  }
-  .nav-bar .nav-label:hover {
-    background: #d14e2e;
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 500;
   }
   .nav-btn {
     background: none;
@@ -472,6 +464,44 @@
   @media (min-width: 520px) {
     .container { padding: 0 24px 80px; }
   }
+
+  /* ===== v5.4 新增样式 ===== */
+  .header-card { background: linear-gradient(135deg, var(--accent) 0%, #f07a5a 100%); border-radius: 20px; padding: 32px 24px 28px; margin: 16px 0 14px; text-align: center; box-shadow: 0 4px 16px rgba(232, 93, 58, 0.2); }
+  .header-card h1 { font-size: 22px; font-weight: 800; color: #ffffff; letter-spacing: 0.5px; margin-bottom: 10px; text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+  .header-card .date-row { font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 4px; }
+  .header-card .time-row { font-size: 12px; color: rgba(255,255,255,0.7); }
+  .section-title { font-size: 16px; font-weight: 700; color: var(--ink); margin: 24px 0 10px 4px; padding-left: 10px; border-left: 3px solid var(--accent); }
+  .hero-card { background: var(--card); border-radius: 16px; padding: 22px 18px; margin-bottom: 14px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+  .hero-card h4 { font-size: 16px; font-weight: 700; color: var(--ink); line-height: 1.5; margin-bottom: 4px; }
+  .hero-card .topic-time { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+  .hero-card .detail-content .sub-heading { font-size: 14px; font-weight: 700; color: var(--ink); margin: 18px 0 10px; padding: 8px 0 8px 12px; border-left: 3px solid var(--accent); background: linear-gradient(90deg, var(--kw-bg) 0%, transparent 70%); border-radius: 0 6px 6px 0; }
+  .hero-card .detail-content .sub-heading:first-child { margin-top: 0; }
+  .hero-card .detail-content p { margin-bottom: 14px; line-height: 1.85; color: var(--ink2); font-size: 14px; }
+  .hero-card .detail-content p:last-child { margin-bottom: 0; }
+  .conclusion-gm { margin-top: 18px; padding: 16px 14px 14px; background: var(--accent-light); border-radius: 12px; border: 1px solid var(--accent-tag); }
+  .conclusion-gm .conclusion-box { background: var(--card); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+  .conclusion-gm .gm-label { font-size: 13px; font-weight: 700; color: var(--accent); margin-bottom: 10px; padding-left: 8px; border-left: 2px solid var(--accent); }
+  .conclusion-gm .gm-item { background: var(--card); border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .conclusion-gm .gm-item:last-child { margin-bottom: 0; }
+  .conclusion-gm .gm-quote { font-size: 14px; line-height: 1.7; color: var(--ink); font-weight: 500; }
+  .conclusion-gm .gm-author { font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .topic-card { background: var(--card); border-radius: 14px; padding: 18px 16px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .topic-card h4 { font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+  .topic-card .topic-time { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+  .topic-card .detail-content p { margin-bottom: 12px; line-height: 1.8; color: var(--ink2); font-size: 14px; }
+  .topic-card .detail-content .sub-heading { font-size: 14px; font-weight: 700; color: var(--ink); margin: 14px 0 8px; }
+  .detail-content p strong, .qa-content p strong { background: var(--accent-light); padding: 1px 4px; border-radius: 3px; font-weight: 600; color: var(--accent); }
+  .quote-section { background: var(--card); border-radius: 14px; padding: 18px 16px; margin-bottom: 12px; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .quote-label { font-size: 12px; font-weight: 700; color: var(--accent); margin-bottom: 8px; letter-spacing: 1px; }
+  .quote-text { font-size: 16px; font-weight: 600; color: var(--ink); line-height: 1.6; margin-bottom: 8px; }
+  .quote-author { font-size: 13px; color: var(--muted); }
+  .stats-card { background: var(--card); border-radius: 14px; padding: 18px 16px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .stat-big { font-size: 28px; font-weight: 800; color: var(--accent); }
+  .stat-label { font-size: 12px; color: var(--muted); }
+  .nav-bar { display: flex; gap: 6px; margin-bottom: 14px; overflow-x: auto; padding-bottom: 4px; }
+  .nav-btn { background: var(--card); border: 1px solid var(--rule); border-radius: 20px; padding: 6px 14px; font-size: 13px; color: var(--ink2); white-space: nowrap; }
+  .nav-label { background: var(--card); border: 1px solid var(--rule); border-radius: 20px; padding: 6px 14px; color: var(--muted); font-size: 13px; font-weight: 600; white-space: nowrap; }
+  .footer-note { font-size: 12px; color: var(--muted2); text-align: center; margin-top: 24px; padding: 0 16px; }
 </style>
 </head>
 <body>
@@ -482,432 +512,255 @@
   <div class="header-card">
     <h1>十二W车行群日报</h1>
     <div class="date-row">2026 年 07 月 16 日（星期四）</div>
-    <div class="time-row">00:00 - 23:59</div>
+    <div class="time-row">02:00 - 23:09</div>
   </div>
 
   <!-- Nav Bar -->
   <div class="nav-bar">
-    <a class="nav-btn" href="daily-report-2026-07-15.html">上一天</a>
-    <a class="nav-label" href="index.html">日报导航</a>
-    <a class="nav-btn" href="daily-report-2026-07-17.html">下一天</a>
+    <button class="nav-btn" onclick="location.href='daily-report-v5.4-2026-07-15.html'">上一天</button>
+    <span class="nav-label">日报导航</span>
+    <button class="nav-btn" disabled>下一天</button>
   </div>
 
   <!-- 每日金句 -->
   <div class="quote-section">
     <div class="quote-label">每日金句</div>
-    <div class="quote-text">暗娼当然不稳定，名妓肯定有主动权。一样是出卖单位时间，名妓的收入是多少？</div>
-    <div class="quote-author"><strong>昍（日日）</strong> · 2026-07-16 · 热点话题</div>
+    <div class="quote-text">暗娼做一单没几两银子，完事就过了，没有复用。名妓真的那么与众不同吗？每届花魁真的是所有人投票选出来的吗？为什么选他不选你？因为人家找对了方向，主动权拿在了自己手里。</div>
+    <div class="quote-author"><strong>AA昍</strong> · 2026-07-16 · 从被动等待到主动掌控</div>
   </div>
 
-  <!-- 一、总消息概览 -->
-  <div class="section-title">一、总消息概览</div>
+  <!-- 总消息概览 -->
+  <div class="section-title">总消息概览</div>
   <div class="stats-card">
-    <div>
-      <div class="stat-big">533</div>
-      <div class="stat-label">总消息数量</div>
+    <div class="stat-item-sm">
+      <div class="num">481</div>
+      <div class="label">总消息</div>
     </div>
-    <div class="stat-group">
-      <div class="stat-item-sm">
-        <div class="num">13</div>
-        <div class="label">活跃成员</div>
-      </div>
-      <div class="stat-item-sm">
-        <div class="num">12:00</div>
-        <div class="label">最活跃时段</div>
-      </div>
+    <div class="stat-item-sm">
+      <div class="num">16,850</div>
+      <div class="label">全文字数</div>
+    </div>
+    <div class="stat-item-sm">
+      <div class="num">8</div>
+      <div class="label">阅读时长</div>
     </div>
   </div>
 
-  <!-- 二、火花碰撞时刻・热点话题 -->
-  <div class="section-title">二、火花碰撞时刻・热点话题</div>
+  <!-- 今日主角 -->
+  <div class="section-title">今日主角</div>
 
-  <!-- 话题一 -->
-  <div class="topic-card">
-    <h4>橙子🍊的职场困局：主业沉船、备孕焦虑与副业飞轮的多线博弈</h4>
-    <div class="topic-time">11:41 - 16:36</div>
+  <!-- 主角一：橙子🍊（小会发起人） -->
+  <div class="hero-card">
+    <h4>橙子🍊 —— 沉船不跳等死：在备孕、跳槽与副业之间找飞轮</h4>
+    <div class="topic-time">11:41 - 18:00 &nbsp;|&nbsp; 小会发起人</div>
 
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">橙子🍊：</span>"我的小会内容写好了，字比较多，脑子也比较乱，辛苦大家。最近状态还可以，请大家放心上强度。"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">职场规划</span>
-      <span class="tag">副业飞轮</span>
-      <span class="tag">备孕焦虑</span>
-      <span class="tag">自媒体IP</span>
-      <span class="tag">内容复用</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
     <div class="detail-content">
-      <div class="sub-heading">一、话题背景与起因</div>
-      <p><strong>橙子🍊</strong>（游戏编剧）在群里发布了她的"车行小会"文档，坦诚地梳理了自己当前的多线困境：主业所在的游戏项目即将沉船，收入面临锐减；想换工作但受限于"大龄已婚未育"的职场标签；同时又希望推进副业（自媒体+编剧私活）和备孕计划。多个目标相互纠缠，让她感到极度焦虑和被动。</p>
-      <div class="sub-heading">二、主要观点与讨论详情</div>
-      <p><strong>子蟹</strong>直截了当地指出橙子同时开了四条任务线（主业、副业1、副业2、生娃），"主业单独来看死局已定，一旦优先满足主业，其他三条任务线全面被影响"，建议干脆砍掉主业，让其他三条线飞轮起来。<strong>宝鹅</strong>则更为保守，建议"现金流别断了"，先苟住，保持心态稳定。</p>
-      <p><strong>溏心蛋</strong>用商科视角分析了"拖下去的惩罚"：10月交接后掉出大厂序列，分红机制变差，全年税后收入可能跌破40万，到时候议价权不在手上，动作会变形。他建议"更新简历先挂出来，看猎头反馈"。<strong>查理</strong>也附和："写简历又没损失。"</p>
-      <p><strong>昍（日日）</strong>的切入最为犀利。他指出橙子"喜欢说黑话"（如"活水"），并追问："如果这个人是花2000块钱来咨询你，这就是你的回答吗？"他提出了著名的<strong>"暗娼vs名妓"</strong>类比——暗娼做一单没几两银子，没有复用；名妓把主动权拿在自己手里，"所有大师，当年都是小弟"。他强调：<strong>"公司的时间和资源是无限的，做自媒体是一个人做小生意，所有投入都必须要可复用。"</strong></p>
-      <p><strong>糕糕</strong>总结道："橙子的主业和自己的兴趣完全可以形成飞轮，就是自己把自己堵严实了。"<strong>二壮</strong>则提出橙子"没有兴趣"这个说法本身就不对："观察生活本身就是个兴趣，揣摩人性也是兴趣，将生活和人性写进作品，不就是文字工作者了？"</p>
-      <div class="sub-heading">三、结论与启发</div>
-      <p>这场讨论的核心启发在于：当多条人生线交织卡住时，最需要的不是蛮干，而是<strong>识别主要矛盾</strong>。橙子的问题不是缺乏选择，而是每个选择都给自己设了一个"不前进的理由"。昍（日日）的"可复用"原则和糕糕的"飞轮"概念，为所有内容创作者提供了核心判断标准：你的每一次时间投入，是否都能成为未来某个更大作品的素材？</p>
+      <div class="sub-heading">小会发起：四条任务线同时卡死</div>
+      <p>上午十一点四十一分，<strong>橙子🍊</strong>发起本周车行小会，提交了一份"字比较多，脑子也比较乱"的文档。她同时面对四条任务线的全面卡死：主业项目是沉船（十月份交接后掉出大厂序列，收入将锐减到20万+），跳槽因大龄已婚未育风险拉满，备孕迟迟没有推进，副业自媒体变现路径不清晰，私活时薪极低（一个短剧投入130小时只收到1300元）。她的心态一言蔽之："沉船不跳，跳不出去，等死，觉得自己好被动。每天就是急急急急急。"</p>
+
+      <div class="sub-heading">群友围诊：先砍掉主业</div>
+      <p><strong>子蟹</strong>率先给出激进方案："你现在同时开了4条任务线——主业、副业1、副业2、生娃。主业单独来看死局已定。但是，如果砍掉主业，副业1副业2生娃，都有时间精力干了，而且完全可以飞轮起来。"<strong>查理</strong>补充："我瞎说啊，是我的话就这么干了，因为主业看起来如果要深耕，基本没有生孩子的机会。"<strong>子蟹</strong>更是用一句话戳中要害："你看似减少了收入，但是远离了恶心的环境，换来了身心愉悦，说不定就能生孩子了。人和时间，这是钱都买不来的。"</p>
+
+      <div class="sub-heading">AA昍的犀利解剖："暗娼vs名妓"与"可复用"</div>
+      <p>下午两点，<strong>AA昍</strong>开启了他最具冲击力的一轮输出。他先用一个比喻点破橙子的困局："暗娼做一单没几两银子，完事就过了，没有复用。名妓真的那么与众不同吗？每届花魁真的是所有人投票选出来的吗？为什么选他不选你？因为人家找对了方向，主动权拿在了自己手里。"接着他提出了今天最核心的方法论——"公司的时间和资源是无限的，因为可以不停地招人。做自媒体是自己一个人做小生意，你的时间和精力是非常有限的。所有的投入都必须要可复用。划重点——可复用。"</p>
+
+      <p><strong>AA昍</strong>进一步拆解了飞轮的构建逻辑："100%复用率，如何达成？让所有主业时间的产出全部能用于副业，怎么弄？先把这个画出来，就把主业榨干了，人效比就上来了，精力自然就充裕了。复用的不同方向，自然就会形成不同的飞轮。"当他发现群友仍然在绕圈时，直白地表达不满："为什么都在鬼打墙啊。最关键的地方打了码。"</p>
+
+      <div class="sub-heading">各方补位：从"死局"到"每条线都能复用"</div>
+      <p><strong>宝鹅</strong>给出了最实操的飞轮拆解——主业攒方法论（世界观搭建、NPC设计）→小红书输出吸粉→接编剧单→实战反哺方法论。"不能只看总稿费，还要综合考虑：预期收入x收款概率/实际精力投入。"<strong>黄云</strong>贡献了创意型内容思路——"每期从一个创意点子出发，随意编故事，带着观众一起编剧。这个核心其实就是展现工作过程。"<strong>二壮</strong>从自身经历共鸣："我之前所有的精力都在主业上，2024年累晕倒两次，中间一点一点把精力转移到自媒体上。橙子你应当能做到。我们的情况不太一样，但你的经济基础远优于我。"</p>
+
+      <p><strong>溏心蛋</strong>点出本质："万事万物都是相同的。备孕、主业、副业1、副业2，不应该隔断看待，事情应该围绕着人排列，而且会在不同情况下转换主次矛盾，不应该是人在问题后面追。"<strong>糕糕</strong>最直白："我整体看下来，没想到这个事情让橙子卡住的地方会那么多。每一个环节你都有一个给自己堵着不前进的理由。"</p>
     </div>
 
     <div class="conclusion-gm">
       <div class="conclusion-box">
         <div class="c-label">关键结论</div>
-        <div class="c-text">个人发展的核心瓶颈往往不是外部条件，而是「自我设障」。把时间投入的「可复用性」作为决策第一标准，主业与副业才能形成飞轮，而不是互相消耗。</div>
+        <div class="c-text">橙子的核心困局不是"没有方向"，而是"所有方向都被自己堵死了"。AA昍点出的破局关键只有两个字——"复用"。主业已有的所有经历都是副业飞轮的起点，不需要等"想清楚模型"再动。具体路径：主业攒方法论→自媒体输出吸粉→编剧私活变现→反哺方法论，所有产出100%可复用。备孕不应是和事业冲突的障碍，而是倒逼精力优化和"以怀孕为契机抽离主业"的契机。</div>
       </div>
       <div class="gm-label">金句时刻</div>
       <div class="gm-item">
-        <div class="gm-quote">暗娼当然不稳定，名妓肯定有主动权。一样是出卖单位时间，名妓的收入是多少？</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
+        <div class="gm-quote">暗娼做一单没几两银子，完事就过了，没有复用。名妓真的那么与众不同吗？为什么选他不选你？因为人家找对了方向，主动权拿在了自己手里，而不是「等着成名」。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">公司的时间和资源是无限的，因为可以不停的招人，做自媒体是自己一个人做小生意，你的时间和精力是非常有限的。所有的投入都必须要可复用。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
+        <div class="gm-quote">公司的时间和资源是无限的，因为可以不停地招人。做自媒体是自己一个人做小生意，你的时间和精力是非常有限的。所有的投入都必须要可复用。划重点——可复用。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">所有大师，当年都是小弟。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
+        <div class="gm-quote">你看似减少了收入，但是远离了恶心的环境，换来了身心愉悦，说不定就能生孩子了。人和时间，这是钱都买不来的。</div>
+        <div class="gm-author">—— <strong>子蟹</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主角二：转念之间 -->
+  <div class="hero-card">
+    <h4>转念之间 —— 从"建议她先生孩子"到被昍说"真想一刀砍死你"</h4>
+    <div class="topic-time">14:44 - 17:18 &nbsp;|&nbsp; 被群友集中追问</div>
+
+    <div class="detail-content">
+      <div class="sub-heading">被AA昍点名：职场咨询案例测试</div>
+      <p>下午两点四十四分，<strong>AA昍</strong>点名让<strong>转念之间</strong>回答橙子的问题："如果这个人是花2000块钱来咨询你，这就是你的回答吗？"转念之间的回答是建议橙子"以生孩子为契机，把精力从主业里面抽出来，搞副业，副业收入超过主业就可以辞职，跟大壮的路径一样。"这个回答引发了AA昍最激烈的批评——"唉我真想一刀砍死你。砍开了你就开窍了。"</p>
+
+      <div class="sub-heading">深层问题：没有拆解到可执行层面</div>
+      <p><strong>AA昍</strong>指出转念之间的回答致命缺陷："如何快速出名？等于没拆完，要从0开始能走到100的路。现在精力不足，生完孩子精力更不足了，工作没了，收入也低了。对方为什么敢听你的？"他进一步要求转念之间做更深层的思考："职场咨询是要帮人家理顺整个职场脉络的。未来5-10年他应该朝哪个方向努力，怎么样在其主业和副业之间构建飞轮。怎么样让所有投入的资源都能复用？"</p>
+
+      <p>经历了这轮批改后，<strong>转念之间</strong>展示出了明显的进步。她开始从"1"出发思考——"1就是主业已经有的成果。复用的方向：1.总结方法论卖课；2.如果已经有的成果自己觉得不够好，可以继续打磨。"她还贡献了自媒体飞轮的实操拆解："围绕自己的主业去写自媒体，然后吸引导演编剧或者观众，相当于是账号有了咨询，然后再把这些东西再放到自媒体上。"她感慨"我觉得橙子今天的小会，我自己好像方向更明确了"，并宣布"从今天开始，就开始写我的印度故事，印度，梦开始的地方"。</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="conclusion-box">
+        <div class="c-label">关键结论</div>
+        <div class="c-text">转念之间的核心问题是做职场咨询时停留在"给建议"层面而非"拆解路径"。AA昍的批改本质是要求她从"0到100"的拆解能力升级。经此一役，她不仅帮橙子看清了方向，自己也重新找到了写作主线——从印度故事开始。</div>
+      </div>
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">做SOP也是复用。就是我不得不投入精力的地方，然后我做这件事的时候就想我以后还能靠这个做什么？或者赚到什么钱？</div>
+        <div class="gm-author">—— <strong>转念之间</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">每一个环节你都有一个给自己堵着不前进的理由。</div>
+        <div class="gm-quote">你呢，从今天开始，就开始写我的印度故事。印度，梦开始的地方。</div>
+        <div class="gm-author">—— <strong>转念之间</strong></div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">一个人就是一家公司。再想想。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 老司机补给站 -->
+  <div class="section-title">老司机补给站</div>
+
+  <div class="topic-card">
+    <h4>AA昍的"开窍"课堂：从暗娼名妓到100%复用率</h4>
+    <div class="topic-time">13:59 - 18:54</div>
+
+    <div class="detail-content">
+      <p><strong>AA昍</strong>今天贡献了一套完整的认知升级方法论。从"暗娼vs名妓"的比喻开始，他层层递进地构建了"可复用→飞轮→主动权"的逻辑链条。他对群友的批评展现了极高的标准——对橙子说"思路还是错的，主动权不在自己手里"，对转念之间说"你想一刀砍死你，砍开了你就开窍了"，对全群说"为什么都在鬼打墙啊"。但他也在关键时刻给出了精准的方向——让橙子看到"主业已有的一切经历都是副业飞轮的起点"，指出转念之间"最关键的地方打了码"（即飞轮在哪），并通过合并转发历史记录（四月份的编剧课讨论）让群友看到"鬼打墙"是反复出现的模式。晚上的心理学实验（乐高拼高达，A组拼了就放旁边能拼十几个，B组拼完就拆只能拼七八个——说明人需要看到成果的积累）更是对"可复用"的绝妙类比。</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">100%复用率，如何达成？让所有主业时间的产出全部能用于副业。先把这个画出来，就把主业榨干了，人效比就上来了，精力自然就充裕了。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">所有大师，当年都是小弟。比如陈思诚、郭帆，他们一步步走上来的东西都扔了吗？肯定没有。而是复用了。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">A组拼好了高达就在旁边放着，拼一个放一个，大概能拼十几个。B组拼好一个就拆一个，只能拼七八个。这就是看到积累的意义。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <h4>黄云的创意输出：每期从点子出发，带观众一起编剧</h4>
+    <div class="topic-time">16:31 - 17:38</div>
+
+    <div class="detail-content">
+      <p><strong>黄云</strong>今天贡献了一个极有创意的内容方案：每期从一个创意点子出发，用摇骰子、抛纸团等随机方式抽选点子来编故事。可以做分层——有创意的点子、一般的点子、无聊的点子——然后分别展示如何把一个烂点子救回来、一个创意点子如何执行好。"这个核心其实就是展现工作过程，说白了，就是把你自己日常的工作额外套个壳。"这一思路完美契合了AA昍的"复用"逻辑——日常工作直接变成内容。</p>
+      <p><strong>黄云</strong>还一针见血地指出了游戏编剧赛道的受众限制："没人看。游戏编剧、文案这一块受众低。因为喜欢玩关注游戏的，最多只想开发做游戏，不会想着编剧。"这提醒橙子需要把编剧这个身份"翻译"给更广的受众，用戏剧、影视、综艺等更大众的载体来承载专业性。</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">这个核心其实就是展现工作过程，说白了，就是把你自己日常的工作额外套个壳。</div>
+        <div class="gm-author">—— <strong>黄云</strong></div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">可以把烂片点子编成如何挽救，创意点子如何执行好，无聊点子变得更爆炸是什么样。</div>
+        <div class="gm-author">—— <strong>黄云</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <h4>糕糕的堵点诊断：每个环节都有一个堵着不前进的理由</h4>
+    <div class="topic-time">16:19 - 18:49</div>
+
+    <div class="detail-content">
+      <p><strong>糕糕</strong>今天用一个精准的诊断击中了橙子的核心问题："我整体看下来，没想到这个事情让橙子卡住的地方会那么多。业内有没有你想成为的目标？一会儿备孕，一会儿跳槽，一会儿自媒体要B端塞广告，一会儿又想写好的内容但是又觉得消耗大，一会儿又想着做C端但是又没有人脉。每一个环节你都有一个给自己堵着不前进的理由。"这个诊断和AA昍的"鬼打墙"批评形成了共鸣。糕糕还指出："不管你是不是备孕，还是已经怀了还是生了，这跟你的个人IP积攒互相之间是不会产生影响的。"并指出群友们对橙子的了解仅限于"一个准备备孕的编剧，好像是跟游戏有关，然后呢？"——说明橙子还没有把自己的完整世界展示出来。</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">不管你是不是备孕，还是已经怀了还是生了，又是被公司炒了还是你跳槽了，这跟你的个人IP积攒互相之间是不会产生影响的。</div>
         <div class="gm-author">—— <strong>糕糕</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">观察生活本身就是个兴趣，揣摩人性也是兴趣，甚至可能是习惯。将生活和人性写进作品，不就是文字工作者了？</div>
+        <div class="gm-quote">做自媒体最关键的是思路，要想怎么我可以把这座小山堆起来，我身边的一切皆可为我所用。站在外人的层面上看，我打不开你，你关上了门。</div>
+        <div class="gm-author">—— <strong>糕糕</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 同伴行动 -->
+  <div class="section-title">同伴行动</div>
+
+  <!-- 同伴：二壮 -->
+  <div class="topic-card">
+    <h4>二壮的现身说法：从累晕到翻转主业副业</h4>
+    <div class="topic-time">15:51 - 17:21</div>
+
+    <div class="detail-content">
+      <p><strong>二壮</strong>用自身经历对橙子进行了最有力的说服。他复盘自己2024年累晕倒两次、2025年摆烂大半年、9月才开始做自媒体的经历，展示了"慢慢把精力从主业抽出来"的可行性。他对橙子说了一句极具分量的话："我和查理可以试错，橙子压根没精力，给自己捆死。""我的自媒体不存在真正意义上的创作，都是抄自己的。"他分享的核心方法是把生活经历——"带娃耗费了我的精力，那我写下来；读博让我咋了咋了的，我写下来"——直接变成内容，因此"写起来其实并不累，写多了有经验总结了，就能卖了"。最后他总结："主动出击。"</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">我的自媒体不存在真正意义上的「创作」，都是抄自己的。</div>
+        <div class="gm-author">—— <strong>二壮</strong></div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">我和查理可以试错，橙子压根没精力，给自己捆死。</div>
         <div class="gm-author">—— <strong>二壮</strong></div>
       </div>
     </div>
   </div>
 
-  <!-- 话题二 -->
+  <!-- 同伴：绵羊 -->
   <div class="topic-card">
-    <h4>昍（日日）的「靠不住」诊断：信任稀缺时代的人际边界课</h4>
-    <div class="topic-time">00:36 - 01:32</div>
+    <h4>绵羊的"将饮茶"视频打磨：从发视频到被追问对标</h4>
+    <div class="topic-time">17:21 - 18:53</div>
 
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">昍（日日）：</span>"我的感受哈：你不是坏人，但很多时候我不敢和你说实话。因为你虽然信我，但你毕竟不是只信我。"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">信任建立</span>
-      <span class="tag">自我认知</span>
-      <span class="tag">人际边界</span>
-      <span class="tag">真诚悖论</span>
-      <span class="tag">信息保护</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
     <div class="detail-content">
-      <div class="sub-heading">一、话题背景与起因</div>
-      <p>凌晨时分，<strong>昍（日日）</strong>对<strong>二壮</strong>进行了一场直截了当的"人际可信度"反馈。起因是二壮之前的一些言行让昍感到无法完全信任——不是道德问题，而是信息边界问题。</p>
-      <div class="sub-heading">二、主要观点与讨论详情</div>
-      <p>昍指出二壮的核心问题："你不是坏人，但很多时候我不敢和你说实话。因为你虽然信我，但你毕竟不是只信我，如果我和你说了实话，你指不定啥时候就无意中把我卖了。"<strong>宝鹅</strong>感叹"信任真稀缺啊"。</p>
-      <p>二壮诚恳地进行了自我剖析，列举了六点"靠不住"的原因：变化剧烈不稳、沾沾自喜爱分享、情绪外露易被利用、不懂斗争、觉得优势可以弥补劣势、从没想过隐藏自己。<strong>昍（日日）</strong>随后给出了极具实操性的<strong>"反指"策略</strong>——拿自己做反指，"慌的时候会想，如果是『我』，这时就该买入了——好，因为『我』是反指，那我现在就卖出"。</p>
-      <p><strong>糕糕</strong>则从更深层指出二壮"很容易给人很浮躁的感觉"，"内耗起来就容易乱说话，然后会倾向于寻求认同"，一旦向外求认同，就会不可避免地暴露不该透露的内容。但她同时也肯定了二壮"蠢蠢的，不是有意而为之，可以很好进步"。</p>
-      <div class="sub-heading">三、结论与启发</div>
-      <p>信任不是靠"真诚"就能换来的单维度品质，而是一个涉及<strong>信息边界管理、情绪稳定性、行为可预测性</strong>的综合函数。想要变得"靠得住"，首先要少说话、多观察，把倾诉欲控制在极少数真正聪明的人之间。</p>
+      <p><strong>绵羊</strong>下午发来"将饮茶"账号的新视频请群友批改。<strong>糕糕</strong>没有直接点评内容，而是先追问了几个关键问题："你的目标是什么？这个视频想做的方向是什么？吸引什么群体？有对标参考吗？对比之前的，做了什么改善？"绵羊回答后，明确了定位：目标用户是30-50岁在日常生活中寻找安定感的女性，方向是以东方茶文化为依托的生活态度——"不教别人怎么做，只是呈现一种活法"。但她也坦言还没找到对标参考。<strong>糕糕</strong>给出的建议是画面太单一，需要加画中画丰富视觉层次。<strong>橙子</strong>也提出字幕与背景色有点混。</p>
+    </div>
+  </div>
+
+  <!-- 同伴：子蟹 -->
+  <div class="topic-card">
+    <h4>子蟹的关键一票：砍掉主业，飞轮起来</h4>
+    <div class="topic-time">12:03 - 17:21</div>
+
+    <div class="detail-content">
+      <p><strong>子蟹</strong>今天贡献了最果断的判断。"你现在同时开了4条任务线——主业、副业1、副业2、生娃。主业单独来看死局已定。但是，如果砍掉主业，副业1副业2生娃，都有时间精力干了，而且完全可以飞轮起来。同样都是搏，我选择第二条路搏。"她还贡献了"橙子需要上一门摸鱼课"的吐槽和"排期卡得紧，你就往上浇垃圾"的职场厚黑学。她甚至发现橙子可以教人如何当编剧——"其实明明很多游戏文案还有小编剧都卡在没有办法入行的情况下，你多分享一些故事，完完全全就可以做他们的C端。"虽然后来AA昍指出这个建议"跟她的现状是背道而驰"（因为时间和精力不够），但子蟹的视角打开了橙子的变现可能性。</p>
     </div>
 
     <div class="conclusion-gm">
-      <div class="conclusion-box">
-        <div class="c-label">关键结论</div>
-        <div class="c-text">「真诚」只是信任的入场券，不是保障卡。真正的人际信任建立在信息边界、情绪稳定和行为可预测性之上，而非单纯的自我暴露。</div>
-      </div>
       <div class="gm-label">金句时刻</div>
       <div class="gm-item">
-        <div class="gm-quote">聪明人非常少，所以人一辈子能倾诉的对象我感觉不会超过一只手。总想找不同人倾诉的时候，就提醒自己，这是在犯蠢。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
+        <div class="gm-quote">如果爆了，橙子就能直接提法拉利了。虽然法拉利很傻逼但大概就是这么个水平。</div>
+        <div class="gm-author">—— <strong>子蟹</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">每与操反，则事可成。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
+        <div class="gm-quote">你管他翻不翻呢？咱目的不就是为了挣钱嘛。你自己愿意相信、而我确实有案例，那你能不能复制得了成功，那是你的事儿啊。</div>
+        <div class="gm-author">—— <strong>溏心蛋</strong></div>
       </div>
-      <div class="gm-item">
-        <div class="gm-quote">你内耗起来就容易乱说话，然后会倾向于寻求认同。一旦有这个诉求，你就会不可避免地去找不同的人私聊，这个时候就很容易无意地暴露很多不该透露给别人的内容。</div>
-        <div class="gm-author">—— <strong>糕糕</strong></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 话题三 -->
-  <div class="topic-card">
-    <h4>落日钓星星的教学效果放大术：两颗芒果🥭撬动家长认知</h4>
-    <div class="topic-time">00:25 - 00:35</div>
-
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">落日钓星星💫：</span>"如何放大自己的教学效果？我讲个好玩的："</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">教育创新</span>
-      <span class="tag">家长沟通</span>
-      <span class="tag">教学转化</span>
-      <span class="tag">情感设计</span>
-      <span class="tag">正向反馈</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
-    <div class="detail-content">
-      <div class="sub-heading">一、话题背景与起因</div>
-      <p><strong>落日钓星星💫</strong>分享了一个真实教学案例：学生子涵底子弱、起步晚，一年前连负数都算不明白。经过一年的耐心培养，子涵不仅听懂了八年级几何，还能给其他同学讲几何证明题。</p>
-      <div class="sub-heading">二、主要观点与讨论详情</div>
-      <p>问题的关键是：<strong>怎么让家长知道孩子的进步？</strong>落日钓星星设计了一个精妙的"情感传递链"：她先给子涵奖励了两颗芒果，然后教子涵回家后用一系列精心设计的话术跟妈妈互动——"今天天气很热，妈妈你上了一天班，有点累吧......你想不想补充一点糖分？"最终引出"芒果是我为你打下的江山，这是胜利的果实！"</p>
-      <p>妈妈"笑到肚皮抽"。当晚落日钓星星在群里群发了孩子们的表现视频，又单独给子涵妈妈私发了讲题视频。子涵妈妈回复：<strong>"祖坟冒了青烟了。"</strong>从来不回复群消息的爸爸，这次也在群里回复了。更妙的是，子涵和妈妈的整段对话"剧本是老师写的，子涵一字不差演绎得很好"。</p>
-      <div class="sub-heading">三、结论与启发</div>
-      <p>教学效果的放大器不是更多课时，而是<strong>「可感知、可传播、可情感共鸣」的正向反馈设计</strong>。把孩子的进步变成一场家长能参与、能感动、能主动传播的"小型戏剧"，教学的价值就完成了从"老师知道"到"全家相信"的跃迁。</p>
-    </div>
-
-    <div class="conclusion-gm">
-      <div class="conclusion-box">
-        <div class="c-label">关键结论</div>
-        <div class="c-text">教学价值的传递需要「情感设计」——把孩子的进步转化为家长可感知、可参与、可传播的故事，教育效果才能突破课堂边界。</div>
-      </div>
-      <div class="gm-label">金句时刻</div>
-      <div class="gm-item">
-        <div class="gm-quote">芒果是我为你打下的江山，这是胜利的果实！</div>
-        <div class="gm-author">—— <strong>子涵（剧本：落日钓星星💫）</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">祖坟冒了青烟了。</div>
-        <div class="gm-author">—— <strong>子涵妈妈</strong></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 话题四 -->
-  <div class="topic-card">
-    <h4>小红书「偷梁换柱」广告邪修与自媒体信息安全隐患</h4>
-    <div class="topic-time">00:49 - 00:54</div>
-
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">糕糕：</span>"我最近看到一个可怕的邪修，就是先发引流的有话题的内容，然后点赞阅读都上去以后，换成品牌广告……"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">平台规则</span>
-      <span class="tag">广告变现</span>
-      <span class="tag">信息传播</span>
-      <span class="tag">内容安全</span>
-      <span class="tag">群生态</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
-    <div class="detail-content">
-      <div class="sub-heading">一、话题背景与起因</div>
-      <p><strong>糕糕</strong>在凌晨分享了一个小红书上的"邪修"操作：先发引流内容把数据拱上去，然后偷偷编辑换成品牌广告。<strong>橙子🍊</strong>补充还有"在热帖评论区里发广告引用，然后再删掉自己的评论"的变种玩法。</p>
-      <div class="sub-heading">二、主要观点与讨论详情</div>
-      <p><strong>黄云</strong>关心这种操作在蒲公英平台是否会显示成商单，<strong>糕糕</strong>回答"不会，这些都是水下的"，并解释"商单一开始编辑就要挂靠"。<strong>宝鹅</strong>质疑"感觉很容易被看出来"，但糕糕确认"完全不会，哈哈哈哈"。</p>
-      <p>这个话题虽然短小，但揭示了一个重要的自媒体灰色地带：<strong>平台规则与变现冲动之间的猫鼠游戏</strong>。同时也让人反思——在一个信息可以随意编辑、评论可以随意删除的平台上，什么是"真实"的内容生态？</p>
-      <div class="sub-heading">三、结论与启发</div>
-      <p>平台规则的漏洞永远存在，但依赖"邪修"获得的短期收益往往伴随着长期风险。对于认真做内容的人来说，更重要的启示是：<strong>你的内容一旦发布，就不再完全属于你</strong>——它可以被编辑、被搬运、被重新语境化。</p>
-    </div>
-
-    <div class="conclusion-gm">
-      <div class="conclusion-box">
-        <div class="c-label">关键结论</div>
-        <div class="c-text">平台规则的灰色地带永远存在，但「邪修」玩法的天花板就是平台封号。可持续的变现必须建立在可复用、可积累的正向内容资产上。</div>
-      </div>
-      <div class="gm-label">金句时刻</div>
-      <div class="gm-item">
-        <div class="gm-quote">不会，这些都是水下的。</div>
-        <div class="gm-author">—— <strong>糕糕</strong></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 三、秉烛共谈录・小会精粹 -->
-  <div class="section-title">三、秉烛共谈录・小会精粹</div>
-
-  <div class="topic-card">
-    <h4>橙子🍊的车行小会：从「命题作文」到「人生作品」的跃迁之路</h4>
-    <div class="topic-time">11:41 - 16:36</div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">职业咨询</span>
-      <span class="tag">内容复用</span>
-      <span class="tag">飞轮效应</span>
-      <span class="tag">个人IP</span>
-      <span class="tag">人生规划</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
-    <div class="detail-content">
-      <div class="sub-heading">一、问题提出与背景补充</div>
-      <p><strong>橙子🍊</strong>是一名游戏编剧，日均工作11小时，主业项目即将沉船。她同时面临四个相互纠缠的人生目标：保住/跳槽主业、发展副业（编剧私活+自媒体）、备孕、以及创作"一部活得比橙子久的好作品"。她坦诚自己"脑子比较乱"，请求群友"放心上强度"。</p>
-      <p><strong>昍（日日）</strong>首先指出橙子的表达中充满"黑话"（如"活水"），并追问："如果这个人是花2000块钱来咨询你，这就是你的回答吗？"他进一步质疑："你能意识到这个『活水』不是正常人说话吗？"这迫使橙子从"行业黑话"退回到"人话"层面重新思考自己的处境。</p>
-
-      <div class="sub-heading">二、核心焦点与深层议题挖掘</div>
-      <p>讨论很快从"要不要换工作"升维到"你的人生主线是什么"。<strong>转念之间</strong>提出首要问题：橙子的大目标到底是"成为优秀的游戏编剧→策划→制作人→导演"，还是"做文字工作"（写小说、做自媒体）？</p>
-      <p>橙子确认了自己的终极目标：<strong>"做一部活得比橙子久的好作品"</strong>。但她困于"感觉主业卡得死死的，想从副业和自媒体找找办法"，同时又被备孕的时间压力所挤压。</p>
-      <p><strong>昍（日日）</strong>一针见血地指出核心矛盾："卖时间换钱本身没有问题，如果客单价足够高，天花板也可以很高。你的问题在于——你的时间想卖给谁就卖给谁吗？主动权不在你手里啊。"他用<strong>"暗娼vs名妓"</strong>的犀利类比，说明同样是出卖单位时间，是否有主动权、是否有复用，收入天差地别。</p>
-
-      <div class="sub-heading">三、多方观点流派与方案探讨</div>
-      <p>群友们形成了几派观点：</p>
-      <p><strong>「激进派」子蟹：</strong>"你现在同时开了4条任务线，主业死局已定，一旦优先满足主业，其他3条任务线全面被影响。我选择砍掉主业，搏第二条路。"</p>
-      <p><strong>「保守派」宝鹅：</strong>"现金流别断了。一方面是收入，一方面是心态。"建议先看看外部市场反馈，不要主动提离职。</p>
-      <p><strong>「折中派」查理：</strong>"把精力放到副业上面来，想好变现方式然后直接怼。副业收入好一点了直接备孕，福利拿到等着被开。"</p>
-      <p><strong>「结构派」二壮：</strong>提出"导演+作品+观众"的增长飞轮，建议橙子用"日均工作11h的编剧备孕日记"这种人设来拱流量，"把自己拱起来，让人找自己"。</p>
-      <p><strong>「对标派」转念之间：</strong>以橙子的前+1（写书→出名→大V→被邀请到游戏公司做主笔）为路径，建议"主业就应该是写作，副业才是找一份稳定发工资的地方"。</p>
-
-      <div class="sub-heading">四、老司机引导与方案点评</div>
-      <p><strong>昍（日日）</strong>作为核心引导者，没有直接给答案，而是不断用提问逼大家深入：</p>
-      <p>"所有人的自媒体本质上都是一样的。多想想。"</p>
-      <p>"一个人就是一家公司。再想想。"</p>
-      <p>"既然绕不开作品，那每一分钟干的所有的事都应该当成作品来看待。这有什么想不明白的…………"</p>
-      <p>他对<strong>二壮</strong>的回答进行点评："缺少了一步思考，就是我为什么要艾特你来回答？"引导二壮思考自己与橙子境遇的相似性（都曾被主业压垮精力）。</p>
-      <p>对<strong>转念之间</strong>的方案，他指出："主业副业有取舍，但彼此之间没有飞轮，和你自己现在卡住的位置是一样的。"</p>
-      <p>对<strong>子蟹</strong>的建议（教人当游戏编剧、教人写小说），他直言："他现在的问题是时间和精力不够用。你这个建议听起来很有道理，但和他的现状是背道而驰。"</p>
-      <p><strong>糕糕</strong>作为另一位老司机，给出了极具穿透力的总结："每一个环节你都有一个给自己堵着不前进的理由。"并建议橙子"从业内有没有你想成为的目标去反推，自己现在处于哪一步？先慢慢拆解。"</p>
-      <p><strong>黄云</strong>则在最后给出了一个实操建议："你去刷过编剧类的账号对标没？"并分享了一张编剧账号的截图，引导橙子从"看对标"开始行动。</p>
-
-      <div class="sub-heading">五、讨论共识与分歧总结</div>
-      <p><strong>共识：</strong></p>
-      <p>1. 橙子的"所有阻碍"中，有相当一部分是"自己给自己的"，需要外部视角来戳破自欺欺人。</p>
-      <p>2. 无论选择哪条路，<strong>「可复用性」</strong>是核心原则——每一次时间投入都应该成为未来某个更大作品的素材。</p>
-      <p>3. "出名"是绕不开的中间目标，但出名的方式不是"为了做而做"的命题作文，而是真实人格的自然流露。</p>
-      <p><strong>分歧：</strong></p>
-      <p>1. 是否应该在当前公司"原地怀孕"拿完福利再走（昍 vs 宝鹅）。</p>
-      <p>2. 教人写作/编剧这条路是否适合橙子当前的时间精力状况（昍 vs 子蟹）。</p>
-      <p>3. "先投简历看市场反馈" vs "先想清楚人生目标再行动"的顺序问题。</p>
-    </div>
-
-    <div class="conclusion-gm">
-      <div class="conclusion-box">
-        <div class="c-label">关键结论</div>
-        <div class="c-text">人生困局的解不在「选择A或B」，而在「把自己当成一家公司来经营」——所有投入必须可复用，所有时间必须指向「人生作品」的积累。被动等待不如主动拱流量，暗娼思维不如名妓思维。</div>
-      </div>
-      <div class="gm-label">金句时刻</div>
-      <div class="gm-item">
-        <div class="gm-quote">一个人就是一家公司。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">既然绕不开作品，那每一分钟干的所有的事都应该当成作品来看待。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">你要做自己的老板，不要不好意思。不然等谁管理你呀。管理你的人会抽走你创收的90%，这是行规。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">暗娼做一单没几两银子，完事就过了。没有复用。名妓真的那么与众不同吗？因为人家找对了方向，主动权拿在了自己手里，而不是「等着成名」。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">每一个环节你都有一个给自己堵着不前进的理由。</div>
-        <div class="gm-author">—— <strong>糕糕</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">主业的东西我写得还不错，但是都是一次性的，我要怎么才能复用呢？</div>
-        <div class="gm-author">—— <strong>橙子🍊</strong></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 四、解惑一点通・有问必答 -->
-  <div class="section-title">四、解惑一点通・有问必答</div>
-
-  <div class="qa-card">
-    <h4>二壮问：怎么才能变得「靠得住」？</h4>
-    <div class="qa-climb">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">二壮：</span>"我以前觉得真诚就够，后来知道真诚不够，但不知道该咋办。"</div>
-    </div>
-    <div class="qa-answer-label">解答</div>
-    <div class="qa-content">
-      <div class="sub-heading">一、问题背景</div>
-      <p><strong>二壮</strong>在被昍（日日）指出"靠不住"后，诚恳地寻求改进方法。他意识到自己虽然真诚，但真诚并不足以建立深度信任。</p>
-      <div class="sub-heading">二、核心分析</div>
-      <p><strong>昍（日日）</strong>指出核心问题：二壮不是坏人，但"你不是只信我"——这意味着信息会在无意中流转到不可控的渠道。<strong>糕糕</strong>补充指出二壮"很容易给人很浮躁的感觉"，内耗时会乱说话、向外求认同，进而不可避免地暴露不该透露的内容。</p>
-      <div class="sub-heading">三、解决方案与建议</div>
-      <p><strong>昍（日日）：</strong>建议"反指"策略——拿自己做反向指标，"每与操反，则事可成"。同时建议"有情绪的时候就写东西，不要找人说话"，因为"聪明人非常少，人一辈子能倾诉的对象不会超过一只手"。</p>
-      <p><strong>糕糕：</strong>建议二壮意识到自己"蠢蠢的，不是有意而为之"，这是可以进步的基础，但要先管住"向外求认同"的冲动。</p>
-    </div>
-    <div class="qa-tags">
-      <span class="tag">信任建立</span>
-      <span class="tag">自我认知</span>
-      <span class="tag">人际边界</span>
-    </div>
-  </div>
-
-  <div class="qa-card">
-    <h4>橙子🍊问：编剧内容如何复用？</h4>
-    <div class="qa-climb">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">橙子🍊：</span>"主业的东西我写得还不错，但是都是一次性的，我要怎么才能复用呢？"</div>
-    </div>
-    <div class="qa-answer-label">解答</div>
-    <div class="qa-content">
-      <div class="sub-heading">一、问题背景</div>
-      <p><strong>橙子🍊</strong>作为游戏编剧，创作内容消耗很大，但都是"一次性"的——写完即弃，无法形成积累。她苦恼于"创作是一种消耗，消耗的是已积累的东西，要复用、补充、滚起来，才能指数增加"。</p>
-      <div class="sub-heading">二、核心分析</div>
-      <p><strong>昍（日日）</strong>指出橙子的困惑说明"跨场景迁移、换位思考的能力"比想象中更难。他反问："我也不理解，你为什么会没有头绪？"</p>
-      <p><strong>转念之间</strong>提出：写作的过程、查的资料、思考的方法论，都可以变成自媒体内容和未来教写作的案例。</p>
-      <div class="sub-heading">三、解决方案与建议</div>
-      <p><strong>黄云：</strong>建议橙子去刷编剧类账号对标，"这些内容都是可复用的，因为这些有很明显的目的，可以复用在他的产品编剧课里"。</p>
-      <p><strong>昍（日日）：</strong>"比如陈思诚，比如郭帆，他们一步一步走上来，也不是一开始就在经典的。他们一步步走上来的东西，都扔了吗？肯定没有。而是复用了。如何将现有东西复用？如何在生产东西的时候，就想到它未来要如何复用？这都是SOP。"</p>
-    </div>
-    <div class="qa-tags">
-      <span class="tag">内容复用</span>
-      <span class="tag">创作方法论</span>
-      <span class="tag">个人IP</span>
-    </div>
-  </div>
-
-  <!-- 五、智慧火花匣・每日精选 -->
-  <div class="section-title">五、智慧火花匣・每日精选</div>
-
-  <div class="pick-card">
-    <h4>落日钓星星的「芒果江山」教学案例</h4>
-    <div class="pick-climb">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">落日钓星星💫：</span>"我给子涵奖励了两颗芒果🥭......芒果是我为你打下的江山，这是胜利的果实！"</div>
-    </div>
-    <div class="pick-body">
-      <div class="sub-heading">一、推荐内容</div>
-      <p>落日钓星星用两颗芒果和一段精心设计的"亲子对话剧本"，把一个普通学生的几何进步，转化为一场让家长笑到肚皮抽、让爸爸破天荒回复群消息的<strong>情感事件</strong>。这不是教学技巧，这是<strong>教学剧场</strong>。</p>
-      <div class="sub-heading">二、核心价值与特点</div>
-      <p>核心价值在于展示了如何把"教育结果"升维为"家庭记忆"。当教学成果可以被孩子主动讲述、被家长主动传播时，教师的价值就不再局限于课时费，而是进入了<strong>情感溢价</strong>的领域。这是所有知识服务从业者都值得学习的"效果放大术"。</p>
-    </div>
-    <div class="pick-tags">
-      <span class="tag">教育创新</span>
-      <span class="tag">情感设计</span>
-      <span class="tag">效果放大</span>
-    </div>
-  </div>
-
-  <div class="pick-card">
-    <h4>昍（日日）的「暗娼vs名妓」生存法则</h4>
-    <div class="pick-climb">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">昍（日日）：</span>"说句不好听的，暗娼当然不稳定，名妓肯定有主动权。一样是出卖单位时间，名妓的收入是多少？"</div>
-    </div>
-    <div class="pick-body">
-      <div class="sub-heading">一、推荐内容</div>
-      <p>昍（日日）用一个极具冲击力的类比，揭示了自由职业者/内容创作者的核心分野：<strong>被动接单 vs 主动定价</strong>。暗娼做一单过一单，没有复用、没有积累、没有品牌；名妓则把每一次服务都变成品牌资产的一部分。</p>
-      <div class="sub-heading">二、核心价值与特点</div>
-      <p>这个类比的精妙之处在于，它不仅适用于橙子的编剧事业，也适用于几乎所有"卖时间换钱"的知识服务者。<strong>「主动权」</strong>和<strong>「可复用性」</strong>是衡量一个人是否从"手艺人"进化为"生意人"的两把标尺。</p>
-    </div>
-    <div class="pick-tags">
-      <span class="tag">商业思维</span>
-      <span class="tag">个人IP</span>
-      <span class="tag">自由职业</span>
     </div>
   </div>
 
   <!-- Footer -->
   <div class="footer-note">
-    本报告基于群聊数据自动生成，仅供参考。内容可能包含个人观点，不代表群组官方立场。
+    本报告基于群聊数据自动生成，仅供参考。
+    生成版本：v5.4 &middot; 2026-07-16
   </div>
 
 </div>

@@ -91,17 +91,9 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   }
   .nav-bar .nav-label {
-    font-size: 13px;
-    color: #fff;
-    background: var(--accent);
-    font-weight: 600;
-    padding: 6px 14px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.15s ease;
-  }
-  .nav-bar .nav-label:hover {
-    background: #d14e2e;
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 500;
   }
   .nav-btn {
     background: none;
@@ -343,6 +335,60 @@
     font-style: normal;
   }
 
+  /* ===== Q&A Card ===== */
+  .qa-card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .qa-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  .qa-climb {
+    background: var(--kw-bg);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+  }
+  .qa-climb .climb-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .qa-climb .climb-text {
+    font-size: 14px;
+    color: var(--ink2);
+    line-height: 1.7;
+  }
+  .qa-answer-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink2);
+    margin-bottom: 6px;
+  }
+  .qa-content {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--ink2);
+  }
+  .qa-content strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .qa-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
   /* ===== Pick Card ===== */
   .pick-card {
     background: var(--card);
@@ -400,16 +446,9 @@
     display: inline-block;
     margin-top: 10px;
     font-size: 13px;
-    color: #fff;
-    background: var(--accent);
+    color: var(--accent);
     text-decoration: none;
-    font-weight: 600;
-    padding: 8px 16px;
-    border-radius: 8px;
-    transition: background 0.15s ease;
-  }
-  .pick-link:hover {
-    background: #d14e2e;
+    font-weight: 500;
   }
 
   /* ===== Footer ===== */
@@ -425,6 +464,44 @@
   @media (min-width: 520px) {
     .container { padding: 0 24px 80px; }
   }
+
+  /* ===== v5.4 新增样式 ===== */
+  .header-card { background: linear-gradient(135deg, var(--accent) 0%, #f07a5a 100%); border-radius: 20px; padding: 32px 24px 28px; margin: 16px 0 14px; text-align: center; box-shadow: 0 4px 16px rgba(232, 93, 58, 0.2); }
+  .header-card h1 { font-size: 22px; font-weight: 800; color: #ffffff; letter-spacing: 0.5px; margin-bottom: 10px; text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+  .header-card .date-row { font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 4px; }
+  .header-card .time-row { font-size: 12px; color: rgba(255,255,255,0.7); }
+  .section-title { font-size: 16px; font-weight: 700; color: var(--ink); margin: 24px 0 10px 4px; padding-left: 10px; border-left: 3px solid var(--accent); }
+  .hero-card { background: var(--card); border-radius: 16px; padding: 22px 18px; margin-bottom: 14px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+  .hero-card h4 { font-size: 16px; font-weight: 700; color: var(--ink); line-height: 1.5; margin-bottom: 4px; }
+  .hero-card .topic-time { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+  .hero-card .detail-content .sub-heading { font-size: 14px; font-weight: 700; color: var(--ink); margin: 18px 0 10px; padding: 8px 0 8px 12px; border-left: 3px solid var(--accent); background: linear-gradient(90deg, var(--kw-bg) 0%, transparent 70%); border-radius: 0 6px 6px 0; }
+  .hero-card .detail-content .sub-heading:first-child { margin-top: 0; }
+  .hero-card .detail-content p { margin-bottom: 14px; line-height: 1.85; color: var(--ink2); font-size: 14px; }
+  .hero-card .detail-content p:last-child { margin-bottom: 0; }
+  .conclusion-gm { margin-top: 18px; padding: 16px 14px 14px; background: var(--accent-light); border-radius: 12px; border: 1px solid var(--accent-tag); }
+  .conclusion-gm .conclusion-box { background: var(--card); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+  .conclusion-gm .gm-label { font-size: 13px; font-weight: 700; color: var(--accent); margin-bottom: 10px; padding-left: 8px; border-left: 2px solid var(--accent); }
+  .conclusion-gm .gm-item { background: var(--card); border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .conclusion-gm .gm-item:last-child { margin-bottom: 0; }
+  .conclusion-gm .gm-quote { font-size: 14px; line-height: 1.7; color: var(--ink); font-weight: 500; }
+  .conclusion-gm .gm-author { font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .topic-card { background: var(--card); border-radius: 14px; padding: 18px 16px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .topic-card h4 { font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+  .topic-card .topic-time { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+  .topic-card .detail-content p { margin-bottom: 12px; line-height: 1.8; color: var(--ink2); font-size: 14px; }
+  .topic-card .detail-content .sub-heading { font-size: 14px; font-weight: 700; color: var(--ink); margin: 14px 0 8px; }
+  .detail-content p strong, .qa-content p strong { background: var(--accent-light); padding: 1px 4px; border-radius: 3px; font-weight: 600; color: var(--accent); }
+  .quote-section { background: var(--card); border-radius: 14px; padding: 18px 16px; margin-bottom: 12px; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .quote-label { font-size: 12px; font-weight: 700; color: var(--accent); margin-bottom: 8px; letter-spacing: 1px; }
+  .quote-text { font-size: 16px; font-weight: 600; color: var(--ink); line-height: 1.6; margin-bottom: 8px; }
+  .quote-author { font-size: 13px; color: var(--muted); }
+  .stats-card { background: var(--card); border-radius: 14px; padding: 18px 16px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .stat-big { font-size: 28px; font-weight: 800; color: var(--accent); }
+  .stat-label { font-size: 12px; color: var(--muted); }
+  .nav-bar { display: flex; gap: 6px; margin-bottom: 14px; overflow-x: auto; padding-bottom: 4px; }
+  .nav-btn { background: var(--card); border: 1px solid var(--rule); border-radius: 20px; padding: 6px 14px; font-size: 13px; color: var(--ink2); white-space: nowrap; }
+  .nav-label { background: var(--card); border: 1px solid var(--rule); border-radius: 20px; padding: 6px 14px; color: var(--muted); font-size: 13px; font-weight: 600; white-space: nowrap; }
+  .footer-note { font-size: 12px; color: var(--muted2); text-align: center; margin-top: 24px; padding: 0 16px; }
 </style>
 </head>
 <body>
@@ -435,259 +512,247 @@
   <div class="header-card">
     <h1>十二W车行群日报</h1>
     <div class="date-row">2026 年 07 月 21 日（星期二）</div>
-    <div class="time-row">02:00 - 00:01</div>
+    <div class="time-row">02:00 - 23:09</div>
   </div>
 
   <!-- Nav Bar -->
   <div class="nav-bar">
-    <a class="nav-btn" href="daily-report-2026-07-20.html">上一天</a>
-    <a class="nav-label" href="index.html">日报导航</a>
-    <button class="nav-btn" disabled>下一天</button>
+    <button class="nav-btn">上一天</button>
+    <span class="nav-label">日报导航</span>
+    <button class="nav-btn">下一天</button>
   </div>
 
   <!-- 每日金句 -->
   <div class="quote-section">
     <div class="quote-label">每日金句</div>
-    <div class="quote-text">与其提醒别人，不要想象一只粉红色的大象，不如你自己先画一只绿色的青蛙出来。别人自然就跟着你走了。</div>
-    <div class="quote-author"><strong>AA昍</strong> · 社群运营 · 引导而非压制</div>
+    <div class="quote-text">与其提醒别人不要想象一只粉红色的大象，不如你自己先画一只绿色的青蛙出来。别人自然就跟着你走了。</div>
+    <div class="quote-author"><strong>AA昍</strong> · 2026-07-21 · 社群运营方法论</div>
   </div>
 
-  <!-- 二、总消息概览 -->
-  <div class="section-title">二、总消息概览</div>
+  <!-- 总消息概览 -->
+  <div class="section-title">总消息概览</div>
   <div class="stats-card">
-    <div>
-      <div class="stat-big">215</div>
-      <div class="stat-label">总消息数量</div>
+    <div class="stat-item-sm">
+      <div class="num">215</div>
+      <div class="label">总消息</div>
     </div>
-    <div class="stat-group">
-      <div class="stat-item-sm">
-        <div class="num">13</div>
-        <div class="label">活跃成员</div>
-      </div>
-      <div class="stat-item-sm">
-        <div class="num">20:12</div>
-        <div class="label">最活跃时段</div>
-      </div>
+    <div class="stat-item-sm">
+      <div class="num">4,044</div>
+      <div class="label">全文字数</div>
+    </div>
+    <div class="stat-item-sm">
+      <div class="num">9</div>
+      <div class="label">阅读时长</div>
     </div>
   </div>
 
-  <!-- 三、今日主角（详写） -->
-  <div class="section-title">三、今日主角</div>
+  <!-- 今日主角 -->
+  <div class="section-title">今日主角</div>
 
-  <!-- 话题一：二壮的社群运营反思与"劝退公告"风波 -->
-  <div class="topic-card">
-    <h4>二壮 · 社群运营的"劝退公告"引发的价值边界思考</h4>
-    <div class="topic-time">11:25 - 15:29</div>
+  <!-- 主角一：橙子🍊（小会发起人） -->
+  <div class="hero-card">
+    <h4>橙子🍊 —— 编剧的突围：成为大V是最稳的路</h4>
+    <div class="topic-time">11:27 - 22:00 &nbsp;|&nbsp; 小会发起人</div>
 
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">二壮：</span>"这个群不是用来听段子的，光刷段子的话，小红书就足够了。"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">社群运营</span>
-      <span class="tag">用户筛选</span>
-      <span class="tag">价值边界</span>
-      <span class="tag">信任积累</span>
-      <span class="tag">转化率</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
     <div class="detail-content">
-      <div class="sub-heading">一、背景：二壮的社群运营困境</div>
-      <p><strong>二壮</strong>在11:25发布了一个"劝退公告"，明确告知群成员："这个群不是用来听段子的，光刷段子的话，小红书就足够了。"他指出后期会进行高强度筛选和主动劝退，目的是让大家更有意义地讨论而不是只吹牛逼。发出这个公告后，二壮观察到群聊内容质量确实有所提升。</p>
-      
-      <div class="sub-heading">二、群友的敏锐反馈与问题诊断</div>
-      <p><strong>绵羊</strong>立即提出了一个关键洞察："一旦那个仰望感消失，他很难为你付高价值的费用。"她分析二壮的内容"有点点的讨好感"，如果讨好感是性格问题，就只能做陪伴型博主；如果是方法问题，后面可以调整。她建议二壮通过严厉的行为建立权威地位，比如有人说不当的话就严厉指出并清退。</p>
-      <p><strong>宝鹅</strong>补充了情绪价值的昂贵性，提醒二壮要和学生之间保持边界，"不能太'平'，绝对不能变成他们下饭的电子榨菜"。<strong>橙子🍊</strong>则从戏剧人物角度指出，一个人说什么不重要，做什么很重要——让观众看到行为而不是语言。</p>
-      
-      <div class="sub-heading">三、AA昍的四象限话题管理框架</div>
-      <p><strong>AA昍</strong>给出了一个完整的社群运营方法论——四象限话题管理：<br>1. <strong>大家都关注且有转化价值</strong>的话题——多参与<br>2. <strong>大家都关注但无转化价值</strong>（纯情绪价值）——有空就参与<br>3. <strong>没关注但有转化价值</strong>——引导大家讨论<br>4. <strong>没关注也无转化价值</strong>——尽量不要参与，若有人聊就打断</p>
-      <p>核心逻辑是：<strong>"转化价值=付费意识"</strong>。真正有价值的话题才会有人愿意付费。关键不是靠说"不要做什么"，而是通过行为引导——"与其提醒别人不要想象一只粉红色的大象，不如你自己先画一只绿色的青蛙出来"。</p>
-      
-      <div class="sub-heading">四、二壮的反思与调整</div>
-      <p>经过这番讨论，<strong>二壮</strong>意识到了问题所在："我说的话让大家觉得我让大家不要闲聊，但我心里没这么想。这个度我又趟过线了。"他决定调整做法，先拉一个助教出来，不要总是自己亲自下场，找到自己的"马医生"。最终二壮明确表示："现阶段的一切工作都是为了节省精力提高效率。"</p>
+      <div class="sub-heading">小会发起：编剧变现路径的穷尽式探索</div>
+      <p>晚上八点半下班后，<strong>橙子🍊</strong>发起本周车行小会，分享了小会文档和两篇内容的数据截图。他坦诚梳理了编剧自媒体的变现困境：写过非常专业的全方法论内容，引来了电视台和平台方建联，但没推进成变现；写过段子引来了经纪人建联，同样没变现。核心困境是——"没摸到编剧通过自媒体变现的渠道"。</p>
+
+      <div class="sub-heading">从被动到主动：戏剧人物的自我映射</div>
+      <p>在上午与群友讨论二壮社群运营时，<strong>橙子🍊</strong>贡献了一个精彩的戏剧人物类比：用行为而非言语来建立人设——"一个人说什么不重要，做什么很重要"。更深刻的是，他从戏剧人物中反观自己，意识到自己一直处于"事找人"而非"人找事"的被动模式："等着事找上门的话，剧情看起来有起伏，但其实很被动。因为相当于人一直在挨打，一直在解题。"他决心之后要主动出击。</p>
+
+      <div class="sub-heading">内容创作双线：蹭热播 + 写自己的小说</div>
+      <p>经过群友的集中讨论，<strong>橙子🍊</strong>当晚形成了两条明确路径。路径一：继续猛猛蹭热播电影、电视剧和综艺，先成为编剧赛道的头部大V。<strong>糕糕</strong>点出关键——"小红书的编剧可不多，你先成为头部"，<strong>AA昍</strong>也肯定"成为大V是最稳的（既容易，又容错）"。路径二：开始写小说，从5-8万字短篇起步，先在网文平台发。橙子还分享了自己的终极目标作者——晋江头部网文作家"御井烹香"，其日更6000+字的勤奋令橙子深受触动。</p>
+
+      <div class="sub-heading">从"做着找"到"倒逼自己"</div>
+      <p>面对"编剧变现模型还没想清楚"的现实，<strong>橙子🍊</strong>的态度是"我也得再找，现在脑子里没这个模型，然后我就做着找，可能做着做着就有了"。他宣布从这周开始，每周小会汇报小说进度，"有一个汇报会反向督促我自己更新"。<strong>AA昍</strong>总结："专心做真正重要的事，绝大多数人是不成长的，所以离某个群体太近，自己就会慢慢不再成长"——这句话成了橙子当晚的收官之悟。</p>
     </div>
 
     <div class="conclusion-gm">
       <div class="conclusion-box">
         <div class="c-label">关键结论</div>
-        <div class="c-text">社群运营的核心不是"禁止"，而是"引导"。通过四象限话题管理框架，识别话题的转化价值，用行为示范而非语言约束来引导群体讨论方向。保持适当的"仰望感"和边界感，才能支撑高客单价。</div>
+        <div class="c-text">编剧自媒体的变现需要两条腿走路：一边持续产出热播影评爆款涨粉（成为编剧赛道大V），一边写自己的原创小说积累作品。不要等想清楚模型再动，而是边做边找路。从"等着事找上门"到"主动去找事"，是橙子今天最重要的认知跃迁。</div>
       </div>
       <div class="gm-label">金句时刻</div>
       <div class="gm-item">
-        <div class="gm-quote">与其提醒别人，不要想象一只粉红色的大象，不如你自己先画一只绿色的青蛙出来。别人自然就跟着你走了。</div>
+        <div class="gm-quote">好的戏剧人物应该是事找人+人找事，主角要主动去找事。等着事找上门的话，相当于人一直在挨打，一直在解题。</div>
+        <div class="gm-author">—— <strong>橙子🍊</strong></div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">专心做真正重要的事，绝大多数人是不成长的，所以离某个群体太近，自己就会慢慢不再成长。大部分大V最后都是这个结果。</div>
         <div class="gm-author">—— <strong>AA昍</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">一旦那个仰望感消失，他很难为你付高价值的费用。</div>
-        <div class="gm-author">—— <strong>绵羊</strong></div>
+        <div class="gm-quote">我决定猛猛蹭热播，电影电视剧看情况，综艺也可以继续蹭。小说写，逃不过去。我也得再找，现在脑子里没这个模型，然后我就做着找。</div>
+        <div class="gm-author">—— <strong>橙子🍊</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主角二：二壮 -->
+  <div class="hero-card">
+    <h4>二壮 —— 社群劝退公告翻车：从"我想说什么"到"别人听到什么"</h4>
+    <div class="topic-time">08:09 - 15:26 &nbsp;|&nbsp; 被群友集中批改</div>
+
+    <div class="detail-content">
+      <div class="sub-heading">凌晨救人：群聊之外的一次真实救援</div>
+      <p>凌晨八点，<strong>二壮</strong>在群中报平安：昨晚在办公室工作时，突然遇到紧急情况，"帮忙处理了，救了两个学生，一直帮忙忙活到两点多。虽然当时感觉有点危险，但是其实还好，我全程安全"。所以前一天的消息没回、留的题没想好。这段经历也让群友对二壮的为人有了更深的认识。</p>
+
+      <div class="sub-heading">社群群公告翻车：劝退风波与意图落差</div>
+      <p><strong>二壮</strong>在自己的付费社群中发了一段群公告："只想听段子的可以准备退群了""后期会进行高强度的筛选和主动劝退"。他本意是想让群聊从"纯闲聊"转向"有质量的讨论"，这段话发出后也确实有人开始更积极地分享和提问。但在十二W车行群分享这段经历后，遭到群友的集中批评。</p>
+
+      <div class="sub-heading">群友集中批改：度的艺术</div>
+      <p><strong>橙子🍊</strong>用一个戏剧类比点出问题核心："你让人物直接说'我不会给你提供情绪价值'，我作为观众会觉得这个人有病吧。但如果你让他的行为是解决问题、冷面、热心等等，我作为观众会觉得，嗯嗯对啊，情绪价值不重要，解决问题才厉害。"<strong>宝鹅</strong>提醒二壮观察日日的方式，"你这个社群才刚运营起来，大家的信任度还没那么高"。<strong>糕糕</strong>更是直言："日日那么多群，不管是免费的还是收费的，也没有群公告这样写。人教人教不会，你这么刻意，没有效果。你只需要在交流的过程里表达出来就行了。"</p>
+
+      <div class="sub-heading">关键醒悟：从"我想说什么"到"别人听到什么"</div>
+      <p>经过群友批改后，<strong>二壮</strong>终于意识到问题所在："我心里没想'不让大家闲聊'，但是我说的话让大家这么认为了。好像明白了，这个度我又趟过线了。再调～"——他领悟到，问题不在意图本身，而在于措辞传递出去后接收者感知到的信息与自己内心所想之间的鸿沟。<strong>黄云</strong>后来用一段长文总结本质：你面对的是学生群体，"没有社会经验，完全不会换位思考，后续非常可能有钱都不愿意掏"，需要"真把他们当人，再去结合自己的目的，才能顺"。</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="conclusion-box">
+        <div class="c-label">关键结论</div>
+        <div class="c-text">社群运营中，意图正确不等于表达正确。二壮的核心问题是把"引导群聊方向"做成了"发布劝退公告"，从"并肩作战"变成了"高高在上"。正确的方式是用行为示范而非文字命令，用参与筛选而非公开劝退。</div>
+      </div>
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">闲聊、摸鱼、八卦、偷懒、不想动脑子，就是人的天性。你要让人去和自己的天性做斗争，肯定是要有一个共同的目标吧。</div>
+        <div class="gm-author">—— <strong>橙子🍊</strong></div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">我心里没想"不让大家闲聊"，但是我说的话让大家这么认为了。好像明白了，这个度我又趟过线了。</div>
+        <div class="gm-author">—— <strong>二壮</strong></div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">你那做法就是完全把自己摆在了高高在上的对立面。你得真把他们当人，再去结合自己的目的，才能顺，否则就是一堆阻力。</div>
+        <div class="gm-author">—— <strong>黄云</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 老司机补给站 -->
+  <div class="section-title">老司机补给站</div>
+  <div class="topic-card">
+    <h4>AA昍的系统性批改：四象限话题法 + "不要回评论" + "先画青蛙"</h4>
+    <div class="topic-time">13:40 - 22:00</div>
+
+    <div class="detail-content">
+      <p><strong>AA昍</strong>在今天贡献了多条方法论级别的输出。针对二壮日报的作用，他提出了<strong>"四象限话题法"</strong>：横轴是关注度（群里多少人关注），纵轴是转化价值（有没有付费意愿），将话题分为四类——多关注高转化的多参与，多关注低转化的有空再说，少关注高转化的引导讨论，少关注低转化的尽量打断。这是在教二壮如何用日报管理自己在不同话语上的参与度，本质是"时间和精力的战略分配"。</p>
+      <p>针对橙子和二壮评论区互动的纠结，<strong>AA昍</strong>甩出两条金律："不要回评论，评论回的越多越没有用"——类比"不要炒股，已经跟你说了不要炒股了，这个时候你还非要炒，那才是真的值得炒的股"。以及"与其提醒别人不要想象一只粉红色的大象，不如你自己先画一只绿色的青蛙出来"——用行动引导而非语言禁止。最后他总结："既然现在已经深刻的意识到，最大的瓶颈就是时间和精力不足，那么接下来所有的任务都应该朝着节约自己的精力、高效利用时间这个方向去推进。做，不是靠说。当然，火坑肯定要自己跳，一两次是不够的。"</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">不要回评论，评论回的越多越没有用。就像不要炒股，已经跟你说了不要炒股了，这个时候你还非要炒，那才是真的值得炒的股。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
       </div>
       <div class="gm-item">
         <div class="gm-quote">先拉一个助教出来，不要总是自己亲自下场，找到自己的「马医生」。</div>
         <div class="gm-author">—— <strong>AA昍</strong></div>
       </div>
+      <div class="gm-item">
+        <div class="gm-quote">做，不是靠说。当然，火坑肯定要自己跳，一两次是不够的。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
+      </div>
     </div>
   </div>
 
-  <!-- 话题二：橙子🍊的编剧变现路径探索 -->
   <div class="topic-card">
-    <h4>橙子🍊 · 编剧变现困境与"成为大V"路径的重新思考</h4>
-    <div class="topic-time">20:12 - 21:48</div>
+    <h4>黄云的商业洞察：凌晨的美妆赛道分析 + 下午的变现形式穷尽</h4>
+    <div class="topic-time">02:54 - 20:44</div>
 
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">橙子🍊：</span>"我主要没摸到那种编剧通过自媒体变现的渠道。认识的所有编剧都是人拉人。"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">编剧变现</span>
-      <span class="tag">人脉积累</span>
-      <span class="tag">大V策略</span>
-      <span class="tag">网文写作</span>
-      <span class="tag">蹭热点</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
     <div class="detail-content">
-      <div class="sub-heading">一、背景：编剧变现的核心困境</div>
-      <p><strong>橙子🍊</strong>在20:12分享了小会文档，指出编剧变现的典型特征："量小但客单价极高"。但问题在于——<strong>如何与这条路形成飞轮</strong>？橙子分享了自己的经历：写专业方法论引来业内建联，写段子也有经纪人来接触，但都没有推进成变现。她发现所有编剧工作都是"人拉人"模式，而自己是"小老鼠"，缺乏人脉积累。</p>
-      
-      <div class="sub-heading">二、老司机的诊断与建议</div>
-      <p><strong>AA昍</strong>指出了核心问题："你的变现特征就是量小但客单价极高，而其他路要如何与这条路形成飞轮，只能你自己拉一个模型出来。现在没看到这个模型，不太好逐条优化。"</p>
-      <p><strong>糕糕</strong>给出了直接的建议："编剧这个路子真的很需要积累人脉，偏偏你又是个小老鼠。如果一时间打不开人脉这个路子，那就先争取成为大V，一直出爆款（不是抽象梗），体量起来了以后，人脉自然来。"</p>
-      <p><strong>黄云</strong>建议橙子先"穷尽下变现形式"：社群、商单、咨询、课程、代劳服务、视频带货、直播带货、直播送礼、连麦付费、付费直播，从中找适合自己的，以此反推内容方向。</p>
-      
-      <div class="sub-heading">三、橙子的战略调整</div>
-      <p><strong>橙子🍊</strong>接受了建议，决定："每周的小会和大家聊一聊我的小说进度"，从这周开始进行"简短汇报不耽误大家时间"，用汇报会反向督促自己更新。同时继续"猛猛蹭热播、电影、电视剧"和"综艺"，积累爆款内容。</p>
-      <p>更重要的是，橙子决定开始写网文——先写5-8万字的短篇试试，看看这个路径是否可行。她分享了一个对标作者（微博@2457891847），指出该作者"写了6000+字/天"的勤勾示范和"即使全年无休"的创作强度。</p>
+      <p>凌晨四点多，<strong>黄云</strong>给<strong>糕糕</strong>做了一场深夜自媒体赛道分析：展示颜值类博主的报价（7.8万粉报价1.6万）、妆容展示类（3.9万粉报价1.8万）、护肤展示类（4.5万粉报价1.5万），并给出了一个非传统建议——做"经历博主"："你有阅历在撑着，这赛道还必须要丰富、杂。也不在乎镜头构图啥的，拿着镜头就叭叭一说，就是展示你的观察，这个很吸粉，后续又容易出书。"</p>
+      <p>下午和晚上，<strong>黄云</strong>又分别给二壮和橙子做了精准分析。对二壮学生群体的洞察一针见血："学生不会明白钱几乎等于信任程度，没有完成否定之否定"，但乐观的是"现在好事就是，用学生这么淌过一趟，以后面对更成熟群体，干活都会顺好多"。对橙子的编剧变现，他穷尽了所有变现形式——社群、商单、咨询、课程、代劳服务、视频带货、直播带货、直播送礼等——建议"从里面看看适合自己的，以此推演内容方向"。</p>
     </div>
 
     <div class="conclusion-gm">
-      <div class="conclusion-box">
-        <div class="c-label">关键结论</div>
-        <div class="c-text">编剧变现的本质是"人脉+爆款"。缺乏人脉时，先成为大V积累粉丝体量是可行的路径。同时要建立"飞轮模型"——如何将自媒体流量转化为编剧工作，反推内容方向。网文写作是验证写作能力和积累读者的低成本试错路径。</div>
-      </div>
       <div class="gm-label">金句时刻</div>
       <div class="gm-item">
-        <div class="gm-quote">如果一时间打不开人脉这个路子，那就先争取成为大V，一直出爆款（不是抽象梗），体量起来了以后，人脉自然来。</div>
+        <div class="gm-quote">你有阅历在撑着，这赛道还必须要丰富、杂。也不在乎镜头构图啥的，拿着镜头就叭叭一说，就是展示你的观察，这个很吸粉，后续又容易出书。</div>
+        <div class="gm-author">—— <strong>黄云</strong></div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">现在好事就是，用学生这么淌过一趟，以后面对更成熟群体，干活都会顺好多。</div>
+        <div class="gm-author">—— <strong>黄云</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <h4>糕糕的实战输出：人教人教不会 + 编剧赛道天然优势</h4>
+    <div class="topic-time">11:37 - 22:17</div>
+
+    <div class="detail-content">
+      <p><strong>糕糕</strong>今天同时给二壮、橙子、查理三位群友提供了具体建议。对二壮的社群劝退公告，她一针见血："人教人教不会，你这么刻意，没有效果。你只需要在交流的过程里表达出来就行了，大家闲聊你不搭茬，只提供输出有效的信息，就能认识到了。"她还分享了语音主播经验和美妆合伙人数据，给群友提供了可操作的参考样本。</p>
+      <p>对橙子的编剧路线，<strong>糕糕</strong>指出了两个关键判断：一是"编剧需要积累人脉，偏偏你又是个小老鼠"，解决方案是"先争取成为大V，体量起来以后人脉自然来"；二是"编剧赛道还有一个天然的优势，就是群体不受限，就走量。不管是年龄占比、性别占比还是用户标签，都不重要，只需要他们喜欢你的作品就行"——这一视角拓宽了橙子的内容策略空间。</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">人教人教不会，你这么刻意，没有效果。你只需要在交流的过程里表达出来就行了，大家闲聊你不搭茬，只提供输出有效的信息，就能认识到了。</div>
         <div class="gm-author">—— <strong>糕糕</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">对的，成为大V是最稳的（既容易，又容错）。</div>
+        <div class="gm-quote">如果一时间打不开人脉这个路子，那就先争取成为大V，一直出爆款（不是抽象梗），就出爆款，就攒粉。体量起来了以后，人脉自然来。</div>
+        <div class="gm-author">—— <strong>糕糕</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 同伴行动 -->
+  <div class="section-title">同伴行动</div>
+
+  <!-- 同伴：绵羊 -->
+  <div class="topic-card">
+    <h4>绵羊的"仰望感"理论：距离产生价值</h4>
+    <div class="topic-time">11:25 - 11:48</div>
+
+    <div class="detail-content">
+      <p>在讨论二壮自媒体学生群体时，<strong>绵羊</strong>贡献了当天最具穿透力的一个概念——"仰望感"。她指出二壮的问题有两个层面：一是情绪价值只能当漏斗，真正沉淀下来的是后续内容；二是距离感一旦消失，付费意愿就会崩坏。"二来是先知的家乡没有人信他，原因就是距离太近。你的学术、知识各方面足够学生来仰望你。但是如果你经常在评论区捞人或者在群里频繁互动，那你就会跟他们失去距离，这个仰望感就会消失。"<strong>绵羊</strong>还敏锐地观察到二壮内容中的"讨好感"倾向，指出如果讨好是性格而非策略，就只能做陪伴型博主——"主打提供一个情绪价值"。这些判断引发了<strong>橙子🍊</strong>、<strong>子蟹</strong>、<strong>宝鹅</strong>的一致共鸣。<strong>子蟹</strong>当即表示："仰望感，我好好琢磨琢磨，我是仰望绵羊姐的，日子过得很滋润，很潇洒，也懂很多道理，我愿意为绵羊姐花钱。"</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">先知的家乡没有人信他，原因就是距离太近。如果经常在评论区捞人或者在群里频繁互动，那你就会跟他们失去距离，这个仰望感就会消失。一旦那个仰望感消失，他很难为你付高价值的费用。</div>
+        <div class="gm-author">—— <strong>绵羊</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 同伴：溏心蛋 -->
+  <div class="topic-card">
+    <h4>溏心蛋的3w单子复盘：小三妈的蝴蝶效应</h4>
+    <div class="topic-time">09:34 - 22:57</div>
+
+    <div class="detail-content">
+      <p><strong>溏心蛋</strong>今天分享了两个话题。上午贡献了补课抽成的实操经验：成绩越好的学生抽成比例越高（最高35%），"因为他们的付费意愿更强，而且他们的上课转化出来的成绩更好一些"。这一点和自媒体高净值客单的逻辑一脉相承。</p>
+      <p>晚上十点多，<strong>溏心蛋</strong>爆出了一个令人震惊的消息：一个陪跑三年的3w单子丢了。他迅速展开了"福尔摩斯"式的摸排分析：追踪到一个关键变量——成绩最好的"乖乖女"同学的妈妈（无业全职待家女，小三上位），在和3w学生的妈妈聊天时传递了一些不能确保目标的负面信息，导致3w家长放弃了项目选择了新加坡。他冷静分析后制定了对策："准备找个借口约3w学生到校当面聊一下，全程录音，探一下口风，如果坐实的话，我后边就有数了。"<strong>AA昍</strong>犀利地点评："3w的妈，能和乖乖女的小三妈聊到一块儿去，本身就挺说明问题的"——并鼓励溏心蛋"回转是次要的，遇上这样的事才是有用的"，"不能不爱钱，但也不能太爱钱"。</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">回转是次要的，遇上这样的事才是有用的。</div>
         <div class="gm-author">—— <strong>AA昍</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">当你还没有明确方向的时候，先产出爆款，和热点电影结合，涨粉肯定不会有错。</div>
-        <div class="gm-author">—— <strong>糕糕</strong></div>
+        <div class="gm-quote">不能不爱钱，但也不能太爱钱。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
       </div>
-    </div>
-  </div>
-
-  <!-- 四、老司机补给站（略写） -->
-  <div class="section-title">四、老司机补给站</div>
-
-  <!-- 认知一：溏心蛋的教育抽成商业模式 -->
-  <div class="topic-card">
-    <h4>溏心蛋 · 教师补课抽成的20%-35%商业模式</h4>
-    <div class="topic-time">09:34 - 09:36</div>
-
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">溏心蛋：</span>"成绩越好的，抽成比例越高。因为他们的付费意愿更强，而且他们的上课转化出来的成绩更好一些。"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">教育抽成</span>
-      <span class="tag">分层收费</span>
-      <span class="tag">高净值客单</span>
-      <span class="tag">付费意愿</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
-    <div class="detail-content">
-      <p><strong>溏心蛋</strong>分享了自己做教师补课抽成的商业逻辑：最初因为胆子小不敢直接补课，同时考虑到学生程度参差不齐、家里不富裕、家长难缠等因素，所以采用转手送其他老师的方式，自己做抽成。</p>
-      <p>核心定价策略是<strong>"20%-35%分层抽成"</strong>：程度差的学生抽20%左右（最低），程度好的学生抽最高到35%，没有抽到40%的。也可以缩短补课时间跨度，提高单位课时价格。逻辑在于：<strong>"成绩越好的，抽成比例越高。因为他们的付费意愿更强，而且他们的上课转化出来的成绩更好一些。"</strong></p>
-      <p>最后溏心蛋总结：<strong>"这一点其实跟做自媒体高净值客单有点像。"</strong>——分层收费的核心都是识别付费意愿和付费能力，为高价值用户提供更高溢价的服务。</p>
-    </div>
-
-    <div class="conclusion-gm">
       <div class="gm-item">
-        <div class="gm-quote">这一点其实跟做自媒体高净值客单有点像。</div>
+        <div class="gm-quote">我反思在家长关系这一块，我没有做好的就是，没有用项目的客观成功，给三万妈站我的勇气。</div>
         <div class="gm-author">—— <strong>溏心蛋</strong></div>
       </div>
     </div>
   </div>
 
-  <!-- 认知二：黄云的美妆博主数据洞察 -->
-  <div class="topic-card">
-    <h4>黄云 · 10万粉以下美妆博主的广告接单困境</h4>
-    <div class="topic-time">04:23 - 04:40</div>
-
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">黄云：</span>"纯颜值类10万粉以下，能接到广告的都很少。"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">美妆博主</span>
-      <span class="tag">广告报价</span>
-      <span class="tag">垂直领域</span>
-      <span class="tag">平台标签</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
-    <div class="detail-content">
-      <p><strong>黄云</strong>查了相关数据后发现：<strong>纯颜值类10万粉以下，能接到广告的都很少</strong>。他分享的案例：一个7.8万粉的博主，视频报价1.6万（吃播）；另一个3.9万粉做妆容展示的，报价1.8万；还有一个4.5万粉做护肤展示的，报价1.5万。</p>
-      <p>关键观察是：<strong>"10万粉以内，要接美妆的一般直接就是美妆类了，直接做妆容展示那种。"</strong>而护肤类10万粉以下接广告的也少，这类达人大多专注小红书，抖音这边一般都带着直播一起。</p>
-    </div>
-
-    <div class="conclusion-gm">
-      <div class="gm-item">
-        <div class="gm-quote">纯颜值类10万粉以下，能接到广告的都很少。</div>
-        <div class="gm-author">—— <strong>黄云</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">10万粉以内，要接美妆的一般直接就是美妆类了，直接做妆容展示那种。</div>
-        <div class="gm-author">—— <strong>黄云</strong></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 五、同伴行动（略写） -->
-  <div class="section-title">五、同伴行动</div>
-
-  <!-- 分享一：二壮的群日报实践 -->
-  <div class="topic-card">
-    <h4>二壮 · 群日报的HTML化与GitHub发布实践</h4>
-    <div class="topic-time">10:43</div>
-
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">二壮：</span>"先做了个html的群日报，后面继续优化到github上。基本照抄新茧模式。"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">群日报</span>
-      <span class="tag">HTML</span>
-      <span class="tag">GitHub</span>
-      <span class="tag">内容沉淀</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
-    <div class="detail-content">
-      <p><strong>二壮</strong>完成了群日报的HTML化实现，采用新茧模式，后续准备优化并发布到GitHub上。这一行动直接呼应了之前群友讨论的"内容沉淀"需求，通过HTML形式的日报，将群聊中的有价值讨论进行结构化整理和保存。</p>
-    </div>
-  </div>
-
   <!-- Footer -->
   <div class="footer-note">
-    本报告基于群聊数据自动生成，仅供参考。内容可能包含个人观点，不代表群组官方立场。
+    本报告基于群聊数据自动生成，仅供参考。
+    生成版本：v5.4 &middot; 2026-07-21
   </div>
 
 </div>

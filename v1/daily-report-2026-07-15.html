@@ -91,17 +91,9 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   }
   .nav-bar .nav-label {
-    font-size: 13px;
-    color: #fff;
-    background: var(--accent);
-    font-weight: 600;
-    padding: 6px 14px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.15s ease;
-  }
-  .nav-bar .nav-label:hover {
-    background: #d14e2e;
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 500;
   }
   .nav-btn {
     background: none;
@@ -472,6 +464,44 @@
   @media (min-width: 520px) {
     .container { padding: 0 24px 80px; }
   }
+
+  /* ===== v5.4 新增样式 ===== */
+  .header-card { background: linear-gradient(135deg, var(--accent) 0%, #f07a5a 100%); border-radius: 20px; padding: 32px 24px 28px; margin: 16px 0 14px; text-align: center; box-shadow: 0 4px 16px rgba(232, 93, 58, 0.2); }
+  .header-card h1 { font-size: 22px; font-weight: 800; color: #ffffff; letter-spacing: 0.5px; margin-bottom: 10px; text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+  .header-card .date-row { font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 4px; }
+  .header-card .time-row { font-size: 12px; color: rgba(255,255,255,0.7); }
+  .section-title { font-size: 16px; font-weight: 700; color: var(--ink); margin: 24px 0 10px 4px; padding-left: 10px; border-left: 3px solid var(--accent); }
+  .hero-card { background: var(--card); border-radius: 16px; padding: 22px 18px; margin-bottom: 14px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+  .hero-card h4 { font-size: 16px; font-weight: 700; color: var(--ink); line-height: 1.5; margin-bottom: 4px; }
+  .hero-card .topic-time { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+  .hero-card .detail-content .sub-heading { font-size: 14px; font-weight: 700; color: var(--ink); margin: 18px 0 10px; padding: 8px 0 8px 12px; border-left: 3px solid var(--accent); background: linear-gradient(90deg, var(--kw-bg) 0%, transparent 70%); border-radius: 0 6px 6px 0; }
+  .hero-card .detail-content .sub-heading:first-child { margin-top: 0; }
+  .hero-card .detail-content p { margin-bottom: 14px; line-height: 1.85; color: var(--ink2); font-size: 14px; }
+  .hero-card .detail-content p:last-child { margin-bottom: 0; }
+  .conclusion-gm { margin-top: 18px; padding: 16px 14px 14px; background: var(--accent-light); border-radius: 12px; border: 1px solid var(--accent-tag); }
+  .conclusion-gm .conclusion-box { background: var(--card); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+  .conclusion-gm .gm-label { font-size: 13px; font-weight: 700; color: var(--accent); margin-bottom: 10px; padding-left: 8px; border-left: 2px solid var(--accent); }
+  .conclusion-gm .gm-item { background: var(--card); border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .conclusion-gm .gm-item:last-child { margin-bottom: 0; }
+  .conclusion-gm .gm-quote { font-size: 14px; line-height: 1.7; color: var(--ink); font-weight: 500; }
+  .conclusion-gm .gm-author { font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .topic-card { background: var(--card); border-radius: 14px; padding: 18px 16px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .topic-card h4 { font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+  .topic-card .topic-time { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+  .topic-card .detail-content p { margin-bottom: 12px; line-height: 1.8; color: var(--ink2); font-size: 14px; }
+  .topic-card .detail-content .sub-heading { font-size: 14px; font-weight: 700; color: var(--ink); margin: 14px 0 8px; }
+  .detail-content p strong, .qa-content p strong { background: var(--accent-light); padding: 1px 4px; border-radius: 3px; font-weight: 600; color: var(--accent); }
+  .quote-section { background: var(--card); border-radius: 14px; padding: 18px 16px; margin-bottom: 12px; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .quote-label { font-size: 12px; font-weight: 700; color: var(--accent); margin-bottom: 8px; letter-spacing: 1px; }
+  .quote-text { font-size: 16px; font-weight: 600; color: var(--ink); line-height: 1.6; margin-bottom: 8px; }
+  .quote-author { font-size: 13px; color: var(--muted); }
+  .stats-card { background: var(--card); border-radius: 14px; padding: 18px 16px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .stat-big { font-size: 28px; font-weight: 800; color: var(--accent); }
+  .stat-label { font-size: 12px; color: var(--muted); }
+  .nav-bar { display: flex; gap: 6px; margin-bottom: 14px; overflow-x: auto; padding-bottom: 4px; }
+  .nav-btn { background: var(--card); border: 1px solid var(--rule); border-radius: 20px; padding: 6px 14px; font-size: 13px; color: var(--ink2); white-space: nowrap; }
+  .nav-label { background: var(--card); border: 1px solid var(--rule); border-radius: 20px; padding: 6px 14px; color: var(--muted); font-size: 13px; font-weight: 600; white-space: nowrap; }
+  .footer-note { font-size: 12px; color: var(--muted2); text-align: center; margin-top: 24px; padding: 0 16px; }
 </style>
 </head>
 <body>
@@ -482,441 +512,244 @@
   <div class="header-card">
     <h1>十二W车行群日报</h1>
     <div class="date-row">2026 年 07 月 15 日（星期三）</div>
-    <div class="time-row">00:03 - 23:58</div>
+    <div class="time-row">02:26 - 22:04</div>
   </div>
 
   <!-- Nav Bar -->
   <div class="nav-bar">
-    <a class="nav-btn" href="daily-report-2026-07-14.html">上一天</a>
-    <a class="nav-label" href="index.html">日报导航</a>
-    <a class="nav-btn" href="daily-report-2026-07-16.html">下一天</a>
+    <button class="nav-btn" onclick="location.href='daily-report-v5.4-2026-07-14.html'">上一天</button>
+    <span class="nav-label">日报导航</span>
+    <button class="nav-btn" onclick="location.href='daily-report-v5.4-2026-07-16.html'">下一天</button>
   </div>
 
   <!-- 每日金句 -->
   <div class="quote-section">
     <div class="quote-label">每日金句</div>
-    <div class="quote-text">危险的问题你不能直接回答，但是你也不能不回答。你把问题扔回去给对方，去做拆解。</div>
-    <div class="quote-author"><strong>蛋糕</strong> · 2026-07-15 · 咨询边界与假问题</div>
+    <div class="quote-text">智人喜欢鬼打墙。一念顿悟佛跳墙。你就是把鬼变成佛的那个道士。</div>
+    <div class="quote-author"><strong>AA昍</strong> · 2026-07-15 · 社群运营本质</div>
   </div>
 
-  <!-- 一、总消息概览 -->
-  <div class="section-title">一、总消息概览</div>
+  <!-- 总消息概览 -->
+  <div class="section-title">总消息概览</div>
   <div class="stats-card">
-    <div>
-      <div class="stat-big">536</div>
-      <div class="stat-label">总消息数量</div>
+    <div class="stat-item-sm">
+      <div class="num">545</div>
+      <div class="label">总消息</div>
     </div>
-    <div class="stat-group">
-      <div class="stat-item-sm">
-        <div class="num">14</div>
-        <div class="label">活跃成员</div>
-      </div>
-      <div class="stat-item-sm">
-        <div class="num">22:00</div>
-        <div class="label">最活跃时段</div>
-      </div>
+    <div class="stat-item-sm">
+      <div class="num">19,220</div>
+      <div class="label">全文字数</div>
+    </div>
+    <div class="stat-item-sm">
+      <div class="num">10</div>
+      <div class="label">阅读时长</div>
     </div>
   </div>
 
-  <!-- 二、火花碰撞时刻・热点话题 -->
-  <div class="section-title">二、火花碰撞时刻・热点话题</div>
+  <!-- 今日主角 -->
+  <div class="section-title">今日主角</div>
 
-  <!-- 话题一 -->
-  <div class="topic-card">
-    <h4>基于"咨询式补课"的教育模式升维：从教师到教育架构师</h4>
-    <div class="topic-time">10:03 - 15:04</div>
+  <!-- 主角一：二壮（社群规划发起人） -->
+  <div class="hero-card">
+    <h4>二壮 —— 摸着红头像过河：从"30天50人"到"鬼打墙变成佛"</h4>
+    <div class="topic-time">06:52 - 22:02 &nbsp;|&nbsp; 社群经营蓝图发布</div>
 
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">溏心蛋：</span>"今天开始咨询式补课新尝试，家长已经晚了约定时间20分钟，一会我要抬点价格。"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">咨询式补课</span>
-      <span class="tag">教育诊断</span>
-      <span class="tag">心理赋能</span>
-      <span class="tag">认知重塑</span>
-      <span class="tag">价值交付</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
     <div class="detail-content">
-      <div class="sub-heading">一、话题背景与起因</div>
-      <p><strong>溏心蛋</strong>（高中班主任/外语老师）接手了一位因湿疹频繁缺课、基础薄弱的高一学生（期末仅62分），原任课老师因教学吃力不愿继续。他决定尝试全新的"咨询式补课"模式，并在课后完整输出了方法论。家长迟到了37分钟，他趁机将价格从800抬到1000。</p>
-      <div class="sub-heading">二、主要观点与讨论详情</div>
-      <p><strong>溏心蛋</strong>提出，传统补课是"单向灌输知识、死磕提分"的流水线作业，而咨询式补课将其升维为"教育诊断+心理赋能+认知重塑"的复合型教学。他总结出五步SOP：<strong>语音与情绪纠偏</strong>、<strong>陪读陪练</strong>（真实场景观察）、<strong>交付底层结构</strong>（如将句子结构公式化）、<strong>工具实操</strong>（知识内化）、<strong>复盘与感受确认</strong>——引导学生自己说出正反馈，"因为他出去就要见到爸妈的"。</p>
-      <p>在商业层面，他提出教师须摒弃"把所有人都教成学霸"的道德包袱，对可提分人群提供高效模式，对特殊困境人群将目标降级为"完成课程"甚至"开心的聊天"也是合格的交付。他还透露新商业模式探索：<strong>3万元包考级通过</strong>，随上随约，考过为止。<strong>昍</strong>对此做营收测算，预估年产值50万，向上预期100万，并建议"先把第1轮跑通"。同时强调"前一天先收费，锁档期"。</p>
-      <div class="sub-heading">三、结论与启发</div>
-      <p>这场讨论的启发远超教育领域。咨询式补课的本质是"从交付知识到交付认知框架"的升维，这个方法论同样适用于所有咨询类业务：先诊断、再架构、最后才是工具和执行。"把第1轮跑通"的务实态度也值得所有创业者借鉴。</p>
+      <div class="sub-heading">清晨蓝图：一份清晰的社群商业计划</div>
+      <p>清晨六点五十二分，<strong>二壮</strong>在群中发布了一份详细的社群经营计划。目标是在七月底之前留下50人，客单价300-400元/月，逐渐膨胀到100-150人，"类似于新茧群的模式，讲问题聊问题"。同时规划了咨询转化——客单价1000元，每月最多5单。他坦诚抛出两个核心问题：精力是否跟得上、客单价是否低了。群公共产品方面，他设计了"带心上网（每天一条）+小打卡"的双轨制。</p>
+
+      <div class="sub-heading">"摸着红头像过河"：复制+场景转化的方法论</div>
+      <p>在讨论中，<strong>二壮</strong>提出了一个关键方法论："我可以先模仿新茧资料库，转化场景，然后加入理解，让自己的部分慢慢多起来。""就是照抄日日的思路，更换场景信息。跟我们找对标模仿文章是一个思路。"他认为场景转化虽然难但自己有信心，预期"搞个三五十条的，我自己应该也就差不多了"。<strong>橙子</strong>追问消耗，他回应中展现出对复用的初步理解。</p>
+
+      <div class="sub-heading">AA昍的变现逻辑：年产值50万的算式</div>
+      <p>下午，<strong>AA昍</strong>给二壮算了一笔账：按照当前模式，"预估年产值50万，向上预期可能100万"。他明确：客单价高低无所谓，"因为本质都是阶梯式的，进人进得快你就涨得快"。关键动作是先把第一轮跑通。同时纠正了操作细节——"前一天先收费，锁档期，晚不晚来无所谓"，因为边际成本不下降，不需要做优惠。</p>
+
+      <div class="sub-heading">"鬼打墙变佛"与信任度重建</div>
+      <p>当晚，<strong>AA昍</strong>对二壮发了一句惊艳全群的话："智人喜欢鬼打墙。一念顿悟佛跳墙。你就是把鬼变成佛的那个道士。"并进一步解释："事情不是你做成的，但你也确实做了事。所以要优先改造信任你的鬼，而不是和鬼交朋友。"二壮深受触动，同时反省了"信任度"的衡量标准——<strong>转念之间</strong>一句话点破："信任度高不高主要看他愿意给你花多少钱，而不是跟你说多少话。"二壮用谈恋爱类比表示理解："我很爱你，但是我不想跟你结婚，把我的一半分给你。"</p>
     </div>
 
     <div class="conclusion-gm">
       <div class="conclusion-box">
         <div class="c-label">关键结论</div>
-        <div class="c-text">咨询式补课的核心不是教知识，而是交付"底层思维框架"和"情绪价值"，让学生在"不难受、不抗拒"的状态下获得"我变清晰了"的真实体感，从而重塑自信。</div>
-      </div>
-      <div class="gm-label">金句时刻</div>
-      <div class="gm-item">
-        <div class="gm-quote">它不专注传统补课「单向灌输知识、死磕提分」的流水线作业，将补课升维成一场「一对一的教育咨询」。教师不仅是知识的传授者，更是学生认知系统的「架构师」和情绪状态的「咨询师」。</div>
-        <div class="gm-author">—— <strong>溏心蛋</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">客群少，是好事还是坏事？乍一看是坏事，但其实也是好事。因为客群少，所以做这个客群的人也少。你来做了就都是你的。</div>
-        <div class="gm-author">—— <strong>昍</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">前一天先收费，锁档期，晚不晚来无所谓，反正是4点结束就完了。</div>
-        <div class="gm-author">—— <strong>昍</strong></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 话题二 -->
-  <div class="topic-card">
-    <h4>自媒体IP打造：吴老师遗传学垂直领域的破局之路</h4>
-    <div class="topic-time">19:47 - 22:16</div>
-
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">爱吃豹🐆：</span>"这里是我个人的一些情况，以及 AI 帮我画的表格。"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">个人IP</span>
-      <span class="tag">垂直领域</span>
-      <span class="tag">信息翻译者</span>
-      <span class="tag">高客单价</span>
-      <span class="tag">内容矩阵</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
-    <div class="detail-content">
-      <div class="sub-heading">一、话题背景与起因</div>
-      <p><strong>爱吃豹🐆</strong>（吴老师）在基因检测/遗传学领域创业，拥有一个持续有转化的公众号（一般阅读三位数，但关注者多为医生和基因检测公司），之前小红书账号已被炸。他向群友请教自媒体方向和IP打造策略。</p>
-      <div class="sub-heading">二、主要观点与讨论详情</div>
-      <p><strong>蛋糕</strong>指出当前公众号过于官方，"不是一个人，你需要变成一个人"，建议从讲故事开始，发有人味的工作镜头，并建议做高端咨询（每小时三千起步）。<strong>绵羊</strong>类比医美咨询赛道——"不是医美机构，也不是医美医师，但可以提供咨询服务"，建议吴老师讲案例、讲故事来引流。</p>
-      <p><strong>昍</strong>点出关键洞察：吴老师处于"病人-家属-信息-医生-基因公司"链条的中间位置，本质是<strong>"翻译"角色</strong>——帮病人理解医生的话，帮医生理解病人的处境，"这个信息差就已经非常值钱了"。他还强调"客群少反而是好事"，因为竞争者少。<strong>溏心蛋</strong>类比"留子帮带群"中跑腿办手续的人，"做好桥梁作用，做好翻译工作"。<strong>子蟹</strong>补充"一端是消费者，一端是制片人，你是编剧，同时满足两边需求"。群友还建议以电视剧/书中的相关疾病为切入点做"疾病-医生"系列。</p>
-      <div class="sub-heading">三、结论与启发</div>
-      <p>小众垂直领域的自媒体不需要大流量，核心是占据"信息翻译者"的稀缺生态位。吴老师决定行动方向：每周写一篇病人和医生都能看懂的内容，以电视剧/书中的疾病为切入点做系列，同时探索海外市场。</p>
-    </div>
-
-    <div class="conclusion-gm">
-      <div class="conclusion-box">
-        <div class="c-label">关键结论</div>
-        <div class="c-text">小众垂直领域的自媒体不需要大流量，核心是占据"信息翻译者"的稀缺生态位，用讲故事的方式连接供需两端，客单价可以很高。</div>
-      </div>
-      <div class="gm-label">金句时刻</div>
-      <div class="gm-item">
-        <div class="gm-quote">写给医生是劝他怎么理解病人。写给病人是如何理解医生？这个理解不是说包容体谅关怀，而是要先理解对方说的话是什么意思，理解对方的利益立场。这个信息差就已经非常值钱了。</div>
-        <div class="gm-author">—— <strong>昍</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">这个公众号整得这么官方，都能有持续的转化变现，可以说潜力巨大。本群的自媒体爆款大佬，多少十万百万的小眼睛，转化比例又是多少？客单价又是多少？</div>
-        <div class="gm-author">—— <strong>蛋糕</strong></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 话题三 -->
-  <div class="topic-card">
-    <h4>咨询边界与"假问题"陷阱——二壮的付费咨询翻车复盘</h4>
-    <div class="topic-time">22:14 - 22:47</div>
-
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">二壮：</span>"我可能有点分不清这个边界，对方有问，跟导师保持什么距离的关系。我不聪明了...会有什么后果吗？"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">咨询边界</span>
-      <span class="tag">假问题</span>
-      <span class="tag">提问目的</span>
-      <span class="tag">信息保护</span>
-      <span class="tag">越俎代庖</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
-    <div class="detail-content">
-      <div class="sub-heading">一、话题背景与起因</div>
-      <p><strong>二壮</strong>在做读博咨询时，一位22岁、有国资背景、自带3个项目进组读研的女MBA学生问他"该跟导师保持什么距离"，二壮直接回答了这个问题，事后复盘时意识到自己犯了一个严重的咨询错误。</p>
-      <div class="sub-heading">二、主要观点与讨论详情</div>
-      <p>群友们迅速指出这属于典型的<strong>"假问题"</strong>——正常人与导师相处会问"如何跟老师好好相处"，而"保持什么距离"暗含了深层关系纠葛。<strong>蛋糕</strong>一针见血："她能问出这个问题，我感觉他们距离已经很深了。"<strong>子蟹</strong>提醒："很多时候对方的问题都是假问题，你答了就掉坑里了。"<strong>橙子</strong>引用之前群内金句："念姐说过不要回答问题，回答目的。"<strong>蛋糕</strong>给出实操方法论："危险的问题你不能直接回答，但是你也不能不回答。你把问题扔回去给对方，去做拆解。"</p>
-      <p><strong>黄云</strong>升华到咨询伦理层面："你只能在『人家自己才最了解自己真实处境，自己才能做出最终决定』的条件下，去给出你的判断，不要越俎代庖。"<strong>二壮</strong>反思自己"有点飘了""在显摆"，决定将这次教训列为SOP，同时停止为该客户提供服务。<strong>昍</strong>事后补刀："信息估计也是假的"，"这个问题要加钱"——提醒二壮对方背景可能也是编的。</p>
-      <div class="sub-heading">三、结论与启发</div>
-      <p>这场复盘不仅是一个咨询案例的教学，更揭示了咨询行业的核心心法：回答目的、而非回答问题。所有从业者都应建立"假问题"的雷达系统。</p>
-    </div>
-
-    <div class="conclusion-gm">
-      <div class="conclusion-box">
-        <div class="c-label">关键结论</div>
-        <div class="c-text">咨询中最大的陷阱是直接回答"假问题"。正确做法是先拆解提问者的真实目的，把问题扔回去，守住自己的信息边界和角色边界。</div>
-      </div>
-      <div class="gm-label">金句时刻</div>
-      <div class="gm-item">
-        <div class="gm-quote">危险的问题你不能直接回答，但是你也不能不回答。你把问题扔回去给对方，去做拆解。</div>
-        <div class="gm-author">—— <strong>蛋糕</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">很多时候对方的问题都是假问题，你答了就掉坑里了。</div>
-        <div class="gm-author">—— <strong>子蟹</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">是过于看重自己的作用。</div>
-        <div class="gm-author">—— <strong>黄云</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">展示自己的专业程度和显摆、卖弄是两个事。</div>
-        <div class="gm-author">—— <strong>二壮</strong></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 话题四 -->
-  <div class="topic-card">
-    <h4>朋友圈运营、定价策略与语音咨询的隐性价值</h4>
-    <div class="topic-time">22:47 - 23:23</div>
-
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">落日钓星星💫：</span>"陌生客咨加我微信后，我会回复一段文字：1.我是谁……没有2，不回复。语音咨询：2000元/h"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">朋友圈人设</span>
-      <span class="tag">定价策略</span>
-      <span class="tag">语音vs文字</span>
-      <span class="tag">咨询转化</span>
-      <span class="tag">信任建立</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
-    <div class="detail-content">
-      <div class="sub-heading">一、话题背景与起因</div>
-      <p>围绕溏心蛋的补课定价和落日钓星星的咨询流程，群友们展开了关于个人IP定价、朋友圈运营和咨询形式选择的深度讨论。</p>
-      <div class="sub-heading">二、主要观点与讨论详情</div>
-      <p><strong>落日钓星星</strong>分享了完整的陌生客户筛选SOP：先要对方提供学情信息，"没有2，不回复"，语音咨询2000元/小时——最初是为了"防止有些陌生人会突然给你打语音电话"，后来发现"真有人付钱"，且主动打电话给家长，对方"受宠若惊"。</p>
-      <p><strong>溏心蛋</strong>分享了阶梯式涨价策略：先报1200并给折扣，后续根据学段和提分效果逐步涨价，再推出3万元包学期卡。<strong>蛋糕</strong>分享了自己的咨询模板：5条必答问题，任何一条不能回答就不要咨询，"我不保证自己能一定解决你的问题"。</p>
-      <p>讨论的高潮是<strong>黄云</strong>对"语音vs文字咨询"的深度分析：语音在时间观念上让对方更重视，能共同营造氛围使建议更容易被接受，即时反应包含情感和真诚，"就算对你的咨询不满意，对方顶多下次不找你了对吧"。<strong>蛋糕</strong>补充了拍摄工作日常短视频的策略："每个人物都会慢慢形成人设，客户的粘性就很高，会把我的朋友圈当成追更的小说来看"。</p>
-      <div class="sub-heading">三、结论与启发</div>
-      <p>定价本身就是筛选机制，高价不是为了赚钱而是为了过滤无效需求。语音咨询在信任建立和情绪传递上远优于文字，能显著提升转化和复购。</p>
-    </div>
-
-    <div class="conclusion-gm">
-      <div class="conclusion-box">
-        <div class="c-label">关键结论</div>
-        <div class="c-text">定价本身就是筛选机制，高价不是为了赚钱而是为了过滤无效需求；语音咨询在信任建立和情绪传递上远优于文字，能显著提升转化和复购。</div>
-      </div>
-      <div class="gm-label">金句时刻</div>
-      <div class="gm-item">
-        <div class="gm-quote">语音，同样一句话，文字打出来给对方明白不了。但你们语音聊到了那个时候，会共同营造一种氛围，在那个氛围下，你说什么都是对的。</div>
-        <div class="gm-author">—— <strong>黄云</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">每个人物都会慢慢形成人设，客户的粘性就很高，会把我的朋友圈当成追更的小说来看，然后就会忍不住到线下了，消费也会心甘情愿。</div>
-        <div class="gm-author">—— <strong>蛋糕</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">洗钱要用现金，交心要在现场。</div>
-        <div class="gm-author">—— <strong>溏心蛋</strong></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 话题五 -->
-  <div class="topic-card">
-    <h4>自媒体"偷师"乱象与群生态的真实面貌</h4>
-    <div class="topic-time">21:38 - 21:56</div>
-
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">蛋糕：</span>"自媒体群会有很多私下来咨询的，不愿意对外公开自己的成长。觉得自己智商过人，付个群费就可以「偷师」。"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">内容抄袭</span>
-      <span class="tag">群生态</span>
-      <span class="tag">偷师</span>
-      <span class="tag">定价保护</span>
-      <span class="tag">人性</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
-    <div class="detail-content">
-      <div class="sub-heading">一、话题背景与起因</div>
-      <p><strong>蛋糕</strong>在运营自媒体群过程中，遇到了群成员"偷师"和抄袭的现象，引发了对群生态和定价策略的反思。</p>
-      <div class="sub-heading">二、主要观点与讨论详情</div>
-      <p><strong>蛋糕</strong>描述了两种典型群友：一种是"不愿意对外公开自己的成长"，觉得付了群费就可以暗中学习别人技巧；另一种更恶劣，"会抄大家的爆款，不止我一个"，被发现了先来道歉但拒绝透露抄了什么内容。蛋糕总结教训："总之，就是因为我收费太便宜了。警醒。"</p>
-      <p><strong>昍</strong>则从红包设计角度分析了微信如何"揣摩人性透透的"——红包上限200元的设定让即便只收到6.6元也不至于特别尴尬。</p>
-      <div class="sub-heading">三、结论与启发</div>
-      <p>群费和咨询定价过低不仅影响收入，更会吸引"偷师型"用户，甚至催生抄袭行为；合理定价本身就是对群生态的保护。</p>
-    </div>
-
-    <div class="conclusion-gm">
-      <div class="conclusion-box">
-        <div class="c-label">关键结论</div>
-        <div class="c-text">群费和咨询定价过低不仅影响收入，更会吸引"偷师型"用户，甚至催生抄袭行为；合理定价本身就是对群生态的保护。</div>
-      </div>
-      <div class="gm-label">金句时刻</div>
-      <div class="gm-item">
-        <div class="gm-quote">总之，就是因为我收费太便宜了。警醒。</div>
-        <div class="gm-author">—— <strong>蛋糕</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">哪天你们突然发现有个内容被抄袭，可能就是群友。因为群友会第一时间知道你的消息。</div>
-        <div class="gm-author">—— <strong>蛋糕</strong></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 三、秉烛共谈录・小会精粹 -->
-  <div class="section-title">三、秉烛共谈录・小会精粹</div>
-
-  <div class="topic-card">
-    <h4>昍给二壮的社群商业模式推演与信任度量衡</h4>
-    <div class="topic-time">01:06 - 01:14 / 15:02 - 16:49</div>
-
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">昍：</span>"你预期微信群要有多少人？这里边要做什么样的转化？客单价是多少？收入有多少？要有预期，不能光干不想。"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">社群运营</span>
-      <span class="tag">客单价</span>
-      <span class="tag">飞轮效应</span>
-      <span class="tag">信任画像</span>
-      <span class="tag">假设验证</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
-    <div class="detail-content">
-      <div class="sub-heading">一、问题提出与背景补充</div>
-      <p><strong>二壮</strong>提出了付费社群的详细规划：月底留存50人，月费300-400元，咨询转化客单价1000元/月5单。他计划基于"新茧资料库"进行场景转化输出，"摸着红头像过河"。同时列出三个方向：遗传咨询、留学咨询、AI工具分享，但<strong>昍</strong>直言"这三个方向确实感觉互相都不搭着，好像没法形成飞轮"。</p>
-
-      <div class="sub-heading">二、核心焦点与深层议题挖掘</div>
-      <p>这场对话的核心焦点并非社群运营的技术细节，而是<strong>"如何建立可验证的商业假设"</strong>。<strong>昍</strong>反复追问"预期"——人数、客单价、收入，并强调"有预期，意味着后面有假设。你在干的过程中就可以去验证或者证伪这个假设。于是你就真的有收获了，要不然就成了被事情推着走。"这个方法论本质上是在教二壮从"做事的人"变成"设计系统的人"。</p>
-
-      <div class="sub-heading">三、多方观点流派与方案探讨</div>
-      <p>关于客单价，<strong>昍</strong>提出"客单价高低无所谓。本质都是阶梯式的，进人进的慢你就涨得慢，进人进的快你就涨快些。按最终的产值来划线。"建议"先把第1轮跑通"。<strong>转念之间</strong>则聚焦信任度判断标准。</p>
-
-      <div class="sub-heading">四、老司机引导与方案点评</div>
-      <p><strong>昍</strong>用多个精准类比推动二壮的认知升级。"智人喜欢鬼打墙。一念顿悟佛跳墙。你就是把鬼变成佛的那个道士"——鼓励二壮看到自己"改造信任"的核心价值。"所以要优先改造信任你的鬼，而不是和鬼交朋友"——点明社群运营的本质不是维护关系而是促进转化。在信任度判断上，<strong>转念之间</strong>一语道破"信任度高不高主要看他愿意给你花多少钱"，<strong>昍</strong>补充"愿意和实际，是两码事，钱只是个工具，不一定真要花"，并称赞这是"好类比"，建议二壮"写文的时候也用上，多类比"。</p>
-
-      <div class="sub-heading">五、讨论共识与分歧总结</div>
-      <p>共识是：社群商业模式的验证关键不在于客单价高低，而在于能否跑通第一轮飞轮；信任的终极检验标准是付费意愿而非聊天频率。二壮决定"这两天就在刻意观察群里的话题和回应情况，搜集素材"，并建立粉丝信任画像。分歧不大，但<strong>昍</strong>对二壮"什么都想做"的倾向保持警惕，多次强调聚焦和假设验证。</p>
-    </div>
-
-    <div class="conclusion-gm">
-      <div class="conclusion-box">
-        <div class="c-label">关键结论</div>
-        <div class="c-text">社群商业模式的验证关键不在于客单价高低，而在于能否跑通第一轮飞轮；信任的终极检验标准是付费意愿而非聊天频率。</div>
+        <div class="c-text">二壮的社群经营已经进入"模式复制+场景转化"阶段，而非从零创造。年产值模型初步跑通：50人基础月费+咨询转化+阶梯涨价。关键是区分"愿意说话的人"和"愿意付费的人"，优先服务后者。社群经营的本质不是交朋友，而是帮助信任你的人完成觉悟。</div>
       </div>
       <div class="gm-label">金句时刻</div>
       <div class="gm-item">
         <div class="gm-quote">智人喜欢鬼打墙。一念顿悟佛跳墙。你就是把鬼变成佛的那个道士。</div>
-        <div class="gm-author">—— <strong>昍</strong></div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">所以要优先改造信任你的鬼，而不是和鬼交朋友。</div>
-        <div class="gm-author">—— <strong>昍</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">信任度高不高主要看他愿意给你花多少钱，而不是跟你说多少话。</div>
+        <div class="gm-quote">信任度高不高主要看他愿意给你花多少钱，而不是跟你说多少话。跟谈恋爱也有点像。</div>
         <div class="gm-author">—— <strong>转念之间</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">愿意，和实际，是两码事。钱只是个工具，不一定真要花。</div>
-        <div class="gm-author">—— <strong>昍</strong></div>
+        <div class="gm-quote">要优先改造信任你的鬼，而不是和鬼交朋友。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主角二：溏心蛋 -->
+  <div class="hero-card">
+    <h4>溏心蛋 —— 咨询式补课：从"延迟20分钟就涨价"到一套完整SOP</h4>
+    <div class="topic-time">10:03 - 22:04 &nbsp;|&nbsp; 创收突破与体系化输出</div>
+
+    <div class="detail-content">
+      <div class="sub-heading">创收实战：迟到37分钟，800变一千</div>
+      <p>上午十点，<strong>溏心蛋</strong>开始了"咨询式补课"的新尝试。家长迟到20分钟时她就预告要抬价，迟到37分钟时目标明确："800变一千，我看能不能谈下来。"下午一点，她宣布"创收了，一共20次课"——这意味着单客户创造了一笔可观的长期订单。群友们一片"好爽""牛"的欢呼，<strong>二壮</strong>更是感叹"可恶，开次小会给你开明白了，激起我的斗志了"。</p>
+
+      <div class="sub-heading">完整方法论的构建：咨询式补课五步SOP</div>
+      <p><strong>溏心蛋</strong>在成功创收后，迅速将实战经验抽象为一套完整的"咨询式补课方法论"。她定义了核心概念："教育诊断+心理赋能+认知重塑的复合型教学模式"。五步SOP清晰而可复制——第一步情绪纠偏（理顺基础缓解焦虑）、第二步陪读陪练（真实场景观察问题）、第三步交付底层结构（公式化语言）、第四步工具实操（引导拆解）、第五步复盘确认（临下课前让学生自己说出正反馈）。最关键的是第五步的巧思："因为他出去就要见到爸妈的，这里相当于引导他出去怎么跟爸妈反馈"——一次教学闭环包裹了家长端的体验管理。</p>
+
+      <div class="sub-heading">商业本质：从"必须教好所有人"到"分层交付"</div>
+      <p><strong>溏心蛋</strong>还思考了商业延展：录播课（利用碎片化时间）、3万包考级通过（按结果付费）、"自助上课随上随约"。她的底层逻辑清晰：补课是商业服务，核心目的是创造收益。"不强行给无法提分的学生死磕，是避免自我内耗、保持职业长久性的关键。"她将交付分两层：正常学生用"极简讲解+充分陪练"，特殊困境学生把目标降级为"完成课程"，只要是"开心的聊天"也是合格交付。</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="conclusion-box">
+        <div class="c-label">关键结论</div>
+        <div class="c-text">溏心蛋今天完成了从"个体教学"到"可复制产品"的跃迁。咨询式补课不仅仅是一种教法，更是一套可复用的商业SOP——情绪疏导优先、底层结构交付、当场确认效果。商业模型中，录播课+包考级+分层交付，构成了"一份时间卖多次"的杠杆逻辑。</div>
+      </div>
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">回归本真，拒绝自我内耗：补课的底层逻辑是商业服务，核心目的是创造收益。因此，教师必须摒弃"必须把所有人都教成学霸"的道德包袱。</div>
+        <div class="gm-author">—— <strong>溏心蛋</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">有预期，意味着后面有假设。你在干的过程中就可以去验证或者证伪。要不然就成了被事情推着走。</div>
-        <div class="gm-author">—— <strong>昍</strong></div>
+        <div class="gm-quote">情绪即生产力——在应试教育中，情绪价值本身就是一种"隐性提分手段"。通过陪伴和疏导让学生情绪变好，本质上就是在帮他们扫除考场上的心理障碍。</div>
+        <div class="gm-author">—— <strong>溏心蛋</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">未来这会是你的主业，甚至你的号炸了，你看我。</div>
-        <div class="gm-author">—— <strong>昍</strong></div>
+        <div class="gm-quote">学生出去就要见到爸妈的，这里相当于引导他出去怎么跟爸妈反馈。</div>
+        <div class="gm-author">—— <strong>溏心蛋</strong></div>
       </div>
     </div>
   </div>
 
-  <!-- 四、解惑一点通・有问必答 -->
-  <div class="section-title">四、解惑一点通・有问必答</div>
+  <!-- 老司机补给站 -->
+  <div class="section-title">老司机补给站</div>
 
-  <div class="qa-card">
-    <h4>客户问了敏感问题，咨询师该怎么处理？</h4>
-    <div class="qa-climb">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">二壮：</span>"我可能有点分不清这个边界，对方有问，跟导师保持什么距离的关系。我不聪明了..."</div>
+  <div class="topic-card">
+    <h4>AA昍的多线程指导：二壮变现→溏心蛋节奏→吴老师方向→查理破迷思</h4>
+    <div class="topic-time">15:02 - 21:17</div>
+
+    <div class="detail-content">
+      <p><strong>AA昍</strong>今天同时在多个线程上进行精准指导。对二壮，他定位了年产值50万的商业模式，并纠正了"提前锁档期"的操作细节。对溏心蛋的补课节奏，他建议"前一天先收费锁档期"确保时间不被浪费。对<strong>爱吃豹</strong>（吴老师）的遗传病咨询IP，他进行了最系统的引导——从"你在这里如果有信息，你也可以做医生角色"到"客群少是好事也是坏事，因为做这个客群的人也少"，再到"先定受众再写内容"，最后总结为"做好桥梁作用，做好翻译工作"——"写给医生是劝他怎么理解病人，写给病人是如何理解医生，这个信息差就已经非常值钱了"。他还顺便破除了查理的"red"黑话执念，直言"以后不要发这些，就是红人"。晚上他对念姐说"类比是帮人理解，不是增加难度"，含蓄地纠正了她过于复杂的类比思路。</p>
     </div>
-    <div class="qa-answer-label">解答</div>
-    <div class="qa-content">
-      <div class="sub-heading">一、问题背景</div>
-      <p><strong>二壮</strong>的付费咨询客户（22岁、国资背景、自带项目读研的女MBA）问他"该跟导师保持什么距离"，他直接回答后意识到可能是陷阱。</p>
-      <div class="sub-heading">二、核心分析</div>
-      <p>群友指出这属于典型的<strong>"假问题"</strong>——"保持什么距离"暗含了深层关系纠葛，正常人会问"如何好好相处"而非"保持距离"。提问方式本身就是信息。<strong>蛋糕</strong>拆解方法论：把问题扔回去——"你为什么这么问，你觉得跟导师目前有什么问题吗？如果没有问题，你不会问这个的。"</p>
-      <div class="sub-heading">三、解决方案</div>
-      <p><strong>蛋糕：</strong>"危险的问题你不能直接回答，但是你也不能不回答。你把问题扔回去给对方，去做拆解。"<br>
-      <strong>子蟹：</strong>"很多时候对方的问题都是假问题，你答了就掉坑里了。"<br>
-      <strong>橙子：</strong>"念姐说过不要回答问题，回答目的。"<br>
-      <strong>黄云：</strong>"你只能在『人家自己才最了解自己真实处境，自己才能做出最终决定』的条件下，去给出你的判断，不要越俎代庖。"</p>
-    </div>
-    <div class="qa-tags">
-      <span class="tag">咨询方法论</span>
-      <span class="tag">假问题识别</span>
-      <span class="tag">咨询伦理</span>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">做好桥梁作用，做好翻译工作。写给医生是劝他怎么理解病人，写给病人是如何理解医生。这个信息差就已经非常值钱了。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">客群少，是好事还是坏事？乍一看是坏事，但其实也是好事。因为客群少，所以做这个客群的人也少。这些人想要找个咨询师也不好找。你来做了就都是你的。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">事情不是你做成的，但你也确实做了事。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
+      </div>
     </div>
   </div>
 
-  <!-- 五、智慧火花匣・每日精选 -->
-  <div class="section-title">五、智慧火花匣・每日精选</div>
+  <div class="topic-card">
+    <h4>糕糕的IP诊断：吴老师的遗传咨询——潜力巨大但人设要重建</h4>
+    <div class="topic-time">20:01 - 21:54</div>
 
-  <div class="pick-card">
-    <h4>昍的"社群信息泄露"类比</h4>
-    <div class="pick-climb">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">昍：</span>"一个不恰当的类比就是，你睡的是a，但a可能睡过bcd，所以你睡的不是a，是a的性史。群也一样。"</div>
+    <div class="detail-content">
+      <p><strong>糕糕</strong>晚上对<strong>爱吃豹</strong>（吴老师）的遗传病咨询自媒体进行了深度诊断。第一个好消息是账号归属吴老师本人，但核心问题是"怎么看都是一个公司账号，只是没有蓝V而已"。她建议优化成个人IP——"要让用户明确是吴老师的账号，不管吴老师跟哪个公司有绑定合作，我都只听吴老师的"。她指出公众号虽然极其官方（阅读三位数、点赞几乎没有），但"都能有持续的转化变现，可以说潜力巨大"。对比群里做自媒体的数据——"多少十万百万的小眼睛，互动多少，转化比例又是多少？"——吴老师的低阅读高转化反而是一个独特的商业优势。</p>
+      <p><strong>糕糕</strong>还分享了自媒体群的幕后故事：有人私下咨询后发6块6红包试探、有人纯搬内容火了后来道歉但"不告诉你是抄的啥"。她感慨"想做好自媒体还是需要多了解人性"，并喊出"现在的问题是大家的号都太小了，怎么谈商务啊"——揭示了她正在构建的MCN商业蓝图遇到了"账号太小"的现实瓶颈。</p>
     </div>
-    <div class="pick-body">
-      <div class="sub-heading">推荐内容</div>
-      <p>这个类比生动揭示了付费社群的<strong>信息安全隐患</strong>——群成员的内容可能被二次传播到无法预知的范围。"这群里看似只有14个号，但说的话会有多少人看到？你也不知道。"在讨论"偷师"和抄袭问题时被引出，让群友重新审视了在群内分享内容的边界。</p>
-      <div class="sub-heading">核心价值</div>
-      <p>将"信息泄露"这个抽象概念用一个接地气（虽然不太恰当）的类比瞬间具象化，让每个群友都意识到了<strong>信息传播的不可控性</strong>。这种"一击即中"的表达方式本身就值得学习——类比是帮人理解，不是增加难度。</p>
-    </div>
-    <div class="pick-tags">
-      <span class="tag">信息传播</span>
-      <span class="tag">群生态</span>
-      <span class="tag">类比思维</span>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">这个公众号整得这么官方，都能有持续的转化变现，可以说潜力巨大。你看看，一般阅读三位数，点赞几乎没有。本群的自媒体爆款大佬，多少十万百万的小眼睛，互动多少，转化比例又是多少？</div>
+        <div class="gm-author">—— <strong>糕糕</strong></div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">我一个人精力再旺盛，我也做不了十个大号。但是大家把账号都做起来，我就可以成为大家的商务，我去给大家谈最好的资源合作，一千个账号我都能做。</div>
+        <div class="gm-author">—— <strong>糕糕</strong></div>
+      </div>
     </div>
   </div>
 
-  <div class="pick-card">
-    <h4>蛋糕的"工伤文案"实况与自媒体人职业边界</h4>
-    <div class="pick-climb">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">蛋糕：</span>"不要和任何傻逼起冲突：1、对方会截图；2、浪费时间；3、影响情绪"</div>
+  <div class="topic-card">
+    <h4>黄云的幕后观察：高客单价行业的共同逻辑</h4>
+    <div class="topic-time">16:31 - 21:12</div>
+
+    <div class="detail-content">
+      <p><strong>黄云</strong>今天以观察为主，但贡献了一个关键判断。他说橙子的编剧行业"和遗传病有点像，都是客单价比较高的"，这为群内两个看似不相关的行业建立了类比桥梁。这与AA昍强调的"跨行业类比"方法一脉相承。</p>
     </div>
-    <div class="pick-body">
-      <div class="sub-heading">推荐内容</div>
-      <p>蛋糕展示了<strong>接到的"直发广告文案"案例</strong>（美容口服胶囊推广稿），让群友直观感受了自媒体人接到"工伤文案"时的真实处境。"精华大口的往毛孔里钻""脸就被营养撑起来"等夸张表述引发群友集体吐槽。<strong>子蟹</strong>评价："提前接触一下工伤文案，增加一下抗性。"</p>
-      <div class="sub-heading">核心价值</div>
-      <p>从实操角度揭示了自媒体变现中<strong>"品牌方 vs 创作者"的审美鸿沟</strong>——品牌方想要的效果和创作者认为好的内容经常南辕北辙。蛋糕总结"话语权是自己争取出来的"，并决定"以后咱不是这个量级了，不会再接这种广告"。<strong>子蟹</strong>分享了自己因为已有变现渠道而敢于"喷PR"的经历，印证了"底气来自不可替代性"。</p>
+  </div>
+
+  <!-- 同伴行动 -->
+  <div class="section-title">同伴行动</div>
+
+  <!-- 同伴：查理 -->
+  <div class="topic-card">
+    <h4>查理的画画方向总结：从迷茫到可量化目标</h4>
+    <div class="topic-time">10:52 - 21:33</div>
+
+    <div class="detail-content">
+      <p><strong>查理</strong>今天提交了一份系统性的画画方向总结，将精力分为三条线：同人大插画、小零食（故事性漫画）、成人零基础教程。她为每条线制定了量化指标——百赞算小爆、千赞算爆、涨粉200以上，家居号涨粉至1000有商单邀请。不成的标准也写清楚了：普遍低于百赞且不涨粉。这份带"成/不成"标准的总结，明显是响应了昨天AA昍要求的"预期管理"方法论。</p>
     </div>
-    <div class="pick-tags">
-      <span class="tag">自媒体运营</span>
-      <span class="tag">广告避坑</span>
-      <span class="tag">职业边界</span>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">继续尝试，反正同人怎么着都要一直画的，目标放在国产热门游戏、影视作品上。最主要是要稳定更新。</div>
+        <div class="gm-author">—— <strong>查理</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 同伴：爱吃豹🐆（吴老师） -->
+  <div class="topic-card">
+    <h4>吴老师的遗传咨询突围：从"基因搬运工"到"病人家属的翻译官"</h4>
+    <div class="topic-time">19:46 - 22:04</div>
+
+    <div class="detail-content">
+      <p><strong>爱吃豹</strong>（吴老师）晚上带着自己的遗传病咨询业务来到群中请教。他坦诚分享了现状：个人公众号关注者主要是医生、基因公司和病人，自己在创业做基因检测产品，已经往海外出口方向做了宣传册。AA昍和糕糕为他系统性梳理了方向——核心定位是"桥梁"和"翻译官"角色：帮病人理解医生的语言，帮医生理解病人的困境。"这个信息差就已经非常值钱了。"糕糕建议从讲故事入手——"公众号不是一个人，你需要变成一个人"，并建议出海做TK，"海外就是不管这个，也不会限流，更不会管控你的私域怎么去引"。吴老师当晚确认了行动步骤：以《问心》为例介绍疾病，实质引流，提供咨询服务。</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">做好桥梁作用，做好翻译工作。理解对方说的话是什么意思，理解对方的利益立场。这个信息差就已经非常值钱了。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">我跟过门诊，就是这种真实经历挺难得的。</div>
+        <div class="gm-author">—— <strong>爱吃豹</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 同伴：转念之间 -->
+  <div class="topic-card">
+    <h4>转念之间的3000粉里程碑：类比与信任度的双重贡献</h4>
+    <div class="topic-time">15:48 - 21:21</div>
+
+    <div class="detail-content">
+      <p><strong>转念之间</strong>今天宣布达到3000粉，同时贡献了两条关键洞察。第一是"信任度=花钱"的类比——"信任度高不高主要看他愿意给你花多少钱，而不是跟你说多少话。跟谈恋爱也有点像"，这个类比引发了二壮和AA昍的深入讨论。第二是教育小号内容的深度转型：从普通的职场内容转向"想写点难听的实话"——"低龄孩子的家长普遍还抱有希望，大龄孩子的家长已经在探讨如果妈妈走了孩子还能活多久"。AA昍提醒她"先把目的或者说先把受众定下来，别急着写"。</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">我很爱你，但是我不想跟你结婚，把我的一半分给你。我很欣赏你，但是不想提拔你。</div>
+        <div class="gm-author">—— <strong>转念之间</strong></div>
+      </div>
     </div>
   </div>
 
   <!-- Footer -->
   <div class="footer-note">
-    本报告基于群聊数据自动生成，仅供参考。内容可能包含个人观点，不代表群组官方立场。
+    本报告基于群聊数据自动生成，仅供参考。
+    生成版本：v5.4 &middot; 2026-07-15
   </div>
 
 </div>

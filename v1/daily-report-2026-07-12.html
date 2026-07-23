@@ -91,17 +91,9 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   }
   .nav-bar .nav-label {
-    font-size: 13px;
-    color: #fff;
-    background: var(--accent);
-    font-weight: 600;
-    padding: 6px 14px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.15s ease;
-  }
-  .nav-bar .nav-label:hover {
-    background: #d14e2e;
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 500;
   }
   .nav-btn {
     background: none;
@@ -450,6 +442,14 @@
     gap: 6px;
     margin-top: 10px;
   }
+  .pick-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
 
   /* ===== Footer ===== */
   .footer-note {
@@ -464,6 +464,44 @@
   @media (min-width: 520px) {
     .container { padding: 0 24px 80px; }
   }
+
+  /* ===== v5.4 新增样式 ===== */
+  .header-card { background: linear-gradient(135deg, var(--accent) 0%, #f07a5a 100%); border-radius: 20px; padding: 32px 24px 28px; margin: 16px 0 14px; text-align: center; box-shadow: 0 4px 16px rgba(232, 93, 58, 0.2); }
+  .header-card h1 { font-size: 22px; font-weight: 800; color: #ffffff; letter-spacing: 0.5px; margin-bottom: 10px; text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+  .header-card .date-row { font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 4px; }
+  .header-card .time-row { font-size: 12px; color: rgba(255,255,255,0.7); }
+  .section-title { font-size: 16px; font-weight: 700; color: var(--ink); margin: 24px 0 10px 4px; padding-left: 10px; border-left: 3px solid var(--accent); }
+  .hero-card { background: var(--card); border-radius: 16px; padding: 22px 18px; margin-bottom: 14px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+  .hero-card h4 { font-size: 16px; font-weight: 700; color: var(--ink); line-height: 1.5; margin-bottom: 4px; }
+  .hero-card .topic-time { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+  .hero-card .detail-content .sub-heading { font-size: 14px; font-weight: 700; color: var(--ink); margin: 18px 0 10px; padding: 8px 0 8px 12px; border-left: 3px solid var(--accent); background: linear-gradient(90deg, var(--kw-bg) 0%, transparent 70%); border-radius: 0 6px 6px 0; }
+  .hero-card .detail-content .sub-heading:first-child { margin-top: 0; }
+  .hero-card .detail-content p { margin-bottom: 14px; line-height: 1.85; color: var(--ink2); font-size: 14px; }
+  .hero-card .detail-content p:last-child { margin-bottom: 0; }
+  .conclusion-gm { margin-top: 18px; padding: 16px 14px 14px; background: var(--accent-light); border-radius: 12px; border: 1px solid var(--accent-tag); }
+  .conclusion-gm .conclusion-box { background: var(--card); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+  .conclusion-gm .gm-label { font-size: 13px; font-weight: 700; color: var(--accent); margin-bottom: 10px; padding-left: 8px; border-left: 2px solid var(--accent); }
+  .conclusion-gm .gm-item { background: var(--card); border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .conclusion-gm .gm-item:last-child { margin-bottom: 0; }
+  .conclusion-gm .gm-quote { font-size: 14px; line-height: 1.7; color: var(--ink); font-weight: 500; }
+  .conclusion-gm .gm-author { font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .topic-card { background: var(--card); border-radius: 14px; padding: 18px 16px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .topic-card h4 { font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+  .topic-card .topic-time { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+  .topic-card .detail-content p { margin-bottom: 12px; line-height: 1.8; color: var(--ink2); font-size: 14px; }
+  .topic-card .detail-content .sub-heading { font-size: 14px; font-weight: 700; color: var(--ink); margin: 14px 0 8px; }
+  .detail-content p strong, .qa-content p strong { background: var(--accent-light); padding: 1px 4px; border-radius: 3px; font-weight: 600; color: var(--accent); }
+  .quote-section { background: var(--card); border-radius: 14px; padding: 18px 16px; margin-bottom: 12px; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .quote-label { font-size: 12px; font-weight: 700; color: var(--accent); margin-bottom: 8px; letter-spacing: 1px; }
+  .quote-text { font-size: 16px; font-weight: 600; color: var(--ink); line-height: 1.6; margin-bottom: 8px; }
+  .quote-author { font-size: 13px; color: var(--muted); }
+  .stats-card { background: var(--card); border-radius: 14px; padding: 18px 16px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .stat-big { font-size: 28px; font-weight: 800; color: var(--accent); }
+  .stat-label { font-size: 12px; color: var(--muted); }
+  .nav-bar { display: flex; gap: 6px; margin-bottom: 14px; overflow-x: auto; padding-bottom: 4px; }
+  .nav-btn { background: var(--card); border: 1px solid var(--rule); border-radius: 20px; padding: 6px 14px; font-size: 13px; color: var(--ink2); white-space: nowrap; }
+  .nav-label { background: var(--card); border: 1px solid var(--rule); border-radius: 20px; padding: 6px 14px; color: var(--muted); font-size: 13px; font-weight: 600; white-space: nowrap; }
+  .footer-note { font-size: 12px; color: var(--muted2); text-align: center; margin-top: 24px; padding: 0 16px; }
 </style>
 </head>
 <body>
@@ -473,384 +511,197 @@
   <!-- Header Card -->
   <div class="header-card">
     <h1>十二W车行群日报</h1>
-    <div class="date-row">2026 年 07 月 12 日（星期日）</div>
-    <div class="time-row">00:00 - 23:59</div>
+    <div class="date-row">2026 年 07 月 12 日（星期六）</div>
+    <div class="time-row">13:55 - 20:25</div>
   </div>
 
   <!-- Nav Bar -->
   <div class="nav-bar">
-    <a class="nav-btn" href="daily-report-2026-07-11.html">上一天</a>
-    <a class="nav-label" href="index.html">日报导航</a>
-    <a class="nav-btn" href="daily-report-2026-07-13.html">下一天</a>
+    <button class="nav-btn" onclick="location.href='daily-report-v5.4-2026-07-11.html'">上一天</button>
+    <span class="nav-label">日报导航</span>
+    <button class="nav-btn" onclick="location.href='daily-report-v5.4-2026-07-13.html'">下一天</button>
   </div>
 
   <!-- 每日金句 -->
   <div class="quote-section">
     <div class="quote-label">每日金句</div>
-    <div class="quote-text">每个人的人格都有一个价格。如果你能把自己标到1个亿，那你的人格不仅高贵，而且高尚。</div>
-    <div class="quote-author"><strong>昍（日日）</strong> · 2026-07-12 · 热点话题</div>
+    <div class="quote-text">越愿意给你付高价的人才会越愿意信任你，有了信任的基础，你才能更好发挥和输出。</div>
+    <div class="quote-author"><strong>糕糕</strong> · 2026-07-12 · 定价与信任论</div>
   </div>
 
-  <!-- 一、总消息概览 -->
-  <div class="section-title">一、总消息概览</div>
+  <!-- 总消息概览 -->
+  <div class="section-title">总消息概览</div>
   <div class="stats-card">
-    <div>
-      <div class="stat-big">523</div>
-      <div class="stat-label">总消息数量</div>
+    <div class="stat-item-sm">
+      <div class="num">586</div>
+      <div class="label">总消息</div>
     </div>
-    <div class="stat-group">
-      <div class="stat-item-sm">
-        <div class="num">13</div>
-        <div class="label">活跃成员</div>
-      </div>
-      <div class="stat-item-sm">
-        <div class="num">20:00</div>
-        <div class="label">最活跃时段</div>
-      </div>
+    <div class="stat-item-sm">
+      <div class="num">9,097</div>
+      <div class="label">全文字数</div>
+    </div>
+    <div class="stat-item-sm">
+      <div class="num">23</div>
+      <div class="label">阅读时长(分)</div>
     </div>
   </div>
 
-  <!-- 二、火花碰撞时刻・热点话题 -->
-  <div class="section-title">二、火花碰撞时刻・热点话题</div>
+  <!-- 今日主角 -->
+  <div class="section-title">今日主角</div>
 
-  <!-- 话题一 -->
-  <div class="topic-card">
-    <h4>十二W车行定调之夜：群规、选人标准与"先赚一个盆"的赚钱哲学</h4>
-    <div class="topic-time">00:00 - 00:30</div>
+  <!-- 主角一：转念之间（小会发起人） -->
+  <div class="hero-card">
+    <h4>转念之间 —— 猎头小会：从"觉得自己不值钱"到认清市场价</h4>
+    <div class="topic-time">19:52 - 20:25 &nbsp;|&nbsp; 小会发起人</div>
 
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">蛋糕：</span>"我们现在是合作伙伴，不是交朋友"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">群规</span>
-      <span class="tag">选人标准</span>
-      <span class="tag">赚钱哲学</span>
-      <span class="tag">被动收入</span>
-      <span class="tag">群生态</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
     <div class="detail-content">
-      <div class="sub-heading">一、话题背景与起因</div>
-      <p>这是十二W车行新群成立后的第一次集体互动。新成员<strong>溏心蛋</strong>首次"上班"（参与小会分享），<strong>橙子</strong>、<strong>查理</strong>等新面孔正式加入。群主<strong>蛋糕</strong>借机完成了群规宣导和价值观对齐。</p>
-      <div class="sub-heading">二、主要观点与讨论详情</div>
-      <p><strong>蛋糕</strong>明确了群的核心定位："我们现在是合作伙伴，不是交朋友"。他解释群里有个不发言的群友，暗示选人没有固定标准，"能在一起，我们彼此要互相珍惜"。同时要求群内容不得外传。</p>
-      <p><strong>昍（日日）</strong>抛出了当晚最有分量的观点——"先赚一个盆"理论。他用新能源基金举例：100万闲钱放行业基金，今年涨了80万。"红利需要用盆来接，但前提是，你得先有一个盆。"核心建议是专心赚钱、不要内耗，早点赚够8位数退休，"开始第二次人生，做真正热爱的，不计回报的事"。</p>
-      <p><strong>黄云</strong>则提醒溏心蛋："明面上付费的利益和对人长期帮助结合的点在哪"，暗示新成员要提前想清楚商业模式。群友们纷纷表态"好"，展现出强烈的认同感和凝聚力。</p>
-      <div class="sub-heading">三、结论与启发</div>
-      <p>这次定调对话确立了群的基调：以商业合作为纽带，以赚钱能力为共同目标，先武装自己再谈热爱。蛋糕用"合作伙伴"重新定义了群关系，比"朋友"更清醒，比"社群"更务实。</p>
+      <div class="sub-heading">小会开局：用"情感关系职场化"炸出创作方法论</div>
+      <p>下午五点五十一，<strong>转念之间</strong>在群里抛出了一组"情感关系如何用职场术语命名"的脑洞内容——"不主动不拒绝却享受付出"叫"外包"、"考察期无限延长"叫"试用期"、"自己不想改却要求对方理解"叫"霸王条款"。这篇内容引发了<strong>AA昍</strong>和<strong>橙子🍊</strong>的即兴接梗——"上班时间偷偷出去面试，算不算出轨""同时拿了三个offer，算不算脚踏三只船"——<strong>转念之间</strong>立刻意识到这个思路反过来也可以写一篇，脱口而出"棒"。这一下"看到有趣就类比"的创作链，正是昨天昍拆解过的内容方法论的一次完美实践。</p>
+
+      <div class="sub-heading">咨询定价的认知重构：从99到2000的跨越</div>
+      <p>晚上八点，<strong>转念之间</strong>正式开启小会。她的核心困惑集中在咨询定价——"尼玛我觉得我从99开始就不错了"，而<strong>子蟹</strong>直接点出"念姐可以直接从2k的案子开始接"，用自己的三档定价（99/688/2048，全有成交）作为实例。但<strong>糕糕</strong>立刻拨乱反正，她严肃指出"有的时候我真的觉得不管是糕校还是车群的定价，都给了很多人一些误解，对真正的市场价格没有概念。性质不一样啊同志们"——并用一个关键逻辑拆穿了转念的低价心理："越愿意给你付高价的人才会越愿意信任你，有了信任的基础，你才能更好发挥和输出。"</p>
+
+      <div class="sub-heading">"擅长破案"的自我发现 vs "辅导儿子"的心理阻力</div>
+      <p><strong>转念之间</strong>对猎头人设进行了坦诚的自我剖析：写简历、面试、转岗这种"具体岗位建议"不是她最擅长的——"我觉得我相对擅长破案"。这是一个重要的自我认知，但也暴露了她的心理阻力："你要让我说两句话都说完了，你关键是他不去做呢。这个感觉就跟我辅导我儿子学习，就这种感觉，无力。"<strong>糕糕</strong>指出"这个想法不对"，但肯定"好事是你知道自己的阻力在哪"。<strong>溏心蛋</strong>提供了一个建设性视角："我不是来教你怎么做管理的，我是来讲述一个管理者如何在复杂局面中赢得胜利的。你从故事里看到自己，自然会产生咨询需求。"</p>
+
+      <div class="sub-heading">黄云的系统性诊断：从"散乱的视角"到"有目的的内容链"</div>
+      <p><strong>黄云</strong>给出了一段长文诊断，直击核心问题：转念的内容视角太散——"汗血牛马、愣头青、八卦社达、老油条、恶女管理"混在一起就是乱的。他给出了具体的改进方向：首先建立"基本思路链条"——产品是什么（咨询）→内容怎么服务于这个产品（故事里藏着咨询逻辑）→找适合自己的视角（比如"作为上司的你，下属出现问题，你通过指导解决了"）。黄云的结论是："这个一定要自己想，不一定要多清楚明白，但至少有个链路，否则大家提前给你规划出来的，一定不是适合你的，你会很疲惫。"</p>
     </div>
 
     <div class="conclusion-gm">
       <div class="conclusion-box">
         <div class="c-label">关键结论</div>
-        <div class="c-text">十二W车行的本质是一个以"年入十万为底线"的商业合伙人网络，群关系的核心不是社交而是合作，优先赚钱、不做内耗。</div>
+        <div class="c-text">转念之间的小会暴露了三个核心矛盾：对市场价格没概念（定价过低）、对咨询本质有误解（认为只是"给答案"而非"帮对方解决做不到的问题"）、内容视角散乱（缺乏统一的叙事人设）。但好消息是，这些问题都被群友精准识别，且每个问题都有可行的解决方案。</div>
       </div>
       <div class="gm-label">金句时刻</div>
       <div class="gm-item">
-        <div class="gm-quote">中国只会越飞越快，红利需要用盆来接，但前提是，你得先有一个盆。怎么也得100w闲钱，先把这个盆赚出来，然后看着它自动变满。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">我们现在是合作伙伴，不是交朋友。</div>
-        <div class="gm-author">—— <strong>蛋糕</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">标准是人定的，你将来是那个定标准的人。</div>
-        <div class="gm-author">—— <strong>蛋糕</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">不能帮你赚1w，就不会拉这个1k的群，同理。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 话题二 -->
-  <div class="topic-card">
-    <h4>转念之间的小会专场：小红书IP打造与"淡淡的死感"内容风格</h4>
-    <div class="topic-time">19:52 - 22:06</div>
-
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">转念之间：</span>"我就位了。让暴风雨来得更猛烈些吧。"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">小红书IP</span>
-      <span class="tag">内容创作</span>
-      <span class="tag">职场类比</span>
-      <span class="tag">定价策略</span>
-      <span class="tag">淡淡死感</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
-    <div class="detail-content">
-      <div class="sub-heading">一、话题背景与起因</div>
-      <p>这是转念之间的第一次小会分享。她提前准备了文档，计划围绕小红书职场IP"猎头人设"进行讨论，但实际内容远超预期——从AI封号潮开场，到内容创作方法论、职场类比选题、亲子育儿号方向、个人风格定位，展开了一场近三小时的深度碰撞。</p>
-      <div class="sub-heading">二、主要观点与讨论详情</div>
-      <p>开场阶段，<strong>此君刀法诡异</strong>提醒"外网尤其是美国查IP封号非常严重"，<strong>蛋糕</strong>转发了一位营养师ChatGPT Pro账号被无预警封号的案例。群友们迅速达成共识：尽量使用国产AI，避免依赖外网工具。</p>
-      <p>进入正题后，<strong>转念之间</strong>分享了她的创作方法论："看到一个有意思的，然后类比，就有一篇了"。她当天用"恋爱=职场"的类比一次性产出了多篇选题，比如"上班时间偷偷出去面试算不算出轨""同时拿三个offer算不算脚踏三只船"。群友们纷纷加入创作：<strong>昍（日日）</strong>提出"他在职期间投简历，可真是个爱劈腿的渣男"，<strong>橙子</strong>补充"同时拿了三个offer，算不算脚踏三只船"。</p>
-      <p>讨论进入深水区后，<strong>蛋糕</strong>建议转念之间考虑做亲子号方向，用"stop being a leader"的视角切入，"在亲子关系中，以管理者的角度思考问题和沟通"——这正是转念之间在公司内部论坛看到的真实案例。转念之间分享了一位前副代表的"爹味育儿"故事，被蛋糕精准评价为"淡淡的死感讲故事"——"你讲这个事就没有带什么情绪感的用词，可是我看起来真的很好笑"。</p>
-      <p><strong>查理</strong>建议转念之间直接写咨询案例，"不直接写用户get不到你有这个业务"。关于定价，<strong>wxid_1tumklcpbbse22</strong>直言"1k一小时的定价少了，念姐可以直接从2k的案子开始接"。</p>
-      <div class="sub-heading">三、结论与启发</div>
-      <p>转念之间当晚最大的收获不是具体的选题建议，而是找到了自己的内容风格定位——"淡淡的死感"式的冷幽默叙事。蛋糕指出这比她之前"硬憋的AI文强得多"，关键是要保持这种自然的状态，不要刻意模仿别人。同时，"职场=恋爱"的类比创作法被验证为高效选题引擎。</p>
-    </div>
-
-    <div class="conclusion-gm">
-      <div class="conclusion-box">
-        <div class="c-label">关键结论</div>
-        <div class="c-text">内容创作最稀缺的不是技巧而是个人风格——"淡淡的死感"讲故事的冷幽默比任何AI润色都更有辨识度；职场类比是选题的永动机，一个框架能批量产出多篇内容。</div>
-      </div>
-      <div class="gm-label">金句时刻</div>
-      <div class="gm-item">
-        <div class="gm-quote">你讲这个事就没有带什么情绪感的用词，可是我看起来真的很好笑。就是你那种淡淡的死感讲故事，你的特色。比你之前硬憋的AI文强得多。</div>
-        <div class="gm-author">—— <strong>蛋糕</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">面向退休工作。凡是写不进ppt里、写不进年终小结里、写不进跳槽简历的事儿，能不干就不干。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">多写，先写七坨屎出来。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">我暗暗认为和你外显状态比较像的几个人，现在已经都默默地「死」掉了。动起来，别死。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">不管是在职场还是殖场，都把爹味发挥得淋漓尽致。</div>
-        <div class="gm-author">—— <strong>蛋糕</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">先深入群众，很多时候更新不是上来就搞强度。</div>
-        <div class="gm-author">—— <strong>蛋糕</strong></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 话题三 -->
-  <div class="topic-card">
-    <h4>自媒体商单暗箱操作：招募内定、万粉反而被拒的"反直觉"真相</h4>
-    <div class="topic-time">23:04 - 23:25</div>
-
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">蛋糕：</span>"招募都是给别人看的，实际名单全都是内定，所以不管是谁，报名一定都选不上，别报。"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">商单内幕</span>
-      <span class="tag">招募内定</span>
-      <span class="tag">赛道匹配</span>
-      <span class="tag">自媒体变现</span>
-      <span class="tag">万粉困境</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
-    <div class="detail-content">
-      <div class="sub-heading">一、话题背景与起因</div>
-      <p><strong>绵羊</strong>分享了自己报名片仔癀牙膏商单落选的复盘：赛道不匹配（护肤美妆号申请口腔护理）、代表作互动数据不佳、品牌要求单人出镜。这本是一个正常的内容优化讨论，却引出了<strong>蛋糕</strong>的一波行业暗箱揭秘。</p>
-      <div class="sub-heading">二、主要观点与讨论详情</div>
-      <p>蛋糕首先抛出重磅炸弹："招募都是给别人看的，实际名单全都是内定。能有机会真正合作的都是给你后台发起邀请的，会来加你微信的。"这意味着公开招募本质是品牌方的PR行为，报名者无论多优秀都不会被选中。</p>
-      <p>更反直觉的是蛋糕自己的遭遇：一个PR直接告诉她"你的照片很好，审美很棒，人很漂亮，如果你是千粉我一定选你……可是万粉不行，你换个号吧"。原因是"正经的万粉探店博主不是我这样的，很明显我这个是换了皮半路出家"——万粉反而成了品牌方的筛除标准。</p>
-      <p><strong>爱吃豹</strong>分享了"广撒网抽奖"涨粉策略，<strong>蛋糕</strong>虽然认可其训练变现思维的价值，但直言"靠这个，可达不到我们的目标KPI每月一万"，建议发挥更多核心优势。</p>
-      <div class="sub-heading">三、结论与启发</div>
-      <p>自媒体商单市场存在大量信息差和反直觉规则：公开招募是面子工程，真实合作靠后台邀请；粉丝量不是越多越好，某些赛道"半路出家"的万粉反而不如"自然流千粉"受品牌方青睐。核心还是要找到自己的赛道优势，而非盲目追求粉丝数。</p>
-    </div>
-
-    <div class="conclusion-gm">
-      <div class="conclusion-box">
-        <div class="c-label">关键结论</div>
-        <div class="c-text">公开招募是品牌方的PR秀场，实际名单全部内定；粉丝数并非越高越有利，赛道匹配度和人设真实性才是品牌方真正看重的。</div>
-      </div>
-      <div class="gm-label">金句时刻</div>
-      <div class="gm-item">
-        <div class="gm-quote">招募都是给别人看的，实际名单全都是内定，所以不管是谁，报名一定都选不上，别报。</div>
-        <div class="gm-author">—— <strong>蛋糕</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">你的照片很好，审美很棒，人很漂亮，如果你是千粉我一定选你……可是万粉不行，你换个号吧。</div>
-        <div class="gm-author">—— <strong>蛋糕</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">跟钱有关的东西，就能更多看到人生百态，还有不同人的面孔。</div>
-        <div class="gm-author">—— <strong>蛋糕</strong></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 三、秉烛共谈录・小会精粹 -->
-  <div class="section-title">三、秉烛共谈录・小会精粹</div>
-
-  <div class="topic-card">
-    <h4>昍（日日）、蛋糕给转念之间的内容创作逐篇点评与方向校正</h4>
-    <div class="topic-time">22:08 - 22:54</div>
-
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">昍（日日）：</span>"所以呢？没结论？所以就要面向退休工作，也就是怎么样让自己更快退休，就怎么样工作。"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">内容点评</span>
-      <span class="tag">标题技巧</span>
-      <span class="tag">排版规范</span>
-      <span class="tag">个人风格</span>
-      <span class="tag">职场类比</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
-    <div class="detail-content">
-      <div class="sub-heading">一、问题提出与背景补充</div>
-      <p>转念之间在会上发出了多篇小红书笔记请求点评。<strong>昍（日日）</strong>和<strong>蛋糕</strong>从标题、排版、内容结构、口语感等多维度进行了逐篇诊断。<strong>宝鹅</strong>也发出了两版标题供大家投票选择。</p>
-
-      <div class="sub-heading">二、核心焦点与深层议题挖掘</div>
-      <p>点评的核心问题不是"好不好"，而是"怎么才能从70分变成90分"。昍指出转念之间一篇"上班是为了什么"的文章"没结论"，随即现场演示了如何用"面向退休工作"的逻辑链条把文章推向深入——从面向退休推导到面向升职加薪，再到面向简历和PPT。这个示范本身就是一篇完整的内容。</p>
-
-      <div class="sub-heading">三、多方观点流派与方案探讨</div>
-      <p><strong>昍（日日）</strong>提出了内容升级的三个方向：一是多加关联和类比，比如引用法官保释与社会心理学实验的关联；二是增加标题的"宇宙感"和辩证法话术风格，如"批判的武器代替不了武器的批判"这种格式；三是排版要精简，"你排版用了太多不同的格式和部件，读起来有点累"。<strong>蛋糕</strong>则从定位出发，建议"争取把这些淡淡的死感转为个人特色，而不是想着去直接模仿和成为别人"。</p>
-      <p><strong>宝鹅</strong>的标题讨论引发了关于押韵和格式整齐的讨论。<strong>子蟹</strong>贡献了"上班我要喷死他们所有人！"作为标题灵感，获得蛋糕和落日钓星星的集体好评。</p>
-
-      <div class="sub-heading">四、老司机引导与方案点评</div>
-      <p><strong>昍（日日）</strong>在现场给转念之间的笔记逐一打分："这篇太差了""这篇还可以，能给到70分"，并解释了扣分逻辑——内容需要有结论、有人味、有口语感。<strong>蛋糕</strong>对转念之间整体评价"写过的那些我都看了，先不打分，我还是觉得都缺点感觉"，但随后在看到转念之间讲"爹味育儿"故事后，立刻改口："你讲这个事就没有带什么情绪感的用词，可是我看起来真的很好笑——你的特色。"这种从批评到认可的转变，正是找到了对的方向。</p>
-
-      <div class="sub-heading">五、讨论共识与分歧总结</div>
-      <p>共识有三点：第一，转念之间的个人风格是"淡淡的死感"叙事，这是她的核心竞争力；第二，先动起来比追求完美更重要，"先写七坨屎出来"；第三，不要追求成为别人，而要把自己的风格做到极致。唯一的分歧是关于"漫才"标签——蛋糕认为漫才需要出镜配合表演，纯文字博主不应往这个方向靠。</p>
-    </div>
-
-    <div class="conclusion-gm">
-      <div class="conclusion-box">
-        <div class="c-label">关键结论一</div>
-        <div class="c-text">内容创作的最高境界不是模仿别人的优秀，而是把自己的"缺点"变成"特色"——转念之间的"淡淡的死感"正是她的护城河。</div>
-      </div>
-      <div class="conclusion-box">
-        <div class="c-label">关键结论二</div>
-        <div class="c-text">好文章需要有结论、有逻辑链条。"面向退休工作"是一个极好的思维框架——从终局反推当下行动。</div>
-      </div>
-      <div class="gm-label">金句时刻</div>
-      <div class="gm-item">
-        <div class="gm-quote">我暗暗认为和你外显状态比较像的几个人，现在已经都默默地「死」掉了。动起来，别死。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">不能说话还像打字似的，自媒体群有人就是这样的，看得人无语。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">漫才要出镜配合表演，和纯文字很大区别，文字看着好笑，表演反而大概率很尬。所以很多段子手都以为自己可以做脱口秀或者演员。</div>
-        <div class="gm-author">—— <strong>蛋糕</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">上班我要喷死他们所有人！</div>
+        <div class="gm-quote">大家有钱！！！收钱了反而方便说很多话，不要怕收钱！！</div>
         <div class="gm-author">—— <strong>子蟹</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">员工说他爹味重，于是他辞职去育儿了。不内耗，找到适合自己的赛道。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
+        <div class="gm-quote">越愿意给你付高价的人才会越愿意信任你。便宜的价格总有人嫌贵，贵的价格总有人付费。要多想后面这种。</div>
+        <div class="gm-author">—— <strong>糕糕</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">你手边的下一代不是你的手下，属于你的下一代，并不是你的下属。</div>
-        <div class="gm-author">—— <strong>昍（日日）</strong></div>
+        <div class="gm-quote">我不是来教你怎么做管理的，我是来讲述一个管理者如何在复杂局面中赢得胜利的。你从故事里看到自己，自然会产生咨询需求。</div>
+        <div class="gm-author">—— <strong>溏心蛋</strong></div>
       </div>
     </div>
   </div>
 
-  <!-- 四、解惑一点通・有问必答 -->
-  <div class="section-title">四、解惑一点通・有问必答</div>
+  <!-- 老司机补给站 -->
+  <div class="section-title">老司机补给站</div>
+  <div class="topic-card">
+    <h4>黄云的剪映AI找音乐法 + 对转念的系统性诊疗</h4>
+    <div class="topic-time">13:55 - 20:19</div>
 
-  <div class="qa-card">
-    <h4>短视频配乐太费时间怎么破？用"AI成片"反向找音乐</h4>
-    <div class="qa-climb">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">黄云：</span>"在剪视频的时候，有个很重要的一环是找音乐。有个很有用的思路是剪映里面不是有个摆在首页的功能叫「AI 成片」嘛……"</div>
+    <div class="detail-content">
+      <p><strong>黄云</strong>在下午分享了一个极其实用的技术方案——用剪映"AI成片"功能来找音乐。核心思路是：不用AI生成的模板本身（"这种套模板的AI剪出来的东西很烂"），而是利用它在"已被市场验证过的卡点模板"里去试配音乐，找到合适的音乐后返回自己的剪辑项目使用。"它在讨好大众耳朵这个点上，效率很高"——这是一次典型的"借AI之力但不被AI所困"的实操方法论。<strong>绵羊</strong>、<strong>橙子🍊</strong>、<strong>糕糕</strong>都表示收获很大。</p>
+      <p>晚上小会中，<strong>黄云</strong>对转念的诊疗展现了他的系统性思维。他不仅指出了内容视角散乱的问题，更给出了一个可行的重构框架："主力产品是商业咨询→流量变小→口吻是讲管理故事、设计冲突、赢得斗争→吸引咨询"。他还特别提醒，群里大家写的小故事可以碰撞很多火花，这些都能成为内容素材。</p>
     </div>
-    <div class="qa-answer-label">解答</div>
-    <div class="qa-content">
-      <div class="sub-heading">一、问题背景</div>
-      <p><strong>绵羊</strong>每次给短视频找音乐都要花大量时间，"大海捞针一样"。<strong>黄云</strong>分享了一个巧妙的"反向利用AI"的方法。</p>
-      <div class="sub-heading">二、核心分析</div>
-      <p>黄云的方法是：在剪映中用"AI成片"功能把素材一键分析，它会在市场验证过的卡点模板里匹配音乐。然后不使用模板本身（套模板剪出来的东西很烂），而是把匹配到的音乐名找到，回到自己的剪辑界面配上去。因为AI推荐的音乐来源于已经被市场验证过的爆款模板，"讨好大众耳朵的效率很高"。</p>
-      <div class="sub-heading">三、延伸补充</div>
-      <p><strong>蛋糕</strong>补充了另一个思路：把小红书、Instagram好的视频音乐直接下载，传到剪映后台使用。<strong>绵羊</strong>表示"太好了，以后就按这个方法找音乐"，解决了长期以来的痛点。</p>
-    </div>
-    <div class="qa-tags">
-      <span class="tag">剪映技巧</span>
-      <span class="tag">视频配乐</span>
-      <span class="tag">AI工具</span>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">AI是在已经被市场验证过的卡点模板里套，所以在讨好大众耳朵这个点上，效率很高。但不要用模板本身，这种套模板的AI剪出来的东西很烂。</div>
+        <div class="gm-author">—— <strong>黄云</strong></div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">群里大家写了那么多的小故事，可以碰撞很多火花。</div>
+        <div class="gm-author">—— <strong>黄云</strong></div>
+      </div>
     </div>
   </div>
 
-  <!-- 五、智慧火花匣・每日精选 -->
-  <div class="section-title">五、智慧火花匣・每日精选</div>
+  <div class="topic-card">
+    <h4>AA昍的即兴接梗 + GPT封号警示：动手能力与冗余思维</h4>
+    <div class="topic-time">16:03 - 20:00</div>
 
-  <div class="pick-card">
-    <h4>"恋爱术语职场化"——转念之间的批量选题神操作</h4>
-    <div class="pick-climb">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">转念之间：</span>"「虽然不会交往，但是不想让别人抢走这个人，这种情感怎么命名？」「客户。」"</div>
+    <div class="detail-content">
+      <p><strong>AA昍</strong>下午预告了当晚小会时间（20:00），随后在转念之间的情感关系梗文下展现了创作者的即兴反应——"上班时间偷偷出去面试，算不算出轨"、"在职期间投简历，可真是个爱劈腿的渣男"。这不是简单的接梗，而是展示了"看到一个有趣的就立刻类比"的创作本能。</p>
+      <p>在晚上的讨论中，<strong>此君刀法诡异</strong>分享了GPT Pro账号被封的案例，提醒大家"现在外网尤其是美国查IP封号非常严重"。<strong>AA昍</strong>、<strong>糕糕</strong>、<strong>查理</strong>都表示只用国产AI或者觉得"总会有这一天"。这是一个实操层面的风险提示。</p>
     </div>
-    <div class="pick-body">
-      <div class="sub-heading">推荐内容</div>
-      <p>转念之间创作了一套"恋爱情感用职场术语重新命名"的段子：客户、外包、试用期、短名单、竞业协议、背调、霸王条款、数据迁移未完成、版本回滚失败、对赌协议。每一个都精准对应一种暧昧/恋爱状态，让人会心一笑。</p>
-      <div class="sub-heading">核心价值</div>
-      <p>这组内容展示了<strong>"类比法"在内容创作中的威力</strong>——一个框架可以批量产出十篇以上内容。群友们迅速加入反向创作：把职场行为用恋爱术语重新定义（投简历=劈腿、面试=出轨、拿offer=脚踏三只船），验证了类比法是选题的永动机。这种"双向类比"本身就是极好的内容系列。</p>
-    </div>
-    <div class="pick-tags">
-      <span class="tag">类比创作</span>
-      <span class="tag">批量选题</span>
-      <span class="tag">职场恋爱</span>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">上班时间偷偷出去面试，算不算出轨。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
+      </div>
     </div>
   </div>
 
-  <div class="pick-card">
-    <h4>绵羊的"老板睡了两个助理"系列——比段子还好笑的真实职场故事</h4>
-    <div class="pick-climb">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">绵羊：</span>"我老公原来上班的公司，他给自己招的两个助理都让老板睡了，后来他招了个长得像男人的。"</div>
+  <div class="topic-card">
+    <h4>糕糕的定价正骨 + 商单资源对接</h4>
+    <div class="topic-time">18:14 - 20:17</div>
+
+    <div class="detail-content">
+      <p><strong>糕糕</strong>今天在多个维度上扮演了纠偏者的角色。当<strong>溏心蛋</strong>汇报新联系了五个学生准备下周教培时，糕糕立刻提醒"新接的教培学生要自己做好记录和总结，为个人IP的C端内容做好准备了"——将具体业务动作与人设内容挂钩。当小会上转念之间陷入"99块行不行"的低价思维时，糕糕直接甩出历史聊天记录——星星老师讲定价、"200万的例子"、"1000元服务1000人vs 1万元服务100人"——用历史证据说明"便宜的价格总有人嫌贵，贵的价格总有人付费"。她还指出转念"在新茧群分享故事时产生信任的人不少，但到外平台就发挥不出来"的问题，追问"原因是啥嘞"。</p>
     </div>
-    <div class="pick-body">
-      <div class="sub-heading">推荐内容</div>
-      <p><strong>绵羊</strong>在讨论中不经意分享了她老公公司的两则故事：老板睡了两个助理后，她老公"学聪明了"招了个长得像男人的；后来老板的二老婆找到她老公了解情况，老板反而找她老公谈话"让不要介入他们家庭的事"。<strong>橙子</strong>一句话点睛："听起来像老公也嫁进去了。"</p>
-      <div class="sub-heading">核心价值</div>
-      <p><strong>蛋糕</strong>评价这类内容的价值："这些小故事，虽然不能说有什么干货，可是说出来以后大家会开心，会觉得有共鸣，自然而然就会参与互动和评论。"关键洞察是：<strong>自媒体不需要每篇都上强度，小故事先深入群众、建立粘性，再慢慢带出深度内容</strong>。昍的标题建议《我招来的人都被老板睡了，我招谁惹睡了？》堪称神来之笔。</p>
-    </div>
-    <div class="pick-tags">
-      <span class="tag">职场故事</span>
-      <span class="tag">内容策略</span>
-      <span class="tag">群众路线</span>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">既然都进了这个群，要有更宏观的目标，先把主线定好。那些时尚啊首饰啊的那些，当时做建议也是为了能让你先从爱好入手，可以动起来而已。</div>
+        <div class="gm-author">—— <strong>糕糕</strong></div>
+      </div>
     </div>
   </div>
 
-  <div class="pick-card">
-    <h4>落日钓星星的"孩子-领导"类比：小学生储君、初中生暴君、高中生昏君</h4>
-    <div class="pick-climb">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">落日钓星星：</span>"对孩子就像对待领导一样——小学生：储君 / 初中生：暴君 / 高中生：昏君"</div>
+  <!-- 同伴行动 -->
+  <div class="section-title">同伴行动</div>
+
+  <div class="topic-card">
+    <h4>溏心蛋 —— 小会复盘输出 + 教培新节奏启动</h4>
+    <div class="topic-time">18:07 - 20:23</div>
+
+    <div class="detail-content">
+      <p><strong>溏心蛋</strong>在今天的表现堪称"从输入到输出的闭环"。他在下午分享了7/11小会的总结文档（"同志们有需要的自取"），同时汇报了教培新进展——"今天联系了五个学生，准备下周开始教培了"。说明他已经在用"案例记录"的方式积累C端内容素材。在小会上，他给转念之间贡献了一个高质量的框架转换："我不是来教你怎么做管理的，我是来讲述一个管理者如何在复杂局面中赢得胜利的"——这句话不仅帮了念姐，也展示了他自己在内容思维上的提升。面对黄云对他昨天小会"散"的点评，他坦诚回应"这是我的问题，客观是关系比较复杂，涉及到的部门和机构都有，我没抓住主要矛盾，找矛盾应该跟着钱走"——这种自省能力，正是老司机最愿意看到的新手品质。</p>
     </div>
-    <div class="pick-body">
-      <div class="sub-heading">推荐内容</div>
-      <p>在讨论亲子育儿号选题时，<strong>落日钓星星</strong>用三个词精准概括了不同阶段孩子的"统治风格"，格式整齐、层层递进。<strong>昍（日日）</strong>立刻指出这个结构的妙处："低：x子，中：x子，高：x子"，并建议用这种格式化话术做标题。</p>
-      <div class="sub-heading">核心价值</div>
-      <p>一句话能让人笑出来，同时触发所有家长的情绪共鸣——这就是好的内容选题。三个词、三行字、零废话，完美展示了<strong>"格式化话术"在小红书传播中的天然优势</strong>。</p>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">我没抓住主要矛盾，找矛盾应该跟着钱走。</div>
+        <div class="gm-author">—— <strong>溏心蛋</strong></div>
+      </div>
     </div>
-    <div class="pick-tags">
-      <span class="tag">育儿类比</span>
-      <span class="tag">格式化话术</span>
-      <span class="tag">亲子号选题</span>
+  </div>
+
+  <div class="topic-card">
+    <h4>子蟹 —— 闲鱼定价三层法 + 收钱逻辑</h4>
+    <div class="topic-time">20:03 - 20:25</div>
+
+    <div class="detail-content">
+      <p><strong>子蟹</strong>在今天的讨论中贡献了最有实操价值的咨询定价模型。她在闲鱼上架了三档商品：99元聊30分钟"小布丁"、688元1小时正式聊案子、2048元处理大案子——"都有成交"。面对转念之间对自己的不自信，她直接用实际数据点燃信心："念姐可以直接从2k的案子开始接"、"大家有钱！！！收钱了反而方便说很多话，不要怕收钱！！"她还分享了一个对咨询本质的精准理解："咨询就是破案，得想一个对方能做到，做了又能立马有改善的招。"当查理问她是否只在小红书上运营时，她坦诚"是，别的平台之前弄得不好，之后会全平台铺开"。子蟹的分享再次验证了"先做再优化"的策略。</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">收钱了反而方便说很多话，不要怕收钱！！</div>
+        <div class="gm-author">—— <strong>子蟹</strong></div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">咨询就是破案，得想一个对方能做到，做了又能立马有改善的招。</div>
+        <div class="gm-author">—— <strong>子蟹</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <h4>此君刀法诡异 —— GPT封号预警：国产AI替代信号</h4>
+    <div class="topic-time">19:58 - 19:58</div>
+
+    <div class="detail-content">
+      <p><strong>此君刀法诡异</strong>在群里分享了GPT Pro账号被无故封禁的案例，提醒"现在外网尤其是美国查IP封号非常严重""你们有跑数据的尽量多用国产AI"。这对依赖AI进行内容创作和数据分析的群友是一个重要的风险提示。</p>
     </div>
   </div>
 
   <!-- Footer -->
   <div class="footer-note">
-    本报告基于群聊数据自动生成，仅供参考。内容可能包含个人观点，不代表群组官方立场。
+    本报告基于群聊数据自动生成，仅供参考。
+    生成版本：v5.4 &middot; 2026-07-12
   </div>
 
 </div>
