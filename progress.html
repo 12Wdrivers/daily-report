@@ -220,6 +220,26 @@
     font-size: 11px;
   }
 
+  /* 当日新增红点 */
+  .new-badge {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    min-width: 17px;
+    height: 17px;
+    background: #e8453c;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 17px;
+    text-align: center;
+    border-radius: 9px;
+    padding: 0 5px;
+    box-shadow: 0 1px 3px rgba(232,69,60,0.35);
+    z-index: 2;
+    letter-spacing: 0.02em;
+  }
+
   /* 老司机 Badge */
   .driver-badge {
     display: inline-flex;
@@ -686,6 +706,46 @@ const DEFAULT_VISIBLE = 5;
 let membersData = [];
 let currentDetailIdx = -1;
 
+// --- localStorage: 已查看状态 ---
+const VIEWED_KEY = 'progress_viewed';
+
+function getTodayStr() {
+  const d = new Date();
+  return d.getFullYear() + '-' +
+    String(d.getMonth() + 1).padStart(2, '0') + '-' +
+    String(d.getDate()).padStart(2, '0');
+}
+
+function getViewedMap() {
+  try {
+    return JSON.parse(localStorage.getItem(VIEWED_KEY)) || {};
+  } catch(e) {
+    return {};
+  }
+}
+
+function markViewed(name) {
+  const map = getViewedMap();
+  map[name] = getTodayStr();
+  localStorage.setItem(VIEWED_KEY, JSON.stringify(map));
+}
+
+function getTodayNewCount(member) {
+  const today = getTodayStr();
+  let count = 0;
+  (member.milestones || []).forEach(ms => {
+    if (ms.date === today) count++;
+  });
+  return count;
+}
+
+function hasUnread(name, count) {
+  if (count === 0) return false;
+  const viewed = getViewedMap();
+  const viewedDate = viewed[name] || '';
+  return viewedDate < getTodayStr();
+}
+
 fetch('progress-data.json')
   .then(r => r.json())
   .then(data => {
@@ -729,8 +789,11 @@ function renderDirectory(data) {
   const grid = document.getElementById('memberGrid');
   grid.innerHTML = members.map((member, idx) => {
     const isDriver = member.role && member.role.includes('老司机');
+    const newCount = getTodayNewCount(member);
+    const showBadge = hasUnread(member.name, newCount);
     return `
       <div class="member-tile${isDriver ? ' tile-driver' : ''}" onclick="showDetail(${idx})" style="animation-delay:${idx * 0.03}s">
+        ${showBadge ? `<span class="new-badge">${newCount}</span>` : ''}
         ${isDriver ? `
         <div class="driver-badge">
           <svg viewBox="0 0 24 24" fill="none" stroke="#b8912e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -755,6 +818,10 @@ function showDetail(idx) {
   const member = membersData[idx];
   if (!member) return;
   currentDetailIdx = idx;
+
+  // Mark as viewed → red dot disappears
+  markViewed(member.name);
+  renderTileBadge(idx);
 
   document.getElementById('detailName').textContent = member.name;
   document.getElementById('detailRole').textContent = member.role || '';
@@ -826,6 +893,14 @@ function showDetail(idx) {
 
   // Setup scroll listener for back-to-top
   setupScrollListener();
+}
+
+function renderTileBadge(idx) {
+  const tiles = document.querySelectorAll('.member-tile');
+  if (tiles[idx]) {
+    const badge = tiles[idx].querySelector('.new-badge');
+    if (badge) badge.remove();
+  }
 }
 
 function showDirectory() {
