@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>十二W车行群日报 2026-07-27</title>
+<title>十二W车行群日报 2026-07-22</title>
 <style>
   :root {
     --bg: #f5f5f7;
@@ -490,69 +490,6 @@
   @media (min-width: 520px) {
     .container { padding: 0 24px 80px; }
   }
-
-/* ===== 大标题 UI 增强 ===== */
-.header-card {
-  background: linear-gradient(135deg, var(--accent) 0%, #f07a5a 100%);
-  border-radius: 20px;
-  padding: 32px 24px 28px;
-  margin: 16px 0 14px;
-  text-align: center;
-  box-shadow: 0 4px 16px rgba(232, 93, 58, 0.2);
-}
-.header-card h1 { font-size: 22px; font-weight: 800; color: #ffffff; letter-spacing: 0.5px; margin-bottom: 10px; text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
-.header-card .date-row { font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 4px; }
-.header-card .time-row { font-size: 12px; color: rgba(255,255,255,0.7); }
-
-/* ===== 章节标题增强 ===== */
-.section-title { font-size: 16px; font-weight: 700; color: var(--ink); margin: 24px 0 10px 4px; padding-left: 10px; border-left: 3px solid var(--accent); }
-
-/* ===== 今日主角卡片专用 ===== */
-.hero-card { background: var(--card); border-radius: 16px; padding: 22px 18px; margin-bottom: 14px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
-.hero-card h4 { font-size: 16px; font-weight: 700; color: var(--ink); line-height: 1.5; margin-bottom: 4px; }
-.hero-card .topic-time { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
-.hero-card .detail-content .sub-heading { font-size: 14px; font-weight: 700; color: var(--ink); margin: 18px 0 10px; padding: 8px 0 8px 12px; border-left: 3px solid var(--accent); background: linear-gradient(90deg, var(--kw-bg) 0%, transparent 70%); border-radius: 0 6px 6px 0; }
-.hero-card .detail-content .sub-heading:first-child { margin-top: 0; }
-.hero-card .detail-content p { margin-bottom: 14px; line-height: 1.85; color: var(--ink2); font-size: 14px; }
-.hero-card .detail-content p:last-child { margin-bottom: 0; }
-
-/* ===== 金句区域 ===== */
-.conclusion-gm { margin-top: 18px; padding: 16px 14px 14px; background: var(--accent-light); border-radius: 12px; border: 1px solid var(--accent-tag); }
-.conclusion-gm .conclusion-box { background: var(--card); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
-.conclusion-gm .gm-label { font-size: 13px; font-weight: 700; color: var(--accent); margin-bottom: 10px; padding-left: 8px; border-left: 2px solid var(--accent); }
-.conclusion-gm .gm-item { background: var(--card); border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
-.conclusion-gm .gm-item:last-child { margin-bottom: 0; }
-.conclusion-gm .gm-quote { font-size: 14px; line-height: 1.7; color: var(--ink); font-weight: 500; }
-.conclusion-gm .gm-author { font-size: 12px; color: var(--muted); margin-top: 6px; }
-
-/* ===== 其他卡片增强 ===== */
-.topic-card { background: var(--card); border-radius: 14px; padding: 18px 16px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
-.topic-card h4 { font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
-.topic-card .topic-time { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
-.topic-card .detail-content p { margin-bottom: 12px; line-height: 1.8; color: var(--ink2); font-size: 14px; }
-.topic-card .detail-content .sub-heading { font-size: 14px; font-weight: 700; color: var(--ink); margin: 14px 0 8px; }
-
-/* ===== 人名高亮 ===== */
-.detail-content p strong, .qa-content p strong { background: var(--accent-light); padding: 1px 4px; border-radius: 3px; font-weight: 600; color: var(--accent); }
-
-/* ===== 每日金句增强 ===== */
-.quote-section { background: var(--card); border-radius: 14px; padding: 18px 16px; margin-bottom: 12px; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
-.quote-label { font-size: 12px; font-weight: 700; color: var(--accent); margin-bottom: 8px; letter-spacing: 1px; }
-.quote-text { font-size: 16px; font-weight: 600; color: var(--ink); line-height: 1.6; margin-bottom: 8px; }
-.quote-author { font-size: 13px; color: var(--muted); }
-
-/* ===== 数据概览增强 ===== */
-.stats-card { background: var(--card); border-radius: 14px; padding: 18px 16px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
-.stat-big { font-size: 28px; font-weight: 800; color: var(--accent); }
-.stat-label { font-size: 12px; color: var(--muted); }
-
-/* ===== 导航栏增强 ===== */
-.nav-bar { display: flex; gap: 6px; margin-bottom: 14px; overflow-x: auto; padding-bottom: 4px; }
-.nav-btn { background: var(--card); border: 1px solid var(--rule); border-radius: 20px; padding: 6px 14px; font-size: 13px; color: var(--ink2); white-space: nowrap; }
-.nav-label { background: var(--card); border: 1px solid var(--rule); border-radius: 20px; padding: 6px 14px; color: var(--muted); font-size: 13px; font-weight: 600; white-space: nowrap; }
-
-/* ===== 页脚 ===== */
-.footer-note { font-size: 12px; color: var(--muted2); text-align: center; margin-top: 24px; padding: 0 16px; }
 </style>
 </head>
 <body>
@@ -562,190 +499,218 @@
   <!-- Header Card -->
   <div class="header-card">
     <h1>十二W车行群日报</h1>
-    <div class="date-row">2026 年 07 月 27 日（星期一）</div>
-    <div class="time-row">09:37 - 21:57</div>
+    <div class="date-row">2026 年 07 月 22 日（星期三）</div>
+    <div class="time-row">10:45 - 22:23</div>
   </div>
 
   <!-- Nav Bar -->
   <div class="nav-bar">
-    <a class="nav-btn" href="../v1/daily-report-2026-07-26.html">上一天</a>
+    <a class="nav-btn" href="../v1/daily-report-2026-07-21.html">上一天</a>
     <a class="nav-label" href="../index.html">日报导航</a>
     <button class="nav-btn" disabled>下一天</button>
-  </div>
-
-  <!-- 一、每日金句 -->
-  <div class="section-title">一、每日金句</div>
-  <div class="quote-section">
-    <div class="quote-label">DAILY QUOTE</div>
-    <div class="quote-text">14亿人，1%的自媒体从业，就是1000w人。收入水平，收税卡在12w，说明年入10w差不多。两者相乘，未来五年这就是一个1万亿的市场。尽早完成12w年收，开始从「元规律」层面分析自己成功的方法，然后把这个方法卖出去。</div>
-    <div class="quote-author">—— <strong>AA昍</strong></div>
   </div>
 
   <!-- 二、总消息概览 -->
   <div class="section-title">二、总消息概览</div>
   <div class="stats-card">
     <div>
-      <div class="stat-big">130</div>
+      <div class="stat-big">245</div>
       <div class="stat-label">总消息数量</div>
     </div>
     <div class="stat-group">
       <div class="stat-item-sm">
-        <div class="num">2904</div>
+        <div class="num">2200</div>
         <div class="label">全文字数</div>
       </div>
       <div class="stat-item-sm">
-        <div class="num">3</div>
+        <div class="num">5</div>
         <div class="label">阅读时长</div>
       </div>
     </div>
   </div>
 
-  <!-- 三、今日主角：子蟹 -->
+  <!-- 三、今日主角 -->
   <div class="section-title">三、今日主角</div>
 
+  <!-- 主角：绵羊 -->
   <div class="topic-card hero-card">
-    <h4>子蟹 · 选题练习的「速胜论」反思</h4>
-    <div class="topic-time">15:05 - 15:52</div>
+    <h4>绵羊 · 从"消费端审美"到"生产端叙事"的内容大转型</h4>
+    <div class="topic-time">11:28 - 15:32</div>
 
     <div class="climb-kw-box">
       <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">子蟹：</span>"一起练起来，我感觉我上周有点儿速胜论，但选题应该是个持续练习的过程"</div>
+      <div class="climb-text"><span class="sender">绵羊：</span>"我好像有点明白了，这就去做一个脚本。"</div>
     </div>
 
     <div class="sub-label">相关关键词</div>
     <div class="tags">
-      <span class="tag">选题练习</span>
-      <span class="tag">速胜论</span>
-      <span class="tag">持续积累</span>
+      <span class="tag">内容转型</span>
+      <span class="tag">生产端叙事</span>
+      <span class="tag">李子柒</span>
+      <span class="tag">讲故事</span>
+      <span class="tag">留人</span>
     </div>
 
     <div class="sub-label">详细内容</div>
     <div class="detail-content">
-      <p><strong>子蟹</strong>在15:05分享了自己的小会笔记，<strong>绵羊</strong>看了之后说"子蟹写的重点也是选题，选题也是我的大难题"。<strong>子蟹</strong>坦承："我感觉我上周有点儿速胜论，但选题应该是个持续练习的过程"，意识到这不是突击可以搞定的。</p>
-      <p>当<strong>宝鹅</strong>问"蟹现在的选题方法是什么"时，<strong>子蟹</strong>分享了四步法："评论区总结一批，从咨询单上总结一批，刷高赞帖子总结一批，自己的经历上再提炼一批"。这个方法论覆盖了外部（评论区/高赞帖）、业务（咨询单）、自身（个人经历）三个维度。</p>
+      <div class="sub-heading">一、背景：漂亮但留不住人</div>
+      <p><strong>绵羊</strong>在11:28宣布今晚小会，分享了自媒体账号总结文档。此前<strong>溏心蛋</strong>在11:46给出了精准诊断：封面点击率11.8%说明内容吸引力很强，但周涨粉只有33，日常观看200-300——"用户看完内容后，没有产生'必须关注'的冲动"。核心问题：视频太像"制造欣赏"，缺少"制造对话"，没有参与用户的社会关系。</p>
+      
+      <div class="sub-heading">二、关键转折：从消费端到生产端</div>
+      <p>整个讨论围绕一个核心命题展开：如何让用户从"游客观光"变成"天天来楼下早餐店"。<strong>子蟹</strong>提出了关键洞察："现在绵羊姐展示的东西，更多是从消费端切入，让人觉得这个是美的。但这些不是重点，重点还是人，这些美的东西一定要把你突出出来，落脚在你身上。"</p>
+      <p><strong>子蟹</strong>进一步给出具体方向：讲生产端的故事——开拖拉机、养猪、照顾妹妹弟弟、女儿刚出生带她做蹲起。"从生产端切入，讲你学过什么、干过什么，反差拉满，很有感染力。"<strong>橙子🍊</strong>补充："李子柒是一种感觉，不是要做农活"，核心是氛围感+赋魅。<strong>宝鹅</strong>则建议降低形式难度，多讲故事，什么都能讲。</p>
+      
+      <div class="sub-heading">三、两条主线框架</div>
+      <p>下午<strong>AA昍</strong>给出了内容框架总结："将饮茶的两条主线已经明确：东方美学生活是画面，负责用户为什么看；杯中窥人是灵魂，解决用户为什么留下。"并指出养猪就是李子柒的方向——"李子柒那个更难做，所以做出来了就更难被模仿，也就更独特了。都是辩证的，投入产出比。"</p>
+      <p><strong>溏心蛋</strong>的"杯中窥人"系列提案获得一致认可：用2-3分钟小视频讲一个小故事，聊身边遇到的人或事。"实际上还是像壮哥做的那件事一样，不过是换一个方式讲寓言故事。"<strong>AA昍</strong>补充：目的是一样的——差异化，有深度，把观众留住。</p>
+      
+      <div class="sub-heading">四、认知突破与行动</div>
+      <p><strong>绵羊</strong>在讨论中经历了认知突破："为啥我想不到"→"我好像有点明白了，这就去做一个脚本"。她发现要多跟大家聊天——"很多事情，你让我回想哪些经历，我死活都想不起来，反倒是有时候聊着聊着，突然就想起来一个事儿。"<strong>二壮</strong>也指出绵羊聊天时"特别欢脱、冷不丁地来一下，很放松"，但视频里"有时候还是不是很放松"，建议匹配聊天的状态。</p>
     </div>
 
     <div class="conclusion-gm">
+      <div class="conclusion-box">
+        <div class="c-label">关键结论</div>
+        <div class="c-text">绵羊的转型方向已明确：从消费端"展示美"转向生产端"讲故事"。两条主线并行——东方美学生活（画面）、杯中窥人（灵魂）。核心不是"变得像李子柒"，而是找到自己独特的"活人感"，把开拖拉机、养猪这些真实经历变成内容资产。</div>
+      </div>
       <div class="gm-label">金句时刻</div>
       <div class="gm-item">
-        <div class="gm-quote">一起练起来，我感觉我上周有点儿速胜论，但选题应该是个持续练习的过程</div>
+        <div class="gm-quote">你的视频美是很美，但是没有参与用户的社会关系。用户看完一条东方美学内容，就像游客出门观光一样，一辈子去一次就够了。什么样的地方会去第二遍反复去呢？楼底下的早餐店、菜市场、超市。</div>
+        <div class="gm-author">—— <strong>溏心蛋</strong></div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">现在绵羊姐展示的东西，更多是从消费端切入，让人觉得这个是美的。但重点还是人，这些美的东西一定要把你突出出来，落脚在你身上。</div>
         <div class="gm-author">—— <strong>子蟹</strong></div>
       </div>
       <div class="gm-item">
-        <div class="gm-quote">评论区总结一批，从咨询单上总结一批，刷高赞帖子总结一批，自己的经历上再提炼一批</div>
-        <div class="gm-author">—— <strong>子蟹</strong></div>
+        <div class="gm-quote">东方美学生活是画面，负责用户为什么看；杯中窥人是灵魂，解决用户为什么留下。</div>
+        <div class="gm-author">—— <strong>AA昍</strong></div>
       </div>
     </div>
   </div>
 
-  <!-- 四、老司机补给站：AA昍 -->
+  <!-- 四、老司机补给站 -->
   <div class="section-title">四、老司机补给站</div>
 
+  <!-- 认知一：AA昍/黄云 - 通用谱系 -->
   <div class="topic-card">
-    <h4>AA昍 · 现场生成选题的「翻译」能力 + 一万亿市场推演</h4>
-    <div class="topic-time">14:00 - 19:07</div>
+    <h4>AA昍 / 黄云 · 从一段旋律到"通用谱系+文化选择"的升维思考</h4>
+    <div class="topic-time">19:28 - 20:45</div>
 
     <div class="climb-kw-box">
       <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">AA昍：</span>"就好像有些人，看到任何新闻，马上「翻译」成，这对应哪一支股票涨停，于是赚到了很多钱。"</div>
+      <div class="climb-text"><span class="sender">黄云：</span>"靠，升维了。这样就是化成一套底层的通用谱系+文化选择，本质又是数学到物理的结构。"</div>
     </div>
 
     <div class="sub-label">相关关键词</div>
     <div class="tags">
-      <span class="tag">选题生成</span>
-      <span class="tag">一万亿市场</span>
-      <span class="tag">翻译思维</span>
+      <span class="tag">通用谱系</span>
+      <span class="tag">文化选择</span>
+      <span class="tag">升维</span>
+      <span class="tag">底层结构</span>
     </div>
 
     <div class="sub-label">详细内容</div>
     <div class="detail-content">
-      <div class="sub-heading">一、一万亿市场推演</div>
-      <p><strong>AA昍</strong>在14:00分享了DeepSeek关于自媒体从业者的分析：14亿人中1%做自媒体就是1000万人，年入10万左右，两者相乘是一个1万亿的市场。关键洞察："尽早完成12w年收，开始从「元规律」层面分析自己成功的方法，然后把这个方法卖出去"——这本质上是"教人如何做xx的xx"模式，对标淘宝大学和巨量大学。</p>
-      <div class="sub-heading">二、现场生成选题：新闻到内容的「翻译」能力</div>
-      <p>当<strong>糕糕</strong>分享职场大小姐微博账号时，<strong>AA昍</strong>当场演示了选题生成能力：看到"领导是傻逼"→翻译成"你工资比领导智商还低，难道是领导的错？"；看到"怀才不遇"→翻译成"怀孕都知道请产假，怀才却能不遇？骗谁呢？"；看到职场生态→翻译成"做+1的嫡系是亲生的，做+2的嫡系是私生的"。核心方法论："说话人没有什么情绪，但是受众一定会被唤醒情绪。所以是好选题。"</p>
+      <div class="sub-heading">一、核心框架</div>
+      <p><strong>AA昍</strong>分享了一个用不同音乐风格演奏同一段旋律的视频，引发<strong>黄云</strong>的"升维"思考：做菜、画画、书法、写作，其实都可以拆解成一套底层"通用谱系+文化选择"。写作的驱动是情节还是状态还是人物？审美倾向上中国是壮美崇高，日本是自怜哀怨；描写方式有白描、渲染氛围、心理感触等。本质上是从数学到物理的结构。</p>
+
+      <div class="sub-heading">二、启发</div>
+      <p><strong>AA昍</strong>给出了可落地的创作建议：同样的台词，不同的剧里会怎么说（大），不同的角色（小），不同的作家（深），不同的口癖（浅）。"最重要的是有趣，严不严谨不重要。如果想不到有趣的就不用写。"以"四大名著里同一句'哥哥'分别怎么读"为例——这种"有趣"比"严谨"更能吸引观众。</p>
     </div>
 
     <div class="conclusion-gm">
+      <div class="conclusion-box">
+        <div class="c-label">关键结论</div>
+        <div class="c-text">好的内容拆解可以追溯到"底层元素+文化选择"的通用谱系。创作时不要追求严谨，要追求有趣——有趣的对比本身就有传播力。</div>
+      </div>
       <div class="gm-label">金句时刻</div>
       <div class="gm-item">
-        <div class="gm-quote">14亿人，1%的自媒体从业，就是1000w人……未来五年这就是一个1万亿的市场</div>
-        <div class="gm-author">—— <strong>AA昍</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">就好像有些人，看到任何新闻，马上「翻译」成，这对应哪一支股票涨停，于是赚到了很多钱</div>
-        <div class="gm-author">—— <strong>AA昍</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">说话人没有什么情绪，但是受众一定会被唤醒情绪。所以是好选题</div>
+        <div class="gm-quote">最重要的是有趣，严不严谨不重要。如果想不到有趣的就不用写。</div>
         <div class="gm-author">—— <strong>AA昍</strong></div>
       </div>
     </div>
   </div>
 
-  <!-- 五、同伴行动：糕糕 -->
+  <!-- 五、同伴行动 -->
   <div class="section-title">五、同伴行动</div>
 
+  <!-- 二壮开单 -->
   <div class="topic-card">
-    <h4>糕糕 · 拆解职场大小姐的选题与变现模式</h4>
-    <div class="topic-time">18:54 - 19:33</div>
+    <h4>二壮 · 咨询开单+高校号+豆包推广，一天入账2700</h4>
+    <div class="topic-time">10:45 - 14:54</div>
 
     <div class="climb-kw-box">
       <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">糕糕：</span>"我关注的这个微博账号，专门写职场……没什么干货，但是选题都还可以"</div>
+      <div class="climb-text"><span class="sender">二壮：</span>"豆包推广三个方向，两个pr找我，三个方向都要合作，2700入帐。"</div>
     </div>
 
     <div class="sub-label">相关关键词</div>
     <div class="tags">
-      <span class="tag">选题案例</span>
-      <span class="tag">变现拆解</span>
-      <span class="tag">职场内容</span>
+      <span class="tag">开单</span>
+      <span class="tag">咨询变现</span>
+      <span class="tag">商务合作</span>
     </div>
 
     <div class="sub-label">详细内容</div>
     <div class="detail-content">
-      <p><strong>糕糕</strong>分享了微博博主"职场大小姐"（20万粉）作为选题学习案例。内容特点：很少黑话和术语，"老百姓能看懂的东西，先别管对不对"；称呼读者为"妙人"；选题都是"说话人没什么情绪但受众会被唤醒情绪"的类型。变现模式：198元永久群+资料，1V1咨询900元/小时，单打独斗，没有小红书也没有视频号。<strong>AA昍</strong>评价"那赚不少呢应该"。<strong>糕糕</strong>总结："现在有ai了呀，这件事变得容易很多了才对。不用编辑部什么头脑风暴会议了。"</p>
+      <div class="sub-heading">一、做法</div>
+      <p><strong>二壮</strong>早上接了一单父母咨询孩子就业的咨询，定半小时尝鲜。随后高校号900块接了个水下。下午豆包推广三个方向同时推进，两个PR找上门，三个方向都要合作，当日总计入账2700元。<strong>子蟹</strong>点评"这个方向有搞头"，跟唐老师的路径很像，也是一种张雪峰模式。</p>
+
+      <div class="sub-heading">二、效果与启发</div>
+      <p>二壮的变现路径覆盖了三种模式：个人咨询（30分钟尝鲜）、自媒体广告（高校号900元）、平台商务合作（豆包推广2700元）。<strong>AA昍</strong>肯定："有开单就说说，挺好。"从咨询到商务合作的多元变现路径，验证了"内容→公域→商单"的飞轮正在加速。</p>
     </div>
 
     <div class="conclusion-gm">
+      <div class="conclusion-box">
+        <div class="c-label">关键结论</div>
+        <div class="c-text">多渠道变现模型初现：个人咨询+自媒体广告+平台商务合作，单日入账2700元。开单频率和多样性都在提升。</div>
+      </div>
       <div class="gm-label">金句时刻</div>
       <div class="gm-item">
-        <div class="gm-quote">现在有ai了呀，这件事变得容易很多了才对。不用编辑部什么头脑风暴会议了</div>
+        <div class="gm-quote">也是一种张雪峰。</div>
+        <div class="gm-author">—— <strong>二壮</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 糕糕口播 -->
+  <div class="topic-card">
+    <h4>糕糕 · 找到"碎碎念不出镜"的口播风格</h4>
+    <div class="topic-time">21:23 - 21:56</div>
+
+    <div class="climb-kw-box">
+      <div class="climb-label">爬楼关键词</div>
+      <div class="climb-text"><span class="sender">糕糕：</span>"我想着以后就走这样的风格，碎碎念，我不需要出镜。就可以带入一些自己的价值观。"</div>
+    </div>
+
+    <div class="sub-label">相关关键词</div>
+    <div class="tags">
+      <span class="tag">口播</span>
+      <span class="tag">碎碎念</span>
+      <span class="tag">内容风格</span>
+    </div>
+
+    <div class="sub-label">详细内容</div>
+    <div class="detail-content">
+      <div class="sub-heading">一、做法</div>
+      <p><strong>糕糕</strong>在毫无准备的状态下随手录了护肤vlog，发现不上镜反而自然多了。"没有上镜的话，好像就自然多了，就可以带入一些自己的价值观。"她决定以后走碎碎念风格，不出镜，用口播带价值观。<strong>子蟹</strong>建议脱敏疗法——多架几个手机机位直接开讲。<strong>黄云</strong>也分享了一个几百万粉美妆博主的风格参考：封面图的感觉动起来。</p>
+
+      <div class="sub-heading">二、效果与启发</div>
+      <p>糕糕在PR群里的个人风格已经形成了辨识度——"老师你还有什么神秘账号没告诉我的吗"——一个人分裂多个账号的传说在PR群传开了。<strong>橙子🍊</strong>点评："你的个人风格很明显！"从"必须出镜"到"碎碎念不出镜"，这是内容创作中"做减法"的典型路径——找到自己最舒服的方式，比模仿别人更有效。</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="conclusion-box">
+        <div class="c-label">关键结论</div>
+        <div class="c-text">"碎碎念不出镜"是一种低门槛高自然度的创作方式，适合有想法但镜头恐惧的创作者。风格辨识度比精致度更重要。</div>
+      </div>
+      <div class="gm-label">金句时刻</div>
+      <div class="gm-item">
+        <div class="gm-quote">我一定要找到一个我能习惯的方式去做口播！我也要讲故事！</div>
         <div class="gm-author">—— <strong>糕糕</strong></div>
       </div>
     </div>
-  </div>
-
-  <!-- 同伴行动：溏心蛋 -->
-  <div class="topic-card">
-    <h4>溏心蛋 · 教师垂类内容创作SOP体系化</h4>
-    <div class="topic-time">21:54 - 21:55</div>
-
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">溏心蛋：</span>"整理了一下我的整个创作sop"</div>
-    </div>
-
-    <div class="sub-label">相关关键词</div>
-    <div class="tags">
-      <span class="tag">创作SOP</span>
-      <span class="tag">教师垂类</span>
-      <span class="tag">内容体系</span>
-    </div>
-
-    <div class="sub-label">详细内容</div>
-    <div class="detail-content">
-      <p><strong>溏心蛋</strong>在晚间分享了自己完整的创作SOP简化版，六步闭环：选题（正常事物的不正常状态）→ 定标题（细化到具体场景/情绪/话术）→ 搭框架（暴论+分析+对策+收尾）→ 出稿（短句+口语化+直角引号）→ 出品（自检清单）→ 复盘（固定可复现的路径）。<strong>子蟹</strong>看后说"我也得理一个出来"。<strong>AA昍</strong>此前强调："sop不要省，如果这是工作，那么kpi就是「结果标题得有梗」，否则不要拿出来。"</p>
-    </div>
-
-    <div class="conclusion-gm">
-      <div class="gm-label">金句时刻</div>
-      <div class="gm-item">
-        <div class="gm-quote">sop不要省，如果这是工作，那么kpi就是「结果标题得有梗」，否则不要拿出来</div>
-        <div class="gm-author">—— <strong>AA昍</strong></div>
-      </div>
-    </div>
-
-    <a class="pick-link" href="http://127.0.0.1:5030/file/17c838deeb562fcdf66ff7ae42ed9513" target="_blank" rel="noopener">🚀 阅读原文：溏心蛋·教师垂类内容创作 SOP</a>
   </div>
 
   <!-- Footer -->
