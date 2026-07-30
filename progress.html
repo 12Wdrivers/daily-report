@@ -730,20 +730,18 @@ function markViewed(name) {
   localStorage.setItem(VIEWED_KEY, JSON.stringify(map));
 }
 
-function getTodayNewCount(member) {
-  const today = getTodayStr();
+function getUnreadCount(name, member) {
+  const viewed = getViewedMap();
+  const viewedDate = viewed[name] || '';
   let count = 0;
   (member.milestones || []).forEach(ms => {
-    if (ms.date === today) count++;
+    if (ms.date > viewedDate) count++;
   });
   return count;
 }
 
-function hasUnread(name, count) {
-  if (count === 0) return false;
-  const viewed = getViewedMap();
-  const viewedDate = viewed[name] || '';
-  return viewedDate < getTodayStr();
+function hasUnread(count) {
+  return count > 0;
 }
 
 fetch('progress-data.json')
@@ -789,8 +787,8 @@ function renderDirectory(data) {
   const grid = document.getElementById('memberGrid');
   grid.innerHTML = members.map((member, idx) => {
     const isDriver = member.role && member.role.includes('老司机');
-    const newCount = getTodayNewCount(member);
-    const showBadge = hasUnread(member.name, newCount);
+    const newCount = getUnreadCount(member.name, member);
+    const showBadge = hasUnread(newCount);
     return `
       <div class="member-tile${isDriver ? ' tile-driver' : ''}" onclick="showDetail(${idx})" style="animation-delay:${idx * 0.03}s">
         ${showBadge ? `<span class="new-badge">${newCount}</span>` : ''}
