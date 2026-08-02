@@ -706,8 +706,11 @@ const DEFAULT_VISIBLE = 5;
 let membersData = [];
 let currentDetailIdx = -1;
 
-// --- localStorage: 已查看状态 ---
-const VIEWED_KEY = 'progress_viewed';
+// --- 当日新增红点（纯日期标记，不依赖浏览器存储） ---
+// 红点 = 「今天有新增里程碑」，不追踪跨浏览器已读/未读
+// 点击进入详情后，当前会话内红点消失（内存变量），换浏览器/新窗口会重新显示
+
+const sessionViewed = new Set(); // 当前会话已查看的成员
 
 function getTodayStr() {
   const d = new Date();
@@ -716,32 +719,13 @@ function getTodayStr() {
     String(d.getDate()).padStart(2, '0');
 }
 
-function getViewedMap() {
-  try {
-    return JSON.parse(localStorage.getItem(VIEWED_KEY)) || {};
-  } catch(e) {
-    return {};
-  }
-}
-
-function markViewed(name) {
-  const map = getViewedMap();
-  map[name] = getTodayStr();
-  localStorage.setItem(VIEWED_KEY, JSON.stringify(map));
-}
-
-function getUnreadCount(name, member) {
-  const viewed = getViewedMap();
-  const viewedDate = viewed[name] || '';
+function getTodayNewCount(member) {
+  const today = getTodayStr();
   let count = 0;
   (member.milestones || []).forEach(ms => {
-    if (ms.date > viewedDate) count++;
+    if (ms.date === today) count++;
   });
   return count;
-}
-
-function hasUnread(count) {
-  return count > 0;
 }
 
 fetch('progress-data.json')
@@ -787,8 +771,8 @@ function renderDirectory(data) {
   const grid = document.getElementById('memberGrid');
   grid.innerHTML = members.map((member, idx) => {
     const isDriver = member.role && member.role.includes('老司机');
-    const newCount = getUnreadCount(member.name, member);
-    const showBadge = hasUnread(newCount);
+    const newCount = getTodayNewCount(member);
+    const showBadge = newCount > 0 && !sessionViewed.has(member.name);
     return `
       <div class="member-tile${isDriver ? ' tile-driver' : ''}" onclick="showDetail(${idx})" style="animation-delay:${idx * 0.03}s">
         ${showBadge ? `<span class="new-badge">${newCount}</span>` : ''}
@@ -817,8 +801,8 @@ function showDetail(idx) {
   if (!member) return;
   currentDetailIdx = idx;
 
-  // Mark as viewed → red dot disappears
-  markViewed(member.name);
+  // Mark as viewed in this session
+  sessionViewed.add(member.name);
   renderTileBadge(idx);
 
   document.getElementById('detailName').textContent = member.name;
