@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>十二W车行群日报 2026-08-05</title>
+<style>
+  :root {
+    --bg: #f5f5f7;
+    --card: #ffffff;
+    --ink: #1a1a1a;
+    --ink2: #333333;
+    --muted: #86868b;
+    --muted2: #aeaeb2;
+    --rule: #e5e5ea;
+    --accent: #e85d3a;
+    --accent-light: #fff4f0;
+    --accent-tag: #fde8e0;
+    --tag-bg: #f0f0f2;
+    --tag-text: #636366;
+    --highlight-bg: #fef6f2;
+    --kw-bg: #fff8f5;
+    --conclusion-bg: #fef6f2;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, 'PingFang SC', 'Helvetica Neue', 'Microsoft YaHei', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 16px 80px;
+  }
+
+  /* ===== Header Card ===== */
+  .header-card {
+    background: linear-gradient(135deg, var(--accent) 0%, #f07a5a 100%);
+    border-radius: 20px;
+    padding: 32px 24px 28px;
+    margin: 16px 0 14px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(232, 93, 58, 0.2);
+  }
+  .header-card h1 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  }
+  .header-card .date-row {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 4px;
+  }
+  .header-card .time-row {
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .header-card .time-row::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+  }
+
+  /* ===== Nav Bar ===== */
+  .nav-bar {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 14px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    background: var(--card);
+    border-radius: 12px;
+    padding: 12px 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-btn {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 13px;
+    color: var(--ink2);
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: inherit;
+    text-decoration: none;
+  }
+  .nav-btn:disabled {
+    color: var(--muted2);
+    border-color: var(--rule);
+  }
+  .nav-label {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 20px;
+    padding: 6px 14px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  /* ===== Daily Quote ===== */
+  .quote-section {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 18px 16px;
+    margin-bottom: 12px;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .quote-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+  .quote-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  .quote-author {
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .quote-author strong {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* ===== Section Title ===== */
+  .section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 24px 0 10px 4px;
+    padding-left: 10px;
+    border-left: 3px solid var(--accent);
+  }
+
+  /* ===== Stats Card ===== */
+  .stats-card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 18px 16px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .stat-big {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent);
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .stat-group {
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+  }
+  .stat-item-sm {
+    text-align: center;
+  }
+  .stat-item-sm .num {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .stat-item-sm .label {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* ===== Topic Card ===== */
+  .topic-card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 18px 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .topic-card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .topic-time {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  /* Hero Card */
+  .hero-card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 22px 18px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+  .hero-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.5;
+    margin-bottom: 4px;
+  }
+  .hero-card .topic-time {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .hero-card .detail-content .sub-heading {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 18px 0 10px;
+    padding: 8px 0 8px 12px;
+    border-left: 3px solid var(--accent);
+    background: linear-gradient(90deg, var(--kw-bg) 0%, transparent 70%);
+    border-radius: 0 6px 6px 0;
+  }
+  .hero-card .detail-content .sub-heading:first-child { margin-top: 0; }
+  .hero-card .detail-content p {
+    margin-bottom: 14px;
+    line-height: 1.85;
+    color: var(--ink2);
+    font-size: 14px;
+  }
+  .hero-card .detail-content p:last-child { margin-bottom: 0; }
+
+  /* Sub-section labels */
+  .sub-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink2);
+    margin: 14px 0 6px;
+  }
+  .sub-label:first-of-type {
+    margin-top: 0;
+  }
+
+  /* Climb Keywords */
+  .climb-kw-box {
+    background: var(--kw-bg);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+  }
+  .climb-kw-box .climb-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .climb-kw-box .climb-text {
+    font-size: 14px;
+    color: var(--ink2);
+    line-height: 1.7;
+  }
+  .climb-kw-box .sender {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* Tags */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .tag {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  /* Detail Content */
+  .detail-content {
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--ink2);
+  }
+  .detail-content strong {
+    background: var(--accent-light);
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .detail-content .sub-heading {
+    font-weight: 700;
+    color: var(--ink);
+    margin: 12px 0 4px;
+    font-size: 14px;
+  }
+  .detail-content p { margin-bottom: 8px; }
+
+  .topic-card .detail-content p {
+    margin-bottom: 12px;
+    line-height: 1.8;
+    color: var(--ink2);
+    font-size: 14px;
+  }
+  .topic-card .detail-content .sub-heading {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 14px 0 8px;
+  }
+
+  /* Conclusion & Golden Moments */
+  .conclusion-gm {
+    margin-top: 18px;
+    padding: 16px 14px 14px;
+    background: var(--accent-light);
+    border-radius: 12px;
+    border: 1px solid var(--accent-tag);
+  }
+  .conclusion-gm .conclusion-box {
+    background: var(--card);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+  }
+  .conclusion-gm .c-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .conclusion-gm .c-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ink2);
+  }
+  .conclusion-gm .gm-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 10px;
+    padding-left: 8px;
+    border-left: 2px solid var(--accent);
+  }
+  .conclusion-gm .gm-item {
+    background: var(--card);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .conclusion-gm .gm-item:last-child { margin-bottom: 0; }
+  .conclusion-gm .gm-quote {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .conclusion-gm .gm-author {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+  .gm-author strong {
+    color: var(--accent);
+    font-style: normal;
+  }
+
+  /* ===== Pick Card ===== */
+  .pick-card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .pick-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.5;
+    margin-bottom: 6px;
+  }
+  .pick-climb {
+    background: var(--kw-bg);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+  }
+  .pick-climb .climb-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .pick-climb .climb-text {
+    font-size: 14px;
+    color: var(--ink2);
+    line-height: 1.7;
+  }
+  .pick-body {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--ink2);
+  }
+  .pick-body strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .pick-body .sub-heading {
+    font-weight: 700;
+    color: var(--ink);
+    margin: 10px 0 4px;
+    font-size: 14px;
+  }
+  .pick-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+  }
+  .pick-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #fff;
+    background: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.15s ease;
+  }
+  .pick-link:hover {
+    background: #d14e2e;
+  }
+
+  /* ===== Footer ===== */
+  .footer-note {
+    font-size: 12px;
+    color: var(--muted2);
+    text-align: center;
+    margin-top: 24px;
+    padding: 0 16px;
+    line-height: 1.7;
+  }
+
+  /* ===== Responsive ===== */
+  @media (min-width: 520px) {
+    .container { padding: 0 24px 80px; }
+  }
+
+/* ===== 大标题 UI 增强 ===== */
+.header-card {
+  background: linear-gradient(135deg, var(--accent) 0%, #f07a5a 100%);
+  border-radius: 20px;
+  padding: 32px 24px 28px;
+  margin: 16px 0 14px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(232, 93, 58, 0.2);
+}
+.header-card h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.header-card .date-row {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 4px;
+}
+.header-card .time-row {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* ===== 章节标题增强 ===== */
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 24px 0 10px 4px;
+  padding-left: 10px;
+  border-left: 3px solid var(--accent);
+}
+
+/* ===== 今日主角卡片专用排版增强 ===== */
+.hero-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 22px 18px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.hero-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+.hero-card .topic-time {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.hero-card .detail-content .sub-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 18px 0 10px;
+  padding: 8px 0 8px 12px;
+  border-left: 3px solid var(--accent);
+  background: linear-gradient(90deg, var(--kw-bg) 0%, transparent 70%);
+  border-radius: 0 6px 6px 0;
+}
+.hero-card .detail-content .sub-heading:first-child { margin-top: 0; }
+.hero-card .detail-content p {
+  margin-bottom: 14px;
+  line-height: 1.85;
+  color: var(--ink2);
+  font-size: 14px;
+}
+.hero-card .detail-content p:last-child { margin-bottom: 0; }
+
+/* ===== 金句时刻区域 ===== */
+.conclusion-gm {
+  margin-top: 18px;
+  padding: 16px 14px 14px;
+  background: var(--accent-light);
+  border-radius: 12px;
+  border: 1px solid var(--accent-tag);
+}
+.conclusion-gm .conclusion-box {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+.conclusion-gm .gm-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+  padding-left: 8px;
+  border-left: 2px solid var(--accent);
+}
+.conclusion-gm .gm-item {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.conclusion-gm .gm-item:last-child { margin-bottom: 0; }
+.conclusion-gm .gm-quote {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink);
+  font-weight: 500;
+}
+.conclusion-gm .gm-author {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* ===== 其他内容卡片增强 ===== */
+.topic-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.topic-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.topic-card .topic-time {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.topic-card .detail-content p {
+  margin-bottom: 12px;
+  line-height: 1.8;
+  color: var(--ink2);
+  font-size: 14px;
+}
+.topic-card .detail-content .sub-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 14px 0 8px;
+}
+
+/* ===== 说话人名字高亮 ===== */
+.detail-content p strong, .qa-content p strong {
+  background: var(--accent-light);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* ===== 每日金句增强 ===== */
+.quote-section {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.quote-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+.quote-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+.quote-author {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ===== 数据概览增强 ===== */
+.stats-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.stat-big {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+}
+.stat-label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ===== 导航栏增强 ===== */
+.nav-bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.nav-btn {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: var(--ink2);
+  white-space: nowrap;
+}
+.nav-label {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 6px 14px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ===== 页脚 ===== */
+.footer-note {
+  font-size: 12px;
+  color: var(--muted2);
+  text-align: center;
+  margin-top: 24px;
+  padding: 0 16px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header Card -->
+  <div class="header-card">
+    <h1>十二W车行群日报</h1>
+    <div class="date-row">2026 年 08 月 05 日（星期三）</div>
+    <div class="time-row">04:18 - 01:31</div>
+  </div>
+
+  <!-- Nav Bar -->
+  <div class="nav-bar">
+    <a class="nav-btn" href="../v1/daily-report-2026-08-04.html">上一天</a>
+    <a class="nav-label" href="../index.html">日报导航</a>
+    <button class="nav-btn" disabled>下一天</button>
+  </div>
+
+  <!-- 一、每日金句 -->
+  <div class="section-title">一、每日金句</div>
+  <div class="quote-section">
+    <div class="quote-label">每日金句</div>
+    <div class="quote-text">"买30的，也能愿意买3000，但很可能不愿意买0。"</div>
+    <div class="quote-author">—— <strong>黄云</strong> · 付费社群定价铁律</div>
+  </div>
+
+  <!-- 二、总消息概览 -->
+  <div class="section-title">二、总消息概览</div>
+  <div class="stats-card" style="display: flex; justify-content: space-between;">
+    <div class="stat-item-sm">
+      <div class="num">429</div>
+      <div class="label">总消息</div>
+    </div>
+    <div class="stat-item-sm">
+      <div class="num">4141</div>
+      <div class="label">聊天字数</div>
+    </div>
+    <div class="stat-item-sm">
+      <div class="num">1646</div>
+      <div class="label">日报字数</div>
+    </div>
+    <div class="stat-item-sm">
+      <div class="num">4</div>
+      <div class="label">阅读时长</div>
+    </div>
+  </div>
+
+  <!-- 三、今日主角 -->
+  <div class="section-title">三、今日主角</div>
+  <div class="topic-card hero-card">
+    <h4>绵羊 —— 美妆护肤小会：商单矛盾与种草转化</h4>
+    <div class="topic-time">19:56 - 23:50 &nbsp;|&nbsp; 小会发起人</div>
+    <div class="climb-kw-box">
+      <div class="climb-label">爬楼关键词</div>
+      <div class="climb-text"><span class="sender">绵羊：</span>"收入来自品牌方，但广告发多了信任透支。这个矛盾怎么破？"</div>
+    </div>
+    <div class="tags">
+      <span class="tag">商单矛盾</span>
+      <span class="tag">种草转化</span>
+      <span class="tag">沉浸式博主</span>
+      <span class="tag">标签垂类</span>
+    </div>
+    <div class="detail-content">
+
+      <div class="sub-heading">一、商单与信任的矛盾</div>
+      <p>19:56 <strong>绵羊</strong>发起小会，分享三账号数据分析与规划，提出核心矛盾：收入靠商单但广告透支信任。<strong>美妆博主</strong>直接点破："你是带货博主，用户关心的是能不能买到合适的东西，不是计较你哪篇是广告。品牌和你的目的都是为了种草转化。"</p>
+
+      <div class="sub-heading">二、种草是美妆赛道核心逻辑</div>
+      <p><strong>美妆博主</strong>20:16解释护肤品为何大量投博主："护肤品注重种草，可以提要求——风格不符、效果不好、用户不喜欢，都能拒。"<strong>黄云</strong>补充："晒整个过程，就是向客户展现成交的整个流程，处处都是成交理由。"<strong>绵羊</strong>顿悟："我看糕的账号都长草了好几个东西，竟然想不到这一点。"</p>
+
+      <div class="sub-heading">三、沉浸式博主与标签垂类</div>
+      <p>20:43 <strong>美妆博主</strong>分享赛道最高报价方向：沉浸式博主全程不说话展示护肤流程，每个产品都是广告位，品牌排队投放。22:49输出八条干货：大牌有流量因买关键词，小众品牌没钱所以找博主置换；护肤和美妆标签要"非常垂非常垂非常垂"；置换产品没拆封的用来抽奖涨粉。<strong>绵羊</strong>23:00确认："合集数据确实比单推好。"</p>
+
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句</div>
+      <div class="gm-item">
+        <div class="gm-quote">"你是带货博主，用户关心的是能不能买到合适的东西，不是计较你哪篇是广告。品牌和你的目的都是为了种草转化。"</div>
+        <div class="gm-author">—— <strong>美妆博主</strong> · 商单与信任</div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">"晒整个过程，就是向客户展现成交的整个流程，处处都是成交理由来吸引人想向你付费。"</div>
+        <div class="gm-author">—— <strong>黄云</strong> · 种草逻辑</div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">"你先把流量做起来，广告接起来，变现了有钱了也有了稳定的粉丝了，那时候想输出什么不行呢？"</div>
+        <div class="gm-author">—— <strong>美妆博主</strong> · 先抢球再想怎么踢</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 四、老司机补给站 -->
+  <div class="section-title">四、老司机补给站</div>
+
+  <div class="topic-card">
+    <h4>黄云 —— 定价0与1的底层铁律 + 博主不能发盗版的本质</h4>
+    <div class="topic-time">08:28 - 10:58</div>
+    <div class="climb-kw-box">
+      <div class="climb-label">爬楼关键词</div>
+      <div class="climb-text"><span class="sender">黄云：</span>"付费和不付费真的天壤之别，0和1。先低后高，和先无后有完全两码事。"</div>
+    </div>
+    <div class="detail-content">
+      <div class="sub-heading">一、博主发同行盗版的本质</div>
+      <p>凌晨 <strong>二壮</strong>在私域群分享食贫道充电视频盗版链接。<strong>黄云</strong>08:28分析：做付费内容的博主，在群里发同行付费盗版还往外转，不是法律问题，是人品问题。"你觉得这人是个二逼。"<strong>会计王🐟</strong>补充："提醒了几次他都没意识到。"</p>
+
+      <div class="sub-heading">二、免费群的定价铁律</div>
+      <p>10:32 <strong>黄云</strong>指出二壮先免费后付费的策略错误："付费和不付费天壤之别，0和1。先低后高，和先无后有完全两码事。"10:58给出关键洞察："买30的也能愿意买3000，但很可能不愿意买0。买0的很可能30也不愿意。"<strong>美妆博主</strong>补充："体验课9.9、39都有，但我没见过体验课0的。"</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句</div>
+      <div class="gm-item">
+        <div class="gm-quote">"买30的也能愿意买3000，但很可能不愿意买0。买0的很可能30也不愿意。体会下。"</div>
+        <div class="gm-author">—— <strong>黄云</strong> · 定价铁律</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <h4>AA昍 —— 盗版事件犀利点评 + 谨言慎行的连锁反应</h4>
+    <div class="topic-time">15:33 - 17:28</div>
+    <div class="climb-kw-box">
+      <div class="climb-label">爬楼关键词</div>
+      <div class="climb-text"><span class="sender">AA昍：</span>"不光是你的话本身的影响，还要考虑那些无条件信任你的人会跟着你说什么话。"</div>
+    </div>
+    <div class="detail-content">
+      <p>15:35 <strong>AA昍</strong>对盗版事件点评："他没有为付费内容花过一分钱，一直在白嫖所有人，所以意识不到白嫖有多讨厌。"15:42："黄老师那个话足够清晰了——你也做付费内容，你在群里发别的博主的付费盗版还往外转，你是什么人？不要整这些理论，都是辩经。"</p>
+
+      <p>17:04-17:11 <strong>AA昍</strong>提醒美妆博主说话的连锁反应："不光是你的话本身的影响，还要考虑那些无条件信任你的人会跟着你说什么话。"17:25分享星火群小群事件：有人在小群实时吐槽星火群说话的同志，"我看了一眼，赶紧退群了。这事很可怕的。"17:28："我之前一直以为这是常识，现在看来不仅不是常识，简直可以开班授课。"</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句</div>
+      <div class="gm-item">
+        <div class="gm-quote">"不光是你的话本身的影响，还要考虑那些无条件信任你的人会跟着你说什么话。这些行为又会对这些人造成什么影响？"</div>
+        <div class="gm-author">—— <strong>AA昍</strong> · 谨言慎行的连锁反应</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 五、同伴行动 -->
+  <div class="section-title">五、同伴行动</div>
+
+  <div class="topic-card">
+    <h4>老师 —— 降价教训：从800降到500的错误回路</h4>
+    <div class="topic-time">10:44 - 10:55</div>
+    <div class="climb-kw-box">
+      <div class="climb-label">爬楼关键词</div>
+      <div class="climb-text"><span class="sender">老师：</span>"为了证明自己有能力，和那个小班承诺只要有效果就降价到500。这个事情现在看是非常的傻逼。"</div>
+    </div>
+    <div class="detail-content">
+      <p><strong>老师</strong>分享刚起步时从800降到500的教训：没有成绩背书，想用降价换多买课。<strong>转念之间</strong>分析："企业思维回路，薄利多销。没认识到个人精力有限。"<strong>落日钓星星💫</strong>18:31补充：机构不直接降客单价，而是扩科绑定给优惠。个体老师退费要秒退，但有风险：家长先交钱后威胁不退就举报。</p>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <h4>宝鹅 —— 对标学生群体toB变现账号</h4>
+    <div class="topic-time">19:04 - 19:39</div>
+    <div class="detail-content">
+      <p><strong>美妆博主</strong>分享几个小红书账号给<strong>宝鹅</strong>参考：同样面对学生群体，靠图文测评和校招内容接商单，7月接7单7000元。"本群完全都可以写，不仅承接B端，还能对接C端收费做咨询。"<strong>宝鹅</strong>19:39："谢谢糕，这个我直接对标。"</p>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <h4>子蟹 —— 0804小会复盘 + 找定位</h4>
+    <div class="topic-time">17:28 - 17:38</div>
+    <div class="detail-content">
+      <p><strong>子蟹</strong>分享0804小会复盘文档。<strong>美妆博主</strong>认为子蟹形象给人实在感、值得信任。<strong>宝鹅</strong>补充："男性和女性都能信任的气质。"<strong>子蟹</strong>表示想找绵羊姐帮忙找定位，自评"实在没有美商"。</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer-note">
+    本报告基于群聊数据自动生成，仅供参考。内容可能包含个人观点，不代表群组官方立场。
+  </div>
+
+</div>
+</body>
+</html>
