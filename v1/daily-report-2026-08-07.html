@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>十二W车行群日报 2026-08-07</title>
+<style>
+  :root {
+    --bg: #f5f5f7;
+    --card: #ffffff;
+    --ink: #1a1a1a;
+    --ink2: #333333;
+    --muted: #86868b;
+    --muted2: #aeaeb2;
+    --rule: #e5e5ea;
+    --accent: #e85d3a;
+    --accent-light: #fff4f0;
+    --accent-tag: #fde8e0;
+    --tag-bg: #f0f0f2;
+    --tag-text: #636366;
+    --highlight-bg: #fef6f2;
+    --kw-bg: #fff8f5;
+    --conclusion-bg: #fef6f2;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, 'PingFang SC', 'Helvetica Neue', 'Microsoft YaHei', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 16px 80px;
+  }
+
+  /* ===== Header Card ===== */
+  .header-card {
+    background: linear-gradient(135deg, var(--accent) 0%, #f07a5a 100%);
+    border-radius: 20px;
+    padding: 32px 24px 28px;
+    margin: 16px 0 14px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(232, 93, 58, 0.2);
+  }
+  .header-card h1 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  }
+  .header-card .date-row {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 4px;
+  }
+  .header-card .time-row {
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .header-card .time-row::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+  }
+
+  /* ===== Nav Bar ===== */
+  .nav-bar {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 14px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    background: var(--card);
+    border-radius: 12px;
+    padding: 12px 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-btn {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 13px;
+    color: var(--ink2);
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: inherit;
+    text-decoration: none;
+  }
+  .nav-btn:disabled {
+    color: var(--muted2);
+    border-color: var(--rule);
+  }
+  .nav-label {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 20px;
+    padding: 6px 14px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  /* ===== Daily Quote ===== */
+  .quote-section {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 18px 16px;
+    margin-bottom: 12px;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .quote-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+  .quote-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  .quote-author {
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .quote-author strong {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* ===== Section Title ===== */
+  .section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 24px 0 10px 4px;
+    padding-left: 10px;
+    border-left: 3px solid var(--accent);
+  }
+
+  /* ===== Stats Card ===== */
+  .stats-card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 18px 16px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .stat-big {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent);
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .stat-group {
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+  }
+  .stat-item-sm {
+    text-align: center;
+  }
+  .stat-item-sm .num {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .stat-item-sm .label {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* ===== Topic Card ===== */
+  .topic-card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 18px 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .topic-card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .topic-time {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  /* Hero Card */
+  .hero-card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 22px 18px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+  .hero-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.5;
+    margin-bottom: 4px;
+  }
+  .hero-card .topic-time {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .hero-card .detail-content .sub-heading {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 18px 0 10px;
+    padding: 8px 0 8px 12px;
+    border-left: 3px solid var(--accent);
+    background: linear-gradient(90deg, var(--kw-bg) 0%, transparent 70%);
+    border-radius: 0 6px 6px 0;
+  }
+  .hero-card .detail-content .sub-heading:first-child { margin-top: 0; }
+  .hero-card .detail-content p {
+    margin-bottom: 14px;
+    line-height: 1.85;
+    color: var(--ink2);
+    font-size: 14px;
+  }
+  .hero-card .detail-content p:last-child { margin-bottom: 0; }
+
+  /* Sub-section labels */
+  .sub-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink2);
+    margin: 14px 0 6px;
+  }
+  .sub-label:first-of-type {
+    margin-top: 0;
+  }
+
+  /* Climb Keywords */
+  .climb-kw-box {
+    background: var(--kw-bg);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+  }
+  .climb-kw-box .climb-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .climb-kw-box .climb-text {
+    font-size: 14px;
+    color: var(--ink2);
+    line-height: 1.7;
+  }
+  .climb-kw-box .sender {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* Tags */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .tag {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  /* Detail Content */
+  .detail-content {
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--ink2);
+  }
+  .detail-content strong {
+    background: var(--accent-light);
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .detail-content .sub-heading {
+    font-weight: 700;
+    color: var(--ink);
+    margin: 12px 0 4px;
+    font-size: 14px;
+  }
+  .detail-content p { margin-bottom: 8px; }
+
+  .topic-card .detail-content p {
+    margin-bottom: 12px;
+    line-height: 1.8;
+    color: var(--ink2);
+    font-size: 14px;
+  }
+  .topic-card .detail-content .sub-heading {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 14px 0 8px;
+  }
+
+  /* Conclusion & Golden Moments */
+  .conclusion-gm {
+    margin-top: 18px;
+    padding: 16px 14px 14px;
+    background: var(--accent-light);
+    border-radius: 12px;
+    border: 1px solid var(--accent-tag);
+  }
+  .conclusion-gm .conclusion-box {
+    background: var(--card);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+  }
+  .conclusion-gm .c-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .conclusion-gm .c-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ink2);
+  }
+  .conclusion-gm .gm-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 10px;
+    padding-left: 8px;
+    border-left: 2px solid var(--accent);
+  }
+  .conclusion-gm .gm-item {
+    background: var(--card);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .conclusion-gm .gm-item:last-child { margin-bottom: 0; }
+  .conclusion-gm .gm-quote {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .conclusion-gm .gm-author {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+  .gm-author strong {
+    color: var(--accent);
+    font-style: normal;
+  }
+
+  /* ===== Pick Card ===== */
+  .pick-card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .pick-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.5;
+    margin-bottom: 6px;
+  }
+  .pick-climb {
+    background: var(--kw-bg);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+  }
+  .pick-climb .climb-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .pick-climb .climb-text {
+    font-size: 14px;
+    color: var(--ink2);
+    line-height: 1.7;
+  }
+  .pick-body {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--ink2);
+  }
+  .pick-body strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .pick-body .sub-heading {
+    font-weight: 700;
+    color: var(--ink);
+    margin: 10px 0 4px;
+    font-size: 14px;
+  }
+  .pick-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+  }
+  .pick-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #fff;
+    background: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.15s ease;
+  }
+  .pick-link:hover {
+    background: #d14e2e;
+  }
+
+  /* ===== Footer ===== */
+  .footer-note {
+    font-size: 12px;
+    color: var(--muted2);
+    text-align: center;
+    margin-top: 24px;
+    padding: 0 16px;
+    line-height: 1.7;
+  }
+
+  /* ===== Responsive ===== */
+  @media (min-width: 520px) {
+    .container { padding: 0 24px 80px; }
+  }
+
+
+/* ===== 大标题 UI 增强 ===== */
+.header-card {
+  background: linear-gradient(135deg, var(--accent) 0%, #f07a5a 100%);
+  border-radius: 20px;
+  padding: 32px 24px 28px;
+  margin: 16px 0 14px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(232, 93, 58, 0.2);
+}
+.header-card h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.header-card .date-row {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 4px;
+}
+.header-card .time-row {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* ===== 章节标题增强 ===== */
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 24px 0 10px 4px;
+  padding-left: 10px;
+  border-left: 3px solid var(--accent);
+}
+
+/* ===== 今日主角卡片专用排版增强 ===== */
+.hero-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 22px 18px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.hero-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+.hero-card .topic-time {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.hero-card .detail-content .sub-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 18px 0 10px;
+  padding: 8px 0 8px 12px;
+  border-left: 3px solid var(--accent);
+  background: linear-gradient(90deg, var(--kw-bg) 0%, transparent 70%);
+  border-radius: 0 6px 6px 0;
+}
+.hero-card .detail-content .sub-heading:first-child { margin-top: 0; }
+.hero-card .detail-content p {
+  margin-bottom: 14px;
+  line-height: 1.85;
+  color: var(--ink2);
+  font-size: 14px;
+}
+.hero-card .detail-content p:last-child { margin-bottom: 0; }
+
+/* ===== 金句时刻区域 ===== */
+.conclusion-gm {
+  margin-top: 18px;
+  padding: 16px 14px 14px;
+  background: var(--accent-light);
+  border-radius: 12px;
+  border: 1px solid var(--accent-tag);
+}
+.conclusion-gm .conclusion-box {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+.conclusion-gm .gm-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+  padding-left: 8px;
+  border-left: 2px solid var(--accent);
+}
+.conclusion-gm .gm-item {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.conclusion-gm .gm-item:last-child { margin-bottom: 0; }
+.conclusion-gm .gm-quote {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink);
+  font-weight: 500;
+}
+.conclusion-gm .gm-author {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* ===== 其他内容卡片增强 ===== */
+.topic-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.topic-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.topic-card .topic-time {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.topic-card .detail-content p {
+  margin-bottom: 12px;
+  line-height: 1.8;
+  color: var(--ink2);
+  font-size: 14px;
+}
+.topic-card .detail-content .sub-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 14px 0 8px;
+}
+
+/* ===== 说话人名字高亮 ===== */
+.detail-content p strong, .qa-content p strong {
+  background: var(--accent-light);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* ===== 每日金句增强 ===== */
+.quote-section {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.quote-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+.quote-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+.quote-author {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ===== 数据概览增强 ===== */
+.stats-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.stat-big {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+}
+.stat-label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ===== 导航栏增强 ===== */
+.nav-bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.nav-btn {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: var(--ink2);
+  white-space: nowrap;
+}
+.nav-label {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 6px 14px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ===== 页脚 ===== */
+.footer-note {
+  font-size: 12px;
+  color: var(--muted2);
+  text-align: center;
+  margin-top: 24px;
+  padding: 0 16px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header Card -->
+  <div class="header-card">
+    <h1>十二W车行群日报</h1>
+    <div class="date-row">2026 年 08 月 07 日（星期五）</div>
+    <div class="time-row">02:03 - 01:13</div>
+  </div>
+
+  <!-- Nav Bar -->
+  <div class="nav-bar">
+    <a class="nav-btn" href="../v1/daily-report-2026-08-06.html">上一天</a>
+    <a class="nav-label" href="../index.html">日报导航</a>
+    <button class="nav-btn" disabled>下一天</button>
+  </div>
+
+  <!-- 一、每日金句 -->
+  <div class="section-title">一、每日金句</div>
+  <div class="quote-section">
+    <div class="quote-label">每日金句</div>
+    <div class="quote-text">"不要「忠实于原著」。而要基于你的目的去加工你手里的素材。"</div>
+    <div class="quote-author">—— <strong>AA昍</strong> · 凌晨分享内容加工思维</div>
+  </div>
+
+  <!-- 二、总消息概览 -->
+  <div class="section-title">二、总消息概览</div>
+  <div class="stats-card" style="display: flex; justify-content: space-between;">
+    <div class="stat-item-sm">
+      <div class="num">673</div>
+      <div class="label">总消息</div>
+    </div>
+    <div class="stat-item-sm">
+      <div class="num">8382</div>
+      <div class="label">聊天字数</div>
+    </div>
+    <div class="stat-item-sm">
+      <div class="num">2381</div>
+      <div class="label">日报字数</div>
+    </div>
+    <div class="stat-item-sm">
+      <div class="num">6</div>
+      <div class="label">阅读时长</div>
+    </div>
+  </div>
+
+  <!-- 三、今日主角 -->
+  <div class="section-title">三、今日主角</div>
+
+  <!-- 主角1：爱吃豹🐆 -->
+  <div class="topic-card hero-card">
+    <h4>爱吃豹🐆 —— 小会：遗传科普IP的活人感转型</h4>
+    <div class="topic-time">18:53 - 00:40 &nbsp;|&nbsp; 小会发起人</div>
+    <div class="climb-kw-box">
+      <div class="climb-label">爬楼关键词</div>
+      <div class="climb-text"><span class="sender">爱吃豹🐆：</span>"我觉得这次小会，好像找到一点点，我该怎么走的方向了。"</div>
+    </div>
+    <div class="tags">
+      <span class="tag">科普IP</span>
+      <span class="tag">活人感</span>
+      <span class="tag">基因选题</span>
+      <span class="tag">自媒体变现</span>
+    </div>
+    <div class="detail-content">
+
+      <div class="sub-heading">一、自媒体收入起步：两个月引两个开口</div>
+      <p>18:53 <strong>爱吃豹🐆</strong>汇报：这个月自媒体引流两个开口，一个教授做了五个样本、净利可达5000；另一个问WGS但还没转化。阅读人数在升，"证明看的群体其实在变多"。</p>
+
+      <div class="sub-heading">二、糕分享果壳网十年科普IP经验</div>
+      <p>19:24 <strong>美妆博主</strong>指出遗传搬运工"不像真人"，建议塑造活人感。她分享果壳网做法：每个科普作者设定IP人设，文章开头有人物引导、结尾呼应，"开微博的都赚钱了"。她当年带3人做到年3000万、毛利超70%。核心方法："针对每一个时事热点，都能哔哔点啥，让别人都觉得他们很专业。然后文末再加点文献引用，用户频频点头：老师！"</p>
+
+      <div class="sub-heading">三、从 SCI 思维到大众传播："你不是要发SCI吧"</div>
+      <p>19:56 <strong>美妆博主</strong>戳穿关键问题："你先把故事写了，然后专业部分你就顺嘴提一下你的总结就完了。你目标是什么，不能忘啊。你不是要发SCI吧。"<strong>爱吃豹🐆</strong>领悟："我得先把IP做起来。"开始尝试新ID"基因大狮"。</p>
+
+      <div class="sub-heading">四、深夜头脑风暴：攒出6个选题</div>
+      <p>23:37 <strong>美妆博主</strong>说"精神病史遗传这个话题能写100篇"。<strong>AA昍</strong>提出飞轮思路：健身相亲——基因亚型决定老年生活质量——识别方法——结合相亲经历。"长期健身，死的时候就很痛快，不会特别痛苦。那同理，有一些基因亚型更容易得各种失能的老年病……相亲的时候就要避开这些人。"00:03 <strong>爱吃豹🐆</strong>攒完6个选题，从"相亲为什么要看脸"到"基因里藏着专情 or 滥情的秘密"，<strong>AA昍</strong>点评"方向看起来没问题"。</p>
+
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句</div>
+      <div class="gm-item">
+        <div class="gm-quote">"你以为看果壳网的人都是博士吗？如果是，这个公司第一个月就破产。"</div>
+        <div class="gm-author">—— <strong>美妆博主</strong> · 科普不等于专业论文</div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">"你不是要发SCI吧。"</div>
+        <div class="gm-author">—— <strong>美妆博主</strong> · 提醒目标导向</div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">"科普不是死板的。"</div>
+        <div class="gm-author">—— <strong>美妆博主</strong> · 给科普IP定调</div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">"我觉得这次小会，好像找到一点点，我该怎么走的方向了。"</div>
+        <div class="gm-author">—— <strong>爱吃豹🐆</strong> · 小会收获</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主角2：老师 -->
+  <div class="topic-card hero-card">
+    <h4>老师 —— 复盘：教师干货涨粉但最终要变现家长</h4>
+    <div class="topic-time">20:24 - 21:04 &nbsp;|&nbsp; 方向复盘</div>
+    <div class="climb-kw-box">
+      <div class="climb-label">爬楼关键词</div>
+      <div class="climb-text"><span class="sender">老师：</span>"涨粉涨得最多的是教师职场干货……但我的最终变现目标是家长群体，而不是教师群体。"</div>
+    </div>
+    <div class="tags">
+      <span class="tag">账号定位</span>
+      <span class="tag">教师vs家长</span>
+      <span class="tag">内容复盘</span>
+    </div>
+    <div class="detail-content">
+
+      <div class="sub-heading">干货涨粉最好，但与变现方向打架</div>
+      <p>20:24 <strong>老师</strong>本是小会日，但因家里突发情况取消，仍有复盘分享。她按象限图分析4月以来内容：涨粉最多的三大类——向上管理领导、职场生存、工位养生——全是教师职场干货。但她的变现目标是家长群体。本周发的孩子教育内容涨粉仅9人。<strong>宝鹅</strong>说"干货才是正道啊，抽象虽然流量高但是不涨粉"。矛盾出现：教师干货给流量，家长内容才能变现。</p>
+
+      <div class="sub-heading">要不要另开号？</div>
+      <p>20:30 <strong>老师</strong>提问："有没有必要再开一个纯面向家长的教育号？"<strong>二壮</strong>分析："教师和家长天然不共边。如果这个号还准备继续发老师相关内容，拱流量 ToB 接广的话，面向家长的号应该另开一个。要么就这个号完全转标签，转成家长视角。"<strong>老师</strong>分享了一篇教师IP数据很好但"出现在我首页就很可怕了"的帖子。<strong>AA昍</strong>给出方向："无目的的辩证：可以正，可以反。有目的的辩证：我是正，如何正。"<strong>老师</strong>称这句话"很受用"。</p>
+
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句</div>
+      <div class="gm-item">
+        <div class="gm-quote">"无目的的辩证：可以正，可以反。有目的的辩证：我是正，如何正。"</div>
+        <div class="gm-author">—— <strong>AA昍</strong> · 老师称"很受用"</div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">"教师和家长天然不共边。"</div>
+        <div class="gm-author">—— <strong>二壮</strong> · 定位分析</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 四、老司机补给站 -->
+  <div class="section-title">四、老司机补给站</div>
+
+  <div class="topic-card">
+    <h4>美妆博主 —— 果壳网十年：科普IP从0到3000万的方法论</h4>
+    <div class="topic-time">19:24 - 20:02</div>
+    <div class="climb-kw-box">
+      <div class="climb-label">爬楼关键词</div>
+      <div class="climb-text"><span class="sender">美妆博主：</span>"你以为看果壳网的人都是博士吗？如果是，这个公司第一个月就破产。"</div>
+    </div>
+    <div class="detail-content">
+      <p>19:31 <strong>美妆博主</strong>分享果壳网编辑部运作模式：给每个写科普文的作者设定活人IP，文章有个人引导和首尾呼应。公司设鼓励机制，写得好的作者多给资源。"大部分作者都没想到能去真的开个自媒体好好更新……但是呢，开微博的都赚钱了。"</p>
+      <p>19:43 她回忆当年带3人做到年3000万，"就靠做大大小小的作者IP做出来的"。后来转型直接给品牌做内容，"后面反而是作者们来找我，糕总，怎么最近没有约稿了"。</p>
+      <p>19:13 <strong>AA昍</strong>给初学者定调：实在不行照着溏心蛋和大壮的先抄，"抄一份出来看看"。<strong>爱吃豹🐆</strong>响应："不管怎么样，写个垃圾也是写了。"</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句</div>
+      <div class="gm-item">
+        <div class="gm-quote">"每篇纯干货，噎死所有人，进展虽然慢，但是筛出来的人优质。"</div>
+        <div class="gm-author">—— <strong>美妆博主</strong> · 筛人与变现逻辑</div>
+      </div>
+      <div class="gm-item">
+        <div class="gm-quote">"不管怎么样，写个垃圾也是写了。"</div>
+        <div class="gm-author">—— <strong>爱吃豹🐆</strong> · 启动哲学</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <h4>AA昍 —— 素材是你的奴隶：不要忠实于原著</h4>
+    <div class="topic-time">02:03 - 19:01, 23:16 - 23:38</div>
+    <div class="climb-kw-box">
+      <div class="climb-label">爬楼关键词</div>
+      <div class="climb-text"><span class="sender">AA昍：</span>"永远要提醒自己，别忘了一开始写的目的。"</div>
+    </div>
+    <div class="detail-content">
+      <p>凌晨02:08 <strong>AA昍</strong>分享两篇内容后给出两条核心原则：1）不要忠实于原著，基于目的加工素材；2）脑子里要有宏观概念——文章互相引导、人设构建宇宙、闭环和飞轮。</p>
+      <p>下午他提出橱窗款 vs 销量款的比喻："服装店分两大类款式，橱窗款好看引流但不成交；销量款穿得出去、带货但不浮夸。干货就备着，哪天爆款带进人来了。"<strong>美妆博主</strong>补充："干货本来就推得慢，细水长流。"</p>
+      <p>23:16 <strong>AA昍</strong>分享校对晚清笔记素材——溺杀风俗、鸦片赌博、科举凶案——然后话锋一转："就像群里的某些同志——手里有海量素材，没了，没有然后，也不知道有什么用，结束。"</p>
+    </div>
+
+    <div class="conclusion-gm">
+      <div class="gm-label">金句</div>
+      <div class="gm-item">
+        <div class="gm-quote">"干货就备着，哪天爆款带进人来了，点一点可能就看到了，是干货，就关注了。"</div>
+        <div class="gm-author">—— <strong>AA昍</strong> · 橱窗款 vs 销量款</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 五、同伴行动 -->
+  <div class="section-title">五、同伴行动</div>
+
+  <div class="topic-card">
+    <h4>会计王🐟 —— CPA人设被挖掘："随便学学就考过了"</h4>
+    <div class="topic-time">21:37 - 22:48</div>
+    <div class="climb-kw-box">
+      <div class="climb-label">爬楼关键词</div>
+      <div class="climb-text"><span class="sender">二壮：</span>"我要是考了CPA去做自媒体，隔三差五就说一嘴。"</div>
+    </div>
+    <div class="detail-content">
+      <p>21:37 <strong>二壮</strong>问会计"你之前想做的CPA咋不做了呢"，发现会计一年半考完CPA专业课后："这一句话就是故事本身。那么多人找考清华的人咨询报志愿呢？你这不比他们对口多了？"<strong>宝鹅</strong>说"甚至可以放在个人简介里"。<strong>会计王🐟</strong>意识到"不要写备考经验过程，要宏观一点"，思考要不要写"CPA到底值不值得考、对职业发展有多大影响"。</p>
+      <p>22:46 <strong>AA昍</strong>发文《CPA的意思是注册会计师》，标题押韵会计微博名"074 会计王能飞"。</p>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <h4>转念之间 —— 拿到职场案例，和糕同步写两种视角</h4>
+    <div class="topic-time">22:06 - 22:38</div>
+    <div class="climb-kw-box">
+      <div class="climb-label">爬楼关键词</div>
+      <div class="climb-text"><span class="sender">美妆博主：</span>"同一个案例，你写你的，我写我的，咱们都看看。"</div>
+    </div>
+    <div class="detail-content">
+      <p>22:08 <strong>美妆博主</strong>分享一个职场案例——同事越权在群里揽功说"我搞定了"——然后和<strong>转念之间</strong>约定同步写。<strong>转念之间</strong>写"私器公用的角度：利用人脉搞特殊化跨过正常流程"；<strong>美妆博主</strong>写"换成现在的我，会把那个男同事吹上天"，然后私下记录、设计时机点炮。<strong>编剧</strong>补充案例风险：不走流程导致功能依赖私交，"表现在她业绩上的就是零产出"。<strong>美妆博主</strong>总结写作心得："针对这种职场问题，不能把重点放在你不应该这样，而是要讲出了这样的事儿你要咋办。"</p>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <h4>绵羊 —— 模仿沉浸式护肤视频，被糕逐帧指导</h4>
+    <div class="topic-time">00:43 - 01:13</div>
+    <div class="climb-kw-box">
+      <div class="climb-label">爬楼关键词</div>
+      <div class="climb-text"><span class="sender">美妆博主：</span>"整体不太行，光线太冷了。这种光线不是不行，但可能走沉浸式不太合适，因为无法沉浸。"</div>
+    </div>
+    <div class="detail-content">
+      <p>00:44 <strong>绵羊</strong>模仿糕分享的沉浸式护肤视频做了一个，发出来请大家看。<strong>黄云</strong>说"第一个镜头的夜景没必要"。<strong>美妆博主</strong>详细指导：前三秒最重要，放洗手画面没主题就直接切出去了；冷光线不适合沉浸式但适合产品功效展示；不知道怎么选BGM就导入博主的视频做BGM提取。<strong>绵羊</strong>："好的，我明天重拍试试看。"</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer-note">
+    本报告基于群聊数据自动生成，仅供参考。内容可能包含个人观点，不代表群组官方立场。
+  </div>
+</div>
+</body>
+</html>
