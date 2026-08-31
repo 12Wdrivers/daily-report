@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>十二W车行群日报 · 2026-08-28</title>
+<title>十二W车行群日报 · 2026-08-30</title>
 <style>
   :root {
     --bg: #f5f5f7;
@@ -681,164 +681,383 @@
   margin-top: 24px;
   padding: 0 16px;
 }
-</style></head>
+</style>
+
+/* ===== 大标题 UI 增强 ===== */
+.header-card {
+  background: linear-gradient(135deg, var(--accent) 0%, #f07a5a 100%);
+  border-radius: 20px;
+  padding: 32px 24px 28px;
+  margin: 16px 0 14px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(232, 93, 58, 0.2);
+}
+.header-card h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.header-card .date-row {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 4px;
+}
+.header-card .time-row {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* ===== 章节标题增强 ===== */
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 24px 0 10px 4px;
+  padding-left: 10px;
+  border-left: 3px solid var(--accent);
+}
+
+/* ===== 今日主角卡片专用排版增强 ===== */
+.hero-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 22px 18px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.hero-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+.hero-card .topic-time {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.hero-card .detail-content .sub-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 18px 0 10px;
+  padding: 8px 0 8px 12px;
+  border-left: 3px solid var(--accent);
+  background: linear-gradient(90deg, var(--kw-bg) 0%, transparent 70%);
+  border-radius: 0 6px 6px 0;
+}
+.hero-card .detail-content .sub-heading:first-child { margin-top: 0; }
+.hero-card .detail-content p {
+  margin-bottom: 14px;
+  line-height: 1.85;
+  color: var(--ink2);
+  font-size: 14px;
+}
+.hero-card .detail-content p:last-child { margin-bottom: 0; }
+
+/* ===== 金句时刻区域：淡橙色背景 ===== */
+.conclusion-gm {
+  margin-top: 18px;
+  padding: 16px 14px 14px;
+  background: var(--accent-light);
+  border-radius: 12px;
+  border: 1px solid var(--accent-tag);
+}
+.conclusion-gm .conclusion-box {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+.conclusion-gm .gm-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+  padding-left: 8px;
+  border-left: 2px solid var(--accent);
+}
+.conclusion-gm .gm-item {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.conclusion-gm .gm-item:last-child { margin-bottom: 0; }
+.conclusion-gm .gm-quote {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink);
+  font-weight: 500;
+}
+.conclusion-gm .gm-author {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* ===== 其他内容卡片增强 ===== */
+.topic-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.topic-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.topic-card .topic-time {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.topic-card .detail-content p {
+  margin-bottom: 12px;
+  line-height: 1.8;
+  color: var(--ink2);
+  font-size: 14px;
+}
+.topic-card .detail-content .sub-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 14px 0 8px;
+}
+
+/* ===== 说话人名字全局高亮：所有卡片统一使用橙色标签效果 ===== */
+.detail-content p strong, .qa-content p strong {
+  background: var(--accent-light);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* ===== 每日金句增强 ===== */
+.quote-section {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.quote-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+.quote-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+.quote-author {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ===== 数据概览增强 ===== */
+.stats-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.stat-big {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+}
+.stat-label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ===== 导航栏增强 ===== */
+.nav-bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.nav-btn {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: var(--ink2);
+  white-space: nowrap;
+}
+.nav-label {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 6px 14px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ===== 页脚 ===== */
+.footer-note {
+  font-size: 12px;
+  color: var(--muted2);
+  text-align: center;
+  margin-top: 24px;
+  padding: 0 16px;
+}
+
+</style>
+</head>
 <body>
-<div class="container">
-  <div class="header-card">
-    <h1>十二W车行群日报</h1>
-    <div class="date-row">2026年8月28日 星期五</div>
-    <div class="time-row">昨日群聊速览</div>
-  </div>
+  <div class="container">
 
-  <div class="nav-bar">
-    <a class="nav-btn" href="daily-report-v5.4-2026-08-27.html">上一天</a>
-    <a class="nav-label" href="../index.html">日报导航</a>
-    <a class="nav-btn" href="daily-report-v5.4-2026-08-30.html">下一天</a>
-  </div>
-
-  <div class="quote-section">
-    <div class="quote-label">每日金句</div>
-    <div class="quote-text">「我的账号可以做线下打卡，也不耽误我做美妆，因为我呈现的是一个真人，有人设，而不是简单的『垂类博主』了。」</div>
-    <div class="quote-author"><strong>美糕博主</strong> · 复盘菲拉格慕线下打卡商单时</div>
-  </div>
-
-  <div class="section-title">总消息概览</div>
-  <div class="stats-card" style="display: flex; justify-content: space-between;">
-    <div class="stat-item-sm"><div class="num">282</div><div class="label">总消息</div></div>
-    <div class="stat-item-sm"><div class="num">6976</div><div class="label">聊天字数</div></div>
-    <div class="stat-item-sm"><div class="num">1784</div><div class="label">日报字数</div></div>
-    <div class="stat-item-sm"><div class="num">4</div><div class="label">阅读时长</div></div>
-  </div>
-
-  <div class="section-title">三、今日主角</div>
-  <div class="topic-card hero-card">
-    <h4>美糕博主 —— 从线下打卡商单到私域实验，一整天都在喂饭</h4>
-    <div class="topic-time">18:11–次日01:28 ｜ 本地生活商单 + 私域 + 新号流量</div>
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">美糕博主：</span>"品牌找人一般会搜 xx线下、xx本地博主、xx线下快闪这类的，然后去找人"</div>
-    </div>
-    <div class="tags">
-      <span class="tag">线下打卡</span>
-      <span class="tag">私域</span>
-      <span class="tag">本地标签</span>
-      <span class="tag">新号流量</span>
-    </div>
-    <div class="detail-content">
-      <div class="sub-heading">品牌要的是真人，不是垂类博主</div>
-      <p>下午接了菲拉格慕王府井打卡，出镜的是美妆号不是资讯号——她推资讯号，没通过。这一单让她把老道理重新想了一遍："我的账号可以做线下打卡，也不耽误我做美妆，因为我呈现的是一个真人，有人设，而不是简单的「垂类博主」了。"</p>
-      <div class="sub-heading">公众号私域实验：备注「男的不加」</div>
-      <p>把微信二维码做成公众号置顶，名字括号里写"男的不加"。现已加了一百多个女生，"她们的页面都是爱护肤，爱穿搭，爱购物"。她的判断是："愿意进到私域，只要你不是那种群发广告私聊的，很少会删。但是自媒体很容易就取消关注。"</p>
-      <div class="sub-heading">深夜喂饭：明星穿搭搬运SOP</div>
-      <p>给<strong>绵羊</strong>指了条现成的路：去微博关注发布会、红毯礼服这类账号，"图一般没有水印，直接保存直接用"，再丢给豆包生成穿搭文案。她坦白以前"看不起这种号，属于一种嫌钱脏心态"。<strong>宝鹅</strong>感慨："这真的是一带一喂饭了。"</p>
-      <div class="sub-heading">十万博主的流量真相</div>
-      <p>她用前同事名字注册新号做测试，"一觉醒来，发了五个笔记，均阅读过万，我只觉得眼前一黑"。而老号"商单多了还会故意不给你自然流量"，自然流"像前列腺炎的老头滴滴答答的"——"我的能火的内容，发其他账号，流量一定会更好。"</p>
-    </div>
-    <div class="conclusion-gm">
-      <div class="gm-label">金句</div>
-      <div class="gm-item">
-        <div class="gm-quote">我的账号可以做线下打卡，也不耽误我做美妆，因为我呈现的是一个真人，有人设，而不是简单的「垂类博主」了。</div>
-        <div class="gm-author">—— <strong>美糕博主</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">我的能火的内容，发其他账号，流量一定会更好。就这么参考就对了。</div>
-        <div class="gm-author">—— <strong>美糕博主</strong></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="topic-card hero-card">
-    <h4>二壮 —— A/B 排版之争：从流量数据到「看书式」阅读习惯</h4>
-    <div class="topic-time">15:03–17:22 ｜ 排版策略 + 阅读习惯 + K12 扩标签</div>
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">二壮：</span>"a 的长尾流量高，b 的爆发流量高……a 是左右划，b 是上下划"</div>
-    </div>
-    <div class="tags">
-      <span class="tag">长文排版</span>
-      <span class="tag">阅读习惯</span>
-      <span class="tag">K12教育</span>
-    </div>
-    <div class="detail-content">
-      <div class="sub-heading">两种排版的流量差异</div>
-      <p><strong>AA昍</strong>提问：千字长文做成七八张图（a）和大标题一张图配长文（b），实质区别在哪？<strong>二壮</strong>给数据判断："a 的长尾流量高，b 的爆发流量高……a 更容易保存图片，适合干货，b 更容易转发，适合段子故事。"<strong>宝鹅</strong>补刀：b 对博主要求更高，"总字数要控制在940字以内"。<strong>美糕博主</strong>从实操端否掉 a："用户真的很少下滑"，"我接的商单都拒绝了长文的模式"。</p>
-      <div class="sub-heading">看书式阅读习惯</div>
-      <p><strong>二壮</strong>把顺序拆成三步：首图标题抓眼球 → 先看文案 → 再左右划图，所以"图里详细，文案干条"相当于看书的习惯。<strong>AA昍</strong>拍腿认同："首图是封面，标题和文字像目录，横着翻后面的图像真正看书的正文。"</p>
-      <div class="sub-heading">排版手艺被夸，K12 扩标签</div>
-      <p><strong>AA昍</strong>看完<strong>二壮</strong>的笔记直说："这篇内容我根本不感兴趣，也甚至没看懂，但都感受到了阅读的愉悦"。同日二壮宣布：这篇商单自然流尚可，"直接下移到了 k12 教育领域"，买了沈奕斐两套课研究家庭教育——"如果这块突破，两个号可以咬死飞轮了"。</p>
-    </div>
-    <a class="pick-link" href="https://www.xiaohongshu.com/discovery/item/6a87af4c000000003003c571" target="_blank" rel="noopener">🚀 阅读原文</a>
-    <div class="conclusion-gm">
-      <div class="gm-label">金句</div>
-      <div class="gm-item">
-        <div class="gm-quote">a 的长尾流量高，b 的爆发流量高……a 更容易保存图片，适合干货，b 更容易转发，适合段子故事。</div>
-        <div class="gm-author">—— <strong>二壮</strong></div>
-      </div>
-      <div class="gm-item">
-        <div class="gm-quote">首图是封面，标题和文字像目录，横着翻后面的图像真正看书的正文。有些人不看目录，非常贴切。</div>
-        <div class="gm-author">—— <strong>AA昍</strong></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-title">四、老司机补给站</div>
-  <div class="topic-card">
-    <h4>转念之间 —— 不是所有流量都值得蹭</h4>
-    <div class="topic-time">16:10–16:20 ｜ 蹭热点的边界</div>
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">转念之间：</span>"蹭流量我觉得 OK，关键这个蹭的方式……这是在蹭什么？"</div>
-    </div>
-    <div class="detail-content">
-      <p><strong>绵羊</strong>发了一条"修指甲"笔记想蹭热点，随后自己藏了。<strong>转念之间</strong>当场反对："如果我看到蹭这个的，我会取关"。<strong>黄云</strong>补刀："不是磨指甲负面，是整个这件事里，所有东西基本都是负面。"</p>
-    </div>
-    <div class="conclusion-gm">
-      <div class="gm-label">金句</div>
-      <div class="gm-item">
-        <div class="gm-quote">蹭流量我觉得 OK，关键这个蹭的方式。景甜给孙磨指甲，你给自己磨指甲，这是在蹭什么？</div>
-        <div class="gm-author">—— <strong>转念之间</strong></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="topic-card">
-    <h4>黄云 &amp; 基因大师 —— 场景才是记忆点：从不在健身房里教健身</h4>
-    <div class="topic-time">19:48–20:11 ｜ 场景差异化</div>
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">黄云：</span>"那反过来，从不在健身房里教人健身？更有意义也更有特点"</div>
-    </div>
-    <div class="detail-content">
-      <p><strong>溏心蛋</strong>提到健身内容总在健身房拍太单一，<strong>黄云</strong>直接反转：既然都在健身房，那反过来不在健身房教，是不是更有特点？<strong>基因大师</strong>接上 Lululemon 在上海草地广场做瑜伽的例子。<strong>黄云</strong>归结回刀哥的公式："常见的事物 + 不常见的场景。"</p>
-    </div>
-  </div>
-
-  <div class="section-title">五、同伴行动</div>
-  <div class="topic-card">
-    <h4>绵羊 —— 主动藏掉一条笔记，然后接住一整晚的喂饭</h4>
-    <div class="topic-time">16:05–21:46 ｜ 内容取舍 + 线下活动</div>
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">绵羊：</span>"要蹭就蹭正向积极的流量"</div>
-    </div>
-    <div class="detail-content">
-      <p>发完修指甲笔记她自己想了想，判断"这种流量没啥用"并主动隐藏，被全群讨论一轮后落下一句"要蹭就蹭正向积极的流量"。晚上她报了 30 号要参加当地商场的美妆节线下活动，<strong>美糕博主</strong>立刻给了一套本地打法：带「xx本地博主」tag，每天搜当地快闪主题活动去蹭。</p>
-    </div>
-  </div>
-
-  <div class="topic-card">
-    <h4>溏心蛋 —— 困扰两天的运动号，一句话就开了</h4>
-    <div class="topic-time">12:58–19:02 ｜ 开新号</div>
-    <div class="climb-kw-box">
-      <div class="climb-label">爬楼关键词</div>
-      <div class="climb-text"><span class="sender">溏心蛋：</span>"一下不困扰了！开心了！"</div>
-    </div>
-    <div class="detail-content">
-      <p>她想开一个纯图文的运动号，怕破坏教师号主页协调性，纠结两天。<strong>美糕博主</strong>一句"想新开号肯定支持，因为新号有流量扶持"就定了，理由很实在："均匀分布各个账号的收益肯定是比只发在一个号收益要大的，因为你不知道什么时候东边不亮西边亮。"</p>
-    </div>
-  </div>
-
-  <div class="footer-note">本报告基于群聊数据自动生成，仅供参考。</div>
+<div class="header-card">
+  <h1>十二W车行群日报</h1>
+  <div class="date-row">2026年8月30日 · 星期日</div>
+  <div class="time-row">群聊速览 · 自动生成</div>
 </div>
+
+<div class="nav-bar">
+  <a class="nav-btn" href="daily-report-v5.4-2026-08-28.html">上一天</a>
+  <a class="nav-label" href="../index.html">日报导航</a>
+  <button class="nav-btn" disabled>下一天</button>
+</div>
+
+<div class="section-title">一、每日金句</div>
+<div class="quote-section">
+  <div class="quote-label">每日金句</div>
+  <div class="quote-text">不存在谁的选题原创，都只是换了个说法</div>
+  <div class="quote-author"><strong>黄云</strong> · 母题讨论</div>
+</div>
+
+<div class="section-title">二、总消息概览</div>
+<div class="stats-card" style="display: flex; justify-content: space-between;">
+  <div class="stat-item-sm">
+    <div class="num">82</div>
+    <div class="label">总消息</div>
+  </div>
+  <div class="stat-item-sm">
+    <div class="num">1447</div>
+    <div class="label">聊天字数</div>
+  </div>
+  <div class="stat-item-sm">
+    <div class="num">722</div>
+    <div class="label">日报字数</div>
+  </div>
+  <div class="stat-item-sm">
+    <div class="num">2</div><div class="label">阅读时长</div>
+  </div>
+</div>
+
+<div class="section-title">三、今日主角</div>
+
+<div class="topic-card hero-card">
+  <h4>子蟹 —— 不写选题的爆文，是邪修吗？</h4>
+  <div class="topic-time">11:56 - 13:38 &nbsp;|&nbsp; 讨论发起人</div>
+  <div class="climb-kw-box">
+    <div class="climb-label">爬楼关键词</div>
+    <div class="climb-text"><span class="sender">子蟹：</span>"能复刻的打法，理论上涨粉应该非常快"</div>
+  </div>
+  <div class="detail-content">
+    <p>不写选题搓出一篇千赞，子蟹犯嘀咕："感觉自己在洗稿"。<strong>黄云</strong>掀桌：选题背后的母题从没变过，只是换了个说法。<strong>编剧</strong>补刀：变的只是表述方式。</p>
+    <p><strong>美糕博主</strong>点透爆因：大家更容易看懂了，看懂了才能往心里去。</p>
+  </div>
+  <div class="conclusion-gm">
+    <div class="gm-label">金句</div>
+    <div class="gm-item">
+      <div class="gm-quote">选题背后的母题，从古至今就没怎么变过</div>
+      <div class="gm-author">—— <strong>黄云</strong></div>
+    </div>
+    <div class="gm-item">
+      <div class="gm-quote">找到自己擅长的叙事结构，比内容本身更重要？</div>
+      <div class="gm-author">—— <strong>子蟹</strong></div>
+    </div>
+  </div>
+</div>
+
+<div class="topic-card hero-card">
+  <h4>美糕博主 —— 深夜解剖卖课连环套</h4>
+  <div class="topic-time">00:00 - 01:39 &nbsp;|&nbsp; 深度输出</div>
+  <div class="climb-kw-box">
+    <div class="climb-label">爬楼关键词</div>
+    <div class="climb-text"><span class="sender">美糕博主：</span>"你先干，没结果？买我更高级的课"</div>
+  </div>
+  <div class="detail-content">
+    <p>从"别谈普通，先把事干了"的视频切入，她直接站到卖课视角拆四步：不分析、不定制、按SOP干，没结果？"一开始你说了你是普通人啊"。</p>
+    <p>又甩合伙人案例：点评笔记＋免费帮发一周，劣质AI图真爆款，报价三千一月，"差点就掏钱了"。<strong>AA昍</strong>补刀：丑图都愿发，要么绝望要么没见识。<strong>子蟹</strong>后怕：解决人才是真解决。</p>
+  </div>
+  <div class="conclusion-gm">
+    <div class="gm-label">金句</div>
+    <div class="gm-item">
+      <div class="gm-quote">用户就一直在买课，一直在买课</div>
+      <div class="gm-author">—— <strong>美糕博主</strong></div>
+    </div>
+    <div class="gm-item">
+      <div class="gm-quote">解决人才是真的解决，解决事儿只是表面</div>
+      <div class="gm-author">—— <strong>子蟹</strong></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-title">四、老司机补给站</div>
+
+<div class="topic-card">
+  <h4>AA昍 —— 人-事-人：卡位70%的生意经</h4>
+  <div class="topic-time">00:10 - 00:19</div>
+  <div class="detail-content">
+    <p>抬一层看：做事的目的是改变人；只讨成熟度70%的人开心，你成长了你就离开，我继续等下一批人。于是向上成长和向下兼容，天然是冲突的。</p>
+  </div>
+  <div class="conclusion-gm">
+    <div class="gm-label">金句</div>
+    <div class="gm-item">
+      <div class="gm-quote">向上成长和向下兼容，两者确实是冲突的</div>
+      <div class="gm-author">—— <strong>AA昍</strong></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-title">五、同伴行动</div>
+
+<div class="topic-card">
+  <h4>绵羊 —— 新号首波正反馈</h4>
+  <div class="topic-time">20:33 - 23:38</div>
+  <div class="climb-kw-box">
+    <div class="climb-label">爬楼关键词</div>
+    <div class="climb-text"><span class="sender">绵羊：</span>"除群友外还涨了十几个粉"</div>
+  </div>
+  <div class="detail-content">
+    <p>美糕博主丢来 Gucci 素材教"反推法"：挣谁的钱，就站对方角度看问题。当晚她汇报：新号除群友外涨了十几个粉。</p>
+  </div>
+  <a class="pick-link" href="https://www.xiaohongshu.com/discovery/item/6a92684300000000210300f1?app_platform=ios&app_version=9.44.1&share_from_user_hidden=true&xsec_source=app_share&type=normal&xsec_token=CB7NKjNO4CCMJgzFCX_6_QouiuOKOJpOx_tg-DeRLM6Lo=&author_share=1&xhsshare=WeixinSession&shareRedId=ODszQkQ3OE82NzUyOTgwNjg3OTg5RjpB&apptime=1788094130&share_id=089cc81ce3db4aba8796596c0cdaa4a6" target="_blank" rel="noopener">🚀 阅读原文</a>
+</div>
+
+<div class="footer-note">
+  本报告基于群聊数据自动生成，仅供参考。
+</div>
+
+  </div>
 </body>
 </html>
