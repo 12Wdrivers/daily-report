@@ -959,8 +959,500 @@ body { -webkit-text-size-adjust: 100%; }
     .section-title { font-size: 15px; }
   }
 
-</style>
 
+/* ===== 大标题 UI 增强 ===== */
+.header-card {
+  background: linear-gradient(135deg, var(--accent) 0%, #f07a5a 100%);
+  border-radius: 20px;
+  padding: 32px 24px 28px;
+  margin: 16px 0 14px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(232, 93, 58, 0.2);
+}
+.header-card h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.header-card .date-row {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 4px;
+}
+.header-card .time-row {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* ===== 章节标题增强 ===== */
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 24px 0 10px 4px;
+  padding-left: 10px;
+  border-left: 3px solid var(--accent);
+}
+
+/* ===== 今日主角卡片专用排版增强 ===== */
+.hero-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 22px 18px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.hero-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+.hero-card .topic-time {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.hero-card .detail-content .sub-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 18px 0 10px;
+  padding: 8px 0 8px 12px;
+  border-left: 3px solid var(--accent);
+  background: linear-gradient(90deg, var(--kw-bg) 0%, transparent 70%);
+  border-radius: 0 6px 6px 0;
+}
+.hero-card .detail-content .sub-heading:first-child { margin-top: 0; }
+.hero-card .detail-content p {
+  margin-bottom: 14px;
+  line-height: 1.85;
+  color: var(--ink2);
+  font-size: 14px;
+}
+.hero-card .detail-content p:last-child { margin-bottom: 0; }
+
+/* ===== 金句时刻区域：淡橙色背景 ===== */
+.conclusion-gm {
+  margin-top: 18px;
+  padding: 16px 14px 14px;
+  background: var(--accent-light);
+  border-radius: 12px;
+  border: 1px solid var(--accent-tag);
+}
+.conclusion-gm .conclusion-box {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+.conclusion-gm .gm-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+  padding-left: 8px;
+  border-left: 2px solid var(--accent);
+}
+.conclusion-gm .gm-item {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.conclusion-gm .gm-item:last-child { margin-bottom: 0; }
+.conclusion-gm .gm-quote {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink);
+  font-weight: 500;
+}
+.conclusion-gm .gm-author {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* ===== 其他内容卡片增强 ===== */
+.topic-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.topic-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.topic-card .topic-time {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.topic-card .detail-content p {
+  margin-bottom: 12px;
+  line-height: 1.8;
+  color: var(--ink2);
+  font-size: 14px;
+}
+.topic-card .detail-content .sub-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 14px 0 8px;
+}
+
+/* ===== 说话人名字全局高亮 ===== */
+.detail-content p strong, .qa-content p strong {
+  background: var(--accent-light);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* ===== 每日金句增强 ===== */
+.quote-section {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.quote-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+.quote-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+.quote-author {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ===== 数据概览增强 ===== */
+.stats-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.stat-big {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+}
+.stat-label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ===== 导航栏增强 ===== */
+.nav-bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.nav-btn {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: var(--ink2);
+  white-space: nowrap;
+}
+.nav-label {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 6px 14px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ===== 页脚 ===== */
+.footer-note {
+  font-size: 12px;
+  color: var(--muted2);
+  text-align: center;
+  margin-top: 24px;
+  padding: 0 16px;
+}
+
+/* ===== 大标题 UI 增强 ===== */
+.header-card {
+  background: linear-gradient(135deg, var(--accent) 0%, #f07a5a 100%);
+  border-radius: 20px;
+  padding: 32px 24px 28px;
+  margin: 16px 0 14px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(232, 93, 58, 0.2);
+}
+.header-card h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.header-card .date-row {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 4px;
+}
+.header-card .time-row {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* ===== 章节标题增强 ===== */
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 24px 0 10px 4px;
+  padding-left: 10px;
+  border-left: 3px solid var(--accent);
+}
+
+/* ===== 今日主角卡片专用排版增强 ===== */
+.hero-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 22px 18px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.hero-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+.hero-card .topic-time {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.hero-card .detail-content .sub-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 18px 0 10px;
+  padding: 8px 0 8px 12px;
+  border-left: 3px solid var(--accent);
+  background: linear-gradient(90deg, var(--kw-bg) 0%, transparent 70%);
+  border-radius: 0 6px 6px 0;
+}
+.hero-card .detail-content .sub-heading:first-child { margin-top: 0; }
+.hero-card .detail-content p {
+  margin-bottom: 14px;
+  line-height: 1.85;
+  color: var(--ink2);
+  font-size: 14px;
+}
+.hero-card .detail-content p:last-child { margin-bottom: 0; }
+
+/* ===== 金句时刻区域：淡橙色背景 ===== */
+.conclusion-gm {
+  margin-top: 18px;
+  padding: 16px 14px 14px;
+  background: var(--accent-light);
+  border-radius: 12px;
+  border: 1px solid var(--accent-tag);
+}
+.conclusion-gm .conclusion-box {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+.conclusion-gm .gm-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+  padding-left: 8px;
+  border-left: 2px solid var(--accent);
+}
+.conclusion-gm .gm-item {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.conclusion-gm .gm-item:last-child { margin-bottom: 0; }
+.conclusion-gm .gm-quote {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink);
+  font-weight: 500;
+}
+.conclusion-gm .gm-author {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* ===== 其他内容卡片增强 ===== */
+.topic-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.topic-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.topic-card .topic-time {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.topic-card .detail-content p {
+  margin-bottom: 12px;
+  line-height: 1.8;
+  color: var(--ink2);
+  font-size: 14px;
+}
+.topic-card .detail-content .sub-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 14px 0 8px;
+}
+
+/* ===== 说话人名字全局高亮 ===== */
+.detail-content p strong, .qa-content p strong {
+  background: var(--accent-light);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* ===== 每日金句增强 ===== */
+.quote-section {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.quote-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+.quote-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+.quote-author {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ===== 数据概览增强 ===== */
+.stats-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.stat-big {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+}
+.stat-label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ===== 导航栏增强 ===== */
+.nav-bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.nav-btn {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: var(--ink2);
+  white-space: nowrap;
+}
+.nav-label {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 6px 14px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ===== 页脚 ===== */
+.footer-note {
+  font-size: 12px;
+  color: var(--muted2);
+  text-align: center;
+  margin-top: 24px;
+  padding: 0 16px;
+}
+
+</style>
 </head>
 
 <body>
@@ -969,50 +1461,150 @@ body { -webkit-text-size-adjust: 100%; }
 
 <div class="header-card">
   <h1>十二W车行群日报</h1>
-  <div class="date-row">2026年9月5日 · 星期六</div>
+  <div class="date-row">2026年9月7日 · 星期一</div>
   <div class="time-row">群聊速览 · 自动生成</div>
 </div>
 
 <div class="nav-bar">
-  <a class="nav-btn" href="../v1/daily-report-2026-09-04.html">上一天</a>
+  <a class="nav-btn" href="daily-report-v5.4-2026-09-06.html">上一天</a>
   <a class="nav-label" href="../index.html">日报导航</a>
-  <a class="nav-btn" href="../v1/daily-report-2026-09-06.html">下一天</a>
+  <a class="nav-btn" href="daily-report-v5.4-2026-09-08.html">下一天</a>
 </div>
 
 <div class="section-title">一、每日金句</div>
 <div class="quote-section">
   <div class="quote-label">每日金句</div>
-  <div class="quote-text">关于 NPD 的帖子，都不是写给 NPD 看的</div>
-  <div class="quote-author"><strong>二壮</strong></div>
+  <div class="quote-text">还100w的，属于买自己命</div>
+  <div class="quote-author"><strong>AA昍</strong> · 拖欠账款讨论</div>
 </div>
 
 <div class="section-title">二、总消息概览</div>
 <div class="stats-card" style="display: flex; justify-content: space-between;">
   <div class="stat-item-sm">
-    <div class="num">31</div>
+    <div class="num">149</div>
     <div class="label">总消息</div>
   </div>
   <div class="stat-item-sm">
-    <div class="num">287</div>
+    <div class="num">3016</div>
     <div class="label">聊天字数</div>
   </div>
   <div class="stat-item-sm">
-    <div class="num">140</div>
+    <div class="num">1343</div>
     <div class="label">日报字数</div>
   </div>
   <div class="stat-item-sm">
-    <div class="num">1min</div>
+    <div class="num">3</div>
     <div class="label">阅读时长</div>
   </div>
 </div>
 
 <div class="section-title">三、今日主角</div>
+<div class="topic-card hero-card">
+  <h4>美糕博主 —— 白天拆垫资内幕，深夜逐个诊断群友账号</h4>
+  <div class="topic-time">13:59 - 00:53 &nbsp;|&nbsp; 全天高频输出</div>
+  <div class="climb-kw-box">
+    <div class="climb-label">爬楼关键词</div>
+    <div class="climb-text"><span class="sender">美糕博主：</span>"谁有垫资的能力，谁能活"</div>
+  </div>
+  <div class="tags">
+    <span class="tag">广告账期</span>
+    <span class="tag">账号诊断</span>
+    <span class="tag">杂志封面</span>
+  </div>
+  <div class="detail-content">
+    <div class="sub-heading">劝退视频水下单</div>
+    <p><strong>二壮</strong>接到豆包视频水下水单，<strong>美糕博主</strong>提醒视频单风险最大：脚本扯皮、剪辑修改、磨蹭上线，"后面还不给钱，我可能会崩溃"。</p>
+    <div class="sub-heading">广告代理垫资内幕</div>
+    <p>由<strong>编剧</strong>的疑问（影视飓风怎么会被拖欠尾款）引出：<strong>美糕博主</strong>拆解车企账期普遍两年起步，代理30天内要给博主结款，靠的是垫资——"谁有垫资的能力，谁能活"。4A 能拿大品牌是因为总部拨款有现金流；她亲历车企拖五年、代理对外供应商费用过亿，"如果收不回这笔钱，就原地倒闭"。</p>
+    <div class="sub-heading">深夜逐个诊断群友账号</div>
+    <p><strong>美糕博主</strong>借助数据服务朋友的经验逐个点评：绵羊找不到差异化、像朋友圈，建议直接做40+女性抗老这类精细垂类；大壮和宝鹅赢在数据好、单价低，但"火都是一时的"，要研究怎么把粉丝运用起来——孵化C端会让B端大幅减少，因为甲方不喜欢找卖课博主接广告；编剧要多贴热点、把自己的人设打出来；子蟹"好好做C端，大有前途"。</p>
+    <div class="sub-heading">自己的新招：把封面做成杂志</div>
+    <p><strong>美糕博主</strong>也给自己定了打法：护肤美妆封面做成杂志感，人设是"开了一家属于自己的时尚杂志社，封面女明星只有本人"，弱化自己的脸、突出产品，用做图审美打出差异化。</p>
+  </div>
+  <div class="conclusion-gm">
+    <div class="gm-label">金句</div>
+    <div class="gm-item">
+      <div class="gm-quote">钱越多，结的越慢。如果就30万，一个星期就能给你结</div>
+      <div class="gm-author">—— <strong>美糕博主</strong></div>
+    </div>
+    <div class="gm-item">
+      <div class="gm-quote">对自然流量没影响，如果是专注做C端，什么能火就发什么。如果是做B端，要垂，越垂越好</div>
+      <div class="gm-author">—— <strong>美糕博主</strong></div>
+    </div>
+    <div class="gm-item">
+      <div class="gm-quote">我们往往只是看到了表面风光……不仅仅是官宣了，这十个亿就到账了</div>
+      <div class="gm-author">—— <strong>美糕博主</strong></div>
+    </div>
+  </div>
+</div>
 
 <div class="topic-card hero-card">
-  <h4>AA昍 —— NPD赛道：职场切到最细</h4>
-  <div class="topic-time">21:38 - 22:32 &nbsp;|&nbsp; 全群拆解</div>
+  <h4>二壮 —— 做自媒体整一年：受众升级，还接到豆包视频商单</h4>
+  <div class="topic-time">10:23 - 21:25 &nbsp;|&nbsp; 一周年记录</div>
+  <div class="climb-kw-box">
+    <div class="climb-label">爬楼关键词</div>
+    <div class="climb-text"><span class="sender">二壮：</span>"之前的帖子都是18-24的，变现潜力很低"</div>
+  </div>
+  <div class="tags">
+    <span class="tag">账号定位</span>
+    <span class="tag">视频商单</span>
+    <span class="tag">一周年</span>
+  </div>
   <div class="detail-content">
-    <p><strong>AA昍</strong>提议做「NPD魔术揭秘」号：像美妆只做口红，切"对付职场NPD"细分。</p>
+    <div class="sub-heading">职场内容转粉，受众到了25-34</div>
+    <p><strong>二壮</strong>复盘：新一篇职场内容转粉还可以，前面的群满了、拉了新群。单篇阅读年龄25-34最多，是好的表现——之前都是18-24，变现潜力低。下一步继续强化标签，让受众从学生为主变成职场为主，对标谢胜子做调研。</p>
+    <div class="sub-heading">纯图文博主接到视频商单</div>
+    <p><strong>二壮</strong>惊讶接到豆包视频商单需求，在美糕博主和黄云提示水下风险后决定："那就走这一个视频吧，后面不接视频水下单。"晚上专门记录：<strong>做自媒体整一年</strong>，"踩了很多坑，不过总体来说，还是要佩服一下自己坚持了这么长时间。"</p>
+  </div>
+  <div class="conclusion-gm">
+    <div class="gm-label">金句</div>
+    <div class="gm-item">
+      <div class="gm-quote">做自媒体整一年，踩了很多坑，不过总体来说，还是要佩服一下自己坚持了这么长时间</div>
+      <div class="gm-author">—— <strong>二壮</strong></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-title">四、老司机补给站</div>
+<div class="topic-card">
+  <h4>AA昍 —— 欠款先还谁？还大债主是买命</h4>
+  <div class="topic-time">14:29 - 14:31</div>
+  <div class="climb-kw-box">
+    <div class="climb-label">爬楼关键词</div>
+    <div class="climb-text"><span class="sender">AA昍：</span>"传统行业都是靠垫资来抢客户的"</div>
+  </div>
+  <div class="detail-content">
+    <p>回应"为什么大账结得快、小账一直拖"：<strong>AA昍</strong>给了两个解释——传统行业靠垫资抢客户，不垫资的只能靠亲戚赊账；换位思考，欠一屁股债手里有2万，先还100万的是"买自己命"。而公司拖欠个人不怕被告：个人不懂法、标的小，"先让他们出出诉讼费，这又能劝退一批人了"。公司有专职法务，"工资要发的，kpi就是这个"。</p>
+  </div>
+  <div class="conclusion-gm">
+    <div class="gm-label">金句</div>
+    <div class="gm-item">
+      <div class="gm-quote">取决于这两个债主，哪个更有可能会因为听说你先还了别人的钱，而找人来砍你</div>
+      <div class="gm-author">—— <strong>AA昍</strong></div>
+    </div>
+  </div>
+</div>
+<div class="topic-card">
+  <h4>黄云 —— 豆包水下单风险更高</h4>
+  <div class="topic-time">14:04 - 14:14</div>
+  <div class="detail-content">
+    <p><strong>黄云</strong>提示：豆包是竞品平台的产品，走水下风险高——正规代理商资金健康，会走正式流程，"像豆包在抖这边的星图是大大方方明牌官方行为在推广"。</p>
+  </div>
+</div>
+
+<div class="section-title">五、同伴行动</div>
+<div class="topic-card">
+  <h4>会计王🐟 —— 从财务视角补一刀</h4>
+  <div class="topic-time">14:28 - 14:31</div>
+  <div class="detail-content">
+    <p>跟公司合作结得快，"有可能是为了保持关系"，但"不绝对，主要还是看谁强势"；个人视角补充："要我我也愿意先结公对公。"</p>
+  </div>
+</div>
+<div class="topic-card">
+  <h4>绵羊 —— 接住诊断，当场改标题</h4>
+  <div class="topic-time">22:25 - 00:52</div>
+  <div class="detail-content">
+    <p><strong>绵羊</strong>追问40+抗老垂类的边界（护肤还是泛抗老），得到"越垂越好"的答复后认领方向；随后发自己的"高智贵气感妆容"笔记求诊断，接受标题优化建议——"40+怎么化出贵气感"。</p>
   </div>
 </div>
 
