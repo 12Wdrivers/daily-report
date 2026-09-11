@@ -738,7 +738,8 @@ function getTodayNewCount(member) {
   return count;
 }
 
-fetch('progress-data.json')
+// cache-busting: GitHub Pages 对 json 设了 max-age=600，不加随机参数会读到 10 分钟前的旧数据
+fetch('progress-data.json?v=' + Date.now())
   .then(r => r.json())
   .then(data => {
     membersData = data.members || [];
