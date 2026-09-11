@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>十二W车行群日报 · 2026-09-10</title>
+<style>
+
+  :root {
+    --bg: #f5f5f7;
+    --card: #ffffff;
+    --ink: #1a1a1a;
+    --ink2: #333333;
+    --muted: #86868b;
+    --muted2: #aeaeb2;
+    --rule: #e5e5ea;
+    --accent: #e85d3a;
+    --accent-light: #fff4f0;
+    --accent-tag: #fde8e0;
+    --tag-bg: #f0f0f2;
+    --tag-text: #636366;
+    --highlight-bg: #fef6f2;
+    --kw-bg: #fff8f5;
+    --conclusion-bg: #fef6f2;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, 'PingFang SC', 'Helvetica Neue', 'Microsoft YaHei', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 16px 80px;
+  }
+
+  /* ===== Header Card ===== */
+  .header-card {
+    background: linear-gradient(135deg, var(--accent) 0%, #f07a5a 100%);
+    border-radius: 20px;
+    padding: 32px 24px 28px;
+    margin: 16px 0 14px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(232, 93, 58, 0.2);
+  }
+  .header-card h1 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  }
+  .header-card .date-row {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 4px;
+  }
+  .header-card .time-row {
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .header-card .time-row::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+  }
+
+  /* ===== Nav Bar ===== */
+  .nav-bar {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 14px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    background: var(--card);
+    border-radius: 12px;
+    padding: 12px 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-btn {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 13px;
+    color: var(--ink2);
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: inherit;
+    text-decoration: none;
+  }
+  .nav-btn:disabled {
+    color: var(--muted2);
+    border-color: var(--rule);
+  }
+  .nav-label {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 20px;
+    padding: 6px 14px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  /* ===== Daily Quote ===== */
+  .quote-section {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 18px 16px;
+    margin-bottom: 12px;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .quote-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+  .quote-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  .quote-author {
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .quote-author strong {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* ===== Section Title ===== */
+  .section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 24px 0 10px 4px;
+    padding-left: 10px;
+    border-left: 3px solid var(--accent);
+  }
+
+  /* ===== Stats Card ===== */
+  .stats-card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 18px 16px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .stat-big {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent);
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .stat-group {
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+  }
+  .stat-item-sm {
+    text-align: center;
+  }
+  .stat-item-sm .num {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .stat-item-sm .label {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* ===== Topic Card ===== */
+  .topic-card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 18px 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .topic-card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .topic-time {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  /* Hero Card */
+  .hero-card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 22px 18px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+  .hero-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.5;
+    margin-bottom: 4px;
+  }
+  .hero-card .topic-time {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .hero-card .detail-content .sub-heading {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 18px 0 10px;
+    padding: 8px 0 8px 12px;
+    border-left: 3px solid var(--accent);
+    background: linear-gradient(90deg, var(--kw-bg) 0%, transparent 70%);
+    border-radius: 0 6px 6px 0;
+  }
+  .hero-card .detail-content .sub-heading:first-child { margin-top: 0; }
+  .hero-card .detail-content p {
+    margin-bottom: 14px;
+    line-height: 1.85;
+    color: var(--ink2);
+    font-size: 14px;
+  }
+  .hero-card .detail-content p:last-child { margin-bottom: 0; }
+
+  /* Sub-section labels */
+  .sub-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink2);
+    margin: 14px 0 6px;
+  }
+  .sub-label:first-of-type {
+    margin-top: 0;
+  }
+
+  /* Climb Keywords */
+  .climb-kw-box {
+    background: var(--kw-bg);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+  }
+  .climb-kw-box .climb-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .climb-kw-box .climb-text {
+    font-size: 14px;
+    color: var(--ink2);
+    line-height: 1.7;
+  }
+  .climb-kw-box .sender {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* Tags */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .tag {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  /* Detail Content */
+  .detail-content {
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--ink2);
+  }
+  .detail-content strong {
+    background: var(--accent-light);
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .detail-content .sub-heading {
+    font-weight: 700;
+    color: var(--ink);
+    margin: 12px 0 4px;
+    font-size: 14px;
+  }
+  .detail-content p { margin-bottom: 8px; }
+
+  .topic-card .detail-content p {
+    margin-bottom: 12px;
+    line-height: 1.8;
+    color: var(--ink2);
+    font-size: 14px;
+  }
+  .topic-card .detail-content .sub-heading {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 14px 0 8px;
+  }
+
+  /* Conclusion & Golden Moments */
+  .conclusion-gm {
+    margin-top: 18px;
+    padding: 16px 14px 14px;
+    background: var(--accent-light);
+    border-radius: 12px;
+    border: 1px solid var(--accent-tag);
+  }
+  .conclusion-gm .conclusion-box {
+    background: var(--card);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+  }
+  .conclusion-gm .c-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .conclusion-gm .c-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ink2);
+  }
+  .conclusion-gm .gm-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 10px;
+    padding-left: 8px;
+    border-left: 2px solid var(--accent);
+  }
+  .conclusion-gm .gm-item {
+    background: var(--card);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .conclusion-gm .gm-item:last-child { margin-bottom: 0; }
+  .conclusion-gm .gm-quote {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .conclusion-gm .gm-author {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+  .gm-author strong {
+    color: var(--accent);
+    font-style: normal;
+  }
+
+  /* ===== Footer ===== */
+  .footer-note {
+    font-size: 12px;
+    color: var(--muted2);
+    text-align: center;
+    margin-top: 24px;
+    padding: 0 16px;
+    line-height: 1.7;
+  }
+
+  /* ===== Responsive ===== */
+  @media (min-width: 520px) {
+    .container { padding: 0 24px 80px; }
+  }
+
+  /* pick-link (阅读原文) */
+  .pick-link {
+    display: inline-block;
+    margin: 14px 0 0;
+    padding: 8px 18px;
+    background: var(--accent);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+
+
+
+/* ===== 大标题 UI 增强 ===== */
+.header-card {
+  background: linear-gradient(135deg, var(--accent) 0%, #f07a5a 100%);
+  border-radius: 20px;
+  padding: 32px 24px 28px;
+  margin: 16px 0 14px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(232, 93, 58, 0.2);
+}
+.header-card h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.header-card .date-row {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 4px;
+}
+.header-card .time-row {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* ===== 章节标题增强 ===== */
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 24px 0 10px 4px;
+  padding-left: 10px;
+  border-left: 3px solid var(--accent);
+}
+
+/* ===== 今日主角卡片专用排版增强 ===== */
+.hero-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 22px 18px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.hero-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+.hero-card .topic-time {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.hero-card .detail-content .sub-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 18px 0 10px;
+  padding: 8px 0 8px 12px;
+  border-left: 3px solid var(--accent);
+  background: linear-gradient(90deg, var(--kw-bg) 0%, transparent 70%);
+  border-radius: 0 6px 6px 0;
+}
+.hero-card .detail-content .sub-heading:first-child { margin-top: 0; }
+.hero-card .detail-content p {
+  margin-bottom: 14px;
+  line-height: 1.85;
+  color: var(--ink2);
+  font-size: 14px;
+}
+.hero-card .detail-content p:last-child { margin-bottom: 0; }
+
+/* ===== 金句时刻区域：淡橙色背景 ===== */
+.conclusion-gm {
+  margin-top: 18px;
+  padding: 16px 14px 14px;
+  background: var(--accent-light);
+  border-radius: 12px;
+  border: 1px solid var(--accent-tag);
+}
+.conclusion-gm .conclusion-box {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+.conclusion-gm .gm-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+  padding-left: 8px;
+  border-left: 2px solid var(--accent);
+}
+.conclusion-gm .gm-item {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.conclusion-gm .gm-item:last-child { margin-bottom: 0; }
+.conclusion-gm .gm-quote {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink);
+  font-weight: 500;
+}
+.conclusion-gm .gm-author {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* ===== 其他内容卡片增强 ===== */
+.topic-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.topic-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.topic-card .topic-time {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.topic-card .detail-content p {
+  margin-bottom: 12px;
+  line-height: 1.8;
+  color: var(--ink2);
+  font-size: 14px;
+}
+.topic-card .detail-content .sub-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 14px 0 8px;
+}
+
+/* ===== 说话人名字全局高亮：所有卡片统一使用橙色标签效果 ===== */
+.detail-content p strong, .qa-content p strong {
+  background: var(--accent-light);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* ===== 每日金句增强 ===== */
+.quote-section {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.quote-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+.quote-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+.quote-author {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ===== 数据概览增强 ===== */
+.stats-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.stat-big {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+}
+.stat-label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ===== 导航栏增强 ===== */
+.nav-bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.nav-btn {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: var(--ink2);
+  white-space: nowrap;
+}
+.nav-label {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 6px 14px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ===== 页脚 ===== */
+.footer-note {
+  font-size: 12px;
+  color: var(--muted2);
+  text-align: center;
+  margin-top: 24px;
+  padding: 0 16px;
+}
+
+/* ===== 大标题 UI 增强 ===== */
+.header-card {
+  background: linear-gradient(135deg, var(--accent) 0%, #f07a5a 100%);
+  border-radius: 20px;
+  padding: 32px 24px 28px;
+  margin: 16px 0 14px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(232, 93, 58, 0.2);
+}
+.header-card h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.header-card .date-row {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 4px;
+}
+.header-card .time-row {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* ===== 章节标题增强 ===== */
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 24px 0 10px 4px;
+  padding-left: 10px;
+  border-left: 3px solid var(--accent);
+}
+
+/* ===== 今日主角卡片专用排版增强 ===== */
+.hero-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 22px 18px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.hero-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+.hero-card .topic-time {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.hero-card .detail-content .sub-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 18px 0 10px;
+  padding: 8px 0 8px 12px;
+  border-left: 3px solid var(--accent);
+  background: linear-gradient(90deg, var(--kw-bg) 0%, transparent 70%);
+  border-radius: 0 6px 6px 0;
+}
+.hero-card .detail-content .sub-heading:first-child { margin-top: 0; }
+.hero-card .detail-content p {
+  margin-bottom: 14px;
+  line-height: 1.85;
+  color: var(--ink2);
+  font-size: 14px;
+}
+.hero-card .detail-content p:last-child { margin-bottom: 0; }
+
+/* ===== 金句时刻区域：淡橙色背景 ===== */
+.conclusion-gm {
+  margin-top: 18px;
+  padding: 16px 14px 14px;
+  background: var(--accent-light);
+  border-radius: 12px;
+  border: 1px solid var(--accent-tag);
+}
+.conclusion-gm .conclusion-box {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+.conclusion-gm .gm-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+  padding-left: 8px;
+  border-left: 2px solid var(--accent);
+}
+.conclusion-gm .gm-item {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.conclusion-gm .gm-item:last-child { margin-bottom: 0; }
+.conclusion-gm .gm-quote {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink);
+  font-weight: 500;
+}
+.conclusion-gm .gm-author {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* ===== 其他内容卡片增强 ===== */
+.topic-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.topic-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.topic-card .topic-time {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.topic-card .detail-content p {
+  margin-bottom: 12px;
+  line-height: 1.8;
+  color: var(--ink2);
+  font-size: 14px;
+}
+.topic-card .detail-content .sub-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 14px 0 8px;
+}
+
+/* ===== 说话人名字全局高亮：所有卡片统一使用橙色标签效果 ===== */
+.detail-content p strong, .qa-content p strong {
+  background: var(--accent-light);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* ===== 每日金句增强 ===== */
+.quote-section {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.quote-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+.quote-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+.quote-author {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ===== 数据概览增强 ===== */
+.stats-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.stat-big {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+}
+.stat-label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ===== 导航栏增强 ===== */
+.nav-bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.nav-btn {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: var(--ink2);
+  white-space: nowrap;
+}
+.nav-label {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 6px 14px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ===== 页脚 ===== */
+.footer-note {
+  font-size: 12px;
+  color: var(--muted2);
+  text-align: center;
+  margin-top: 24px;
+  padding: 0 16px;
+}
+
+/* ===== 手机阅读增强（v5.5 追加） ===== */
+body { -webkit-text-size-adjust: 100%; }
+.stat-item-sm .num { font-size: 24px; font-weight: 800; color: var(--accent); }
+.stat-item-sm .label { font-size: 11px; color: var(--muted); }
+.climb-kw-box { background: var(--kw-bg); border-radius: 10px; padding: 10px 12px; margin-bottom: 10px; }
+.climb-label { font-size: 11px; font-weight: 700; color: var(--accent); margin-bottom: 4px; letter-spacing: 1px; }
+.climb-text { font-size: 13px; line-height: 1.7; color: var(--ink2); }
+.climb-text .sender { font-weight: 700; color: var(--ink); }
+.tag { background: var(--tag-bg); color: var(--tag-text); border-radius: 4px; padding: 2px 8px; font-size: 11px; margin-right: 6px; }
+.detail-content .sub-heading { border-left: 3px solid var(--accent); padding-left: 10px; }
+@media (max-width: 400px) {
+  .header-card h1 { font-size: 20px; }
+  .quote-text { font-size: 15px; }
+}
+
+
+
+  /* ===== Mobile Enhancement ===== */
+  @media (max-width: 380px) {
+    .header-card { padding: 24px 16px 20px; border-radius: 16px; }
+    .header-card h1 { font-size: 18px; }
+    .quote-text { font-size: 14px; }
+    .stat-item-sm .num { font-size: 22px; }
+    .stat-item-sm .label { font-size: 10px; }
+    .topic-card { padding: 14px; border-radius: 14px; }
+    .topic-card h4 { font-size: 14px; }
+    .detail-content p { font-size: 13px; line-height: 1.7; }
+    .section-title { font-size: 15px; }
+  }
+
+
+/* ===== 大标题 UI 增强 ===== */
+.header-card {
+  background: linear-gradient(135deg, var(--accent) 0%, #f07a5a 100%);
+  border-radius: 20px;
+  padding: 32px 24px 28px;
+  margin: 16px 0 14px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(232, 93, 58, 0.2);
+}
+.header-card h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.header-card .date-row {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 4px;
+}
+.header-card .time-row {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* ===== 章节标题增强 ===== */
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 24px 0 10px 4px;
+  padding-left: 10px;
+  border-left: 3px solid var(--accent);
+}
+
+/* ===== 今日主角卡片专用排版增强 ===== */
+.hero-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 22px 18px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.hero-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+.hero-card .topic-time {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.hero-card .detail-content .sub-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 18px 0 10px;
+  padding: 8px 0 8px 12px;
+  border-left: 3px solid var(--accent);
+  background: linear-gradient(90deg, var(--kw-bg) 0%, transparent 70%);
+  border-radius: 0 6px 6px 0;
+}
+.hero-card .detail-content .sub-heading:first-child { margin-top: 0; }
+.hero-card .detail-content p {
+  margin-bottom: 14px;
+  line-height: 1.85;
+  color: var(--ink2);
+  font-size: 14px;
+}
+.hero-card .detail-content p:last-child { margin-bottom: 0; }
+
+/* ===== 金句时刻区域：淡橙色背景 ===== */
+.conclusion-gm {
+  margin-top: 18px;
+  padding: 16px 14px 14px;
+  background: var(--accent-light);
+  border-radius: 12px;
+  border: 1px solid var(--accent-tag);
+}
+.conclusion-gm .conclusion-box {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+.conclusion-gm .gm-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+  padding-left: 8px;
+  border-left: 2px solid var(--accent);
+}
+.conclusion-gm .gm-item {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.conclusion-gm .gm-item:last-child { margin-bottom: 0; }
+.conclusion-gm .gm-quote {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink);
+  font-weight: 500;
+}
+.conclusion-gm .gm-author {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* ===== 其他内容卡片增强 ===== */
+.topic-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.topic-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.topic-card .topic-time {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.topic-card .detail-content p {
+  margin-bottom: 12px;
+  line-height: 1.8;
+  color: var(--ink2);
+  font-size: 14px;
+}
+.topic-card .detail-content .sub-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 14px 0 8px;
+}
+
+/* ===== 说话人名字全局高亮 ===== */
+.detail-content p strong, .qa-content p strong {
+  background: var(--accent-light);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* ===== 每日金句增强 ===== */
+.quote-section {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.quote-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+.quote-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+.quote-author {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ===== 数据概览增强 ===== */
+.stats-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.stat-big {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+}
+.stat-label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ===== 导航栏增强 ===== */
+.nav-bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.nav-btn {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: var(--ink2);
+  white-space: nowrap;
+}
+.nav-label {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 6px 14px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ===== 页脚 ===== */
+.footer-note {
+  font-size: 12px;
+  color: var(--muted2);
+  text-align: center;
+  margin-top: 24px;
+  padding: 0 16px;
+}
+
+/* ===== 大标题 UI 增强 ===== */
+.header-card {
+  background: linear-gradient(135deg, var(--accent) 0%, #f07a5a 100%);
+  border-radius: 20px;
+  padding: 32px 24px 28px;
+  margin: 16px 0 14px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(232, 93, 58, 0.2);
+}
+.header-card h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.header-card .date-row {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 4px;
+}
+.header-card .time-row {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* ===== 章节标题增强 ===== */
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 24px 0 10px 4px;
+  padding-left: 10px;
+  border-left: 3px solid var(--accent);
+}
+
+/* ===== 今日主角卡片专用排版增强 ===== */
+.hero-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 22px 18px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.hero-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+.hero-card .topic-time {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.hero-card .detail-content .sub-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 18px 0 10px;
+  padding: 8px 0 8px 12px;
+  border-left: 3px solid var(--accent);
+  background: linear-gradient(90deg, var(--kw-bg) 0%, transparent 70%);
+  border-radius: 0 6px 6px 0;
+}
+.hero-card .detail-content .sub-heading:first-child { margin-top: 0; }
+.hero-card .detail-content p {
+  margin-bottom: 14px;
+  line-height: 1.85;
+  color: var(--ink2);
+  font-size: 14px;
+}
+.hero-card .detail-content p:last-child { margin-bottom: 0; }
+
+/* ===== 金句时刻区域：淡橙色背景 ===== */
+.conclusion-gm {
+  margin-top: 18px;
+  padding: 16px 14px 14px;
+  background: var(--accent-light);
+  border-radius: 12px;
+  border: 1px solid var(--accent-tag);
+}
+.conclusion-gm .conclusion-box {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+.conclusion-gm .gm-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+  padding-left: 8px;
+  border-left: 2px solid var(--accent);
+}
+.conclusion-gm .gm-item {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.conclusion-gm .gm-item:last-child { margin-bottom: 0; }
+.conclusion-gm .gm-quote {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink);
+  font-weight: 500;
+}
+.conclusion-gm .gm-author {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* ===== 其他内容卡片增强 ===== */
+.topic-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.topic-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.topic-card .topic-time {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.topic-card .detail-content p {
+  margin-bottom: 12px;
+  line-height: 1.8;
+  color: var(--ink2);
+  font-size: 14px;
+}
+.topic-card .detail-content .sub-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 14px 0 8px;
+}
+
+/* ===== 说话人名字全局高亮 ===== */
+.detail-content p strong, .qa-content p strong {
+  background: var(--accent-light);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* ===== 每日金句增强 ===== */
+.quote-section {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.quote-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+.quote-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+.quote-author {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ===== 数据概览增强 ===== */
+.stats-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.stat-big {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+}
+.stat-label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ===== 导航栏增强 ===== */
+.nav-bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.nav-btn {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: var(--ink2);
+  white-space: nowrap;
+}
+.nav-label {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 6px 14px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ===== 页脚 ===== */
+.footer-note {
+  font-size: 12px;
+  color: var(--muted2);
+  text-align: center;
+  margin-top: 24px;
+  padding: 0 16px;
+}
+
+
+/* ===== 大标题 UI 增强 ===== */
+.header-card {
+  background: linear-gradient(135deg, var(--accent) 0%, #f07a5a 100%);
+  border-radius: 20px;
+  padding: 32px 24px 28px;
+  margin: 16px 0 14px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(232, 93, 58, 0.2);
+}
+.header-card h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.header-card .date-row {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 4px;
+}
+.header-card .time-row {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* ===== 章节标题增强 ===== */
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 24px 0 10px 4px;
+  padding-left: 10px;
+  border-left: 3px solid var(--accent);
+}
+
+/* ===== 今日主角卡片专用排版增强 ===== */
+.hero-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 22px 18px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.hero-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+.hero-card .topic-time {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.hero-card .detail-content .sub-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 18px 0 10px;
+  padding: 8px 0 8px 12px;
+  border-left: 3px solid var(--accent);
+  background: linear-gradient(90deg, var(--kw-bg) 0%, transparent 70%);
+  border-radius: 0 6px 6px 0;
+}
+.hero-card .detail-content .sub-heading:first-child { margin-top: 0; }
+.hero-card .detail-content p {
+  margin-bottom: 14px;
+  line-height: 1.85;
+  color: var(--ink2);
+  font-size: 14px;
+}
+.hero-card .detail-content p:last-child { margin-bottom: 0; }
+
+/* ===== 金句时刻区域：淡橙色背景 ===== */
+.conclusion-gm {
+  margin-top: 18px;
+  padding: 16px 14px 14px;
+  background: var(--accent-light);
+  border-radius: 12px;
+  border: 1px solid var(--accent-tag);
+}
+.conclusion-gm .conclusion-box {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+.conclusion-gm .gm-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+  padding-left: 8px;
+  border-left: 2px solid var(--accent);
+}
+.conclusion-gm .gm-item {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.conclusion-gm .gm-item:last-child { margin-bottom: 0; }
+.conclusion-gm .gm-quote {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink);
+  font-weight: 500;
+}
+.conclusion-gm .gm-author {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* ===== 其他内容卡片增强 ===== */
+.topic-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.topic-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.topic-card .topic-time {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.topic-card .detail-content p {
+  margin-bottom: 12px;
+  line-height: 1.8;
+  color: var(--ink2);
+  font-size: 14px;
+}
+.topic-card .detail-content .sub-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 14px 0 8px;
+}
+
+/* ===== 说话人名字全局高亮：所有卡片统一使用橙色标签效果 ===== */
+.detail-content p strong, .qa-content p strong {
+  background: var(--accent-light);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* ===== 每日金句增强 ===== */
+.quote-section {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.quote-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+.quote-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+.quote-author {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ===== 数据概览增强 ===== */
+.stats-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.stat-big {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+}
+.stat-label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ===== 导航栏增强 ===== */
+.nav-bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.nav-btn {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: var(--ink2);
+  white-space: nowrap;
+}
+.nav-label {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 6px 14px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ===== 页脚 ===== */
+.footer-note {
+  font-size: 12px;
+  color: var(--muted2);
+  text-align: center;
+  margin-top: 24px;
+  padding: 0 16px;
+}
+
+</style>
+</head>
+
+<body>
+
+  <div class="container">
+
+<div class="header-card">
+  <h1>十二W车行群日报</h1>
+  <div class="date-row">2026年9月10日 · 星期四</div>
+  <div class="time-row">群聊速览 · 自动生成</div>
+</div>
+
+<div class="nav-bar">
+  <a class="nav-btn" href="daily-report-v5.4-2026-09-09.html">上一天</a>
+  <a class="nav-label" href="../index.html">日报导航</a>
+  <button class="nav-btn" disabled>下一天</button>
+</div>
+
+<div class="section-title">一、每日金句</div>
+<div class="quote-section">
+  <div class="quote-label">每日金句</div>
+  <div class="quote-text">有合作就是正反馈，流量再多，没有合作都是幻觉。</div>
+  <div class="quote-author"><strong>美糕博主</strong> · 给绵羊拆流量焦虑</div>
+</div>
+
+<div class="section-title">二、总消息概览</div>
+<div class="stats-card" style="display: flex; justify-content: space-between;">
+  <div class="stat-item-sm">
+    <div class="num">122</div>
+    <div class="label">总消息</div>
+  </div>
+  <div class="stat-item-sm">
+    <div class="num">2254</div>
+    <div class="label">聊天字数</div>
+  </div>
+  <div class="stat-item-sm">
+    <div class="num">1116</div>
+    <div class="label">日报字数</div>
+  </div>
+  <div class="stat-item-sm">
+    <div class="num">3</div>
+    <div class="label">阅读时长</div>
+  </div>
+</div>
+
+<div class="section-title">三、今日主角</div>
+<div class="topic-card hero-card">
+  <h4>绵羊 —— 小会：这周心态崩了，糕拆掉了她的流量幻觉</h4>
+  <div class="topic-time">20:10 - 20:50 &nbsp;|&nbsp; 小会发起人：绵羊</div>
+  <div class="climb-kw-box">
+    <div class="climb-label">爬楼关键词</div>
+    <div class="climb-text"><span class="sender">绵羊：</span>"这周我心态有点不太好，感觉怎么做都不对，怎么做都做不好"</div>
+  </div>
+  <div class="tags">
+    <span class="tag">心态复盘</span>
+    <span class="tag">长尾流量</span>
+    <span class="tag">咨询</span>
+  </div>
+  <div class="detail-content">
+    <div class="sub-heading">症状：只有11个小眼睛</div>
+    <p><strong>绵羊</strong>自述这周数据反馈很差，"有的只有11个小眼睛，有的投了薯条才有人看"；面相号不做了，点赞还在涨，"本来是好事，但它出现的时间不对"。<strong>黄云</strong>点了一句："有点太容易被短期的流量数据影响情绪了"。</p>
+    <div class="sub-heading">拆解：你已经拿到正反馈了</div>
+    <p><strong>美糕博主</strong>先反问"不是都接到OLAY了吗"，再给两条判断：美妆的阅读单价天然比其他赛道贵，因为能关注的都是真要买东西的人；面相学算泛流量、玄学擦边。结论是"有合作就是正反馈，流量再多，没有合作都是幻觉"。</p>
+    <div class="sub-heading">机制：长尾流量与"被收录"</div>
+    <p>她用一个反例解释：一个她以为被限流的号，改了赛道和名字，新内容只有10来个小眼睛，却连续来了三个合作；数据明显很好的新号反而不被考虑——"他们真的不看近期内容怎么样的，看的都是账号本身，整体的"，品牌反应慢，收录靠长尾。<strong>绵羊</strong>回应："我是在反思自己的心态问题，不是情绪问题……我有个好处就是调整状态还比较快"。</p>
+    <div class="sub-heading">出路：咨询与C端</div>
+    <p><strong>绵羊</strong>说自己羡慕职场号"能给别人提供这种帮助，可以说是有真本事"。<strong>美糕博主</strong>给她指路：饮茶号一直不知道怎么发育，那就布局C端培训孵化。她也说了自己的打算：回老家找货源做快团团，"做私域卖货，是我一直最快乐的事"。</p>
+  </div>
+  <div class="conclusion-gm">
+    <div class="gm-label">金句</div>
+    <div class="gm-item">
+      <div class="gm-quote">有合作就是正反馈，流量再多，没有合作都是幻觉</div>
+      <div class="gm-author">—— <strong>美糕博主</strong></div>
+    </div>
+    <div class="gm-item">
+      <div class="gm-quote">我是在反思自己的心态问题，不是情绪问题</div>
+      <div class="gm-author">—— <strong>绵羊</strong></div>
+    </div>
+    <div class="gm-item">
+      <div class="gm-quote">关键是要活人感，要积累，也急不来</div>
+      <div class="gm-author">—— <strong>美糕博主</strong></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-title">四、老司机补给站</div>
+<div class="topic-card">
+  <h4>黄云 —— don学是缝合；粤语才是她的差异化</h4>
+  <div class="topic-time">22:49 - 00:21</div>
+  <div class="climb-kw-box">
+    <div class="climb-label">爬楼关键词</div>
+    <div class="climb-text"><span class="sender">黄云：</span>"经验主义明明是知识来自经验，这恰恰是实践论反对的东西。特别坏"</div>
+  </div>
+  <div class="detail-content">
+    <div class="sub-heading">批don学：把实践论挪去讲自由主义</div>
+    <p>某知识付费博主公开为"西哲"站台，摆出洛克、休谟、杜威、维特根斯坦、福柯的谱系。<strong>黄云</strong>直言"很土很落后"，"用大众熟知的和要洗脑的混一起，很坏"。<strong>AA昍</strong>补刀："去道德化（价值中立）可不是马哲，是自由主义。"</p>
+    <div class="sub-heading">给糕的建议：说粤语</div>
+    <p>深夜<strong>黄云</strong>对<strong>美糕博主</strong>说："你说粤语特别有记忆点，上镜应该也是……大家潜意识里觉得长得好看的人普通话必定标准、显精致，你上镜说粤语就会有记忆点。"她问"不会觉得装装的吗"，黄云认为这个问题不存在。</p>
+  </div>
+</div>
+
+<div class="section-title">五、同伴行动</div>
+<div class="topic-card">
+  <h4>基因大师 —— 主业里"搓"出一个数据库产品</h4>
+  <div class="topic-time">20:47</div>
+  <div class="detail-content">
+    <p><strong>基因大师</strong>说自己在自媒体上一搭没一搭地写着，但主业里"搓了一个真正的数据库产品出来"，"我算是有自己的产品了，而且是互联网产品"。<strong>AA昍</strong>提议可以孵化合作，看看有什么新玩法。</p>
+  </div>
+</div>
+
+<div class="topic-card">
+  <h4>落日钓星星💫 —— 压力到顶时的"扛揍"方法</h4>
+  <div class="topic-time">22:09</div>
+  <div class="detail-content">
+    <p>老人住院、家里装修、新学期开学三件事叠在一起。<strong>落日钓星星💫</strong>的办法是先问"它是为什么来的"：事情引起的就解决事，睡不够或碳水没吃够就去睡觉吃饭，压力顶不住那天她跑去打了两小时网球。<strong>AA昍</strong>说"这种小结就挺好的，我很需要了"。</p>
+  </div>
+</div>
+
+<div class="footer-note">
+  本报告基于群聊数据自动生成，仅供参考。
+</div>
+  </div>
+
+</body>
+</html>
