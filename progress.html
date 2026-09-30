@@ -713,6 +713,11 @@ let currentDetailIdx = -1;
 
 const sessionViewed = new Set(); // 当前会话已查看的成员
 
+// ⚠️ 临时例外窗口（2026-09-30 手动开启，用于补推 09-27 以来的红点）：
+// 若 progress-data.json 提供 highlight_since，则把该日期及之后的所有里程碑都标红点，
+// 覆盖默认的「只看今天/昨天」。**根除方式：删掉 progress-data.json 里的 highlight_since 字段即可恢复默认。**
+let highlightSince = null;
+
 function getTodayStr() {
   const d = new Date();
   return d.getFullYear() + '-' +
@@ -733,7 +738,10 @@ function getTodayNewCount(member) {
   const yesterday = getYesterdayStr();
   let count = 0;
   (member.milestones || []).forEach(ms => {
-    if (ms.date === today || ms.date === yesterday) count++;
+    const hit = highlightSince
+      ? (ms.date >= highlightSince)            // 例外窗口：起始日及之后全部算新增
+      : (ms.date === today || ms.date === yesterday); // 默认：今天或昨天
+    if (hit) count++;
   });
   return count;
 }
@@ -743,6 +751,7 @@ fetch('progress-data.json?v=' + Date.now())
   .then(r => r.json())
   .then(data => {
     membersData = data.members || [];
+    highlightSince = data.highlight_since || null; // 例外窗口（无该字段则为 null，走默认逻辑）
     renderDirectory(data);
   })
   .catch(err => {
